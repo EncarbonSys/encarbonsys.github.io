@@ -79,9 +79,9 @@
             right: 0;
             z-index: 1000;
             backdrop-filter: blur(20px);
-            background: rgba(10, 26, 15, 0.9);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 1rem 0;
+            background: rgba(30, 50, 35, 0.9);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 0.5rem 0;
             transition: all 0.3s ease;
         }
         .nav-container {
@@ -101,23 +101,18 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: logoGlow 3s ease-in-out infinite;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            filter: drop-shadow(0 0 0 transparent);
         }
         .logo img {
             height: 90px;
-            filter: drop-shadow(0 0 10px var(--cosmic-green));
             transition: all 0.3s ease;
         }
         .logo:hover img {
             transform: scale(1.1);
-            filter: drop-shadow(0 0 20px var(--cosmic-green));
-        }
-        @keyframes logoGlow {
-            0%, 100% { filter: drop-shadow(0 0 10px var(--cosmic-green)); }
-            50% { filter: drop-shadow(0 0 20px var(--cosmic-green)); }
+            filter: brightness(1.2) contrast(1.1);
         }
         .nav-links {
             display: flex;
@@ -126,17 +121,18 @@
             align-items: center;
         }
         .nav-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
             font-size: 0.95rem;
+            letter-spacing: 0.5px;
         }
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -4px;
             left: 0;
             width: 0;
             height: 2px;
@@ -155,14 +151,15 @@
             padding: 0.8rem 1.8rem;
             border: none;
             border-radius: 12px;
-            font-weight: 800;
+            font-weight: 1000;
             text-decoration: none;
             transition: all 0.4s ease;
-            font-size: 0.9rem;
-            box-shadow: 0 0 25px var(--cosmic-glow);
+            font-size: 0.99rem;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
             text-shadow: none;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(0, 255, 136, 0.3);
         }
         .nav-cta::before {
             content: '';
@@ -171,13 +168,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0), transparent);
             transition: all 0.6s ease;
             z-index: -1;
         }
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 40px var(--cosmic-glow);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #00ff99 0%, #44e0a8 100%);
             color: #000000;
         }
@@ -241,7 +238,7 @@
         }
         .hero-subtitle {
             font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-            font-weight: 400;
+            font-weight: 600;
             line-height: 1.5;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 3rem;
@@ -305,7 +302,7 @@
         .btn-primary:hover {
             transform: translateY(-4px) scale(1.05);
             box-shadow: 0 15px 60px var(--cosmic-glow);
-            background: linear-gradient(135deg, #00ff99 0%, #44e0a8 100%);
+            background: linear-gradient(135deg, #00ff99 0%, #2ff2f6 100%);
         }
         .btn-primary:hover::before {
             left: 100%;
@@ -899,7 +896,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 255, 136, 0.05) 50%, rgba(0, 255, 136, 0.1) 100%);
+            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.1) 0%, rgba(0, 255, 136, 0.05) 50%, rgba(0, 255, 136, 0.1) 100%);
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -1055,7 +1052,6 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
         /* Custom Form Styles */
         .form-success {
             display: none;
@@ -1069,12 +1065,10 @@
             font-weight: 600;
             animation: fadeIn 0.5s ease;
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
         .form-error {
             display: none;
             background: rgba(255, 107, 107, 0.1);
@@ -1086,14 +1080,12 @@
             color: #ff6b6b;
             font-weight: 600;
         }
-        
         .form-loading {
             display: none;
             text-align: center;
             padding: 2rem;
             color: var(--cosmic-accent);
         }
-        
         .form-loading:after {
             content: '';
             display: inline-block;
@@ -1116,8 +1108,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="https://image2url.com/images/1754668449267-fe2ffa09-5cd3-4c14-af91-73c32e6559f6.png" alt="EncarbonSys Logo">
-               EnCBAM™ by EncarbonSys
+                <img src="https://image2url.com/images/1754755186569-8b535936-b581-418a-8127-a3005d56b50c.png" alt="EncarbonSys Logo">
+               EncarbonSys
             </a>
             <ul class="nav-links">
                 <li><a href="#problem">Problem</a></li>
@@ -1133,9 +1125,20 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">CBAM Compliance. 
-                    Done for You.</h1>
-                <p class="hero-subtitle">India's first plug-and-play CBAM report engine for exporters. Generate EU-compliant reports in hours, not weeks.</p>
+                <h1 class="hero-title">EnCBAM™ 
+                    </h1>
+                <p style="font-size: 3.5rem; line-height: 1.0; margin-bottom: 0.5em; margin-top: 0.1em ; font-weight: 1000;color: white;
+            background: linear-gradient(135deg, #ffffff 0%, var(--cosmic-green) 50%, #f0f5f0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1.2s ease-out 0.2s both, titleGlow 4s ease-in-out infinite;
+        
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 20px var(--cosmic-glow); }
+            50% { text-shadow: 0 0 40px var(--cosmic-glow); }
+        }">Enabling CBAM Compliance</p>    
+                <p class="hero-subtitle">EnCBAM™ is the flagship solution from EnCarbonSys, built to simplify Carbon Border Adjustment Mechanism (CBAM) compliance for EU exporters. </p>
                 <div class="cta-buttons">
                     <a href="#cta-form" class="btn-primary">
                         <i class="fas fa-rocket"></i>
@@ -1153,12 +1156,27 @@
                     </div>
                     <div class="trust-item">
                         <span class="check-icon">✅</span>
-                        <span>₹1,15,000+ Saved</span>
+                        <span>ISO:14064 & ISO:14067</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="check-icon">✅</span>
+                        <span>2026 Carbon Tax Ready <span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="check-icon">✅</span>
+                        <span>Auditor Ready</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="check-icon">✅</span>
+                        <span>₹1,15,000+ Saved/Report</span>
                     </div>
                     <div class="trust-item">
                         <span class="check-icon">✅</span>
                         <span>Fast Delivery</span>
                     </div>
+                    
+                    
+                    
                 </div>
             </div>
             <div class="dashboard-mockup">
@@ -1208,11 +1226,7 @@
     </section>
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Timeline Image -->
-        <div class="timeline-image scroll-reveal">
-            <img src="https://image2url.com/images/1754589254338-e76e6b42-7fa2-4a88-9bdc-110a36be4852.jpeg" alt="Timeline of CBAM regulation">
-        </div>
-        <!-- Problem Section -->
+        <!-- Problem Section with Merged Timeline Image -->
         <section id="problem" class="section scroll-reveal section-problem">
             <div class="section-card">
                 <h2 class="section-title problem">
@@ -1245,9 +1259,15 @@
                         </div>
                     </div>
                     <p style="font-size: 1.2rem; margin-top: 2rem; color: var(--cosmic-green); font-weight: 600;">Most MSMEs don't have the tools. EncarbonSys gives you CBAM compliance — fast, legit, and export-ready.</p>
+                    
+                    <!-- Timeline Image merged into the Problem section tile -->
+                    <div class="timeline-image" style="margin-top: 3rem;">
+                        <img src="https://image2url.com/images/1754589254338-e76e6b42-7fa2-4a88-9bdc-110a36be4852.jpeg" alt="Timeline of CBAM regulation">
+                    </div>
                 </div>
             </div>
         </section>
+
         <!-- Solution Section -->
         <section id="solution" class="section scroll-reveal section-solution">
             <div class="section-card">
@@ -1287,7 +1307,8 @@
                 </div>
             </div>
         </section>
-        <!-- How It Works -->
+
+        <!-- How It Works Section with Merged Steps to Comply Image -->
         <section id="process" class="section scroll-reveal section-process">
             <div class="section-card">
                 <h2 class="section-title">
@@ -1324,12 +1345,14 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Steps to Comply Image merged into the How It Works section tile -->
+                <div class="timeline-image" style="margin-top: 3rem;">
+                    <img src="https://acquiscompliancewebprod.blob.core.windows.net/acquiscomplianceweb/assets/Steps_to_comply_with_cbam_25b1b9f135.png" alt="Timeline of CBAM regulation">
+                </div>
             </div>
         </section>
-        <!-- Timeline Image 2 -->
-        <div class="timeline-image scroll-reveal">
-            <img src="https://acquiscompliancewebprod.blob.core.windows.net/acquiscomplianceweb/assets/Steps_to_comply_with_cbam_25b1b9f135.png" alt="Timeline of CBAM regulation">
-        </div>
+
         <!-- Savings Section -->
         <section class="section scroll-reveal section-savings">
             <div class="section-card">
@@ -1339,25 +1362,28 @@
                 </h2>
                 <div class="pricing-grid">
                     <div class="pricing-card">
-                        <h3 style="color: #ff6b6b; margin-bottom: 1rem;">Traditional Route</h3>
+                        <h2 style="color: #ff6b6b; margin-bottom: 1rem;">Traditional Route</h2>
                         <div class="features-grid" style="grid-template-columns: 1fr;">
                             <div style="background: rgba(255, 107, 107, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 107, 107, 0.3);">
                                 <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Environmental consultant: ₹1,00,000+</li>
-                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Legal/compliance advisor: ₹50,000</li>
-                                    <li><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>2–4 weeks of back-and-forth</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>₹1,50,000+ in consultant and compliance fees</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>2–4 weeks of </li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Risk of errors, rework, and non-compliance</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Stress, uncertainty, and paperwork overload</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="pricing-card featured">
-                        <h3 style="color: var(--cosmic-green); margin-bottom: 1rem;">EncarbonSys Route</h3>
+                        <h2 style="color: var(--cosmic-green); margin-bottom: 1rem;">EncarbonSys Route</h2>
                         <div class="features-grid" style="grid-template-columns: 1fr;">
                             <div style="background: rgba(0, 255, 136, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0, 255, 136, 0.3);">
                                 <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Flat ₹35,000 per report</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Most Affordable in the space</li>
                                     <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Delivered in hours not weeks</li>
-                                    <li><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Zero meetings, zero drama</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>EU-compliant and audit-ready reports</li>
+                                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Clarity, speed, and zero drama</li>
+                                </ul>
                                 </ul>
                             </div>
                         </div>
@@ -1365,7 +1391,7 @@
                 </div>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-number">₹1,15,000</div>
+                        <div class="stat-number">₹1,15,000+</div>
                         <div class="stat-label">Average Savings Per Quarter</div>
                     </div>
                     <div class="stat-card">
@@ -1375,6 +1401,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Who Is This For -->
         <section class="section scroll-reveal section-audience">
             <div class="section-card">
@@ -1421,28 +1448,8 @@
                 </div>
             </div>
         </section>
-        <!-- Pricing Section -->
-        <section id="pricing" class="section scroll-reveal">
-            <div class="section-card">
-                <h2 class="section-title">
-                    <i class="fas fa-tag"></i>
-                    Packages & Pricing
-                </h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card featured">
-                        <h3 style="color: var(--cosmic-green); font-size: 1.5rem; margin-bottom: 1rem;">CBAM Compliance Report</h3>
-                        <div class="price">₹35,000<span style="font-size: 1rem; color: rgba(255,255,255,0.6);">/report per CN code</span></div>
-                        <ul style="list-style: none; padding: 0; text-align: left;">
-                            <li style="margin-bottom: 1rem; color: rgba(255,255,255,0.9);"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.8rem;"></i>Valid for 1 quarter</li>
-                            <li style="margin-bottom: 1rem; color: rgba(255,255,255,0.9);"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.8rem;"></i>Includes PDF + XML</li>
-                            <li style="margin-bottom: 1rem; color: rgba(255,255,255,0.9);"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.8rem;"></i>Audit trail and emissions summary</li>
-                            <li style="margin-bottom: 1rem; color: rgba(255,255,255,0.9);"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.8rem;"></i>Fast delivery</li>
-                        </ul>
-                        <p style="margin-top: 2rem; font-style: italic; color: var(--cosmic-accent);">Bulk exporter packs and dashboards coming soon.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+
         <!-- Why EnCBAM? -->
         <section class="section scroll-reveal">
             <div class="section-card">
@@ -1450,6 +1457,7 @@
                     <i class="fas fa-star"></i>
                     Why EnCBAM™?
                 </h2>
+                <p style="font-size: 1.5rem; line-height: 1.8; color: var(--cosmic-accent); font-weight: 600; text-align: center;">EnCBAM™ - Where carbon compliance meets operational genius.</p>
                 <div class="features-grid">
                     <div class="feature-card card-exporters">
                         <div class="feature-content">
@@ -1461,8 +1469,15 @@
                     <div class="feature-card card-engine">
                         <div class="feature-content">
                             <div class="feature-icon">⚙️</div>
-                            <div class="feature-title">Default-value Engine</div>
-                            <div class="feature-description">Automated emissions calculations using official CBAM values</div>
+                            <div class="feature-title">Automated emissions calculation Engine</div>
+                            <div class="feature-description">Default and Actual emissions calculations using official CBAM values</div>
+                        </div>
+                    </div>
+                    <div class="feature-card card-outputs">
+                        <div class="feature-content">
+                            <div class="feature-icon">🏅</div>
+                            <div class="feature-title">ISO Aligned</div>
+                            <div class="feature-description">ISO:14064 and ISO:14067 standards Carbon Footprinting </div>
                         </div>
                     </div>
                     <div class="feature-card card-outputs">
@@ -1471,7 +1486,8 @@
                             <div class="feature-title">PDF & XML Outputs</div>
                             <div class="feature-description">Submission-ready formats for EU portals</div>
                         </div>
-                    </div>
+                    </div>    
+                    
                     <div class="feature-card card-india">
                         <div class="feature-content">
                             <div class="feature-icon">🇮🇳</div>
@@ -1489,39 +1505,47 @@
                 </div>
             </div>
         </section>
+        
         <!-- About Section -->
         <section id="about" class="section scroll-reveal">
             <div class="section-card">
                 <h2 class="section-title">
                     <i class="fas fa-info-circle"></i>
-                    About EnCBAM™
+                    About EnCarbonSys
                 </h2>
                 <div class="section-content">
-                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">EnCBAM™ is the flagship tool of EncarbonSys, which is a carbon compliance automation engine designed to make CBAM simple for Indian exporters. We don't just generate reports — we eliminate confusion, compress bureaucracy, and help you scale with confidence.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--cosmic-accent); font-weight: 600;">Built in India. Compliant in Europe. Powered by automation, spreadsheets, and pure rage at bad systems.</p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">EncarbonSys — Energy and Carbon Systems — for a Smarter, Sustainable Future.
+We design intelligent platforms that simplify how businesses measure, manage, and integrate their energy and carbon data. Our solutions combine accuracy, automation, and insight to help organizations stay compliant today and competitive tomorrow.</p>
+
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;"></p>Our vision is clear: to make energy and carbon management seamless, transparent, and future-proof — empowering businesses to lead with responsibility and confidence in a changing world.</p>
+
+                <p style="font-size: 1.3rem; line-height: 1.8; color: var(--cosmic-accent); font-weight: 800;">EncarbonSys — Engineering the Future of Energy & Carbon Intelligence.</p>
                 </div>
             </div>
         </section>
-        <!-- CTA Section -->
+        
+        <!-- CTA Section with Merge of "Act Before Penalties Hit" and Form -->
         <section id="cta" class="section scroll-reveal">
-            <div class="cta-section">
-                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; color: white;">Act Before Penalties Hit</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: var(--cosmic-accent);">CBAM reporting is already active. In 2026, financial enforcement begins.</p>
-                <div class="cta-buttons">
+            <div class="section-card" style="background: var(--glass-bg); border-radius: 24px; padding: 4rem 2rem; backdrop-filter: blur(20px); border: 1px solid var(--glass-border);">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; color: var(--problem-red); text-align: center;">
+                    ACT    BEFORE    PENALTIES    HIT
+                </h2>
+                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: var(--cosmic-accent); text-align: center;">
+                    CBAM reporting is already active. In 2026, financial enforcement begins.
+                </p>
+                <div class="btn-secondary" style="justify-content: center; margin-left: 27rem; margin-bottom: 1.5rem;">
                     <a href="https://wa.me/919620828005?text=Hi%20EncarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?"  
-                       class="btn-secondary" style="font-size: 1.2rem; padding: 1.5rem 3rem;">
+                       class="btn-secondary" style="font-size: 1.2rem; padding: 1.5rem 3rem; background: var(--cosmic-green); color: #000000; border: 1px solid var(--cosmic-green);">
                         <i class="fas fa-phone"></i>
                         Book a Free Call
                     </a>
                 </div>
-            </div>
-        </section>
-        <!-- CTA Section with Form -->
-        <section id="cta-form" class="section scroll-reveal">
-            <div class="cta-section" style="background: var(--glass-bg); border-radius: 24px; padding: 3rem 2rem; backdrop-filter: blur(20px); border: 1px solid var(--glass-border);">
-                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; color: white; text-align: center;">Get Your CBAM Report</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: var(--cosmic-accent); text-align: center;">Fill the form below — Let's get you CBAM compliant!</p>
-                
+                <p style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--cosmic-accent); text-align: center;"> 
+                    OR
+                </p>
+                <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 3rem; color: var(--cosmic-accent); text-align: center;"> 
+                    Fill the form below, Let's get you CBAM compliant!
+                </p>
                 <!-- Form Container -->
                 <div id="formContainer" style="display: block;">
                     <!-- Formspree Form -->
@@ -1529,38 +1553,38 @@
                         <!-- Company Name -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Company Name <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="company_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Shree Steel Pvt Ltd">
+                            <input type="text" id="company_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Shree Steel Pvt Ltd">
                         </div>
                         <!-- Contact Person -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Contact Person Name <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="contact_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Rajesh Kumar">
+                            <input type="text" id="contact_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Rajesh Kumar">
                         </div>
                         <!-- Work Email -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Work Email <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="email" id="work_email" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. rajesh@shreesteel.com">
+                            <input type="email" id="work_email" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. rajesh@shreesteel.com">
                         </div>
                         <!-- Phone / WhatsApp -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Phone / WhatsApp <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="phone" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. +91 98765 43210">
+                            <input type="text" id="phone" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. +91 98765 43210">
                         </div>
                         <!-- HS Code -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Product HS Code(s) <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
                             <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 0.5rem;">e.g. 7207.11 for semi-finished steel</p>
-                            <input type="text" id="hs_code" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. 7207.11, 7606.12">
+                            <input type="text" id="hs_code" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. 7207.11, 7606.12">
                         </div>
                         <!-- Product Description -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Product Description <span style="color: var(--cosmic-green);">*</span></label>
-                            <textarea id="product_description" required rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Hot-rolled carbon steel coils, 3mm thickness, exported to Germany"></textarea>
+                            <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Product Description <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
+                            <textarea id="product_description" required rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Hot-rolled carbon steel coils, 3mm thickness, exported to Germany"></textarea>
                         </div>
                         <!-- Export Destination Country -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Export Destination Country <span style="color: var(--cosmic-green);">*</span></label>
-                            <select id="export_country" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
+                            <select id="export_country" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
                                 <option value="">Select a country</option>
                                 <option value="Germany">Germany</option>
                                 <option value="France">France</option>
@@ -1576,42 +1600,39 @@
                         <!-- Estimated Quantity -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Estimated Annual Export Quantity <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
-                            <input type="number" id="quantity" step="any" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. 500">
+                            <input type="number" id="quantity" step="any" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(0px);" placeholder="e.g. 500">
                             <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-top: 0.5rem;">Units: tonnes, kg, etc. (specify in notes if needed)</p>
                         </div>
                         <!-- File Upload -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Upload Supporting Files <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
                             <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 0.5rem;">Invoices, product sheets, customs docs</p>
-                            <input type="file" id="file" multiple style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
+                            <input type="file" id="file" multiple style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
                         </div>
                         <!-- Additional Notes -->
                         <div>
                             <label style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem;">Additional Notes <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
-                            <textarea id="notes" rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.08); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="Any special requirements or questions?"></textarea>
+                            <textarea id="notes" rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="Any special requirements or questions?"></textarea>
                         </div>
                         <!-- Submit Button -->
                         <button type="submit" id="submitBtn" class="btn-primary" style="font-size: 1.2rem; padding: 1.5rem 3rem; width: 100%; max-width: 300px; margin: 2rem auto 0;">
                             <i class="fas fa-paper-plane"></i>
-                            Submit & Get Report
+                            SUBMIT
                         </button>
                     </form>
                 </div>
-                
                 <!-- Success Message -->
                 <div id="successMessage" class="form-success">
                     <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
                     <h3>Thank You!</h3>
                     <p>Your request has been submitted successfully. We'll contact you shortly.</p>
                 </div>
-                
                 <!-- Error Message -->
                 <div id="errorMessage" class="form-error">
                     <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
                     <h3>Something went wrong</h3>
                     <p>Please try again or contact us directly at support@encarbonsys.com</p>
                 </div>
-                
                 <!-- Loading Indicator -->
                 <div id="loadingIndicator" class="form-loading">
                     <p>Sending your request...</p>
@@ -1620,9 +1641,9 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); backdrop-filter: blur(20px); text-align: center; padding: 3rem 2rem; margin-top: 4rem;">
-        <p style="color: var(--cosmic-accent); font-weight: 600; margin-bottom: 1rem;">• EncarbonSys™ © 2025 • </p>
-        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">MSME Ready | Startup India Aligned | Privacy-First • support@encarbonsys.com</p>
+    <footer style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); backdrop-filter: blur(20px); text-align: center; padding: 3rem 2rem; margin-top: 0.1rem;">
+        <p style="color: var(--cosmic-accent); font-weight: 600; margin-bottom: 1rem;">• EncarbonSys © 2025 • </p>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">MSME Ready | Startup India Aligned | Privacy-First | support@encarbonsys.com</p>
     </footer>
     <script>
         // Loading screen
@@ -1713,7 +1734,6 @@
                 }
                 lastScrollTop = scrollTop;
             });
-            
             // Form handling
             const form = document.getElementById('contactForm');
             const formContainer = document.getElementById('formContainer');
@@ -1721,10 +1741,8 @@
             const errorMessage = document.getElementById('errorMessage');
             const loadingIndicator = document.getElementById('loadingIndicator');
             const submitBtn = document.getElementById('submitBtn');
-            
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                
                 // Show loading state
                 formContainer.style.display = 'none';
                 successMessage.style.display = 'none';
@@ -1732,7 +1750,6 @@
                 loadingIndicator.style.display = 'block';
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                 submitBtn.disabled = true;
-                
                 try {
                     // Get form data
                     const formData = {
@@ -1746,7 +1763,6 @@
                         quantity: document.getElementById('quantity').value,
                         notes: document.getElementById('notes').value
                     };
-                    
                     // Simulate API call with Formspree
                     const response = await fetch('https://formspree.io/f/xyzpbvln', {
                         method: 'POST',
@@ -1755,13 +1771,11 @@
                         },
                         body: JSON.stringify(formData)
                     });
-                    
                     if (response.ok) {
                         // Show success message
                         loadingIndicator.style.display = 'none';
                         formContainer.style.display = 'none';
                         successMessage.style.display = 'block';
-                        
                         // Reset form after 5 seconds
                         setTimeout(() => {
                             form.reset();
@@ -1778,7 +1792,6 @@
                     loadingIndicator.style.display = 'none';
                     formContainer.style.display = 'none';
                     errorMessage.style.display = 'block';
-                    
                     // Allow retry after 3 seconds
                     setTimeout(() => {
                         errorMessage.style.display = 'none';
