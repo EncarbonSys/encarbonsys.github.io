@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnCarbonSys - October 2025 CBAM Reporting Offer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        .section {
+            padding: 80px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Glass Card with Glow Effect */
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .glass-card:hover {
+            box-shadow: 0 12px 40px rgba(45, 245, 109, 0.2);
+            border: 1px solid rgba(45, 245, 109, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        /* Highlighted Glass Card */
+        .glass-card-highlight {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(45, 245, 109, 0.3);
+            border: 1px solid rgba(45, 245, 109, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(45, 245, 109, 0.3);
+            }
+            100% {
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 25px rgba(45, 245, 109, 0.6);
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse 3s infinite alternate;
+        }
+        
+        /* Header Styling */
+        .header {
+            text-align: center;
+            padding: 120px 0 80px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(10,10,10,0.9) 100%);
+            border-bottom: 1px solid rgba(45, 245, 109, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Attention-grabbing Badge */
+        .offer-badge {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #2DF56D, #1aa347);
+            color: #000000;
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transform: rotate(5deg);
+            box-shadow: 0 5px 15px rgba(45, 245, 109, 0.4);
+            z-index: 10;
+        }
+        
+        /* Float Animation */
+        @keyframes float {
+            0% {
+                transform: rotate(5deg) translateY(0px);
+            }
+            50% {
+                transform: rotate(5deg) translateY(-10px);
+            }
+            100% {
+                transform: rotate(5deg) translateY(0px);
+            }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Enhanced Title */
+        .header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ffffff, #2DF56D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(45, 245, 109, 0.5);
+        }
+        
+        .header p {
+            font-size: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #2DF56D;
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .highlight {
+            color: #2DF56D;
+            font-weight: 600;
+        }
+        
+        /* Feature Cards */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(45, 245, 109, 0.2);
+            border-color: rgba(45, 245, 109, 0.2);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(45, 245, 109, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid rgba(45, 245, 109, 0.2);
+            box-shadow: 0 0 20px rgba(45, 245, 109, 0.2);
+        }
+        
+        .feature-icon i {
+            font-size: 28px;
+            color: #2DF56D;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        /* List Styling */
+        ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #2DF56D;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(45, 245, 109, 0.5);
+        }
+        
+        /* Offer Details */
+        .offer-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .detail-item {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .detail-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+        
+        .detail-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(45, 245, 109, 0.15);
+            border-color: rgba(45, 245, 109, 0.2);
+        }
+        
+        /* Highlighted Detail Item */
+        .detail-item-highlight {
+            background-color: rgba(45, 245, 109, 0.1);
+            border: 1px solid rgba(45, 245, 109, 0.3);
+            box-shadow: 0 0 20px rgba(45, 245, 109, 0.2);
+        }
+        
+        .detail-icon {
+            font-size: 28px;
+            color: #2DF56D;
+            margin-bottom: 15px;
+        }
+        
+        .detail-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .detail-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .detail-item-highlight .detail-value {
+            color: #2DF56D;
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(45, 245, 109, 0.3);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 3px solid #2DF56D;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        
+        .benefit-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.4s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .benefit-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefit-card h4 i {
+            color: #2DF56D;
+            margin-right: 15px;
+            font-size: 26px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(0,0,0,0.95) 100%);
+            border-top: 1px solid rgba(45, 245, 109, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #2DF56D, #1aa347);
+            color: #000000;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 20px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(45, 245, 109, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(45, 245, 109, 0.6);
+        }
+        
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 80px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .countdown-item.visible {
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.5s;
+        }
+        
+        .countdown-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2DF56D;
+            margin-bottom: 5px;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(45, 245, 109, 0.2);
+        }
+        
+        .footer p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+        
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(45, 245, 109, 0.3);
+        }
+        
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #2DF56D;
+            text-shadow: 0 0 10px rgba(45, 245, 109, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+            
+            .feature-card {
+                width: 100%;
+            }
+            
+            .offer-details {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .header p {
+                font-size: 18px;
+            }
+            
+            .offer-badge {
+                top: 20px;
+                right: 20px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .logo-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <img class="background" src="https://assets-persist.lovart.ai/agent_images/7daba098-acbf-49db-bdf2-6c89689843ea.png" alt="Background">
+    
+    <!-- Header with attention-grabbing badge -->
+    <header class="header">
+        <div class="offer-badge float-animation">LIMITED TIME OFFER</div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://image2url.com/images/1755178545433-c3754ed2-3557-4a1f-a3d8-13fff7dc37dd.png" alt="EnCarbonSys Logo" class="logo-image">
+                <div class="logo-text">EnCarbonSys Campaign — Free October CBAM Filing</div>
+            </div>
+            <h1>Free CBAM Filing for October </h1>
+            <h1>Stay Export-Ready, No Cost.</h1>
+            <p>Don't risk missing the Q3 CBAM deadline (Oct 31, 2025). EnCarbonSys generates your report, free of charge — simple, legit, and future-proof.</p>
+            
+            <!-- Countdown timer to create urgency -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">40</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">12</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">35</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">22</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Introduction with enhanced glass card -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card-highlight pulse-animation">
+                <p> Most Indian exporters are struggling with CBAM.</p>
+                <p> Reports are mandatory, penalties are looming, and EU buyers are demanding compliance.</p>
+                <p> That's why EnCarbonSys is offering FREE October CBAM reporting for MSMEs.</p>
+                <p> EnCarbonSys is thrilled to offer a <span class="highlight">complimentary FREE reporting package</span> for a select number of clients.</p>
+                <p> This exclusive initiative underscores our commitment to delivering cutting-edge, automation-driven compliance solutions as CBAM transitions to full implementation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What's Included with enhanced feature cards -->
+    <section class="section">
+        <div class="container">
+            <h2>Here's what you get:</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="feature-title">Seamless Report Preparation</div>
+                    <ul>
+                        <li>Generation of CBAM-compliant XML files (fully aligned with EU schema)</li>
+                        <li>Professional, easy-to-read PDF reports (EnCarbonSys premium template)</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="feature-title">Effortless Data Handling</div>
+                    <ul>
+                        <li>Application of default emissions factors (when actual data isn't available)</li>
+                        <li>Conversion of your emissions data into official CBAM formats</li>
+                        <li>ISO Aligned Data Handling</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="feature-title">Value-Added Features</div>
+                    <ul>
+                        <li>Streamlined importer–exporter data mapping into structured report fields</li>
+                        <li>Branded deliverables with clear disclaimers and detailed supporting notes</li>
+                        <li>Comprehensive documentation explaining report content and methodology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Offer Details with highlighted free offer -->
+    <section class="section">
+        <div class="container">
+            <h2>Offer Details & Conditions</h2>
+            <div class="glass-card">
+                <div class="offer-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="detail-title">Valid until</div>
+                        <div class="detail-value">25 October 2025</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-title">Limited to</div>
+                        <div class="detail-value">First 50 clients per CN code</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="detail-title">Regular value</div>
+                        <div class="detail-value">Premium service pricing</div>
+                    </div>
+                    
+                    <div class="detail-item detail-item-highlight pulse-animation">
+                        <div class="detail-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="detail-title">October 2025 offer</div>
+                        <div class="detail-value">Completely free</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us -->
+    <section class="section">
+        <div class="container">
+            <h2>Why free?</h2>
+            <div class="glass-card-highlight pulse-animation">
+                <p>Because we believe compliance should be easy.
+                <p>Try us in October — if you like the peace of mind, we'll support you for all future filings at affordable rates. for a select number of clients.</p>
+                <p> This exclusive initiative underscores our commitment to delivering cutting-edge, automation-driven compliance solutions as CBAM transitions to full implementation.</p>
+            </div>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-robot"></i> Automation-Driven Excellence</h4>
+                    <p>Leverage our advanced tools for PDF/XML generation, calculators, and intuitive dashboards.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-expand-arrows-alt"></i> Scalable & Future-Ready</h4>
+                    <p>Seamlessly handle both default and actual emissions data with a platform built for 2026 CBAM compliance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-shield-alt"></i> Trusted Expertise</h4>
+                    <p>Professional, reliable solutions tailored to exporters' real-world needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Act Now: Secure Your Complimentary CBAM Report</h2>
+            <p>Don't miss this opportunity to streamline your CBAM compliance with EnCarbonSys.</p>
+            <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?" class="cta-button pulse-animation">👉 Claim Your Free October Filing</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 EnCarbonSys. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for countdown timer and scroll animations -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('October 25, 2025 23:59:59').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+            
+            if (difference < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+            }
+        }
+        
+        // Initialize countdown
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Scroll Animation
+        function checkScroll() {
+            const sections = document.querySelectorAll('.section');
+            const featureCards = document.querySelectorAll('.feature-card');
+            const detailItems = document.querySelectorAll('.detail-item');
+            const benefitCards = document.querySelectorAll('.benefit-card');
+            const countdownItems = document.querySelectorAll('.countdown-item');
+            
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+            
+            featureCards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < triggerBottom) {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+            
+            detailItems.forEach((item, index) => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < triggerBottom) {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+            
+            benefitCards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < triggerBottom) {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+            
+            countdownItems.forEach((item, index) => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < triggerBottom) {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+</html>
