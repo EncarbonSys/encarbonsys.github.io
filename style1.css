@@ -137,7 +137,7 @@
         .nav-links a:hover::after {
             width: 100%;
         }
-        .nav-cta {
+        .nav-cta1 {
             
             color: #000000;
             padding: 0.8rem 1.8rem;
@@ -153,7 +153,7 @@
             overflow: hidden;
             border: 1px solid rgba(0, 255, 136, 0.3);
         }
-        .nav-cta::before {
+        .nav-cta1::before {
             content: '';
             position: absolute;
             top: 0;
@@ -164,13 +164,13 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
-        .nav-cta:hover {
+        .nav-cta1:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #191d1b 0%, #69e6b8 100%);
             color: #000000;
         }
-        .nav-cta:hover::before {
+        .nav-cta1:hover::before {
             left: 100%;
         }
         /* Mobile Menu Toggle */
@@ -276,7 +276,7 @@
             max-width: 600px;
             animation: fadeInUp 1.2s ease-out 0.4s both;
         }
-        .cta-buttons {
+        .cta1-buttons {
             display: flex;
             gap: 1.2rem;
             margin-bottom: 3.5rem;
@@ -1013,7 +1013,7 @@
             .section1-card {
                 padding: 2rem 1.5rem;
             }
-            .cta-buttons {
+            .cta1-buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -1065,7 +1065,7 @@
             .hero1-subtitle {
                 font-size: 1.1rem;
             }
-            .cta-buttons {
+            .cta1-buttons {
                 gap: 1rem;
             }
             .btn-primary,
@@ -1191,14 +1191,14 @@
             animation: spin 1s linear infinite;
             margin-left: 10px;
         }
-        /* Updated cta section1 */
-        .cta-section1 {
+        /* Updated cta1 section1 */
+        .cta1-section1 {
             text-align: center;
         }
-        .cta-section1 h2 {
+        .cta1-section1 h2 {
             margin-bottom: 1rem;
         }
-        .cta-section1 p {
+        .cta1-section1 p {
             margin-bottom: 1.5rem;
         }
 </style>
