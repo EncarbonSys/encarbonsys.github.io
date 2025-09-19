@@ -83,7 +83,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
+        .logo2 {
             font-size: 1.9rem;
             font-weight: 900;
             color: white;
@@ -97,11 +97,11 @@
             gap: 0.5rem;
             filter: drop-shadow(0 0 0 transparent);
         }
-        .logo img {
+        .logo2 img {
             height: 60px;
             transition: all 0.3s ease;
         }
-        .logo:hover img {
+        .logo2:hover img {
             transform: scale(1.1);
             filter: brightness(1.2) contrast(1.1);
         }
@@ -136,7 +136,7 @@
         .nav-links a:hover::after {
             width: 100%;
         }
-        .nav-cta1 {
+        .nav-cta {
             
             color: #000000;
             padding: 0.8rem 1.8rem;
@@ -152,7 +152,7 @@
             overflow: hidden;
             border: 1px solid rgba(0, 255, 136, 0.3);
         }
-        .nav-cta1::before {
+        .nav-cta::before {
             content: '';
             position: absolute;
             top: 0;
@@ -163,13 +163,13 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
-        .nav-cta1:hover {
+        .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #191d1b 0%, #69e6b8 100%);
             color: #000000;
         }
-        .nav-cta1:hover::before {
+        .nav-cta:hover::before {
             left: 100%;
         }
         /* Mobile Menu Toggle */
@@ -275,7 +275,7 @@
             max-width: 600px;
             animation: fadeInUp 1.2s ease-out 0.4s both;
         }
-        .cta1-buttons {
+        .cta-buttons {
             display: flex;
             gap: 1.2rem;
             margin-bottom: 3.5rem;
@@ -1012,7 +1012,7 @@
             .section1-card {
                 padding: 2rem 1.5rem;
             }
-            .cta1-buttons {
+            .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -1064,7 +1064,7 @@
             .hero-subtitle {
                 font-size: 1.1rem;
             }
-            .cta1-buttons {
+            .cta-buttons {
                 gap: 1rem;
             }
             .btn-primary,
@@ -1190,14 +1190,14 @@
             animation: spin 1s linear infinite;
             margin-left: 10px;
         }
-        /* Updated cta1 section1 */
-        .cta1-section1 {
+        /* Updated cta section1 */
+        .cta-section1 {
             text-align: center;
         }
-        .cta1-section1 h2 {
+        .cta-section1 h2 {
             margin-bottom: 1rem;
         }
-        .cta1-section1 p {
+        .cta-section1 p {
             margin-bottom: 1.5rem;
         }
 </style>
