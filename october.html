@@ -551,6 +551,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div id="navbar"></div>
+
+<script>
+  fetch('/navbar.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('navbar').innerHTML = html)
+    .catch(err => console.error('Navbar failed to load', err));
+</script>
+
     <img class="background" src="https://assets-persist.lovart.ai/agent_images/7daba098-acbf-49db-bdf2-6c89689843ea.png" alt="Background">
     
     <!-- Header with attention-grabbing badge -->
@@ -643,9 +652,9 @@
                 </div>
                 <p>                   </p>
             <div class = "feature-card" > <ul> 
-                 <li> <span class = highlight>Free October CBAM Report (Value $999):</span> We generate your official Q3 2025 CBAM report — fully compliant and ready for direct submission to the EU portal.</li>
-                <li> <span class = highlight>Valid Until 25 October 2025:</span> Offer closes once our onboarding capacity is full to ensure every exporter gets their report in time before the Oct 31 deadline.</li>
+                <li> <span class = highlight>Free October CBAM Report (Value $999):</span> We generate your official Q3 2025 CBAM report Completely Free — fully compliant and ready for direct submission to the EU portal.</li>
                 <li> <span class = highlight>1 CN Code Covered (One Product Line):</span> We process one CN code free — enough to keep your key export product compliant and prove legitimacy to EU buyers.</li>
+                <li> <span class = highlight>Valid Until 25 October 2025:</span> Offer closes once our onboarding capacity is full to ensure every exporter gets their report in time before the Oct 31 deadline.</li>
                 <li> <span class = highlight>EU-Ready Report Format:</span>  We provide the XML report package in the official EU CBAM format — all you need to do is submit to your importer in EU.</li>
                 <li> <span class = highlight>2026-Ready, Starting Now:</span> We prepare your systems today, so you're future-proof when real emission data rules kick in. Pilot users get exclusive early-bird discounts for Q4 Reporting & 2026 compliance packages.</li>
                 </ul>
@@ -732,7 +741,7 @@
         <div class="container">
             <h2>Act Now: Secure Your Free CBAM Report</h2>
             <p>Don't miss this opportunity to streamline your CBAM compliance with EnCarbonSys.</p>
-            <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?" class="cta-button pulse-animation">👉 Claim Your Free October Filing</a>
+            <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?" class="cta-button pulse-animation"> Claim Your Free October Filing</a>
         </div>
     </section>
     
