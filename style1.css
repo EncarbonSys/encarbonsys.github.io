@@ -110,6 +110,8 @@
             gap: 1.5rem;
             list-style: none;
             align-items: center;
+            top: 30px;
+       
         }
         .nav-links a {
             color: rgba(255, 255, 255, 0.9);
