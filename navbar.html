@@ -20,40 +20,6 @@
   </div>
 </nav>
 
-<style>
-.nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            align-items: center;
-        }
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--cosmic-green);
-            transition: width 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: var(--cosmic-green);
-        }
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-</style>
-
 <script>
   // === Mobile menu toggle ===
   document.addEventListener("DOMContentLoaded", () => {
