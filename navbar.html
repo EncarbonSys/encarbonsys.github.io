@@ -1,0 +1,54 @@
+<!-- navbar.html -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo" id="logoLink">
+      <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys Logo">
+      EnCarbonSys
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/client_resource.html">Client Hub</a></li>
+      <li><a href="/october.html" class="nav-cta">CBAM OFFER</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // === Mobile menu toggle ===
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("mobileMenuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinks.classList.remove("active"));
+      });
+    }
+
+    // === Smooth scroll for # links (if target exists) ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        if (targetId.length > 1 && document.querySelector(targetId)) {
+          e.preventDefault();
+          document.querySelector(targetId).scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+</script>
