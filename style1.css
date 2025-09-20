@@ -84,8 +84,8 @@
             align-items: center;
         }
         .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.9rem;
+            font-weight: 750;
             color: white;
             text-decoration: none;
             background: linear-gradient(135deg, var(--cosmic-green) 0%, var(--cosmic-accent) 100%);
