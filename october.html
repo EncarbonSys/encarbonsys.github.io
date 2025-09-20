@@ -256,6 +256,29 @@
             margin-bottom: 15px;
             color: #ffffff;
         }
+     /* List Styling */
+         .feature-card ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card ul li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #2DF56D;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(45, 245, 109, 0.5);
+        }
         /* List Styling */
          .offer-card ul {
             list-style-type: none;
