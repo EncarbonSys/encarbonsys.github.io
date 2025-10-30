@@ -2371,8 +2371,74 @@
   }
 }
 </style>
+<script>
+// Banner functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Close button functionality
+  const closeButton = document.querySelector('.banner-close');
+  const banner = document.querySelector('.encarbonsys-banner-container');
+  
+  closeButton.addEventListener('click', function() {
+    banner.style.animation = 'slideDown 0.5s forwards';
+    
+    // Store in session storage that banner was closed
+    sessionStorage.setItem('encarbonsysBannerClosed', 'true');
+    
+    // Remove banner after animation completes
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 500);
+  });
+  
+  // Check if banner was previously closed
+  if (sessionStorage.getItem('encarbonsysBannerClosed') === 'true') {
+    banner.style.display = 'none';
+  }
+  
+  // Countdown functionality
+  function updateCountdown() {
+    const deadline = new Date('October 25, 2025 23:59:59').getTime();
+    const now = new Date().getTime();
+    const timeLeft = deadline - now;
+    
+    if (timeLeft > 0) {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      
+      document.getElementById('days-count').textContent = days;
+      document.getElementById('hours-count').textContent = hours;
+      document.getElementById('mins-count').textContent = minutes;
+    }
+  }
+  
+  // Update countdown immediately and then every minute
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+  
+  // Add slideshow effect for CTA button
+  const primaryCta = document.querySelector('.primary-cta');
+  
+  setInterval(() => {
+    primaryCta.classList.add('pulse');
+    setTimeout(() => {
+      primaryCta.classList.remove('pulse');
+    }, 1000);
+  }, 5000);
+});
+
+// Add slideDown animation
+document.styleSheets[0].insertRule(`
+  @keyframes slideDown {
+    to {
+      transform: translateY(100%);
+    }
+  }
+`, document.styleSheets[0].cssRules.length);
+</script>                               
 </body>
 </html>
+
 
 
 
