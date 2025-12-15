@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CBAM Insights - EnCarbonSys Blog</title>
+    <style>
+        :root{
+            --primary-green:#1B7F3D;
+            --primary-emerald:#059669;
+            --primary-teal:#0D9488;
+            --accent-green:#10B981;
+            --bg-light-mint:#F0FDF4;
+            --bg-light-grey:#F8FAFC;
+            --bg-white:#FFFFFF;
+            --text-dark:#1F2937;
+            --text-medium:#4B5563;
+            --text-light:#6B7280;
+            --border-light:#D1FAE5;
+            --shadow-green:rgba(27,127,61,0.12);
+            --shadow-light:rgba(0,0,0,0.05);
+            --spacing-xs:8px;
+            --spacing-sm:16px;
+            --spacing-md:24px;
+            --spacing-lg:32px;
+            --spacing-xl:48px;
+            --radius-sm:8px;
+            --radius-md:12px;
+            --radius-lg:16px;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+            line-height:1.6;color:var(--text-dark);
+            background:linear-gradient(135deg,var(--bg-light-mint) 0%,var(--bg-light-grey) 100%);
+            min-height:100vh;
+        }
+        img{max-width:100%;height:auto;display:block}
+        a{text-decoration:none;color:inherit;transition:all .3s ease}
+
+        .header{
+            background:var(--bg-white);
+            box-shadow:0 2px 8px var(--shadow-light);
+            position:sticky;top:0;z-index:1000;
+            border-bottom:3px solid transparent;
+            border-image:linear-gradient(90deg,var(--primary-green),var(--primary-teal)) 1;
+        }
+        .header-container{max-width:1400px;margin:0 auto;padding:var(--spacing-sm) var(--spacing-lg);display:flex;justify-content:space-between;align-items:center}
+        .logo{height:50px;width:auto}
+        .nav-menu{display:flex;gap:var(--spacing-lg);list-style:none}
+        .nav-menu a{font-weight:500;color:var(--text-medium);padding:var(--spacing-xs) var(--spacing-sm);border-radius:var(--radius-sm);transition:all .3s ease}
+        .nav-menu a:hover{color:var(--primary-green);background:var(--bg-light-mint)}
+
+        .container{max-width:1400px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
+
+        .hero-section{margin-bottom:var(--spacing-xl)}
+        .featured-card{
+            background:var(--bg-white);border-radius:var(--radius-lg);
+            box-shadow:0 8px 24px var(--shadow-green);overflow:hidden;
+            display:grid;grid-template-columns:40% 60%;transition:transform .3s ease,box-shadow .3s ease;
+        }
+        .featured-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px var(--shadow-green)}
+        .featured-image{
+            background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 100%);
+            min-height:400px;display:flex;align-items:center;justify-content:center;color:var(--text-light);font-size:18px;
+        }
+        .featured-content{padding:var(--spacing-lg);display:flex;flex-direction:column}
+        .featured-label{display:inline-block;background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:var(--spacing-sm);width:fit-content}
+        .featured-title{font-size:32px;font-weight:700;margin-bottom:var(--spacing-sm);color:var(--text-dark)}
+        .featured-excerpt{margin-bottom:var(--spacing-md);line-height:1.7}
+        .author-info{display:flex;align-items:center;gap:var(--spacing-sm);margin-bottom:var(--spacing-md)}
+        .author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
+        .author-details{display:flex;flex-direction:column}
+        .author-name{font-weight:600;color:var(--text-dark);font-size:14px}
+        .post-date{font-size:13px;color:var(--text-light)}
+        .btn-primary{
+            background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));
+            color:#fff;padding:12px 32px;border-radius:var(--radius-sm);font-weight:600;border:none;cursor:pointer;transition:all .3s ease;width:fit-content
+        }
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 16px var(--shadow-green)}
+
+        .main-content{display:grid;grid-template-columns:65% 35%;gap:var(--spacing-lg)}
+
+        .blog-posts{display:flex;flex-direction:column;gap:var(--spacing-lg)}
+        .post-card{background:var(--bg-white);border-radius:var(--radius-md);box-shadow:0 4px 16px var(--shadow-light);overflow:hidden;transition:all .3s ease}
+        .post-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px var(--shadow-green)}
+        .post-image{background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 100%);height:250px;display:flex;align-items:center;justify-content:center;color:var(--text-light)}
+        .category-tag{display:inline-block;background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:#fff;padding:4px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:var(--spacing-sm)}
+        .post-content{padding:var(--spacing-md)}
+        .post-title{font-size:24px;font-weight:700;margin-bottom:var(--spacing-sm);color:var(--text-dark);line-height:1.4}
+        .post-excerpt{margin-bottom:var(--spacing-md);line-height:1.6;color:var(--text-medium)}
+        .post-meta{display:flex;align-items:center;justify-content:space-between;padding-top:var(--spacing-sm);border-top:1px solid var(--border-light)}
+        .post-author{display:flex;align-items:center;gap:var(--spacing-sm)}
+        .post-author-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
+
+        .sidebar{display:flex;flex-direction:column;gap:var(--spacing-md)}
+        .widget{background:var(--bg-white);border-radius:var(--radius-md);box-shadow:0 4px 16px var(--shadow-light);overflow:hidden}
+        .widget-header{background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:white;padding:var(--spacing-sm) var(--spacing-md);font-weight:700;font-size:18px}
+        .widget-content{padding:var(--spacing-md)}
+        .about-profile{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal));margin:0 auto var(--spacing-sm)}
+        .about-text{text-align:center;color:var(--text-medium);font-size:14px;line-height:1.6}
+        .category-list{list-style:none;padding:0;margin:0}
+        .category-item{display:flex;justify-content:space-between;align-items:center;padding:var(--spacing-sm) 0;border-bottom:1px solid var(--border-light);transition:all .3s ease}
+        .category-item:last-child{border-bottom:none}
+        .category-count{background:var(--bg-light-mint);color:var(--primary-green);padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600}
+
+        .recent-post-item{display:flex;gap:var(--spacing-sm);padding:var(--spacing-sm) 0;border-bottom:1px solid var(--border-light)}
+        .recent-post-item:last-child{border-bottom:none}
+        .recent-post-thumb{width:64px;height:48px;background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 100%);flex-shrink:0;border-radius:6px}
+        .recent-post-title{font-size:14px;font-weight:600;color:var(--text-dark);margin-bottom:4px;line-height:1.4}
+        .recent-post-date{font-size:12px;color:var(--text-light)}
+
+        .newsletter-form{display:flex;flex-direction:column;gap:var(--spacing-sm)}
+        .newsletter-text{color:var(--text-medium);font-size:14px;margin-bottom:var(--spacing-xs)}
+        .newsletter-input{padding:12px;border:2px solid var(--border-light);border-radius:var(--radius-sm);font-size:14px;transition:all .3s ease}
+        .newsletter-input:focus{outline:none;border-color:var(--primary-green);box-shadow:0 0 0 3px rgba(27,127,61,0.1)}
+        .btn-subscribe{background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:white;padding:12px;border-radius:var(--radius-sm);font-weight:600;border:none;cursor:pointer;transition:all .3s ease}
+        .btn-subscribe:hover{transform:translateY(-2px);box-shadow:0 8px 16px var(--shadow-green)}
+
+        .footer{background:linear-gradient(135deg,var(--primary-green),var(--primary-teal) 100%);color:white;margin-top:var(--spacing-xl)}
+        .footer-container{max-width:1400px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
+        .footer-content{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--spacing-xl);margin-bottom:var(--spacing-lg)}
+        .footer-section h3{margin-bottom:var(--spacing-md)}
+        .footer-links{list-style:none;padding:0;margin:0}
+        .footer-links li{margin-bottom:var(--spacing-sm)}
+        .footer-links a{opacity:.9;transition:all .3s ease}
+        .footer-links a:hover{opacity:1;padding-left:var(--spacing-xs)}
+        .social-links{display:flex;gap:var(--spacing-sm);margin-top:var(--spacing-md)}
+        .social-icon{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;transition:all .3s ease}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.2);padding:var(--spacing-md);text-align:center;opacity:.8;font-size:14px}
+
+        @media (max-width:1024px){
+            .main-content{grid-template-columns:1fr}
+            .featured-card{grid-template-columns:1fr}
+            .featured-image{min-height:300px}
+            .footer-content{grid-template-columns:1fr}
+        }
+        @media (max-width:768px){
+            .header-container{padding:var(--spacing-sm) var(--spacing-md);flex-direction:column;gap:var(--spacing-sm)}
+            .nav-menu{flex-wrap:wrap;justify-content:center}
+            .featured-title{font-size:26px}
+            .post-title{font-size:20px}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="https://a.lov.ai/artifacts/userBqpSU1yZ4XqSHGqP.png" alt="EnCarbonSys Logo" class="logo" />
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="featured-card">
+                <div class="featured-image">CBAM Compliance</div>
+                <div class="featured-content">
+                    <span class="featured-label">Featured</span>
+                    <h1 class="featured-title">Making Sense of CBAM: Your Complete Guide to EU Carbon Compliance</h1>
+                    <p class="featured-excerpt">The EU's Carbon Border Adjustment Mechanism is reshaping global trade. Whether you're importing steel, aluminum, or other carbon-intensive goods, understanding CBAM isn't optional anymore—it's essential for doing business in Europe.</p>
+                    <div class="author-info">
+                        <div class="author-avatar" aria-hidden="true"></div>
+                        <div class="author-details">
+                            <span class="author-name">EnCarbonSys Team</span>
+                            <span class="post-date">December 2025</span>
+                        </div>
+                    </div>
+                    <a href="cbam-omnibus-new-rules.html"><button class="btn-primary">Read Article</button></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <section class="blog-posts" aria-label="Blog posts">
+                <article class="post-card">
+                    <div class="post-image">CBAM Omnibus</div>
+                    <div class="post-content">
+                        <span class="category-tag">CBAM</span>
+                        <h2 class="post-title">CBAM Omnibus: What the New Rules Mean for Importers</h2>
+                        <p class="post-excerpt">The European Parliament just approved major changes to CBAM. Good news for small importers, but if you're bringing in more than 50 tonnes annually, there's work to do. Here's what changed and what you need to know.</p>
+                        <div class="post-meta">
+                            <div class="post-author">
+                                <div class="post-author-avatar" aria-hidden="true"></div>
+                                <div>
+                                    <div class="author-name">EnCarbonSys Team</div>
+                                    <div class="post-date">September 2025</div>
+                                </div>
+                            </div>
+                            <a href="cbam-omnibus-new-rules.html" style="color:var(--primary-green);font-weight:600">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">CBAM Updates</div>
+                    <div class="post-content">
+                        <span class="category-tag">CBAM</span>
+                        <h2 class="post-title">CBAM Updates: What's New in April 2025?</h2>
+                        <p class="post-excerpt">From reporting thresholds to cost calculations, CBAM keeps evolving. We break down the latest changes including the 50-tonne threshold, EU precursor exemptions, and what it all means for your bottom line.</p>
+                        <div class="post-meta">
+                            <div class="post-author">
+                                <div class="post-author-avatar" aria-hidden="true"></div>
+                                <div>
+                                    <div class="author-name">EnCarbonSys Team</div>
+                                    <div class="post-date">April 2025</div>
+                                </div>
+                            </div>
+                            <a href="cbam-updates-april-2025.html" style="color:var(--primary-green);font-weight:600">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">Supplier Data</div>
+                    <div class="post-content">
+                        <span class="category-tag">CBAM</span>
+                        <h2 class="post-title">Turning Supplier Data Chaos into Carbon Clarity</h2>
+                        <p class="post-excerpt">Every importer is chasing the same suppliers for carbon data. Every supplier is drowning in requests. There's a better way to manage CBAM supplier data—and it could save you months of headaches.</p>
+                        <div class="post-meta">
+                            <div class="post-author">
+                                <div class="post-author-avatar" aria-hidden="true"></div>
+                                <div>
+                                    <div class="author-name">EnCarbonSys Team</div>
+                                    <div class="post-date">November 2025</div>
+                                </div>
+                            </div>
+                            <a href="supplier-data-management.html" style="color:var(--primary-green);font-weight:600">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">Authorised Declarant</div>
+                    <div class="post-content">
+                        <span class="category-tag">CBAM</span>
+                        <h2 class="post-title">CBAM Authorised Declarant: Your Complete Application Guide</h2>
+                        <p class="post-excerpt">Starting March 28, 2025, you'll need Authorised Declarant status to import CBAM goods into the EU. Here's everything you need to know about the application process, requirements, and deadlines.</p>
+                        <div class="post-meta">
+                            <div class="post-author">
+                                <div class="post-author-avatar" aria-hidden="true"></div>
+                                <div>
+                                    <div class="author-name">EnCarbonSys Team</div>
+                                    <div class="post-date">March 2025</div>
+                                </div>
+                            </div>
+                            <a href="authorised-declarant-guide.html" style="color:var(--primary-green);font-weight:600">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="sidebar" aria-label="Sidebar widgets">
+                <div class="widget">
+                    <div class="widget-header">Categories</div>
+                    <div class="widget-content">
+                        <ul class="category-list">
+                            <li class="category-item"><span class="category-name">CBAM Compliance</span><span class="category-count">4</span></li>
+                            <li class="category-item"><span class="category-name">Regulations</span><span class="category-count">4</span></li>
+                            <li class="category-item"><span class="category-name">Carbon Reporting</span><span class="category-count">4</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">About</div>
+                    <div class="widget-content">
+                        <div class="about-profile" aria-hidden="true"></div>
+                        <p class="about-text">EnCarbonSys helps businesses navigate CBAM compliance with practical tools and expert guidance. We make carbon reporting simple, accurate, and stress-free.</p>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">Recent Posts</div>
+                    <div class="widget-content">
+                        <div class="recent-post-item">
+                            <div class="recent-post-thumb" aria-hidden="true"></div>
+                            <div class="recent-post-info">
+                                <div class="recent-post-title">CBAM Omnibus Updates</div>
+                                <div class="recent-post-date">Sep 2025</div>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <div class="recent-post-thumb" aria-hidden="true"></div>
+                            <div class="recent-post-info">
+                                <div class="recent-post-title">April 2025 Changes</div>
+                                <div class="recent-post-date">Apr 2025</div>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <div class="recent-post-thumb" aria-hidden="true"></div>
+                            <div class="recent-post-info">
+                                <div class="recent-post-title">Supplier Data Management</div>
+                                <div class="recent-post-date">Nov 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">Subscribe</div>
+                    <div class="widget-content">
+                        <p class="newsletter-text">Get the latest CBAM updates and carbon compliance insights delivered to your inbox.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required />
+                            <button type="submit" class="btn-subscribe">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" aria-label="Site footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p class="footer-text">📧 info@encarbonsys.com<br/>📞 +1 (555) 123-4567<br/>📍 Sustainability Solutions</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="X">𝕏</a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-icon" aria-label="Email">📧</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>About EnCarbonSys</h3>
+                    <p class="footer-text">We help organizations navigate carbon compliance and emissions reporting with modern, reliable tools and expert guidance.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EnCarbonSys. All rights reserved. | Powered by sustainable innovation.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
