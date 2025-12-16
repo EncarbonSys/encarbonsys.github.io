@@ -22,10 +22,83 @@
             background: #ffffff;
         }
 
-        .article-container {
-            max-width: 900px;
+        /* Main Layout with Sidebar */
+        .article-layout {
+            max-width: 1400px;
             margin: 100px auto 60px;
             padding: 0 30px;
+            display: flex;
+            gap: 40px;
+            position: relative;
+        }
+
+        /* Table of Contents Sidebar */
+        .toc-sidebar {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 100px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2DF56D;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .toc-list a:hover {
+            background: #2DF56D;
+            color: #0a0a0a;
+            transform: translateX(5px);
+        }
+
+        .toc-list a.active {
+            background: #2DF56D;
+            color: #0a0a0a;
+        }
+
+        .toc-list a i {
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .article-container {
+            flex: 1;
+            max-width: 900px;
         }
 
         .article-header {
@@ -73,6 +146,7 @@
             color: #0a0a0a;
             margin: 50px 0 25px;
             line-height: 1.3;
+            scroll-margin-top: 100px;
         }
 
         .article-content p {
@@ -156,8 +230,66 @@
             gap: 12px;
         }
 
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border-radius: 16px;
+            padding: 50px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #e0e0e0;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2DF56D;
+            color: #0a0a0a;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(45, 245, 109, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .article-layout {
+                flex-direction: column;
+            }
+
+            .toc-sidebar {
+                width: 100%;
+                order: -1;
+            }
+
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+        }
+
         @media (max-width: 768px) {
-            .article-container {
+            .toc-sidebar {
+                display: none;
+            }
+
+            .article-layout {
                 margin-top: 80px;
                 padding: 0 20px;
             }
@@ -184,100 +316,160 @@
             .then(html => document.getElementById('navbar').innerHTML = html);
     </script>
 
-    <article class="article-container">
-        <a href="/cbam-blog/" class="back-link">
-            <i class="fas fa-arrow-left"></i> Back to Blog
-        </a>
-
-        <header class="article-header">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Business documents and EU regulations" class="featured-image">
-            
-            <h1>CBAM Omnibus: What the New Rules Mean for Importers</h1>
-            
-            <div class="article-meta">
-                <span><i class="far fa-calendar"></i> September 11, 2025</span>
-                <span><i class="far fa-clock"></i> 5 min read</span>
+    <div class="article-layout">
+        <!-- Table of Contents Sidebar -->
+        <aside class="toc-sidebar">
+            <div class="toc-sticky">
+                <div class="toc-title">ON THIS PAGE</div>
+                <ul class="toc-list">
+                    <li><a href="#what-is-omnibus"><i class="fas fa-chevron-right"></i> What's Different?</a></li>
+                    <li><a href="#small-importers"><i class="fas fa-chevron-right"></i> Small Importers Exemption</a></li>
+                    <li><a href="#declarant-status"><i class="fas fa-chevron-right"></i> Authorised Declarant Status</a></li>
+                    <li><a href="#timelines"><i class="fas fa-chevron-right"></i> New Timelines</a></li>
+                    <li><a href="#emissions-calc"><i class="fas fa-chevron-right"></i> Emissions Calculations</a></li>
+                    <li><a href="#business-impact"><i class="fas fa-chevron-right"></i> Business Impact</a></li>
+                    <li><a href="#bottom-line"><i class="fas fa-chevron-right"></i> Bottom Line</a></li>
+                </ul>
             </div>
-        </header>
+        </aside>
 
-        <div class="article-content">
-            <p>The European Parliament just gave CBAM a makeover. They've approved what's being called the "Omnibus" package—a set of changes designed to make life easier for small importers while keeping the regulation's climate goals firmly intact.</p>
+        <!-- Main Article Content -->
+        <article class="article-container">
+            <a href="/cbam-blog/" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
 
-            <p>If you're importing steel, aluminium, cement, fertilisers, electricity, or hydrogen into the EU, these updates will shape how you handle compliance over the next couple of years. Let's break down what's actually changing.</p>
+            <header class="article-header">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Business documents and EU regulations" class="featured-image">
+                
+                <h1>CBAM Omnibus: What the New Rules Mean for Importers</h1>
+                
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> September 11, 2025</span>
+                    <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+            </header>
 
-            <h2>What's Different Under the Omnibus Update?</h2>
+            <div class="article-content">
+                <p>The European Parliament just gave CBAM a makeover. They've approved what's being called the "Omnibus" package—a set of changes designed to make life easier for small importers while keeping the regulation's climate goals firmly intact.</p>
 
-            <p>The Omnibus amendments bring some welcome clarity and simplification for businesses dealing with CBAM. Here's what you need to know:</p>
+                <p>If you're importing steel, aluminium, cement, fertilisers, electricity, or hydrogen into the EU, these updates will shape how you handle compliance over the next couple of years. Let's break down what's actually changing.</p>
 
-            <h2>1. Small Importers Get a Break</h2>
+                <h2 id="what-is-omnibus">What's Different Under the Omnibus Update?</h2>
 
-            <p>Here's some good news if you're a smaller player: importers bringing in fewer than <strong>50 tonnes of CBAM goods per year</strong> are now exempt from reporting obligations. This is specifically aimed at lifting the administrative burden off SMEs and occasional traders.</p>
+                <p>The Omnibus amendments bring some welcome clarity and simplification for businesses dealing with CBAM. Here's what you need to know:</p>
 
-            <p>There's a catch though—this exemption doesn't apply to hydrogen or electricity. If you're importing those, you're still in scope regardless of volume.</p>
+                <h2 id="small-importers">1. Small Importers Get a Break</h2>
 
-            <h2>2. Authorised Declarant Status Gets Clearer</h2>
+                <p>Here's some good news if you're a smaller player: importers bringing in fewer than <strong>50 tonnes of CBAM goods per year</strong> are now exempt from reporting obligations. This is specifically aimed at lifting the administrative burden off SMEs and occasional traders.</p>
 
-            <p>If you expect to cross that 50-tonne threshold, you'll need to apply for authorised declarant status before you hit the limit. The good news? You can keep importing goods into the EU during 2026 as long as you apply before <strong>March 31, 2026</strong>.</p>
+                <p>There's a catch though—this exemption doesn't apply to hydrogen or electricity. If you're importing those, you're still in scope regardless of volume.</p>
 
-            <p>Another helpful change: authorised declarants can now delegate CBAM declarations to third parties who have an EORI registration. This gives you more flexibility in how you manage compliance.</p>
+                <h2 id="declarant-status">2. Authorised Declarant Status Gets Clearer</h2>
 
-            <h2>3. New Timelines for Reporting and Certificates</h2>
+                <p>If you expect to cross that 50-tonne threshold, you'll need to apply for authorised declarant status before you hit the limit. The good news? You can keep importing goods into the EU during 2026 as long as you apply before <strong>March 31, 2026</strong>.</p>
 
-            <p>Starting with the "Definitive Period" in 2026, here's how the calendar will work:</p>
+                <p>Another helpful change: authorised declarants can now delegate CBAM declarations to third parties who have an EORI registration. This gives you more flexibility in how you manage compliance.</p>
 
-            <ul>
-                <li>Annual CBAM declarations will be due on <strong>September 30</strong></li>
-                <li>Certificates get cancelled one month later</li>
-                <li>CBAM certificates will be priced based on <strong>quarterly average EU ETS auction prices</strong> (not weekly averages anymore—less volatility!)</li>
-                <li>From 2027 onwards, you'll need to purchase certificates quarterly, covering 50% of your imports each time</li>
-            </ul>
+                <h2 id="timelines">3. New Timelines for Reporting and Certificates</h2>
 
-            <h2>4. Emissions Calculations Just Got Simpler for Some</h2>
+                <p>Starting with the "Definitive Period" in 2026, here's how the calendar will work:</p>
 
-            <p>If you're a downstream aluminium or steel producer with thermal input capacity below <strong>20 MW</strong>, you're off the hook for measuring on-site emissions. Instead, you'll allocate emissions from your upstream precursors.</p>
+                <ul>
+                    <li>Annual CBAM declarations will be due on <strong>September 30</strong></li>
+                    <li>Certificates get cancelled one month later</li>
+                    <li>CBAM certificates will be priced based on <strong>quarterly average EU ETS auction prices</strong> (not weekly averages anymore—less volatility!)</li>
+                    <li>From 2027 onwards, you'll need to purchase certificates quarterly, covering 50% of your imports each time</li>
+                </ul>
 
-            <p>Verification requirements have also been streamlined. Now, only actual emissions data used in a declaration needs verification. If you're using default values, you can apply them without going through the verification process.</p>
+                <h2 id="emissions-calc">4. Emissions Calculations Just Got Simpler for Some</h2>
 
-            <h2>What Does This Mean for Your Business?</h2>
+                <p>If you're a downstream aluminium or steel producer with thermal input capacity below <strong>20 MW</strong>, you're off the hook for measuring on-site emissions. Instead, you'll allocate emissions from your upstream precursors.</p>
 
-            <p>These changes are designed to ease the burden on smaller importers while keeping CBAM's environmental teeth sharp. In fact, <strong>99% of emissions from covered sectors remain in scope</strong>—so the climate ambition hasn't been watered down.</p>
+                <p>Verification requirements have also been streamlined. Now, only actual emissions data used in a declaration needs verification. If you're using default values, you can apply them without going through the verification process.</p>
 
-            <p>But if you're a larger importer, these changes actually highlight how urgent it is to get your systems ready. You need to be prepared for:</p>
+                <h2 id="business-impact">What Does This Mean for Your Business?</h2>
 
-            <ul>
-                <li>Data collection from suppliers</li>
-                <li>Verification processes</li>
-                <li>Authorised declarant applications</li>
-            </ul>
+                <p>These changes are designed to ease the burden on smaller importers while keeping CBAM's environmental teeth sharp. In fact, <strong>99% of emissions from covered sectors remain in scope</strong>—so the climate ambition hasn't been watered down.</p>
 
-            <p>Here's what you should do right now:</p>
+                <p>But if you're a larger importer, these changes actually highlight how urgent it is to get your systems ready. You need to be prepared for:</p>
 
-            <ul>
-                <li><strong>Check if you qualify</strong> for the 50-tonne exemption</li>
-                <li><strong>Apply early</strong> for authorised declarant status if you're likely to exceed thresholds</li>
-                <li><strong>Set up processes</strong> to collect verified emissions data from your suppliers</li>
-                <li><strong>Prepare for quarterly certificate purchases</strong> starting in 2027</li>
-            </ul>
+                <ul>
+                    <li>Data collection from suppliers</li>
+                    <li>Verification processes</li>
+                    <li>Authorised declarant applications</li>
+                </ul>
 
-            <h2>The Bottom Line</h2>
+                <p>Here's what you should do right now:</p>
 
-            <p>CBAM remains one of the most significant regulatory shifts in global trade. The Omnibus update fine-tunes the system rather than fundamentally changing it. For importers, the message is crystal clear: simplify where you can, but get ready for more structured and verified reporting.</p>
+                <ul>
+                    <li><strong>Check if you qualify</strong> for the 50-tonne exemption</li>
+                    <li><strong>Apply early</strong> for authorised declarant status if you're likely to exceed thresholds</li>
+                    <li><strong>Set up processes</strong> to collect verified emissions data from your suppliers</li>
+                    <li><strong>Prepare for quarterly certificate purchases</strong> starting in 2027</li>
+                </ul>
 
-            <p>The rules are complex, the timelines are tight, and the costs of getting it wrong are high. But with the right preparation and tools, CBAM compliance doesn't have to be overwhelming.</p>
+                <h2 id="bottom-line">The Bottom Line</h2>
 
-            <p>At EnCarbonSys, we help importers and traders cut through the complexity with accurate data and practical compliance tools. Whether you need help mapping your exposure, managing supplier data, or preparing credible CBAM declarations, we've got you covered.</p>
-        </div>
+                <p>CBAM remains one of the most significant regulatory shifts in global trade. The Omnibus update fine-tunes the system rather than fundamentally changing it. For importers, the message is crystal clear: simplify where you can, but get ready for more structured and verified reporting.</p>
 
-        <div class="resources-section">
-            <h2><i class="fas fa-book"></i> Official Resources & Citations</h2>
-            <ul>
-                <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
-                <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
-                <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2022/03/15/carbon-border-adjustment-mechanism-cbam-council-agrees-its-negotiating-mandate/" target="_blank">Council of the EU - CBAM Press Release</a></li>
-                <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (ETS) Information</a></li>
-                <li><a href="https://ec.europa.eu/info/strategy/priorities-2019-2024/european-green-deal_en" target="_blank">European Green Deal Overview</a></li>
-            </ul>
-        </div>
-    </article>
+                <p>The rules are complex, the timelines are tight, and the costs of getting it wrong are high. But with the right preparation and tools, CBAM compliance doesn't have to be overwhelming.</p>
+
+                <div class="cta-section">
+                    <h2>Need Help with CBAM Compliance?</h2>
+                    <p>EnCarbonSys provides comprehensive CBAM compliance solutions. <a href="/pricing.html" style="color: #2DF56D; border-bottom: 2px solid #2DF56D;">View our affordable pricing plans</a>.</p>
+                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Get Expert Guidance</a>
+                </div>
+            </div>
+
+            <div class="resources-section">
+                <h2><i class="fas fa-book"></i> Official Resources & Citations</h2>
+                <ul>
+                    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
+                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                    <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2022/03/15/carbon-border-adjustment-mechanism-cbam-council-agrees-its-negotiating-mandate/" target="_blank">Council of the EU - CBAM Press Release</a></li>
+                    <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (ETS) Information</a></li>
+                    <li><a href="https://ec.europa.eu/info/strategy/priorities-2019-2024/european-green-deal_en" target="_blank">European Green Deal Overview</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <script>
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.article-content h2[id]');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
