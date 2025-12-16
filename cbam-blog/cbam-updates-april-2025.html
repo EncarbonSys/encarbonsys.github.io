@@ -1,275 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBAM Updates: What's New in April 2025? - EnCarbonSys</title>
+    <meta name="description" content="CBAM keeps evolving in 2025. Learn about new reporting thresholds, EU precursor exemptions, and what these changes mean for your business.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/navbar.css">
     <style>
-        :root{
-            --primary-green:#1B7F3D;
-            --primary-emerald:#059669;
-            --primary-teal:#0D9488;
-            --accent-green:#10B981;
-            --bg-light-mint:#F0FDF4;
-            --bg-light-grey:#F8FAFC;
-            --bg-white:#FFFFFF;
-            --text-dark:#1F2937;
-            --text-medium:#4B5563;
-            --text-light:#6B7280;
-            --border-light:#D1FAE5;
-            --shadow-green:rgba(27,127,61,0.12);
-            --shadow-light:rgba(0,0,0,0.05);
-            --spacing-xs:8px;
-            --spacing-sm:16px;
-            --spacing-md:24px;
-            --spacing-lg:32px;
-            --spacing-xl:48px;
-            --radius-sm:8px;
-            --radius-md:12px;
-            --radius-lg:16px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-            line-height:1.7;color:var(--text-dark);
-            background:linear-gradient(135deg,var(--bg-light-mint) 0%,var(--bg-light-grey) 100%);
-            min-height:100vh;
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        img{max-width:100%;height:auto;display:block}
-        a{text-decoration:none;color:var(--primary-green);transition:all .3s ease}
-        a:hover{color:var(--primary-teal)}
 
-        .header{
-            background:var(--bg-white);
-            box-shadow:0 2px 8px var(--shadow-light);
-            position:sticky;top:0;z-index:1000;
-            border-bottom:3px solid transparent;
-            border-image:linear-gradient(90deg,var(--primary-green),var(--primary-teal)) 1;
+        .article-container {
+            max-width: 900px;
+            margin: 100px auto 60px;
+            padding: 0 30px;
         }
-        .header-container{max-width:1400px;margin:0 auto;padding:var(--spacing-sm) var(--spacing-lg);display:flex;justify-content:space-between;align-items:center}
-        .logo{height:50px;width:auto}
-        .nav-menu{display:flex;gap:var(--spacing-lg);list-style:none}
-        .nav-menu a{font-weight:500;color:var(--text-medium);padding:var(--spacing-xs) var(--spacing-sm);border-radius:var(--radius-sm);transition:all .3s ease}
-        .nav-menu a:hover{color:var(--primary-green);background:var(--bg-light-mint)}
 
-        .article-container{max-width:900px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
-        .article-header{margin-bottom:var(--spacing-xl)}
-        .article-category{display:inline-block;background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:var(--spacing-md)}
-        .article-title{font-size:42px;font-weight:800;margin-bottom:var(--spacing-md);color:var(--text-dark);line-height:1.2}
-        .article-meta{display:flex;align-items:center;gap:var(--spacing-md);color:var(--text-light);font-size:14px;margin-bottom:var(--spacing-lg)}
-        .article-author{display:flex;align-items:center;gap:var(--spacing-sm)}
-        .author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
-        .featured-img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:var(--spacing-lg)}
+        .article-header {
+            margin-bottom: 40px;
+        }
 
-        .article-content{background:var(--bg-white);border-radius:var(--radius-lg);padding:var(--spacing-xl);box-shadow:0 4px 16px var(--shadow-light);margin-bottom:var(--spacing-xl)}
-        .article-content h2{font-size:28px;font-weight:700;margin:var(--spacing-lg) 0 var(--spacing-md);color:var(--text-dark)}
-        .article-content p{margin-bottom:var(--spacing-md);line-height:1.8;color:var(--text-medium)}
-        .article-content ul,.article-content ol{margin:var(--spacing-md) 0;padding-left:var(--spacing-lg)}
-        .article-content li{margin-bottom:var(--spacing-sm);line-height:1.8}
-        .article-content strong{color:var(--text-dark);font-weight:600}
+        .featured-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
 
-        .resources-section{background:var(--bg-light-mint);border-radius:var(--radius-lg);padding:var(--spacing-lg);margin-bottom:var(--spacing-xl);border-left:4px solid var(--primary-green)}
-        .resources-section h2{font-size:24px;font-weight:700;margin-bottom:var(--spacing-md);color:var(--text-dark)}
-        .resources-section ul{list-style:none;padding:0}
-        .resources-section li{margin-bottom:var(--spacing-sm);padding-left:var(--spacing-md);position:relative}
-        .resources-section li:before{content:"→";position:absolute;left:0;color:var(--primary-green);font-weight:bold}
-        .resources-section a{color:var(--primary-green);font-weight:600}
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
 
-        .back-link{display:inline-flex;align-items:center;gap:var(--spacing-xs);color:var(--primary-green);font-weight:600;margin-bottom:var(--spacing-lg)}
-        .back-link:hover{gap:var(--spacing-sm)}
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
 
-        .footer{background:linear-gradient(135deg,var(--primary-green),var(--primary-teal) 100%);color:white;margin-top:var(--spacing-xl)}
-        .footer-container{max-width:1400px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
-        .footer-content{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--spacing-xl);margin-bottom:var(--spacing-lg)}
-        .footer-section h3{margin-bottom:var(--spacing-md)}
-        .footer-links{list-style:none;padding:0;margin:0}
-        .footer-links li{margin-bottom:var(--spacing-sm)}
-        .footer-links a{opacity:.9;transition:all .3s ease;color:white}
-        .footer-links a:hover{opacity:1;padding-left:var(--spacing-xs)}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.2);padding:var(--spacing-md);text-align:center;opacity:.8;font-size:14px}
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        @media (max-width:768px){
-            .article-title{font-size:32px}
-            .article-content h2{font-size:24px}
-            .footer-content{grid-template-columns:1fr}
-            .featured-img{height:250px}
+        .article-content {
+            font-size: 18px;
+            color: #2d2d2d;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 50px 0 25px;
+            line-height: 1.3;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 25px 0;
+            padding-left: 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-content strong {
+            color: #0a0a0a;
+            font-weight: 600;
+        }
+
+        .resources-section {
+            background: #f0fdf4;
+            border: 2px solid #2DF56D;
+            border-radius: 12px;
+            padding: 35px;
+            margin: 50px 0;
+        }
+
+        .resources-section h2 {
+            color: #0a0a0a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resources-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resources-section li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .resources-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2DF56D;
+            font-weight: bold;
+        }
+
+        .resources-section a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .resources-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2DF56D;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                margin-top: 80px;
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="https://a.lov.ai/artifacts/userBqpSU1yZ4XqSHGqP.png" alt="EnCarbonSys Logo" class="logo" />
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <div id="navbar"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(r => r.text())
+            .then(html => document.getElementById('navbar').innerHTML = html);
+    </script>
+
+    <article class="article-container">
+        <a href="/cbam-blog/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Blog
+        </a>
+
+        <header class="article-header">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Calendar and business planning" class="featured-image">
+            
+            <h1>CBAM Updates: What's New in April 2025?</h1>
+            
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> April 7, 2025</span>
+                <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <p>CBAM keeps evolving, and 2025 has brought a wave of updates that are reshaping how manufacturers and importers handle carbon reporting. Some changes bring relief, others add complexity, but all of them matter if you're moving high-carbon goods into the EU.</p>
+
+            <p>Let's walk through what's new as of April 2025 and what it means for your operations.</p>
+
+            <h2>The Big Change: New Reporting Threshold</h2>
+
+            <p>The most significant update this year? The reporting threshold has shifted from <strong>EUR 150 per consignment</strong> to <strong>50 tonnes or 100 tCO2e per annum, per EORI</strong>.</p>
+
+            <p>Here's the thing though—this is based on default values, which tend to be pretty punitive. For steel and aluminium in particular, you'll likely hit the emissions threshold well before you reach 50 tonnes of actual product.</p>
+
+            <p>What does this mean for CBAM as a carbon mechanism? While the number of companies in scope has dropped dramatically (from an estimated 200,000 to just 20,000), <strong>99% of emissions are still captured</strong>. So the environmental impact remains intact, but the administrative burden has been concentrated on larger players.</p>
+
+            <h2>EU Precursors Are Out of Scope</h2>
+
+            <p>Here's some good news if you're working with EU-origin materials: there's now <strong>no requirement to prepare EU CBAM data for EU-based businesses</strong>. Since an ETS charge has already been applied to EU-origin precursors, you don't need to account for them again under CBAM.</p>
+
+            <p>The catch? It's still unclear how CBAM benchmarks will be applied for these products. Plus, if you're dealing with the UK CBAM, EU installations will still need to prepare product-level information for reporting.</p>
+
+            <p>For non-EU businesses that only purchase EU-origin materials, your CBAM emissions intensity will be considered zero. That's a significant simplification.</p>
+
+            <h2>Maximum CBAM Costs for 2026: Time to Get Real Data</h2>
+
+            <p>The maximum cost of CBAM applied to goods entering the EU next year will be based on:</p>
+
+            <ul>
+                <li>Default values at the CN Code level</li>
+                <li>The CBAM benchmark</li>
+                <li>Whether a carbon price is paid in the country of origin</li>
+            </ul>
+
+            <p>If you're still relying on default CBAM data, consider this your wake-up call. Default values are defined by the average intensity of the <strong>10 worst-emitting countries</strong> producing these products (where data is available). That means they're likely to be highly punitive.</p>
+
+            <p>At a certain volume, it makes far more financial sense to invest in getting actual data rather than paying the premium that comes with defaults.</p>
+
+            <h2>Simpler Emissions Calculations for Downstream Processors</h2>
+
+            <p>Downstream processing emissions of aluminium and steel products are now excluded from EU CBAM scope. The threshold for what counts as "downstream processing" isn't crystal clear yet, but here's a good rule of thumb: if your operations wouldn't be captured by the EU ETS, you're likely out of scope for calculating your own emissions contribution.</p>
+
+            <p>What does this mean practically? Many manufacturers will now have a simpler carbon accounting exercise. You'll only need to allocate precursor emissions to finished goods and can effectively ignore your operational emissions.</p>
+
+            <p>It's still unclear whether this allocation exercise will require verification, but it's safer to assume it will.</p>
+
+            <h2>CBAM Costs Will Vary: Two Key Variables</h2>
+
+            <p>Your final CBAM cost will be determined by two main factors:</p>
+
+            <h2>1. EUA Price</h2>
+
+            <p>The European Union Allowance (EUA) is a tradable permit under the EU Emissions Trading System that allows the holder to emit one metric ton of CO₂ or its equivalent in other greenhouse gases.</p>
+
+            <p>The EUA price reflects the market cost of emitting carbon in the EU. CBAM Certificates will be priced based on EUA prices on a quarterly basis for 2026. The good news? This can be hedged via EUA hedges, so companies that want to manage risk can do so.</p>
+
+            <h2>2. Emissions Intensity</h2>
+
+            <p>This is where it gets tricky. The emissions intensity figure you'll use to calculate CBAM cost for 2026 imports is the <strong>2026 calendar year intensity from the installation</strong>—which you'll only learn in 2027 when their accounting is complete.</p>
+
+            <p>Plus, in early 2027, this figure will need to be verified. So while you might have 2025 figures to work with, you're heavily reliant on trusting that:</p>
+
+            <ul>
+                <li>The installation did their calculation correctly</li>
+                <li>The calculation will pass verification without issues</li>
+            </ul>
+
+            <h2>How to Calculate Actual CBAM Cost Exposure in Advance</h2>
+
+            <p>While businesses can purchase certificates from <strong>February 1, 2027</strong>, you may not know your actual certificate exposure until Q2 at the earliest—once you receive verified emissions data from suppliers.</p>
+
+            <p>This uncertainty is understandably a concern for importers. To reduce risk, we suggest partnering with experts who can help with high-quality carbon forecasting for installations.</p>
+
+            <h2>First Annual Declaration Deadline Pushed Back</h2>
+
+            <p>Here's some breathing room: the deadline for the first annual CBAM declaration has been pushed back to <strong>August 31, 2027</strong>.</p>
+
+            <p>This means that for many companies, reporting will take a back seat to emissions data collection and EUA hedging considerations during 2026.</p>
+
+            <p>Before you can submit that declaration though, you'll need to register as a CBAM Authorised Declarant.</p>
+
+            <h2>What You Should Do Now</h2>
+
+            <p>With all these changes, here's your action plan:</p>
+
+            <ul>
+                <li><strong>Assess your exposure</strong> under the new 50-tonne/100 tCO2e threshold</li>
+                <li><strong>Start collecting actual emissions data</strong> from suppliers to avoid punitive default values</li>
+                <li><strong>Consider EUA hedging strategies</strong> to manage cost volatility</li>
+                <li><strong>Register as an Authorised Declarant</strong> if you haven't already</li>
+                <li><strong>Build relationships with suppliers</strong> who can provide verified emissions data</li>
+            </ul>
+
+            <p>CBAM is complex, but it doesn't have to be overwhelming. At EnCarbonSys, we help businesses navigate these changes with practical tools and expert guidance.</p>
         </div>
-    </header>
 
-    <main class="article-container">
-        <a href="index.html" class="back-link">← Back to Blog</a>
-
-        <article>
-            <header class="article-header">
-                <span class="article-category">CBAM Updates</span>
-                <h1 class="article-title">CBAM Updates: What's New in April 2025?</h1>
-                <div class="article-meta">
-                    <div class="article-author">
-                        <div class="author-avatar"></div>
-                        <span>EnCarbonSys Team</span>
-                    </div>
-                    <span>•</span>
-                    <span>April 7, 2025</span>
-                    <span>•</span>
-                    <span>6 min read</span>
-                </div>
-            </header>
-
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Calendar and business planning" class="featured-img" />
-
-            <div class="article-content">
-                <p>CBAM keeps evolving, and 2025 has brought a wave of updates that are reshaping how manufacturers and importers handle carbon reporting. Some changes bring relief, others add complexity, but all of them matter if you're moving high-carbon goods into the EU.</p>
-
-                <p>Let's walk through what's new as of April 2025 and what it means for your operations.</p>
-
-                <h2>The Big Change: New Reporting Threshold</h2>
-
-                <p>The most significant update this year? The reporting threshold has shifted from <strong>EUR 150 per consignment</strong> to <strong>50 tonnes or 100 tCO2e per annum, per EORI</strong>.</p>
-
-                <p>Here's the thing though—this is based on default values, which tend to be pretty punitive. For steel and aluminium in particular, you'll likely hit the emissions threshold well before you reach 50 tonnes of actual product.</p>
-
-                <p>What does this mean for CBAM as a carbon mechanism? While the number of companies in scope has dropped dramatically (from an estimated 200,000 to just 20,000), <strong>99% of emissions are still captured</strong>. So the environmental impact remains intact, but the administrative burden has been concentrated on larger players.</p>
-
-                <h2>EU Precursors Are Out of Scope</h2>
-
-                <p>Here's some good news if you're working with EU-origin materials: there's now <strong>no requirement to prepare EU CBAM data for EU-based businesses</strong>. Since an ETS charge has already been applied to EU-origin precursors, you don't need to account for them again under CBAM.</p>
-
-                <p>The catch? It's still unclear how CBAM benchmarks will be applied for these products. Plus, if you're dealing with the UK CBAM, EU installations will still need to prepare product-level information for reporting.</p>
-
-                <p>For non-EU businesses that only purchase EU-origin materials, your CBAM emissions intensity will be considered zero. That's a significant simplification.</p>
-
-                <h2>Maximum CBAM Costs for 2026: Time to Get Real Data</h2>
-
-                <p>The maximum cost of CBAM applied to goods entering the EU next year will be based on:</p>
-
-                <ul>
-                    <li>Default values at the CN Code level</li>
-                    <li>The CBAM benchmark</li>
-                    <li>Whether a carbon price is paid in the country of origin</li>
-                </ul>
-
-                <p>If you're still relying on default CBAM data, consider this your wake-up call. Default values are defined by the average intensity of the <strong>10 worst-emitting countries</strong> producing these products (where data is available). That means they're likely to be highly punitive.</p>
-
-                <p>At a certain volume, it makes far more financial sense to invest in getting actual data rather than paying the premium that comes with defaults.</p>
-
-                <h2>Simpler Emissions Calculations for Downstream Processors</h2>
-
-                <p>Downstream processing emissions of aluminium and steel products are now excluded from EU CBAM scope. The threshold for what counts as "downstream processing" isn't crystal clear yet, but here's a good rule of thumb: if your operations wouldn't be captured by the EU ETS, you're likely out of scope for calculating your own emissions contribution.</p>
-
-                <p>What does this mean practically? Many manufacturers will now have a simpler carbon accounting exercise. You'll only need to allocate precursor emissions to finished goods and can effectively ignore your operational emissions.</p>
-
-                <p>It's still unclear whether this allocation exercise will require verification, but it's safer to assume it will.</p>
-
-                <h2>CBAM Costs Will Vary: Two Key Variables</h2>
-
-                <p>Your final CBAM cost will be determined by two main factors:</p>
-
-                <h2>1. EUA Price</h2>
-
-                <p>The European Union Allowance (EUA) is a tradable permit under the EU Emissions Trading System that allows the holder to emit one metric ton of CO₂ or its equivalent in other greenhouse gases.</p>
-
-                <p>The EUA price reflects the market cost of emitting carbon in the EU. CBAM Certificates will be priced based on EUA prices on a quarterly basis for 2026. The good news? This can be hedged via EUA hedges, so companies that want to manage risk can do so.</p>
-
-                <h2>2. Emissions Intensity</h2>
-
-                <p>This is where it gets tricky. The emissions intensity figure you'll use to calculate CBAM cost for 2026 imports is the <strong>2026 calendar year intensity from the installation</strong>—which you'll only learn in 2027 when their accounting is complete.</p>
-
-                <p>Plus, in early 2027, this figure will need to be verified. So while you might have 2025 figures to work with, you're heavily reliant on trusting that:</p>
-
-                <ul>
-                    <li>The installation did their calculation correctly</li>
-                    <li>The calculation will pass verification without issues</li>
-                </ul>
-
-                <h2>How to Calculate Actual CBAM Cost Exposure in Advance</h2>
-
-                <p>While businesses can purchase certificates from <strong>February 1, 2027</strong>, you may not know your actual certificate exposure until Q2 at the earliest—once you receive verified emissions data from suppliers.</p>
-
-                <p>This uncertainty is understandably a concern for importers. To reduce risk, we suggest partnering with experts who can help with high-quality carbon forecasting for installations.</p>
-
-                <h2>First Annual Declaration Deadline Pushed Back</h2>
-
-                <p>Here's some breathing room: the deadline for the first annual CBAM declaration has been pushed back to <strong>August 31, 2027</strong>.</p>
-
-                <p>This means that for many companies, reporting will take a back seat to emissions data collection and EUA hedging considerations during 2026.</p>
-
-                <p>Before you can submit that declaration though, you'll need to register as a CBAM Authorised Declarant.</p>
-
-                <h2>What You Should Do Now</h2>
-
-                <p>With all these changes, here's your action plan:</p>
-
-                <ul>
-                    <li><strong>Assess your exposure</strong> under the new 50-tonne/100 tCO2e threshold</li>
-                    <li><strong>Start collecting actual emissions data</strong> from suppliers to avoid punitive default values</li>
-                    <li><strong>Consider EUA hedging strategies</strong> to manage cost volatility</li>
-                    <li><strong>Register as an Authorised Declarant</strong> if you haven't already</li>
-                    <li><strong>Build relationships with suppliers</strong> who can provide verified emissions data</li>
-                </ul>
-
-                <p>CBAM is complex, but it doesn't have to be overwhelming. At EnCarbonSys, we help businesses navigate these changes with practical tools and expert guidance.</p>
-
-                <p><em>Need help with CBAM? <a href="../index.html#contact">Contact us today</a> to see how we can support your compliance journey.</em></p>
-            </div>
-
-            <div class="resources-section">
-                <h2>📚 Official Resources & Citations</h2>
-                <ul>
-                    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
-                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
-                    <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (ETS) - Official Information</a></li>
-                    <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2023/1773/oj" target="_blank">Commission Implementing Regulation (EU) 2023/1773</a></li>
-                    <li><a href="https://www.consilium.europa.eu/en/policies/green-deal/fit-for-55-the-eu-plan-for-a-green-transition/" target="_blank">Fit for 55 Package - Council of the EU</a></li>
-                    <li><a href="https://ghgprotocol.org/" target="_blank">GHG Protocol - Carbon Accounting Standards</a></li>
-                </ul>
-            </div>
-        </article>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="index.html">Blog</a></li>
-                        <li><a href="../index.html#about">About Us</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>📧 info@encarbonsys.com<br/>📞 +1 (555) 123-4567</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>About EnCarbonSys</h3>
-                    <p>We help organizations navigate carbon compliance and emissions reporting with modern, reliable tools and expert guidance.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 EnCarbonSys. All rights reserved.</p>
-            </div>
+        <div class="resources-section">
+            <h2><i class="fas fa-book"></i> Official Resources & Citations</h2>
+            <ul>
+                <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
+                <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (ETS) - Official Information</a></li>
+                <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2023/1773/oj" target="_blank">Commission Implementing Regulation (EU) 2023/1773</a></li>
+                <li><a href="https://www.consilium.europa.eu/en/policies/green-deal/fit-for-55-the-eu-plan-for-a-green-transition/" target="_blank">Fit for 55 Package - Council of the EU</a></li>
+                <li><a href="https://ghgprotocol.org/" target="_blank">GHG Protocol - Carbon Accounting Standards</a></li>
+            </ul>
         </div>
-    </footer>
+    </article>
 </body>
 </html>
