@@ -111,13 +111,13 @@
 .nav-cta, .nav-cta1 {
     background: linear-gradient(135deg, var(--cosmic-green) 0%, var(--cosmic-accent) 100%);
     color: #000000;
-    padding: 0.8rem 2.8rem;
+    padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 12px;
     font-weight: 1000;
     text-decoration: none;
     transition: all 0.4s ease;
-    font-size: 0.99rem;
+    font-size: 0.89rem;
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
     text-shadow: none;
     position: relative;
