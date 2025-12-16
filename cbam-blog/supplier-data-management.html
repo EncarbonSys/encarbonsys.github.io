@@ -1,289 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turning Supplier Data Chaos into Carbon Clarity - EnCarbonSys</title>
+    <meta name="description" content="Learn how centralized CBAM supplier catalogues are transforming carbon data management from chaos to clarity for importers and producers.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/navbar.css">
     <style>
-        :root{
-            --primary-green:#1B7F3D;
-            --primary-emerald:#059669;
-            --primary-teal:#0D9488;
-            --accent-green:#10B981;
-            --bg-light-mint:#F0FDF4;
-            --bg-light-grey:#F8FAFC;
-            --bg-white:#FFFFFF;
-            --text-dark:#1F2937;
-            --text-medium:#4B5563;
-            --text-light:#6B7280;
-            --border-light:#D1FAE5;
-            --shadow-green:rgba(27,127,61,0.12);
-            --shadow-light:rgba(0,0,0,0.05);
-            --spacing-xs:8px;
-            --spacing-sm:16px;
-            --spacing-md:24px;
-            --spacing-lg:32px;
-            --spacing-xl:48px;
-            --radius-sm:8px;
-            --radius-md:12px;
-            --radius-lg:16px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-            line-height:1.7;color:var(--text-dark);
-            background:linear-gradient(135deg,var(--bg-light-mint) 0%,var(--bg-light-grey) 100%);
-            min-height:100vh;
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        img{max-width:100%;height:auto;display:block}
-        a{text-decoration:none;color:var(--primary-green);transition:all .3s ease}
-        a:hover{color:var(--primary-teal)}
 
-        .header{
-            background:var(--bg-white);
-            box-shadow:0 2px 8px var(--shadow-light);
-            position:sticky;top:0;z-index:1000;
-            border-bottom:3px solid transparent;
-            border-image:linear-gradient(90deg,var(--primary-green),var(--primary-teal)) 1;
+        .article-container {
+            max-width: 900px;
+            margin: 100px auto 60px;
+            padding: 0 30px;
         }
-        .header-container{max-width:1400px;margin:0 auto;padding:var(--spacing-sm) var(--spacing-lg);display:flex;justify-content:space-between;align-items:center}
-        .logo{height:50px;width:auto}
-        .nav-menu{display:flex;gap:var(--spacing-lg);list-style:none}
-        .nav-menu a{font-weight:500;color:var(--text-medium);padding:var(--spacing-xs) var(--spacing-sm);border-radius:var(--radius-sm);transition:all .3s ease}
-        .nav-menu a:hover{color:var(--primary-green);background:var(--bg-light-mint)}
 
-        .article-container{max-width:900px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
-        .article-header{margin-bottom:var(--spacing-xl)}
-        .article-category{display:inline-block;background:linear-gradient(135deg,var(--primary-green),var(--primary-emerald));color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:var(--spacing-md)}
-        .article-title{font-size:42px;font-weight:800;margin-bottom:var(--spacing-md);color:var(--text-dark);line-height:1.2}
-        .article-meta{display:flex;align-items:center;gap:var(--spacing-md);color:var(--text-light);font-size:14px;margin-bottom:var(--spacing-lg)}
-        .article-author{display:flex;align-items:center;gap:var(--spacing-sm)}
-        .author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
-        .featured-img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:var(--spacing-lg)}
+        .article-header {
+            margin-bottom: 40px;
+        }
 
-        .article-content{background:var(--bg-white);border-radius:var(--radius-lg);padding:var(--spacing-xl);box-shadow:0 4px 16px var(--shadow-light);margin-bottom:var(--spacing-xl)}
-        .article-content h2{font-size:28px;font-weight:700;margin:var(--spacing-lg) 0 var(--spacing-md);color:var(--text-dark)}
-        .article-content p{margin-bottom:var(--spacing-md);line-height:1.8;color:var(--text-medium)}
-        .article-content ul,.article-content ol{margin:var(--spacing-md) 0;padding-left:var(--spacing-lg)}
-        .article-content li{margin-bottom:var(--spacing-sm);line-height:1.8}
-        .article-content strong{color:var(--text-dark);font-weight:600}
+        .featured-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
 
-        .resources-section{background:var(--bg-light-mint);border-radius:var(--radius-lg);padding:var(--spacing-lg);margin-bottom:var(--spacing-xl);border-left:4px solid var(--primary-green)}
-        .resources-section h2{font-size:24px;font-weight:700;margin-bottom:var(--spacing-md);color:var(--text-dark)}
-        .resources-section ul{list-style:none;padding:0}
-        .resources-section li{margin-bottom:var(--spacing-sm);padding-left:var(--spacing-md);position:relative}
-        .resources-section li:before{content:"→";position:absolute;left:0;color:var(--primary-green);font-weight:bold}
-        .resources-section a{color:var(--primary-green);font-weight:600}
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
 
-        .back-link{display:inline-flex;align-items:center;gap:var(--spacing-xs);color:var(--primary-green);font-weight:600;margin-bottom:var(--spacing-lg)}
-        .back-link:hover{gap:var(--spacing-sm)}
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
 
-        .footer{background:linear-gradient(135deg,var(--primary-green),var(--primary-teal) 100%);color:white;margin-top:var(--spacing-xl)}
-        .footer-container{max-width:1400px;margin:0 auto;padding:var(--spacing-xl) var(--spacing-lg)}
-        .footer-content{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--spacing-xl);margin-bottom:var(--spacing-lg)}
-        .footer-section h3{margin-bottom:var(--spacing-md)}
-        .footer-links{list-style:none;padding:0;margin:0}
-        .footer-links li{margin-bottom:var(--spacing-sm)}
-        .footer-links a{opacity:.9;transition:all .3s ease;color:white}
-        .footer-links a:hover{opacity:1;padding-left:var(--spacing-xs)}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.2);padding:var(--spacing-md);text-align:center;opacity:.8;font-size:14px}
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        @media (max-width:768px){
-            .article-title{font-size:32px}
-            .article-content h2{font-size:24px}
-            .footer-content{grid-template-columns:1fr}
-            .featured-img{height:250px}
+        .article-content {
+            font-size: 18px;
+            color: #2d2d2d;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 50px 0 25px;
+            line-height: 1.3;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 25px 0;
+            padding-left: 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-content strong {
+            color: #0a0a0a;
+            font-weight: 600;
+        }
+
+        .resources-section {
+            background: #f0fdf4;
+            border: 2px solid #2DF56D;
+            border-radius: 12px;
+            padding: 35px;
+            margin: 50px 0;
+        }
+
+        .resources-section h2 {
+            color: #0a0a0a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resources-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resources-section li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .resources-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2DF56D;
+            font-weight: bold;
+        }
+
+        .resources-section a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .resources-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2DF56D;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                margin-top: 80px;
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="https://a.lov.ai/artifacts/userBqpSU1yZ4XqSHGqP.png" alt="EnCarbonSys Logo" class="logo" />
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <div id="navbar"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(r => r.text())
+            .then(html => document.getElementById('navbar').innerHTML = html);
+    </script>
+
+    <article class="article-container">
+        <a href="/cbam-blog/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Blog
+        </a>
+
+        <header class="article-header">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Data analytics and supply chain management" class="featured-image">
+            
+            <h1>Turning Supplier Data Chaos into Carbon Clarity</h1>
+            
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> November 3, 2025</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <p>Carbon is now a contract variable. Every 0.1 tCO₂/t can significantly move per-tonne costs, and starting January 1, 2026, carbon cost exposure will begin shaping every deal under the EU CBAM.</p>
+
+            <p>Yet for most importers and producers, the challenge isn't understanding the regulation—it's wrangling the data.</p>
+
+            <h2>The Supplier Data Problem</h2>
+
+            <p>CBAM compliance has created a perfect storm of inefficiency. Every importer is contacting the same suppliers individually. Every supplier is drowning in repetitive data requests. The result? A tangle of duplicate requests, slow responses, and inconsistent data quality.</p>
+
+            <p>Forecasting your exposure or benchmarking against EU intensity benchmarks takes months instead of days, and even then, you're left with gaps in confidence. The outcome is mispriced deals, reliance on default values, and avoidable margin risk.</p>
+
+            <h2>There's a Better Way</h2>
+
+            <p>What if instead of every company chasing suppliers separately, there was shared infrastructure for installation-level CBAM data? A central place where installation operators and buyers could manage, validate, and exchange supplier emissions data?</p>
+
+            <p>That's exactly what modern CBAM supplier catalogues are designed to do—replace manual outreach with a streamlined, centralized workflow.</p>
+
+            <h2>How a CBAM Supplier Catalogue Works</h2>
+
+            <p>A well-designed supplier catalogue provides:</p>
+
+            <ul>
+                <li><strong>Public directory</strong> for steel and aluminium installations with searchable entity names and CN codes</li>
+                <li><strong>Request-to-share workflow</strong>: logged-in users can request installation data, and producers approve or decline</li>
+                <li><strong>Risk ratings on request</strong>: indicative carbon-intensity benchmarking without full disclosure</li>
+                <li><strong>Pre-filled installation profiles</strong> to reduce supplier workload</li>
+                <li><strong>Benchmarking views</strong> comparing intensity and implied certificate costs indexed to the EUA price</li>
+                <li><strong>Validated intensities</strong> for paying users with emissions data supplied directly by producers</li>
+            </ul>
+
+            <p>The best catalogues are built on thousands of steel and aluminium intensity datapoints, providing coverage across the world's largest producers.</p>
+
+            <h2>Why This Matters (and Why Now)</h2>
+
+            <p>From January 2026, CBAM costs begin accruing. Every tonne imported without verifiable data will default to the EU benchmark, increasing cost exposure and reducing competitiveness.</p>
+
+            <p>Over the past few years, leading platforms have supported thousands of declarations representing millions of tonnes of goods reported into the EU. That experience has revealed one fundamental truth: <strong>you can't fix supplier data one company at a time</strong>. It requires shared infrastructure.</p>
+
+            <h2>Built for Both Sides of the Trade</h2>
+
+            <p>A good supplier catalogue serves both importers and producers:</p>
+
+            <h2>For Importers and Traders</h2>
+
+            <ul>
+                <li>Forecast exposure and cut supplier engagement from months to days</li>
+                <li>Move to contract-ready data you can actually trade on</li>
+                <li>Get instant cost insights across suppliers and commodities, aligned to the latest EUA price</li>
+                <li>Manage all CBAM declarations in one place, from data collection to verification support</li>
+            </ul>
+
+            <h2>For Producers and Manufacturers</h2>
+
+            <ul>
+                <li>Upload once, reach many buyers</li>
+                <li>Prepare for verification faster</li>
+                <li>Benchmark performance against peers</li>
+                <li>Defend margin in tenders</li>
+                <li>Convert CBAM data to full Product Carbon Footprints (PCFs) in line with the GHG Protocol</li>
+            </ul>
+
+            <h2>From Compliance to Commercial Edge</h2>
+
+            <p>CBAM compliance is just the starting line. With standardized, verifiable installation data in one system, companies can unlock:</p>
+
+            <ul>
+                <li><strong>Exposure forecasting</strong> and scenario analysis</li>
+                <li><strong>Automated verification</strong> preparation</li>
+                <li><strong>Benchmarking and quoting</strong> capabilities</li>
+                <li><strong>Integration</strong> into full-stack carbon accounting across CBAM, PCF, and CCF modules</li>
+            </ul>
+
+            <p>This is how compliance becomes a commercial advantage—turning carbon from a cost line into a strategic variable you can price, hedge, and manage.</p>
+
+            <h2>The Data Challenge Is Real</h2>
+
+            <p>Leading carbon accounting platforms already support significant portions of steel, aluminium, and fertiliser imports by volume into the EU. This deep coverage isn't just about numbers—it's about proven technology that tracks billions of tCO₂e, generates millions of product carbon footprints, and covers hundreds of commodity products.</p>
+
+            <p>That network and expertise underpin the most credible datasets for CBAM reporting and benchmarking available today.</p>
+
+            <h2>What You Should Do Now</h2>
+
+            <p>If you're an importer or trader:</p>
+
+            <ul>
+                <li>Stop chasing suppliers individually—look for centralized data solutions</li>
+                <li>Start forecasting your 2026 exposure now, not in Q2 2027</li>
+                <li>Build relationships with suppliers who can provide verified data</li>
+                <li>Consider EUA hedging strategies to manage cost volatility</li>
+            </ul>
+
+            <p>If you're a producer or manufacturer:</p>
+
+            <ul>
+                <li>Get your emissions data verified and ready to share</li>
+                <li>Benchmark your performance against competitors</li>
+                <li>Use carbon data as a competitive advantage in tenders</li>
+                <li>Prepare for the shift from CBAM to full PCF reporting</li>
+            </ul>
+
+            <h2>The Bottom Line</h2>
+
+            <p>The supplier data problem isn't going away—but the solution is here. Centralized, verified, and accessible carbon data infrastructure is transforming CBAM from a compliance headache into a strategic opportunity.</p>
+
+            <p>At EnCarbonSys, we help businesses on both sides of the supply chain manage CBAM data efficiently. Whether you're an importer forecasting exposure or a producer defending margins, we've got the tools and expertise to help.</p>
         </div>
-    </header>
 
-    <main class="article-container">
-        <a href="index.html" class="back-link">← Back to Blog</a>
-
-        <article>
-            <header class="article-header">
-                <span class="article-category">Supply Chain Management</span>
-                <h1 class="article-title">Turning Supplier Data Chaos into Carbon Clarity</h1>
-                <div class="article-meta">
-                    <div class="article-author">
-                        <div class="author-avatar"></div>
-                        <span>EnCarbonSys Team</span>
-                    </div>
-                    <span>•</span>
-                    <span>November 3, 2025</span>
-                    <span>•</span>
-                    <span>7 min read</span>
-                </div>
-            </header>
-
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Data analytics and supply chain management" class="featured-img" />
-
-            <div class="article-content">
-                <p>Carbon is now a contract variable. Every 0.1 tCO₂/t can significantly move per-tonne costs, and starting January 1, 2026, carbon cost exposure will begin shaping every deal under the EU CBAM.</p>
-
-                <p>Yet for most importers and producers, the challenge isn't understanding the regulation—it's wrangling the data.</p>
-
-                <h2>The Supplier Data Problem</h2>
-
-                <p>CBAM compliance has created a perfect storm of inefficiency. Every importer is contacting the same suppliers individually. Every supplier is drowning in repetitive data requests. The result? A tangle of duplicate requests, slow responses, and inconsistent data quality.</p>
-
-                <p>Forecasting your exposure or benchmarking against EU intensity benchmarks takes months instead of days, and even then, you're left with gaps in confidence. The outcome is mispriced deals, reliance on default values, and avoidable margin risk.</p>
-
-                <h2>There's a Better Way</h2>
-
-                <p>What if instead of every company chasing suppliers separately, there was shared infrastructure for installation-level CBAM data? A central place where installation operators and buyers could manage, validate, and exchange supplier emissions data?</p>
-
-                <p>That's exactly what modern CBAM supplier catalogues are designed to do—replace manual outreach with a streamlined, centralized workflow.</p>
-
-                <h2>How a CBAM Supplier Catalogue Works</h2>
-
-                <p>A well-designed supplier catalogue provides:</p>
-
-                <ul>
-                    <li><strong>Public directory</strong> for steel and aluminium installations with searchable entity names and CN codes</li>
-                    <li><strong>Request-to-share workflow</strong>: logged-in users can request installation data, and producers approve or decline</li>
-                    <li><strong>Risk ratings on request</strong>: indicative carbon-intensity benchmarking without full disclosure</li>
-                    <li><strong>Pre-filled installation profiles</strong> to reduce supplier workload</li>
-                    <li><strong>Benchmarking views</strong> comparing intensity and implied certificate costs indexed to the EUA price</li>
-                    <li><strong>Validated intensities</strong> for paying users with emissions data supplied directly by producers</li>
-                </ul>
-
-                <p>The best catalogues are built on thousands of steel and aluminium intensity datapoints, providing coverage across the world's largest producers.</p>
-
-                <h2>Why This Matters (and Why Now)</h2>
-
-                <p>From January 2026, CBAM costs begin accruing. Every tonne imported without verifiable data will default to the EU benchmark, increasing cost exposure and reducing competitiveness.</p>
-
-                <p>Over the past few years, leading platforms have supported thousands of declarations representing millions of tonnes of goods reported into the EU. That experience has revealed one fundamental truth: <strong>you can't fix supplier data one company at a time</strong>. It requires shared infrastructure.</p>
-
-                <h2>Built for Both Sides of the Trade</h2>
-
-                <p>A good supplier catalogue serves both importers and producers:</p>
-
-                <h2>For Importers and Traders</h2>
-
-                <ul>
-                    <li>Forecast exposure and cut supplier engagement from months to days</li>
-                    <li>Move to contract-ready data you can actually trade on</li>
-                    <li>Get instant cost insights across suppliers and commodities, aligned to the latest EUA price</li>
-                    <li>Manage all CBAM declarations in one place, from data collection to verification support</li>
-                </ul>
-
-                <h2>For Producers and Manufacturers</h2>
-
-                <ul>
-                    <li>Upload once, reach many buyers</li>
-                    <li>Prepare for verification faster</li>
-                    <li>Benchmark performance against peers</li>
-                    <li>Defend margin in tenders</li>
-                    <li>Convert CBAM data to full Product Carbon Footprints (PCFs) in line with the GHG Protocol</li>
-                </ul>
-
-                <h2>From Compliance to Commercial Edge</h2>
-
-                <p>CBAM compliance is just the starting line. With standardized, verifiable installation data in one system, companies can unlock:</p>
-
-                <ul>
-                    <li><strong>Exposure forecasting</strong> and scenario analysis</li>
-                    <li><strong>Automated verification</strong> preparation</li>
-                    <li><strong>Benchmarking and quoting</strong> capabilities</li>
-                    <li><strong>Integration</strong> into full-stack carbon accounting across CBAM, PCF, and CCF modules</li>
-                </ul>
-
-                <p>This is how compliance becomes a commercial advantage—turning carbon from a cost line into a strategic variable you can price, hedge, and manage.</p>
-
-                <h2>The Data Challenge Is Real</h2>
-
-                <p>Leading carbon accounting platforms already support significant portions of steel, aluminium, and fertiliser imports by volume into the EU. This deep coverage isn't just about numbers—it's about proven technology that tracks billions of tCO₂e, generates millions of product carbon footprints, and covers hundreds of commodity products.</p>
-
-                <p>That network and expertise underpin the most credible datasets for CBAM reporting and benchmarking available today.</p>
-
-                <h2>What You Should Do Now</h2>
-
-                <p>If you're an importer or trader:</p>
-
-                <ul>
-                    <li>Stop chasing suppliers individually—look for centralized data solutions</li>
-                    <li>Start forecasting your 2026 exposure now, not in Q2 2027</li>
-                    <li>Build relationships with suppliers who can provide verified data</li>
-                    <li>Consider EUA hedging strategies to manage cost volatility</li>
-                </ul>
-
-                <p>If you're a producer or manufacturer:</p>
-
-                <ul>
-                    <li>Get your emissions data verified and ready to share</li>
-                    <li>Benchmark your performance against competitors</li>
-                    <li>Use carbon data as a competitive advantage in tenders</li>
-                    <li>Prepare for the shift from CBAM to full PCF reporting</li>
-                </ul>
-
-                <h2>The Bottom Line</h2>
-
-                <p>The supplier data problem isn't going away—but the solution is here. Centralized, verified, and accessible carbon data infrastructure is transforming CBAM from a compliance headache into a strategic opportunity.</p>
-
-                <p>At EnCarbonSys, we help businesses on both sides of the supply chain manage CBAM data efficiently. Whether you're an importer forecasting exposure or a producer defending margins, we've got the tools and expertise to help.</p>
-
-                <p><em>Ready to turn data chaos into clarity? <a href="../index.html#contact">Get in touch with our team</a> to see how we can help.</em></p>
-            </div>
-
-            <div class="resources-section">
-                <h2>📚 Official Resources & Citations</h2>
-                <ul>
-                    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
-                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
-                    <li><a href="https://ghgprotocol.org/" target="_blank">GHG Protocol - Product Carbon Footprint Standards</a></li>
-                    <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2023/1773/oj" target="_blank">Commission Implementing Regulation (EU) 2023/1773 - Default Values</a></li>
-                    <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU ETS - Carbon Pricing Information</a></li>
-                    <li><a href="https://www.iso.org/standard/71206.html" target="_blank">ISO 14064 - Greenhouse Gas Verification Standards</a></li>
-                </ul>
-            </div>
-        </article>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="index.html">Blog</a></li>
-                        <li><a href="../index.html#about">About Us</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>📧 info@encarbonsys.com<br/>📞 +1 (555) 123-4567</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>About EnCarbonSys</h3>
-                    <p>We help organizations navigate carbon compliance and emissions reporting with modern, reliable tools and expert guidance.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 EnCarbonSys. All rights reserved.</p>
-            </div>
+        <div class="resources-section">
+            <h2><i class="fas fa-book"></i> Official Resources & Citations</h2>
+            <ul>
+                <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
+                <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                <li><a href="https://ghgprotocol.org/" target="_blank">GHG Protocol - Product Carbon Footprint Standards</a></li>
+                <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2023/1773/oj" target="_blank">Commission Implementing Regulation (EU) 2023/1773 - Default Values</a></li>
+                <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU ETS - Carbon Pricing Information</a></li>
+                <li><a href="https://www.iso.org/standard/71206.html" target="_blank">ISO 14064 - Greenhouse Gas Verification Standards</a></li>
+            </ul>
         </div>
-    </footer>
+    </article>
 </body>
 </html>
