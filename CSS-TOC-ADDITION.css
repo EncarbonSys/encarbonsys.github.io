@@ -1,0 +1,136 @@
+/* Main Layout with Sidebar - ADD THIS TO ALL ARTICLES */
+.article-layout {
+    max-width: 1400px;
+    margin: 20px auto 60px;
+    padding: 0 30px;
+    display: flex;
+    gap: 40px;
+    position: relative;
+}
+
+/* Table of Contents Sidebar */
+.toc-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.toc-sticky {
+    position: sticky;
+    top: 100px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    border: 2px solid #e9ecef;
+}
+
+.toc-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0a0a0a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2DF56D;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 8px;
+}
+
+.toc-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.toc-list a:hover {
+    background: #2DF56D;
+    color: #0a0a0a;
+    transform: translateX(5px);
+}
+
+.toc-list a.active {
+    background: #2DF56D;
+    color: #0a0a0a;
+}
+
+.toc-list a i {
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+/* Update Article Container */
+.article-container {
+    flex: 1;
+    max-width: 900px;
+}
+
+/* Add scroll margin to h2 for smooth scrolling */
+.article-content h2 {
+    scroll-margin-top: 100px;
+}
+
+/* Fix CTA Button Text Visibility */
+.cta-section p {
+    color: #e0e0e0;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #2DF56D;
+    color: #0a0a0a;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(45, 245, 109, 0.3);
+}
+
+/* Mobile Responsive Updates */
+@media (max-width: 1024px) {
+    .article-layout {
+        flex-direction: column;
+    }
+
+    .toc-sidebar {
+        width: 100%;
+        order: -1;
+    }
+
+    .toc-sticky {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .toc-sidebar {
+        display: none;
+    }
+}
+
+/* ALSO UPDATE BREADCRUMB MAX-WIDTH */
+.breadcrumb {
+    max-width: 1400px; /* Changed from 900px */
+}
