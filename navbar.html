@@ -2,10 +2,10 @@
 <nav class="navbar">
   <div class="nav-container">
     <a href="/" class="logo" id="logoLink">
-      <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys logo2">EnCarbonSys
+      <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys logo">EnCarbonSys
     </a>
 
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -14,9 +14,10 @@
       <li><a href="/index.html#solution">Solution</a></li>
       <li><a href="/pricing.html">Pricing</a></li>
       <li><a href="/index.html#about">About</a></li>
-      <li><a href="/client _resource.html">Client Hub</a></li>
+      <li><a href="/cbam-blog/">Blog</a></li>
+      <li><a href="/client_resource.html">Client Hub</a></li>
       <li><a href="/october.html" class="nav-cta1">CBAM OFFER</a></li>
-    </div>
+    </ul>
   </div>
 </nav>
 
@@ -29,11 +30,36 @@
     if (menuBtn && navLinks) {
       menuBtn.addEventListener("click", () => {
         navLinks.classList.toggle("active");
+        
+        // Animate hamburger icon
+        const icon = menuBtn.querySelector("i");
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       });
 
       // Close menu when clicking a link
       navLinks.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => navLinks.classList.remove("active"));
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          const icon = menuBtn.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+          navLinks.classList.remove("active");
+          const icon = menuBtn.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       });
     }
 
@@ -44,11 +70,55 @@
         if (targetId.length > 1 && document.querySelector(targetId)) {
           e.preventDefault();
           document.querySelector(targetId).scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
+            block: "start"
           });
         }
       });
     });
+
+    // === Navbar scroll effect ===
+    let lastScroll = 0;
+    const navbar = document.querySelector(".navbar");
+    
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        navbar.style.padding = "0.3rem 0";
+        navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
+      } else {
+        navbar.style.padding = "0.5rem 0";
+        navbar.style.boxShadow = "none";
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // === Active link highlighting ===
+    const sections = document.querySelectorAll("section[id]");
+    const navLinksArray = document.querySelectorAll(".nav-links a");
+
+    function highlightNav() {
+      let scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinksArray.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${sectionId}` || 
+                link.getAttribute("href") === `/index.html#${sectionId}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", highlightNav);
   });
 </script>
-         
