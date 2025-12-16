@@ -60,6 +60,7 @@
         .article-meta{display:flex;align-items:center;gap:var(--spacing-md);color:var(--text-light);font-size:14px;margin-bottom:var(--spacing-lg)}
         .article-author{display:flex;align-items:center;gap:var(--spacing-sm)}
         .author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
+        .featured-img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:var(--spacing-lg)}
 
         .article-content{background:var(--bg-white);border-radius:var(--radius-lg);padding:var(--spacing-xl);box-shadow:0 4px 16px var(--shadow-light);margin-bottom:var(--spacing-xl)}
         .article-content h2{font-size:28px;font-weight:700;margin:var(--spacing-lg) 0 var(--spacing-md);color:var(--text-dark)}
@@ -67,6 +68,13 @@
         .article-content ul,.article-content ol{margin:var(--spacing-md) 0;padding-left:var(--spacing-lg)}
         .article-content li{margin-bottom:var(--spacing-sm);line-height:1.8}
         .article-content strong{color:var(--text-dark);font-weight:600}
+
+        .resources-section{background:var(--bg-light-mint);border-radius:var(--radius-lg);padding:var(--spacing-lg);margin-bottom:var(--spacing-xl);border-left:4px solid var(--primary-green)}
+        .resources-section h2{font-size:24px;font-weight:700;margin-bottom:var(--spacing-md);color:var(--text-dark)}
+        .resources-section ul{list-style:none;padding:0}
+        .resources-section li{margin-bottom:var(--spacing-sm);padding-left:var(--spacing-md);position:relative}
+        .resources-section li:before{content:"→";position:absolute;left:0;color:var(--primary-green);font-weight:bold}
+        .resources-section a{color:var(--primary-green);font-weight:600}
 
         .back-link{display:inline-flex;align-items:center;gap:var(--spacing-xs);color:var(--primary-green);font-weight:600;margin-bottom:var(--spacing-lg)}
         .back-link:hover{gap:var(--spacing-sm)}
@@ -85,6 +93,7 @@
             .article-title{font-size:32px}
             .article-content h2{font-size:24px}
             .footer-content{grid-template-columns:1fr}
+            .featured-img{height:250px}
         }
     </style>
 </head>
@@ -121,6 +130,8 @@
                     <span>8 min read</span>
                 </div>
             </header>
+
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Shipping containers at port" class="featured-img" />
 
             <div class="article-content">
                 <p>The EU's Carbon Border Adjustment Mechanism is entering a crucial new phase. Starting <strong>March 28, 2025</strong>, businesses importing regulated goods like aluminium, steel, iron, cement, fertilisers, electricity, and hydrogen must apply for Authorised CBAM Declarant status to continue operations seamlessly in the EU.</p>
@@ -235,6 +246,18 @@
                 <p>At EnCarbonSys, we help businesses navigate the entire CBAM compliance journey—from application preparation to ongoing reporting and verification support.</p>
 
                 <p><em>Need support with CBAM compliance? <a href="../index.html#contact">Talk to our team today</a> to ensure you're ready for January 2026.</em></p>
+            </div>
+
+            <div class="resources-section">
+                <h2>📚 Official Resources & Citations</h2>
+                <ul>
+                    <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2025/486/oj" target="_blank">Commission Implementing Regulation (EU) 2025/486 - Authorised Declarant Requirements</a></li>
+                    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
+                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                    <li><a href="https://ec.europa.eu/taxation_customs/dds2/eos/eori_home.jsp" target="_blank">EORI Number Registration System</a></li>
+                    <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU ETS - Carbon Pricing Information</a></li>
+                    <li><a href="https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-import-and-export-0/customs-procedures/economic-operators-registration-and-identification-number-eori_en" target="_blank">EORI Registration Guide</a></li>
+                </ul>
             </div>
         </article>
     </main>
