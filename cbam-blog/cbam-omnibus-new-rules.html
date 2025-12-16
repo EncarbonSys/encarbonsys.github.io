@@ -60,6 +60,7 @@
         .article-meta{display:flex;align-items:center;gap:var(--spacing-md);color:var(--text-light);font-size:14px;margin-bottom:var(--spacing-lg)}
         .article-author{display:flex;align-items:center;gap:var(--spacing-sm)}
         .author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary-green),var(--primary-teal))}
+        .featured-img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:var(--spacing-lg)}
 
         .article-content{background:var(--bg-white);border-radius:var(--radius-lg);padding:var(--spacing-xl);box-shadow:0 4px 16px var(--shadow-light);margin-bottom:var(--spacing-xl)}
         .article-content h2{font-size:28px;font-weight:700;margin:var(--spacing-lg) 0 var(--spacing-md);color:var(--text-dark)}
@@ -67,6 +68,13 @@
         .article-content ul,.article-content ol{margin:var(--spacing-md) 0;padding-left:var(--spacing-lg)}
         .article-content li{margin-bottom:var(--spacing-sm);line-height:1.8}
         .article-content strong{color:var(--text-dark);font-weight:600}
+
+        .resources-section{background:var(--bg-light-mint);border-radius:var(--radius-lg);padding:var(--spacing-lg);margin-bottom:var(--spacing-xl);border-left:4px solid var(--primary-green)}
+        .resources-section h2{font-size:24px;font-weight:700;margin-bottom:var(--spacing-md);color:var(--text-dark)}
+        .resources-section ul{list-style:none;padding:0}
+        .resources-section li{margin-bottom:var(--spacing-sm);padding-left:var(--spacing-md);position:relative}
+        .resources-section li:before{content:"→";position:absolute;left:0;color:var(--primary-green);font-weight:bold}
+        .resources-section a{color:var(--primary-green);font-weight:600}
 
         .back-link{display:inline-flex;align-items:center;gap:var(--spacing-xs);color:var(--primary-green);font-weight:600;margin-bottom:var(--spacing-lg)}
         .back-link:hover{gap:var(--spacing-sm)}
@@ -85,6 +93,7 @@
             .article-title{font-size:32px}
             .article-content h2{font-size:24px}
             .footer-content{grid-template-columns:1fr}
+            .featured-img{height:250px}
         }
     </style>
 </head>
@@ -121,6 +130,8 @@
                     <span>5 min read</span>
                 </div>
             </header>
+
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Business documents and EU regulations" class="featured-img" />
 
             <div class="article-content">
                 <p>The European Parliament just gave CBAM a makeover. They've approved what's being called the "Omnibus" package—a set of changes designed to make life easier for small importers while keeping the regulation's climate goals firmly intact.</p>
@@ -190,6 +201,17 @@
                 <p>At EnCarbonSys, we help importers and traders cut through the complexity with accurate data and practical compliance tools. Whether you need help mapping your exposure, managing supplier data, or preparing credible CBAM declarations, we've got you covered.</p>
 
                 <p><em>Need help navigating CBAM? <a href="../index.html#contact">Get in touch with our team</a> to learn how we can support your compliance journey.</em></p>
+            </div>
+
+            <div class="resources-section">
+                <h2>📚 Official Resources & Citations</h2>
+                <ul>
+                    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
+                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                    <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2022/03/15/carbon-border-adjustment-mechanism-cbam-council-agrees-its-negotiating-mandate/" target="_blank">Council of the EU - CBAM Press Release</a></li>
+                    <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (ETS) Information</a></li>
+                    <li><a href="https://ec.europa.eu/info/strategy/priorities-2019-2024/european-green-deal_en" target="_blank">European Green Deal Overview</a></li>
+                </ul>
             </div>
         </article>
     </main>
