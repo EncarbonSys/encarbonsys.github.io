@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSFR9S0QX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5KSFR9S0QX');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - CUSTOMIZE THESE -->
+    <title>Your Article Title Here (50-60 chars) | EnCarbonSys</title>
+    <meta name="description" content="Compelling 150-160 character description with primary keyword and CTA. Make it click-worthy!">
+    <meta name="keywords" content="primary keyword, secondary keyword, long-tail keyword, CBAM, related term">
+    <meta name="author" content="EnCarbonSys">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://encarbonsys.com/cbam-blog/your-article-slug.html">
+    
+    <!-- Open Graph / Facebook - CUSTOMIZE THESE -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://encarbonsys.com/cbam-blog/your-article-slug.html">
+    <meta property="og:title" content="Your Article Title for Social Media">
+    <meta property="og:description" content="Compelling social media description that makes people want to click and share.">
+    <meta property="og:image" content="https://your-featured-image-url.jpg">
+    <meta property="og:site_name" content="EnCarbonSys">
+    <meta property="article:published_time" content="2024-12-16T00:00:00Z">
+    <meta property="article:modified_time" content="2024-12-16T00:00:00Z">
+    <meta property="article:author" content="EnCarbonSys">
+    <meta property="article:section" content="Your Category">
+    <meta property="article:tag" content="Tag1">
+    <meta property="article:tag" content="Tag2">
+    
+    <!-- Twitter Card - CUSTOMIZE THESE -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://encarbonsys.com/cbam-blog/your-article-slug.html">
+    <meta name="twitter:title" content="Your Article Title for Twitter">
+    <meta name="twitter:description" content="Twitter-optimized description (max 200 chars).">
+    <meta name="twitter:image" content="https://your-featured-image-url.jpg">
+    
+    <!-- Schema.org JSON-LD - CUSTOMIZE THESE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Your Article Title",
+      "description": "Your article description for search engines.",
+      "image": "https://your-featured-image-url.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "EnCarbonSys",
+        "url": "https://encarbonsys.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "EnCarbonSys",
+        "url": "https://encarbonsys.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png"
+        }
+      },
+      "datePublished": "2024-12-16",
+      "dateModified": "2024-12-16",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://encarbonsys.com/cbam-blog/your-article-slug.html"
+      },
+      "articleSection": "Your Category",
+      "keywords": ["Keyword1", "Keyword2", "Keyword3"],
+      "wordCount": 2000
+    }
+    </script>
+
+    <!-- Breadcrumb Schema - UPDATE ARTICLE NAME -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://encarbonsys.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CBAM Blog",
+        "item": "https://encarbonsys.com/cbam-blog/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Your Article Title",
+        "item": "https://encarbonsys.com/cbam-blog/your-article-slug.html"
+      }]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/navbar.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 90px auto 0;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #2DF56D;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            margin: 0 8px;
+        }
+
+        .breadcrumb .current {
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 20px auto 60px;
+            padding: 0 30px;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0a0a0a;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-excerpt {
+            font-size: 20px;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Social Share Buttons */
+        .social-share {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .share-twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-linkedin {
+            background: #0077B5;
+            color: white;
+        }
+
+        .share-facebook {
+            background: #1877F2;
+            color: white;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #2a2a2a;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 40px 0 20px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin: 30px 0 15px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content a {
+            color: #2DF56D;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #2DF56D;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #2DF56D;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: #0a0a0a;
+        }
+
+        .stats-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #2DF56D;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2DF56D;
+            color: #0a0a0a;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(45, 245, 109, 0.3);
+        }
+
+        /* Related Articles Section */
+        .related-articles {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .related-articles h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #2DF56D;
+        }
+
+        .related-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 10px;
+        }
+
+        .related-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .related-card .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #2DF56D;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .breadcrumb {
+                margin-top: 70px;
+                font-size: 12px;
+            }
+
+            .article-header h1 {
+                font-size: 36px;
+            }
+
+            .article-content {
+                font-size: 16px;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+
+            .social-share {
+                flex-wrap: wrap;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Breadcrumb Navigation - UPDATE ARTICLE TITLE -->
+    <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <a href="/cbam-blog/">CBAM Blog</a>
+        <span>›</span>
+        <span class="current">Your Article Title</span>
+    </nav>
+
+    <div class="article-container">
+        <a href="/cbam-blog/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Blog
+        </a>
+
+        <article>
+            <div class="article-header">
+                <!-- UPDATE DATE, READ TIME, AND CATEGORY -->
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> December 16, 2024</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span><i class="fas fa-tag"></i> Your Category</span>
+                </div>
+                
+                <!-- UPDATE TITLE AND EXCERPT -->
+                <h1>Your Article Title Goes Here</h1>
+                <p class="article-excerpt">
+                    Your compelling article excerpt that summarizes the key points and entices readers to continue. Make it engaging and include your primary keyword naturally.
+                </p>
+
+                <!-- Social Share Buttons - UPDATE URL AND TITLE -->
+                <div class="social-share">
+                    <a href="https://twitter.com/intent/tweet?text=Your%20Article%20Title&url=https://encarbonsys.com/cbam-blog/your-article-slug.html" target="_blank" class="share-btn share-twitter">
+                        <i class="fab fa-twitter"></i> Share
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://encarbonsys.com/cbam-blog/your-article-slug.html" target="_blank" class="share-btn share-linkedin">
+                        <i class="fab fa-linkedin"></i> Share
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://encarbonsys.com/cbam-blog/your-article-slug.html" target="_blank" class="share-btn share-facebook">
+                        <i class="fab fa-facebook"></i> Share
+                    </a>
+                </div>
+            </div>
+
+            <!-- UPDATE FEATURED IMAGE AND ALT TEXT -->
+            <img src="https://your-featured-image-url.jpg" alt="Descriptive alt text with keyword" class="featured-image">
+
+            <div class="article-content">
+                <!-- YOUR ARTICLE CONTENT STARTS HERE -->
+                
+                <p>
+                    Your opening paragraph should hook the reader immediately. Include your primary keyword naturally in the first 100 words. Make it compelling and set the stage for what's to come.
+                </p>
+
+                <!-- Example: Stats Box -->
+                <div class="stats-box">
+                    <h3>Key Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-label">Your statistic description</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$100M</span>
+                            <span class="stat-label">Another statistic</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2026</span>
+                            <span class="stat-label">Important date</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Your First Main Section (H2)</h2>
+                <p>
+                    Content for your first section. Include <a href="/cbam-blog/related-article.html">internal links to related articles</a> naturally within the content. Also link to <a href="/pricing.html">relevant pages on your main site</a>.
+                </p>
+
+                <h3>Subsection (H3)</h3>
+                <ul>
+                    <li><strong>Point 1:</strong> Explanation with details</li>
+                    <li><strong>Point 2:</strong> More information</li>
+                    <li><strong>Point 3:</strong> Additional context</li>
+                </ul>
+
+                <!-- Example: Highlight Box -->
+                <div class="highlight-box">
+                    <h3><i class="fas fa-lightbulb"></i> Key Insight</h3>
+                    <p>Use highlight boxes to emphasize important points, tips, or insights that you want readers to remember.</p>
+                </div>
+
+                <h2>Your Second Main Section (H2)</h2>
+                <p>
+                    Continue with your content. Remember to:
+                </p>
+                <ol>
+                    <li>Keep paragraphs short (2-4 sentences)</li>
+                    <li>Use lists to break up text</li>
+                    <li>Include internal and external links</li>
+                    <li>Add images where relevant</li>
+                    <li>Use bold for emphasis</li>
+                </ol>
+
+                <h3>Another Subsection</h3>
+                <p>
+                    More detailed content here. Link to <a href="https://authoritative-external-source.com" target="_blank" rel="noopener noreferrer">authoritative external sources</a> to support your claims.
+                </p>
+
+                <!-- CTA Section - UPDATE AS NEEDED -->
+                <div class="cta-section">
+                    <h2>Need Help with CBAM Compliance?</h2>
+                    <p style="margin-bottom: 30px;">EnCarbonSys provides expert guidance and tools to simplify your CBAM compliance journey. Get started with our <a href="/pricing.html" style="color: #2DF56D; border-bottom: 2px solid #2DF56D;">affordable solutions</a>.</p>
+                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Schedule a Consultation</a>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>
+                    Wrap up your article with a strong conclusion that summarizes key points and includes a call-to-action. Reinforce your primary keyword one last time naturally.
+                </p>
+                <p>
+                    End with actionable advice or next steps for the reader.
+                </p>
+            </div>
+        </article>
+
+        <!-- Related Articles Section - UPDATE LINKS -->
+        <section class="related-articles">
+            <h2>Related Articles</h2>
+            <div class="related-grid">
+                <a href="/cbam-blog/related-article-1.html" class="related-card">
+                    <h3>Related Article Title 1</h3>
+                    <p>Brief description of the related article that entices readers to click.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="/cbam-blog/related-article-2.html" class="related-card">
+                    <h3>Related Article Title 2</h3>
+                    <p>Another related article description that provides value.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="/cbam-blog/related-article-3.html" class="related-card">
+                    <h3>Related Article Title 3</h3>
+                    <p>Third related article to keep readers engaged on your site.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
+
+<!-- 
+USAGE INSTRUCTIONS:
+1. Copy this template for each new article
+2. Search and replace "your-article-slug" with actual slug
+3. Update all meta tags (title, description, keywords)
+4. Update Open Graph and Twitter Card data
+5. Update Schema.org JSON-LD data
+6. Update breadcrumb navigation
+7. Update social share URLs
+8. Replace featured image and alt text
+9. Write your article content
+10. Update related articles section
+11. Test on mobile before publishing
+12. Run through SEO checklist
+13. Submit to Google Search Console after publishing
+-->
