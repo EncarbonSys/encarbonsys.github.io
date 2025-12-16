@@ -1764,6 +1764,224 @@
                 </div>
             </div>
         </section>
+
+   <!-- Latest Blog Articles Widget -->
+<!-- Add this section to your homepage where you want blog articles to appear -->
+
+<style>
+    .blog-widget {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 60px 30px;
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-radius: 20px;
+    }
+
+    .blog-widget-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .blog-widget-header h2 {
+        font-size: 42px;
+        font-weight: 800;
+        color: #0a0a0a;
+        margin-bottom: 15px;
+    }
+
+    .blog-widget-header p {
+        font-size: 18px;
+        color: #4a4a4a;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .blog-articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .blog-article-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-article-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .blog-article-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .blog-article-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-article-meta {
+        display: flex;
+        gap: 15px;
+        font-size: 13px;
+        color: #999;
+        margin-bottom: 12px;
+    }
+
+    .blog-article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .blog-article-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0a0a0a;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+
+    .blog-article-excerpt {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .blog-read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #2DF56D;
+        font-weight: 600;
+        font-size: 15px;
+        transition: gap 0.3s ease;
+    }
+
+    .blog-article-card:hover .blog-read-more {
+        gap: 12px;
+    }
+
+    .blog-view-all {
+        text-align: center;
+    }
+
+    .blog-view-all-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #2DF56D;
+        color: #0a0a0a;
+        padding: 15px 35px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .blog-view-all-btn:hover {
+        background: #1aa347;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(45, 245, 109, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .blog-widget {
+            margin: 50px 20px;
+            padding: 40px 20px;
+        }
+
+        .blog-widget-header h2 {
+            font-size: 32px;
+        }
+
+        .blog-articles-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<section class="blog-widget">
+    <div class="blog-widget-header">
+        <h2>Latest CBAM Insights</h2>
+        <p>Stay ahead with expert analysis, regulatory updates, and practical compliance guides</p>
+    </div>
+
+    <div class="blog-articles-grid">
+        <!-- Article 1 -->
+        <a href="/cbam-blog/cbam-verification-requirements-2026.html" class="blog-article-card">
+            <img src="https://images.unsplash.com/photo-1588582669551-8617e4a757bb?w=600&h=400&fit=crop" alt="CBAM Verification Requirements" class="blog-article-image">
+            <div class="blog-article-content">
+                <div class="blog-article-meta">
+                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <h3 class="blog-article-title">CBAM Verification Requirements 2026: Your Complete Guide</h3>
+                <p class="blog-article-excerpt">Everything importers need to know about accredited verifiers, site visits, and compliance deadlines for the definitive phase.</p>
+                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="/cbam-blog/cbam-impact-steel-industry.html" class="blog-article-card">
+            <img src="https://images.unsplash.com/photo-1734864220078-c7354732aa7d?w=600&h=400&fit=crop" alt="CBAM Steel Industry Impact" class="blog-article-image">
+            <div class="blog-article-content">
+                <div class="blog-article-meta">
+                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+                <h3 class="blog-article-title">How CBAM is Reshaping the Global Steel Industry</h3>
+                <p class="blog-article-excerpt">Explore CBAM's transformative impact on steel trade, cost implications, and how manufacturers are adapting to the new landscape.</p>
+                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="/cbam-blog/cbam-developing-countries-impact.html" class="blog-article-card">
+            <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=600&h=400&fit=crop" alt="CBAM Developing Countries" class="blog-article-image">
+            <div class="blog-article-content">
+                <div class="blog-article-meta">
+                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                    <span><i class="far fa-clock"></i> 12 min read</span>
+                </div>
+                <h3 class="blog-article-title">CBAM's Impact on Developing Countries</h3>
+                <p class="blog-article-excerpt">How the Carbon Border Adjustment Mechanism affects emerging economies and their export competitiveness in EU markets.</p>
+                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+
+    <div class="blog-view-all">
+        <a href="/cbam-blog/" class="blog-view-all-btn">
+            View All Articles <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<!-- 
+INTEGRATION INSTRUCTIONS:
+1. Copy this entire file content
+2. Paste it into your index.html where you want the blog section to appear
+3. Recommended placement: After the "About" section, before the footer
+4. The widget is fully responsive and matches your site's design
+5. Update article links and images as you publish new content
+-->                         
     </main>
     <!-- Footer -->
 <footer style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); backdrop-filter: blur(20px); text-align: center; padding: 2rem 1.5rem; margin-top: 0.1rem;">
@@ -1996,6 +2214,7 @@
     </script>
 </body>
 </html>
+
 
 
 
