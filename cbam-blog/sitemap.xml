@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Main Website Pages -->
+    
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://encarbonsys.com/</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Pricing Page - High Priority -->
+    <url>
+        <loc>https://encarbonsys.com/pricing.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Client Resources - High Priority -->
+    <url>
+        <loc>https://encarbonsys.com/client_resource.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Landing Page - High Priority -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- October Page -->
+    <url>
+        <loc>https://encarbonsys.com/october.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Articles - All High Priority for SEO -->
+    
+    <!-- CBAM Impact on Steel Industry -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-impact-steel-industry.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CBAM Verification Requirements 2026 -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-verification-requirements-2026.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CBAM Developing Countries Impact -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-developing-countries-impact.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CBAM Six Pains and Predictions -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-six-pains-predictions.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Navigating CBAM Changes -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/navigating-cbam-changes.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CBAM Updates April 2025 -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-updates-april-2025.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Authorised Declarant Guide -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Supplier Data Management -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/supplier-data-management.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CBAM Omnibus New Rules -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-omnibus-new-rules.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Legal Documents -->
+    
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://encarbonsys.com/EnCarbonSys%20PRIVACY%20POLICY.pdf</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Terms & Conditions -->
+    <url>
+        <loc>https://encarbonsys.com/Terms%20%26%20Conditions.pdf</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Refund & Cancellation Policy -->
+    <url>
+        <loc>https://encarbonsys.com/Refund%20%26%20Cancellation%20Policy%20(1).pdf</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Brochure -->
+    <url>
+        <loc>https://encarbonsys.com/brochure.pdf</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
