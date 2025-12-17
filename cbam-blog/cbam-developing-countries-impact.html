@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBAM and Developing Countries: Challenges, Concerns, and Paths Forward | EnCarbonSys</title>
+    <title>How CBAM Affects Developing Nations: Economic Impact Analysis | EnCarbonSys</title>
     <meta name="description" content="Examining CBAM's impact on developing nations including India, Turkey, and African countries. Explore challenges, equity concerns, and strategic responses.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,10 +22,85 @@
             background: #ffffff;
         }
 
-        .article-container {
-            max-width: 900px;
+        /* Main Layout with Sidebar */
+        .article-layout {
+            max-width: 1400px;
             margin: 100px auto 60px;
             padding: 0 30px;
+            display: flex;
+            gap: 40px;
+            position: relative;
+        }
+
+        /* Table of Contents Sidebar */
+        .toc-sidebar {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 100px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2DF56D;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .toc-list a:hover {
+            background: #2DF56D;
+            color: #0a0a0a;
+            transform: translateX(5px);
+        }
+
+        .toc-list a.active {
+            background: #2DF56D;
+            color: #0a0a0a;
+        }
+
+        .toc-list a i {
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .article-container {
+            flex: 1;
+            max-width: 900px;
         }
 
         .article-header {
@@ -80,6 +155,7 @@
             font-weight: 700;
             color: #0a0a0a;
             margin: 40px 0 20px;
+            scroll-margin-top: 100px;
         }
 
         .article-content h3 {
@@ -87,6 +163,7 @@
             font-weight: 600;
             color: #0a0a0a;
             margin: 30px 0 15px;
+            scroll-margin-top: 100px;
         }
 
         .article-content p {
@@ -193,9 +270,9 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #0a0a0a;
+            color: #2DF56D;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 30px;
             transition: gap 0.3s ease;
         }
@@ -204,7 +281,33 @@
             gap: 12px;
         }
 
+        @media (max-width: 1024px) {
+            .article-layout {
+                flex-direction: column;
+            }
+
+            .toc-sidebar {
+                width: 100%;
+                order: -1;
+            }
+
+            .toc-sticky {
+                position: relative;
+                top: 0;
+                max-height: none;
+            }
+        }
+
         @media (max-width: 768px) {
+            .toc-sidebar {
+                display: none;
+            }
+
+            .article-layout {
+                margin-top: 80px;
+                padding: 0 20px;
+            }
+
             .article-header h1 {
                 font-size: 36px;
             }
@@ -228,21 +331,47 @@
     </style>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
+    <div id="navbar"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(r => r.text())
+            .then(html => document.getElementById('navbar').innerHTML = html);
+    </script>
 
-    <div class="article-container">
-        <a href="/cbam-blog/" class="back-link">
-            <i class="fas fa-arrow-left"></i> Back to Blog
-        </a>
+    <div class="article-layout">
+        <!-- Table of Contents Sidebar -->
+        <aside class="toc-sidebar">
+            <div class="toc-sticky">
+                <div class="toc-title">ON THIS PAGE</div>
+                <ul class="toc-list">
+                    <li><a href="#core-challenges"><i class="fas fa-chevron-right"></i> Core Challenges</a></li>
+                    <li><a href="#economic-impacts"><i class="fas fa-chevron-right"></i> Economic Impacts</a></li>
+                    <li><a href="#capacity-gaps"><i class="fas fa-chevron-right"></i> Capacity Gaps</a></li>
+                    <li><a href="#equity-concerns"><i class="fas fa-chevron-right"></i> Equity Concerns</a></li>
+                    <li><a href="#regional-perspectives"><i class="fas fa-chevron-right"></i> Regional Perspectives</a></li>
+                    <li><a href="#india-response"><i class="fas fa-chevron-right"></i> India's Response</a></li>
+                    <li><a href="#turkey-position"><i class="fas fa-chevron-right"></i> Turkey's Position</a></li>
+                    <li><a href="#african-vulnerability"><i class="fas fa-chevron-right"></i> African Vulnerability</a></li>
+                    <li><a href="#strategic-options"><i class="fas fa-chevron-right"></i> Strategic Options</a></li>
+                    <li><a href="#international-support"><i class="fas fa-chevron-right"></i> International Support</a></li>
+                    <li><a href="#looking-ahead"><i class="fas fa-chevron-right"></i> Looking Ahead</a></li>
+                </ul>
+            </div>
+        </aside>
 
-        <article>
+        <!-- Main Article Content -->
+        <article class="article-container">
+            <a href="/cbam-blog/" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+
             <div class="article-header">
                 <div class="article-meta">
                     <span><i class="far fa-calendar"></i> December 16, 2024</span>
                     <span><i class="far fa-clock"></i> 12 min read</span>
                     <span><i class="fas fa-tag"></i> Global Impact</span>
                 </div>
-                <h1>CBAM and Developing Countries: Navigating Challenges and Finding Paths Forward</h1>
+                <h1>How CBAM Affects Developing Nations: Economic Impact Analysis</h1>
                 <p class="article-excerpt">
                     The EU's Carbon Border Adjustment Mechanism presents unique challenges for developing nations. From economic impacts to capacity constraints and equity concerns, here's what countries like India, Turkey, and African nations are facing—and how they're responding.
                 </p>
@@ -264,12 +393,12 @@
                     <p><strong>Low- and lower-middle-income countries are three times more vulnerable to CBAM than wealthier nations.</strong> Countries like Mozambique face potential GDP impacts of up to 7% due to heavy reliance on CBAM-affected exports to the EU.</p>
                 </div>
 
-                <h2>The Core Challenges: Why CBAM Hits Developing Countries Harder</h2>
+                <h2 id="core-challenges">Understanding the Multifaceted Challenges</h2>
                 <p>
                     CBAM's impact on developing countries isn't just about carbon pricing—it's a multifaceted challenge that touches on economic development, technical capacity, and fundamental questions of equity.
                 </p>
 
-                <h3>1. Economic Impacts and Export Vulnerability</h3>
+                <h3 id="economic-impacts">Export Vulnerability and Economic Disruption</h3>
                 <p>
                     Many developing countries have built their industrial bases around carbon-intensive sectors like steel, cement, and aluminum. CBAM directly threatens these economic foundations:
                 </p>
@@ -281,7 +410,7 @@
                     <li><strong>Trade Flow Realignments:</strong> EU imports may shift away from developing countries toward wealthier, lower-carbon producers</li>
                 </ul>
 
-                <h3>2. Technical and Financial Capacity Gaps</h3>
+                <h3 id="capacity-gaps">Infrastructure and Resource Limitations</h3>
                 <p>
                     Perhaps the most immediate challenge is the sheer technical complexity of CBAM compliance:
                 </p>
@@ -293,7 +422,7 @@
                     <li><strong>Human Capital:</strong> Shortage of trained professionals in emissions accounting and verification</li>
                 </ul>
 
-                <h3>3. Climate Justice and Equity Concerns</h3>
+                <h3 id="equity-concerns">Historical Responsibility and Fairness Questions</h3>
                 <p>
                     Beyond practical challenges, CBAM raises fundamental questions about fairness and historical responsibility:
                 </p>
@@ -305,7 +434,7 @@
                     <li><strong>Trade Barrier Concerns:</strong> Many view CBAM as de facto protectionism disguised as climate policy</li>
                 </ul>
 
-                <h2>Regional Perspectives: How Major Exporters are Responding</h2>
+                <h2 id="regional-perspectives">Country-Specific Impacts and Responses</h2>
 
                 <table class="country-table">
                     <thead>
@@ -339,7 +468,7 @@
                     </tbody>
                 </table>
 
-                <h3>India: Leading the Diplomatic Challenge</h3>
+                <h3 id="india-response">India's Diplomatic and Technical Strategy</h3>
                 <p>
                     As one of the world's largest steel exporters, India has emerged as a vocal critic of CBAM:
                 </p>
@@ -351,7 +480,7 @@
                     <li><strong>Dual Strategy:</strong> While challenging CBAM diplomatically, India is simultaneously investing in steel industry decarbonization</li>
                 </ul>
 
-                <h3>Turkey: Caught in the Middle</h3>
+                <h3 id="turkey-position">Turkey's Complex Balancing Act</h3>
                 <p>
                     Turkey's position is particularly complex, straddling developed and developing country status:
                 </p>
@@ -363,7 +492,7 @@
                     <li><strong>Investment Imperative:</strong> Must rapidly build MRV capacity and invest in green technologies</li>
                 </ul>
 
-                <h3>African Nations: Disproportionate Vulnerability</h3>
+                <h3 id="african-vulnerability">Africa's Disproportionate Burden</h3>
                 <p>
                     African countries face some of the most severe CBAM impacts relative to their economic size:
                 </p>
@@ -380,7 +509,7 @@
                     <p>Critics argue that CBAM violates the principle of Common But Differentiated Responsibilities (CBDR) enshrined in international climate agreements. Developed countries industrialized over centuries without carbon constraints, yet CBAM imposes immediate costs on countries still in early stages of industrial development. This raises fundamental questions about climate justice and equitable burden-sharing.</p>
                 </div>
 
-                <h2>Strategic Response Options: Four Paths Forward</h2>
+                <h2 id="strategic-options">Four Pathways for Developing Nations</h2>
                 <p>
                     Developing countries are pursuing various strategies to navigate CBAM's challenges:
                 </p>
@@ -429,12 +558,12 @@
                     <li><strong>Examples:</strong> Exploring increased trade with Asia, Middle East, and other developing regions</li>
                 </ul>
 
-                <h2>The Role of International Support</h2>
+                <h2 id="international-support">Essential Support Mechanisms</h2>
                 <p>
                     For CBAM to be both effective and equitable, developing countries need substantial international support:
                 </p>
 
-                <h3>Essential Support Mechanisms</h3>
+                <h3>Critical Support Areas</h3>
                 <ul>
                     <li><strong>Technical Assistance:</strong> Help building MRV systems and emissions monitoring capacity</li>
                     <li><strong>Technology Transfer:</strong> Access to low-carbon production technologies at affordable costs</li>
@@ -461,7 +590,7 @@
                     <p>CBAM's success—both as a climate tool and as an equitable policy—depends on genuine partnership between the EU and developing countries. This means moving beyond compliance requirements to collaborative support for industrial transformation that respects development needs while advancing climate goals.</p>
                 </div>
 
-                <h2>Looking Ahead: Toward Equitable Climate Action</h2>
+                <h2 id="looking-ahead">Future Implications and Global Trends</h2>
                 <p>
                     CBAM represents a critical juncture in global climate policy. It demonstrates that major economies are willing to use trade policy to advance climate goals—a potentially powerful tool for driving global decarbonization.
                 </p>
@@ -492,11 +621,11 @@
 
                 <div class="cta-section">
                     <h2>Supporting Developing Country Exporters</h2>
-                    <p style="margin-bottom: 30px;">EnCarbonSys provides specialized support for developing country exporters navigating CBAM, including capacity building, emissions monitoring systems, and compliance strategies.</p>
-                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Learn More</a>
+                    <p style="margin-bottom: 30px; color: #e0e0e0;">EnCarbonSys provides specialized support for developing country exporters navigating CBAM. <a href="/pricing.html" style="color: #2DF56D; border-bottom: 2px solid #2DF56D;">View our affordable pricing plans</a>.</p>
+                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Get Expert Guidance</a>
                 </div>
 
-                <h2>Conclusion: Balancing Climate Action and Development</h2>
+                <h2>Balancing Climate Action with Development Needs</h2>
                 <p>
                     CBAM presents developing countries with a profound challenge: how to maintain market access and economic development while transitioning to low-carbon production without the resources that enabled developed countries' own industrial transformations.
                 </p>
@@ -517,11 +646,40 @@
     </div>
 
     <script>
-        fetch('/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Highlight active section in TOC
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.article-content h2[id], .article-content h3[id]');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
