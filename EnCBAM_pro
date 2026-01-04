@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnCBAM Product Pitch</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page page-cover"
+        style="background: linear-gradient(135deg, #063c21 0%, #0a5c3d 30%, #1a7f4d 70%, #059669 100%); overflow: visible;">
+        <!-- Animated gradient background elements -->
+        <div
+            style="position: absolute; top: -200px; right: -300px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); border-radius: 50%; pointer-events: none; animation: float 6s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -150px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,255,100,0.05), transparent 70%); border-radius: 50%; pointer-events: none; animation: float 8s ease-in-out infinite 1s;">
+        </div>
+
+        <!-- Top bar with logo -->
+        <div
+            style="position: absolute; top: 30px; left: 6%; z-index: 10; display: flex; align-items: center; gap: 16px;">
+            <img src="https://image2url.com/r2/default/images/1767526716014-7ef837d0-8f5e-4306-858a-ab330facbb42.png"
+                alt="EnCarbonSys" style="height: 70px; object-fit: contain; opacity: 0.98;">
+            <div style="display: flex; flex-direction: column;">
+            </div>
+        </div>
+
+        <!-- Main content grid -->
+        <div
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; flex: 1; position: relative; z-index: 2;">
+            <!-- Left side: Copy -->
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <h1 class="cover-h1"
+                    style="font-size: 100px; margin: 60px 0 20px 0; line-height: 1.1; text-shadow: 0 2px 20px rgba(0,0,0,0.2);">
+                    <span style="color: black;"></span>En</span><span style="color: #39FF14;">CBAM</span>
+                </h1>
+                <div
+                    style="width: 120px; height: 5px; background: linear-gradient(90deg, #00FF00 0%, rgba(0,255,100,0.4) 100%); border-radius: 3px; margin-bottom: 40px;">
+                </div>
+
+                <p class="tagline"
+                    style="font-size: 42px; margin: 0 0 25px 0; font-weight: 700; line-height: 1.2; color: white;">CBAM
+                    compliance, without the chaos.</p>
+
+                <p class="subtitle"
+                    style="font-size: 18px; color: rgba(255,255,255,0.9); max-width: 600px; line-height: 1.7; margin-bottom: 40px;">
+                    A flagship Solution from EnCarbonSys built to simplify CBAM Compliance for exporters, producers,
+                    consultants, and EU-facing supply chains.</p>
+
+                <!-- Trust badges -->
+                <div style="display: flex; gap: 30px; font-size: 14px; color: rgba(255,255,255,0.9);">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i class="ri-check-line"
+                            style="color: #00FF00; font-size: 16px; width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid rgba(0,255,0,0.18); background: rgba(0,255,0,0.06);"></i>
+                        <span style="font-weight:700;">CBAM-Ready</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i class="ri-check-line"
+                            style="color: #00FF00; font-size: 16px; width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid rgba(0,255,0,0.18); background: rgba(0,255,0,0.06);"></i>
+                        <span style="font-weight:700;">EU Compliant</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i class="ri-check-line"
+                            style="color: #00FF00; font-size: 16px; width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid rgba(0,255,0,0.18); background: rgba(0,255,0,0.06);"></i>
+                        <span style="font-weight:700;">Audit-Ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side: Dashboard mockup -->
+            <div style="position: relative; height: 100%; min-height: 600px;">
+                <!-- Floating dashboard card 1 -->
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 380px; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform: rotate(4deg); z-index: 3;">
+                    <div
+                        style="font-weight: 700; color: #063c21; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+                        Monthly Dashboard</div>
+                    <div
+                        style="background: linear-gradient(135deg, #F0FFF4, #E6FFFA); border-radius: 12px; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; font-weight: 800; color: #059669;">2,847</div>
+                            <div style="color: #1B7F3D; font-weight: 600; margin-top: 5px;">tCO2e</div>
+                            <div style="color: #718096; font-size: 12px; margin-top: 8px;">This Month</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; gap: 10px;">
+                        <div
+                            style="flex: 1; background: #F0FFF4; border-radius: 10px; padding: 12px; text-align: center;">
+                            <div style="color: #1B7F3D; font-weight: 700; font-size: 16px;">94%</div>
+                            <div style="color: #718096; font-size: 11px; margin-top: 3px;">Complete</div>
+                        </div>
+                        <div
+                            style="flex: 1; background: #FFF5F5; border-radius: 10px; padding: 12px; text-align: center;">
+                            <div style="color: #C53030; font-weight: 700; font-size: 16px;">2</div>
+                            <div style="color: #718096; font-size: 11px; margin-top: 3px;">Gaps</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating dashboard card 2 -->
+                <div
+                    style="position: absolute; bottom: 20px; left: 0; width: 360px; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 25px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform: rotate(-3deg); z-index: 2;">
+                    <div
+                        style="font-weight: 700; color: #063c21; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+                        Emissions by Product</div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+                        <div
+                            style="flex: 1; height: 120px; background: linear-gradient(180deg, #059669, #047857); border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; color: white; font-weight: 700;">
+                            Steel</div>
+                        <div
+                            style="flex: 1; height: 80px; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; color: white; font-weight: 700;">
+                            Cement</div>
+                        <div
+                            style="flex: 1; height: 100px; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; color: white; font-weight: 700;">
+                            Aluminium</div>
+                    </div>
+                    <div style="background: #F0FFF4; border-radius: 10px; padding: 12px; text-align: center;">
+                        <div style="color: #1B7F3D; font-weight: 700; font-size: 14px;">Fully Auditable</div>
+                        <div style="color: #718096; font-size: 11px; margin-top: 3px;">All data verified & timestamped
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+
+    <!-- PAGE 2: THE CBAM REALITY -->
+    <div class="page" style="background: #fff5f5;">
+        <div class="section-tag" style="background-color: rgba(153, 27, 27, 0.1); color: #991b1b;">The Problem</div>
+        <div class="grid-2" style="height: 100%; align-items: center;">
+            <div>
+                <h2 style="color: #991b1b;">CBAM Reality</h2>
+                <h3 style="color: #b91c1c; font-size: 40px; margin-bottom: 40px;">CBAM is not just a
+                    reporting problem. It is a data, process, and accountability problem.</h3>
+                <p><strong>What stakeholders are struggling with today:</strong></p>
+                <ul>
+                    <li>Fragmented data across Excel, ERP, emails, invoices, meters, and PDFs</li>
+                    <li>No monthly emissions discipline → panic at quarter/year-end</li>
+                    <li>Zero audit trail → high rejection and verification risk</li>
+                    <li>Confusion around precursors, attribution, and system boundaries</li>
+                    <li>Manual CBAM templates that break when scale increases</li>
+                    <li>Consultants spending time compiling data instead of advising</li>
+                </ul>
+            </div>
+            <div class="quote-box">
+                <i class="ri-double-quotes-l"></i>
+                <p style="margin-bottom: 0;">"CBAM today feels like tax compliance in 1998. EnCBAM modernizes it."</p>
+                <div style="margin-top: 40px; display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 60px; height: 60px; background: #991b1b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class="ri-error-warning-line" style="font-size: 30px; position: static; opacity: 1;"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; font-size: 24px; color: #7f1d1d;">Current State</div>
+                        <div style="font-size: 18px; color: #991b1b;">High Risk, High Friction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: WHAT ENCBAM IS -->
+    <div class="page page-gray">
+        <div class="section-tag">Overview</div>
+        <div style="text-align: center; max-width: 1400px; margin: 0 auto 60px auto;">
+            <p class="bold-stmt" style="font-size: 48px; margin-bottom: 30px;">EnCBAM is an end-to-end CBAM Compliance
+                Solution for Exporters.</p>
+            <p>It covers the full compliance lifecycle of CBAM product: Installation setup, mapping, monitoring,
+                calculation, audit trail, and report-readiness.</p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 40px;">
+            <div class="card" style="padding: 30px; text-align: center;">
+                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-settings-4-line"></i></div>
+                <h3>Setup</h3>
+                <p style="font-size: 20px;">Product & precursor mapping</p>
+            </div>
+            <div class="card" style="padding: 30px; text-align: center;">
+                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-dashboard-line"></i></div>
+                <h3>Monitor</h3>
+                <p style="font-size: 20px;">Monthly production & energy</p>
+            </div>
+            <div class="card" style="padding: 30px; text-align: center;">
+                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-file-shield-2-line"></i></div>
+                <h3>Comply</h3>
+                <p style="font-size: 20px;">Audit trail & report-readiness</p>
+            </div>
+        </div>
+
+        <div class="screenshot-container" style="max-height: 500px; border-color: transparent;">
+            <img src="https://a.lovart.ai/artifacts/user/HQhwZPf3Ehd8vt2T.png" alt="Dashboard Overview"
+                style="object-position: top;">
+        </div>
+        <div style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-green);">Built for
+            factories. Designed for auditors.</div>
+
+    </div>
+
+    <!-- PAGE 4: WHO ENCBAM IS FOR -->
+    <div class="page">
+        <div class="section-tag">Target Audience</div>
+        <h2>Who EnCBAM Is For</h2>
+        <div class="grid-3" style="flex: 1; align-items: stretch; margin-top: 40px; gap: 20px;">
+            <div class="card" style="background: linear-gradient(to bottom right, #fff, #f0fff4); padding: 30px;">
+                <div class="feature-icon" style="background: #ebf8ff; color: #3182ce;"><i class="ri-ship-line"></i>
+                </div>
+                <h3>1.Exporters (Manufacturers)</h3>
+                <p style="font-size: 18px;"><strong>Problem:</strong> EU buyers demanding CBAM-ready data.</p>
+                <div style="margin: 20px 0; border-left: 4px solid var(--emerald); padding-left: 15px;">
+                    <p style="color: var(--emerald); font-weight: bold; margin-bottom: 8px; font-size: 18px;">EnCBAM
+                        Solves:</p>
+                    <ul style="font-size: 16px;">
+                        <li>Monthly CBAM‑ready emissions tracking</li>
+                        <li>Product‑level embedded emissions</li>
+                        <li>Clean, auditable data exports</li>
+                    </ul>
+                </div>
+                <p class="bold-stmt" style="font-size: 18px;">Result: You stay export‑eligible and preferred.</p>
+            </div>
+
+            <div class="card" style="background: linear-gradient(to bottom right, #fff, #ebf8ff); padding: 30px;">
+                <div class="feature-icon" style="background: #ebf8ff; color: #3182ce;"><i class="ri-truck-fill"></i>
+                </div>
+                <h3>2. Suppliers</h3>
+                <p style="font-size: 18px;"><strong>Problem:</strong> Supplier data is unreliable, incomplete, or late.
+                </p>
+                <div style="margin: 20px 0; border-left: 4px solid #3182ce; padding-left: 15px;">
+                    <p style="color: #3182ce; font-weight: bold; margin-bottom: 8px; font-size: 18px;">EnCBAM Solves:
+                    </p>
+                    <ul style="font-size: 16px;">
+                        <li>Structured, comparable supplier emissions</li>
+                        <li>Reduced default value exposure</li>
+                        <li>Faster annual declarations</li>
+                    </ul>
+                </div>
+                <p class="bold-stmt" style="color: #3182ce; font-size: 18px;">Result: Lower CBAM cost risk.</p>
+            </div>
+
+            <div class="card" style="background: linear-gradient(to bottom right, #fff, #fffaf0); padding: 30px;">
+                <div class="feature-icon" style="background: #FFFAF0; color: #DD6B20;"><i
+                        class="ri-shield-check-line"></i></div>
+                <h3>3. Auditors & Verifiers</h3>
+                <p style="font-size: 18px;"><strong>Problem:</strong> No traceability, no trust.</p>
+                <div style="margin: 20px 0; border-left: 4px solid #DD6B20; padding-left: 15px;">
+                    <p style="color: #DD6B20; font-weight: bold; margin-bottom: 8px; font-size: 18px;">EnCBAM Solves:
+                    </p>
+                    <ul style="font-size: 16px;">
+                        <li>Immutable audit trail</li>
+                        <li>Timestamped changes</li>
+                        <li>Evidence-linked data</li>
+                    </ul>
+                </div>
+                <p class="bold-stmt" style="color: #DD6B20; font-size: 18px;">Result: Faster verification, fewer
+                    disputes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 6: DASHBOARD MODULE -->
+    <div class="page" style="background: #F0FFF4;">
+        <div class="section-tag">Core Module 01</div>
+        <div class="grid-2" style="align-items: center; height: 100%;">
+            <div>
+                <h2 style="font-size: 64px;">CBAM Dashboard</h2>
+                <p><strong>One‑screen CBAM readiness. Early detection of data gaps.</strong></p>
+                <div class="card" style="margin-top: 40px; border-left: 8px solid var(--emerald);">
+                    <p style="margin-bottom: 20px;"><strong>What it shows:</strong></p>
+                    <ul>
+                        <li>Total emissions snapshot</li>
+                        <li>Active installations & products</li>
+                        <li>Compliance status</li>
+                        <li>Emissions trends</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screenshot-container">
+                <img src="https://a.lovart.ai/artifacts/user/HQhwZPf3Ehd8vt2T.png" alt="Dashboard">
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: INSTALLATION & PRODUCT MANAGEMENT -->
+    <div class="page">
+        <div class="section-tag">Core Module 02 & 03</div>
+        <h2>Installation & Product Management</h2>
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <div>
+                <h3><span class="number-badge">2</span>Installation Management</h3>
+                <p>Factory‑level installation setup and one‑time configuration that forms the foundation for all CBAM
+                    logic.</p>
+                <p class="bold-stmt" style="font-size: 22px; color: var(--text-light);"><i class="ri-check-double-line"
+                        style="color: var(--emerald);"></i> Solves: Confusion between furnaces, lines, and installations
+                </p>
+            </div>
+            <div>
+                <h3><span class="number-badge">3</span>Product Management</h3>
+                <p>CBAM product mapping with CN‑Code alignment, production routes (primary, secondary, recycling), and
+                    installation linkage.</p>
+                <p class="bold-stmt" style="font-size: 22px; color: var(--text-light);"><i class="ri-check-double-line"
+                        style="color: var(--emerald);"></i> Solves: Wrong CN codes → rejected filings</p>
+            </div>
+        </div>
+        <div class="screenshot-container" style="flex: 1; max-height: 600px;">
+            <img src="https://a.lovart.ai/artifacts/user/JxDgK0AP1HklWdkh.png" alt="Products Interface"
+                style="object-fit: contain; background: #f7fafc;">
+        </div>
+    </div>
+
+    <!-- PAGE 8: PRECURSOR CONFIGURATION -->
+    <div class="page page-gray">
+        <div class="section-tag">Core Module 04</div>
+        <div class="grid-2" style="align-items: start; gap: 40px;">
+            <div class="h-full-flex">
+                <div>
+                    <h2>Precursor Configuration</h2>
+                    <p style="font-size: 28px;">Raw material mapping, Supplier & country attribution, CN‑code
+                        validation.</p>
+                    <p class="bold-stmt">Pain solved: Precursor chaos and double counting.</p>
+                </div>
+                <div class="screenshot-container" style="margin-top: 20px;">
+                    <img src="https://a.lovart.ai/artifacts/user/nJquGSze4Dyk0JDe.png" alt="Precursor Configuration">
+                </div>
+            </div>
+            <div class="h-full-flex">
+                <div class="screenshot-container">
+                    <img src="https://a.lovart.ai/artifacts/user/GsROazIfzxPki0MP.png" alt="Monthly Precursor Data">
+                </div>
+                <div class="card" style="margin-top: 30px; background: #fff;">
+                    <p><strong>Monthly Tracking:</strong></p>
+                    <p>Track quantities and suppliers monthly to ensure precise weighted average calculations at
+                        year-end.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 9: MONTHLY MONITORING ENGINE -->
+    <div class="page">
+        <div class="section-tag">Core Module 05</div>
+        <div class="grid-2" style="height: 100%; align-items: center;">
+            <div>
+                <h2 style="font-size: 64px; white-space: nowrap;">Monthly Monitoring Engine</h2>
+                <p class="bold-stmt" style="font-size: 40px; margin-bottom: 40px;">This is the heart of EnCBAM.</p>
+                <div class="card" style="border-left: 8px solid var(--emerald); background: #F0FFF4;">
+                    <p style="font-size: 28px; font-weight: bold; color: var(--primary-green);">Why monthly matters:</p>
+                    <p>CBAM is annual on paper, but emissions are generated daily. EnCBAM enforces discipline before
+                        panic starts.</p>
+                </div>
+                <ul style="margin-top: 40px;">
+                    <li>Monthly production tonnage</li>
+                    <li>Electricity consumption</li>
+                    <li>Fuel & combustion data</li>
+                    <li>Precursor consumption</li>
+                </ul>
+            </div>
+            <div class="screenshot-container">
+                <img src="https://a.lovart.ai/artifacts/user/fEf275bvKuUuAIbV.png" alt="Production Data">
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 10: EMISSIONS ENGINE -->
+    <div class="page page-gray">
+        <div class="section-tag">Core Module 06</div>
+        <h2>Emissions Engine</h2>
+        <p style="max-width: 900px; margin-bottom: 40px;">Direct emissions (combustion, mass balance) and Indirect
+            emissions (electricity) with method-specific inputs. <strong>Solves incorrect formulas & inconsistent
+                methods.</strong></p>
+
+        <div class="grid-2" style="gap: 40px;">
+            <div>
+                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--dark-gray);">Direct
+                    Emissions (Combustion/Mass Balance)</div>
+                <div class="screenshot-container">
+                    <img src="https://a.lovart.ai/artifacts/user/cMzWUFeUjZ4BTWEz.png" alt="Emissions Tracking">
+                </div>
+            </div>
+            <div>
+                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--dark-gray);">Indirect
+                    Emissions (Electricity)</div>
+                <div class="screenshot-container">
+                    <img src="https://a.lovart.ai/artifacts/user/d35jiexV0vMxmCPJ.png" alt="Electricity Data">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 11: ATTRIBUTED EMISSIONS -->
+    <div class="page">
+        <div class="section-tag">Core Module 07</div>
+        <h2>Attributed Emissions Management</h2>
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <div>
+                <ul>
+                    <li>Measurable heat</li>
+                    <li>Waste gases</li>
+                    <li>Shared emissions allocation</li>
+                </ul>
+                <p class="bold-stmt">Pain solved: Attribution errors between products.</p>
+            </div>
+        </div>
+
+        <div style="position: relative; height: 600px; width: 100%; margin-top: 20px;">
+            <!-- Top-Left Image -->
+            <div class="screenshot-container"
+                style="position: absolute; top: 0; left: 0; width: 70%; z-index: 1; transform: perspective(1000px) rotateY(10deg) rotateX(2deg); box-shadow: -20px 20px 50px rgba(0,0,0,0.3);">
+                <img src="https://a.lovart.ai/artifacts/user/1fQNUbdWO1wWYo7W.png" alt="Attributed Emissions Heat">
+            </div>
+            <!-- Bottom-Right Image (Overlapping diagonally) -->
+            <div class="screenshot-container"
+                style="position: absolute; bottom: 0; right: 0; width: 70%; z-index: 2; transform: perspective(1000px) rotateY(-10deg) rotateX(2deg); box-shadow: 20px 20px 50px rgba(0,0,0,0.3);">
+                <img src="https://a.lovart.ai/artifacts/user/Lf0w583z9uvfM8AY.png" alt="Precursors Detail">
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 12: AUDIT & REPORTING -->
+    <div class="page">
+        <div class="section-tag">Core Module 08 & 09</div>
+        <div class="grid-2" style="margin-bottom: 40px; align-items: flex-end;">
+            <div>
+                <h2>Evidence & Audit Logs</h2>
+                <p style="font-size: 28px; margin-bottom: 30px;">Every action logged. Every change
+                    traceable. JSON‑level detail available.</p>
+                <div
+                    style="padding: 20px; border: 1px solid var(--emerald); border-radius: 12px; display: inline-block;">
+                    <i class="ri-check-line" style="color: var(--emerald); margin-right: 10px;"></i> This is what
+                    auditors love.
+                </div>
+            </div>
+            <div>
+                <h3 style="color: var(--emerald);">Reporting Readiness</h3>
+                <ul>
+                    <li>CBAM‑aligned data structure</li>
+                    <li>Export‑ready datasets (EU XML compatible)</li>
+                    <li>Eliminates last‑minute fire drills</li>
+                </ul>
+            </div>
+        </div>
+        <div class="screenshot-container" style="border: none; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+            <img src="https://a.lovart.ai/artifacts/user/seO2fbX1mTFNjcyp.png" alt="Audit Trail Large">
+        </div>
+    </div>
+
+    <!-- PAGE 13: COMPARISON -->
+    <div class="page">
+        <div class="section-tag">Value Proposition</div>
+        <h2 style="text-align: center; margin-bottom: 60px;">How EnCBAM Actually Solves CBAM</h2>
+
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 45%;">CBAM Pain</th>
+                        <th style="width: 10%;"></th>
+                        <th style="width: 45%; color: var(--primary-green);">EnCBAM Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Manual spreadsheets</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Structured system</td>
+                    </tr>
+                    <tr>
+                        <td>Data inconsistency</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Monthly discipline</td>
+                    </tr>
+                    <tr>
+                        <td>No audit trail</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Immutable logs</td>
+                    </tr>
+                    <tr>
+                        <td>Supplier confusion</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Precursor mapping</td>
+                    </tr>
+                    <tr>
+                        <td>Default values risk</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Verified actuals</td>
+                    </tr>
+                    <tr>
+                        <td>Consultant overload</td>
+                        <td style="text-align: center;"><i class="ri-arrow-right-line"
+                                style="font-size: 32px; color: #cbd5e0;"></i></td>
+                        <td>Automation leverage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAGE 14: WHY DIFFERENT -->
+    <div class="page" style="background: var(--emerald-light);">
+        <div class="section-tag">Differentiation</div>
+        <div class="grid-2" style="align-items: center; height: 100%;">
+            <div>
+                <h2>Why EnCBAM Is Different</h2>
+                <div class="card" style="margin-top: 40px; padding: 60px;">
+                    <ul style="font-size: 28px;">
+                        <li style="margin-bottom: 30px;">Built specifically for CBAM (not generic ESG)</li>
+                        <li style="margin-bottom: 30px;">Mirrors sector-specific EU CBAM logic, not general guidelines
+                        </li>
+                        <li style="margin-bottom: 30px;">Designed bottom‑up from installations & processes</li>
+                        <li style="margin-bottom: 30px;">Audit‑first, not dashboard‑first</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="padding: 60px; text-align: right;">
+                <i class="ri-server-line" style="font-size: 200px; color: var(--emerald); opacity: 0.2;"></i>
+                <p class="bold-stmt"
+                    style="font-size: 64px; line-height: 1.2; color: var(--primary-green); text-align: right;">"This is
+                    not a slideware ESG tool. This is compliance infrastructure."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 15: STRATEGIC IMPACT -->
+    <div class="page">
+        <div class="section-tag">Business Impact</div>
+        <h2>Strategic Impact</h2>
+        <p style="font-size: 32px; margin-bottom: 60px;">Using EnCBAM enables:</p>
+
+        <div class="grid-3" style="margin-bottom: 40px;">
+            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
+                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+                        class="ri-money-euro-circle-line"></i></div>
+                <h3 style="font-size: 32px;">Lower Costs</h3>
+                <p>Lower CBAM certificate costs through precise data vs defaults.</p>
+            </div>
+            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
+                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+                        class="ri-shake-hands-line"></i></div>
+                <h3 style="font-size: 32px;">Higher Trust</h3>
+                <p>Higher trust with EU buyers as a preferred, data-ready supplier.</p>
+            </div>
+            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
+                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+                        class="ri-timer-flash-line"></i></div>
+                <h3 style="font-size: 32px;">Faster Audits</h3>
+                <p>Reduced verification time and legal exposure.</p>
+            </div>
+        </div>
+        <div class="card" style="text-align: center; background: var(--bg-gray);">
+            <div style="font-size: 60px; color: var(--dark-gray); margin-bottom: 20px;"><i
+                    class="ri-line-chart-line"></i></div>
+            <h3 style="font-size: 32px;">Scalability</h3>
+            <p>Scalable compliance infrastructure as CBAM tightens in 2026 and beyond.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 16: ENCBAM ARCHITECTURE -->
+    <div class="page">
+        <div style="position: relative; height: 100%;">
+            <div class="section-tag">System Architecture</div>
+            <h2
+                style="text-align: center; margin-bottom: 30px; font-size: 44px; background: linear-gradient(135deg, var(--primary-green), var(--emerald)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                How EnCBAM Works</h2>
+
+            <div
+                style="display: grid; grid-template-columns: 1.1fr 320px 1.1fr; gap: 40px; align-items: center; position: relative; padding: 0 20px;">
+
+                <!-- LEFT SIDE: INPUTS -->
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                        <div
+                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--primary-green), var(--emerald)); border-radius: 2px;">
+                        </div>
+                        <h3
+                            style="color: var(--primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
+                            Data Inputs</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Installation Data</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Facility setup
+                                & configuration</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Supplier & Precursor Data</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Raw material &
+                                sourcing</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Product Data</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">CN codes &
+                                specifications and monthly production reports</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Fuel Data</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Combustion &
+                                energy inputs</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Electricity Data</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Electricity
+                                consumption</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                System Boundary</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Scope
+                                definition & limits</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Evidence Upload</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Bills, BOMs,
+                                readings, packing lists, etc</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTER: PROCESSING CORE -->
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; height: 100%;">
+
+                    <!-- Core Circle -->
+                    <div
+                        style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.12), rgba(5, 150, 105, 0.08)); border: 2px solid rgba(5, 150, 105, 0.3); border-radius: 50%; width: 240px; height: 240px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 60px rgba(5, 150, 105, 0.15), inset 0 0 40px rgba(5, 150, 105, 0.05); position: relative;">
+                        <div
+                            style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.1), transparent); animation: spin 20s linear infinite;">
+                        </div>
+                        <div style="position: relative; z-index: 1; text-align: center;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE: OUTPUTS -->
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                        <div
+                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--primary-green), var(--emerald)); border-radius: 2px;">
+                        </div>
+                        <h3
+                            style="color: var(--primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
+                            Outcomes & Features</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Direct & Indirect Emissions</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Accurate
+                                calculations</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Specific Embedded Emissions (SEE)</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">EU CBAM
+                                methodology</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                CBAM Report Generation</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">EU-compliant
+                                formats, Custom Date Ranges</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Continuous Monitoring</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Monthly
+                                tracking</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Data Storage & Management</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Secure,
+                                archivable and unified data management</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Immutable Audit Trail</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Every action
+                                logged</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Evidence Management</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Centralized
+                                document control</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div
+                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                Report</div>
+                            <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Comprehensive
+                                insights</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.04)); border-left: 4px solid #3B82F6; padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #3B82F6, transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div
+                                    style="font-weight: 700; color: #3B82F6; margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                    Carbon Price Forecasting</div>
+                                <span
+                                    style="background: linear-gradient(135deg, #3B82F6, #1E40AF); color: white; padding: 2px 8px; border-radius: 6px; font-size: 9px; font-weight: 700; white-space: nowrap;">Coming
+                                    Soon</span>
+                            </div>
+                            <div
+                                style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1; margin-top: 2px;">
+                                Market intelligence</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.04)); border-left: 4px solid #3B82F6; padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #3B82F6, transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div
+                                    style="font-weight: 700; color: #3B82F6; margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                    Monitoring Methodology</div>
+                                <span
+                                    style="background: linear-gradient(135deg, #3B82F6, #1E40AF); color: white; padding: 2px 8px; border-radius: 6px; font-size: 9px; font-weight: 700; white-space: nowrap;">Coming
+                                    Soon</span>
+                            </div>
+                            <div
+                                style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1; margin-top: 2px;">
+                                Compliance standards</div>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.04)); border-left: 4px solid #3B82F6; padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #3B82F6, transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div
+                                    style="font-weight: 700; color: #3B82F6; margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                    Scenario Modelling</div>
+                                <span
+                                    style="background: linear-gradient(135deg, #3B82F6, #1E40AF); color: white; padding: 2px 8px; border-radius: 6px; font-size: 9px; font-weight: 700; white-space: nowrap;">Coming
+                                    Soon</span>
+                            </div>
+                            <div
+                                style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1; margin-top: 2px;">
+                                What-if analysis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes spin {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            </style>
+        </div>
+
+    </div>
+
+    <!-- PAGE 18: FINAL WORD -->
+    <div class="page page-cover">
+        <div class="section-tag"
+            style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">EnCBAM -
+            Enabling CBAM Compliance</div>
+        <div
+            style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h2 style="font-size: 100px; color: white; margin-bottom: 40px;">CBAM is here to stay!</h2>
+            <p style="font-size: 48px; margin-bottom: 60px; color: rgba(255,255,255,0.9);">And only spreadsheets will
+                NOT
+                survive
+                2026 onwards.</p>
+
+            <div style="color: white; padding: 40px 80px; border-radius: 20px; font-size: 64px; font-weight: bold;">
+                EnCBAM turns CBAM from fear into flow.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
