@@ -6,20 +6,453 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnCBAM Product Pitch</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <style>
+        :root {
+            --encbam-primary-green: #10b981;
+            --encbam-primary-dark: #064e3b;
+            --encbam-emerald: #10b981;
+            --encbam-emerald-light: #ecfdf5;
+            --encbam-sapphire: #3b82f6;
+            --encbam-sapphire-dark: #1e3a8a;
+            --encbam-sapphire-light: #eff6ff;
+            --encbam-dark-gray: #0f172a;
+            --encbam-text-dark: #1e293b;
+            --encbam-text-light: #64748b;
+            --encbam-white: #FFFFFF;
+            --encbam-bg-gray: #f8fafc;
+            --encbam-gradient-cover: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+            --encbam-shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --encbam-shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        @font-face {
+            font-family: 'MiSans-Bold';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'MiSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: 'MiSans-Medium';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf');
+        }
+
+        .encbam-body {
+            max-width: 100%;
+            margin: 0 auto;
+            font-family: 'MiSans-Regular', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--encbam-text-dark);
+            overflow-x: hidden;
+        }
+
+        .encbam-page {
+            width: 100%;
+            max-width: 1920px;
+            min-height: 100vh;
+            background-color: var(--encbam-white);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 6% 180px 6%;
+            margin-bottom: 20px;
+        }
+
+        .encbam-page-cover {
+            background: var(--encbam-gradient-cover);
+            color: var(--encbam-white);
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .encbam-page-dark {
+            background-color: var(--encbam-dark-gray);
+            color: var(--encbam-white);
+        }
+
+        .encbam-page-gray {
+            background-color: var(--encbam-bg-gray);
+        }
+
+        .encbam-brand-logo {
+            font-family: 'MiSans-Bold';
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .encbam-brand-logo i {
+            font-size: 36px;
+            color: var(--encbam-emerald);
+        }
+
+        .encbam-page-cover .encbam-brand-logo i {
+            color: var(--encbam-white);
+        }
+
+        .encbam-page h1 {
+            font-family: 'MiSans-Bold';
+            font-size: 80px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+
+        .encbam-page h2 {
+            font-family: 'MiSans-Bold';
+            font-size: 56px;
+            margin-bottom: 30px;
+            color: var(--encbam-primary-green);
+        }
+
+        .encbam-page-dark h2 {
+            color: var(--encbam-emerald);
+        }
+
+        .encbam-page h3 {
+            font-family: 'MiSans-Medium';
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--encbam-dark-gray);
+        }
+
+        .encbam-page p {
+            font-size: 24px;
+            line-height: 1.6;
+            color: var(--encbam-text-dark);
+            margin-bottom: 24px;
+        }
+
+        .encbam-text-light p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .encbam-tagline {
+            font-size: 42px;
+            font-family: 'MiSans-Medium';
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+
+        .encbam-subtitle {
+            font-size: 32px;
+            max-width: 1200px;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .encbam-section-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: rgba(27, 127, 61, 0.1);
+            color: var(--encbam-primary-green);
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .encbam-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .encbam-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .encbam-card {
+            background: var(--encbam-white);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: var(--encbam-shadow-premium);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .encbam-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .encbam-card-dark {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+
+        .encbam-page ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .encbam-page li {
+            font-size: 24px;
+            margin-bottom: 16px;
+            padding-left: 40px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .encbam-page li::before {
+            content: "\EB7B";
+            font-family: "remixicon";
+            position: absolute;
+            left: 0;
+            color: var(--encbam-emerald);
+            font-size: 28px;
+            top: 2px;
+        }
+
+        .encbam-page-dark li::before {
+            color: #4FD1C5;
+        }
+
+        .encbam-screenshot-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border: 8px solid var(--encbam-white);
+            width: 100%;
+        }
+
+        .encbam-screenshot-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .encbam-quote-box {
+            background: linear-gradient(135deg, #F0FFF4 0%, #FFFFFF 100%);
+            border-left: 10px solid var(--encbam-primary-green);
+            padding: 60px;
+            border-radius: 0 24px 24px 0;
+            font-family: 'MiSans-Medium';
+            font-size: 36px;
+            color: var(--encbam-primary-green);
+            position: relative;
+        }
+
+        .encbam-quote-box i {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 60px;
+            opacity: 0.2;
+        }
+
+        .encbam-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 6%;
+            right: 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid rgba(0, 0, 0, 0.08);
+            padding-top: 30px;
+            font-size: 16px;
+            color: var(--encbam-text-light);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .encbam-footer .encbam-brand-logo {
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .encbam-footer span {
+            text-align: center;
+            flex: 1;
+        }
+
+        .encbam-footer span:nth-child(2) {
+            color: #98f398;
+            font-weight: 600;
+        }
+
+        .encbam-footer span:last-child {
+            text-align: right;
+            flex: 0 0 auto;
+            min-width: 40px;
+        }
+
+        .encbam-page-cover .encbam-footer,
+        .encbam-page-dark .encbam-footer {
+            border-top: 2px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .encbam-page-cover .encbam-footer .encbam-brand-logo,
+        .encbam-page-dark .encbam-footer .encbam-brand-logo {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .encbam-comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 20px;
+        }
+
+        .encbam-comparison-table th {
+            text-align: left;
+            font-size: 32px;
+            padding: 20px;
+            color: var(--encbam-text-light);
+        }
+
+        .encbam-comparison-table td {
+            background: var(--encbam-white);
+            padding: 30px;
+            font-size: 28px;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .encbam-comparison-table tr td:first-child {
+            border-left: 10px solid #E53E3E;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            font-weight: bold;
+            color: #742A2A;
+            background: #FFF5F5;
+        }
+
+        .encbam-comparison-table tr td:last-child {
+            border-left: 10px solid var(--encbam-emerald);
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            font-weight: bold;
+            color: var(--encbam-primary-green);
+            background: #F0FFF4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .encbam-feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--encbam-emerald-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--encbam-primary-green);
+            margin-bottom: 24px;
+        }
+
+        .encbam-bold-stmt {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--encbam-primary-green);
+            margin: 20px 0;
+            display: block;
+        }
+
+        .encbam-number-badge {
+            background: var(--encbam-primary-green);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .encbam-img-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .encbam-inputs-card {
+            background: linear-gradient(135deg, var(--encbam-emerald-light), #ffffff) !important;
+            border-left: 6px solid var(--encbam-emerald) !important;
+        }
+
+        .encbam-outputs-card {
+            background: linear-gradient(135deg, var(--encbam-sapphire-light), #ffffff) !important;
+            border-left: 6px solid var(--encbam-sapphire) !important;
+        }
+
+        @keyframes encbam-float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes encbam-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0;
+            }
+
+            .encbam-body {
+                background: white;
+                width: 297mm;
+                height: 210mm;
+            }
+
+            .encbam-page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                width: 297mm;
+                height: 210mm;
+                padding: 20mm !important;
+            }
+
+            .encbam-no-print {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="encbam-body">
 
     <!-- PAGE 1: COVER -->
-    <div class="page page-cover"
+    <div class="encbam-page encbam-page-cover"
         style="background: linear-gradient(135deg, #063c21 0%, #0a5c3d 30%, #1a7f4d 70%, #059669 100%); overflow: visible;">
         <!-- Animated gradient background elements -->
         <div
-            style="position: absolute; top: -200px; right: -300px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); border-radius: 50%; pointer-events: none; animation: float 6s ease-in-out infinite;">
+            style="position: absolute; top: -200px; right: -300px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); border-radius: 50%; pointer-events: none; animation: encbam-float 6s ease-in-out infinite;">
         </div>
         <div
-            style="position: absolute; bottom: -150px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,255,100,0.05), transparent 70%); border-radius: 50%; pointer-events: none; animation: float 8s ease-in-out infinite 1s;">
+            style="position: absolute; bottom: -150px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,255,100,0.05), transparent 70%); border-radius: 50%; pointer-events: none; animation: encbam-float 8s ease-in-out infinite 1s;">
         </div>
 
         <!-- Top bar with logo -->
@@ -36,7 +469,7 @@
             style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; flex: 1; position: relative; z-index: 2;">
             <!-- Left side: Copy -->
             <div style="display: flex; flex-direction: column; justify-content: center;">
-                <h1 class="cover-h1"
+                <h1
                     style="font-size: 100px; margin: 60px 0 20px 0; line-height: 1.1; text-shadow: 0 2px 20px rgba(0,0,0,0.2);">
                     <span style="color: black;"></span>En</span><span style="color: #39FF14;">CBAM</span>
                 </h1>
@@ -44,11 +477,11 @@
                     style="width: 120px; height: 5px; background: linear-gradient(90deg, #00FF00 0%, rgba(0,255,100,0.4) 100%); border-radius: 3px; margin-bottom: 40px;">
                 </div>
 
-                <p class="tagline"
+                <p class="encbam-tagline"
                     style="font-size: 42px; margin: 0 0 25px 0; font-weight: 700; line-height: 1.2; color: white;">CBAM
                     compliance, without the chaos.</p>
 
-                <p class="subtitle"
+                <p class="encbam-subtitle"
                     style="font-size: 18px; color: rgba(255,255,255,0.9); max-width: 600px; line-height: 1.7; margin-bottom: 40px;">
                     A flagship Solution from EnCarbonSys built to simplify CBAM Compliance for exporters, producers,
                     consultants, and EU-facing supply chains.</p>
@@ -132,7 +565,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @keyframes encbam-float {
 
             0%,
             100% {
@@ -146,9 +579,10 @@
     </style>
 
     <!-- PAGE 2: THE CBAM REALITY -->
-    <div class="page" style="background: #fff5f5;">
-        <div class="section-tag" style="background-color: rgba(153, 27, 27, 0.1); color: #991b1b;">The Problem</div>
-        <div class="grid-2" style="height: 100%; align-items: center;">
+    <div class="encbam-page" style="background: #fff5f5;">
+        <div class="encbam-section-tag" style="background-color: rgba(153, 27, 27, 0.1); color: #991b1b;">The Problem
+        </div>
+        <div class="encbam-grid-2" style="height: 100%; align-items: center;">
             <div>
                 <h2 style="color: #991b1b;">CBAM Reality</h2>
                 <h3 style="color: #b91c1c; font-size: 40px; margin-bottom: 40px;">CBAM is not just a
@@ -163,7 +597,7 @@
                     <li>Consultants spending time compiling data instead of advising</li>
                 </ul>
             </div>
-            <div class="quote-box">
+            <div class="encbam-quote-box">
                 <i class="ri-double-quotes-l"></i>
                 <p style="margin-bottom: 0;">"CBAM today feels like tax compliance in 1998. EnCBAM modernizes it."</p>
                 <div style="margin-top: 40px; display: flex; align-items: center; gap: 20px;">
@@ -181,54 +615,62 @@
     </div>
 
     <!-- PAGE 3: WHAT ENCBAM IS -->
-    <div class="page page-gray">
-        <div class="section-tag">Overview</div>
+    <div class="encbam-page encbam-page-gray">
+        <div class="encbam-section-tag">Overview</div>
         <div style="text-align: center; max-width: 1400px; margin: 0 auto 60px auto;">
-            <p class="bold-stmt" style="font-size: 48px; margin-bottom: 30px;">EnCBAM is an end-to-end CBAM Compliance
+            <p class="encbam-bold-stmt" style="font-size: 48px; margin-bottom: 30px;">EnCBAM is an end-to-end CBAM
+                Compliance
                 Solution for Exporters.</p>
             <p>It covers the full compliance lifecycle of CBAM product: Installation setup, mapping, monitoring,
                 calculation, audit trail, and report-readiness.</p>
         </div>
 
-        <div class="grid-3" style="margin-bottom: 40px;">
-            <div class="card" style="padding: 30px; text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-settings-4-line"></i></div>
+        <div class="encbam-grid-3" style="margin-bottom: 40px;">
+            <div class="encbam-card" style="padding: 30px; text-align: center;">
+                <div class="encbam-feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-settings-4-line"></i>
+                </div>
                 <h3>Setup</h3>
                 <p style="font-size: 20px;">Product & precursor mapping</p>
             </div>
-            <div class="card" style="padding: 30px; text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-dashboard-line"></i></div>
+            <div class="encbam-card" style="padding: 30px; text-align: center;">
+                <div class="encbam-feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-dashboard-line"></i>
+                </div>
                 <h3>Monitor</h3>
                 <p style="font-size: 20px;">Monthly production & energy</p>
             </div>
-            <div class="card" style="padding: 30px; text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-file-shield-2-line"></i></div>
+            <div class="encbam-card" style="padding: 30px; text-align: center;">
+                <div class="encbam-feature-icon" style="margin: 0 auto 20px auto;"><i class="ri-file-shield-2-line"></i>
+                </div>
                 <h3>Comply</h3>
                 <p style="font-size: 20px;">Audit trail & report-readiness</p>
             </div>
         </div>
 
-        <div class="screenshot-container" style="max-height: 500px; border-color: transparent;">
+        <div class="encbam-screenshot-container" style="max-height: 500px; border-color: transparent;">
             <img src="https://a.lovart.ai/artifacts/user/HQhwZPf3Ehd8vt2T.png" alt="Dashboard Overview"
                 style="object-position: top;">
         </div>
-        <div style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-green);">Built for
+        <div style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--encbam-primary-green);">Built
+            for
             factories. Designed for auditors.</div>
 
     </div>
 
     <!-- PAGE 4: WHO ENCBAM IS FOR -->
-    <div class="page">
-        <div class="section-tag">Target Audience</div>
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Target Audience</div>
         <h2>Who EnCBAM Is For</h2>
-        <div class="grid-3" style="flex: 1; align-items: stretch; margin-top: 40px; gap: 20px;">
-            <div class="card" style="background: linear-gradient(to bottom right, #fff, #f0fff4); padding: 30px;">
-                <div class="feature-icon" style="background: #ebf8ff; color: #3182ce;"><i class="ri-ship-line"></i>
+        <div class="encbam-grid-3" style="flex: 1; align-items: stretch; margin-top: 40px; gap: 20px;">
+            <div class="encbam-card"
+                style="background: linear-gradient(to bottom right, #fff, #f0fff4); padding: 30px;">
+                <div class="encbam-feature-icon" style="background: #ebf8ff; color: #3182ce;"><i
+                        class="ri-ship-line"></i>
                 </div>
                 <h3>1.Exporters (Manufacturers)</h3>
                 <p style="font-size: 18px;"><strong>Problem:</strong> EU buyers demanding CBAM-ready data.</p>
-                <div style="margin: 20px 0; border-left: 4px solid var(--emerald); padding-left: 15px;">
-                    <p style="color: var(--emerald); font-weight: bold; margin-bottom: 8px; font-size: 18px;">EnCBAM
+                <div style="margin: 20px 0; border-left: 4px solid var(--encbam-emerald); padding-left: 15px;">
+                    <p style="color: var(--encbam-emerald); font-weight: bold; margin-bottom: 8px; font-size: 18px;">
+                        EnCBAM
                         Solves:</p>
                     <ul style="font-size: 16px;">
                         <li>Monthly CBAM‑ready emissions tracking</li>
@@ -236,11 +678,13 @@
                         <li>Clean, auditable data exports</li>
                     </ul>
                 </div>
-                <p class="bold-stmt" style="font-size: 18px;">Result: You stay export‑eligible and preferred.</p>
+                <p class="encbam-bold-stmt" style="font-size: 18px;">Result: You stay export‑eligible and preferred.</p>
             </div>
 
-            <div class="card" style="background: linear-gradient(to bottom right, #fff, #ebf8ff); padding: 30px;">
-                <div class="feature-icon" style="background: #ebf8ff; color: #3182ce;"><i class="ri-truck-fill"></i>
+            <div class="encbam-card"
+                style="background: linear-gradient(to bottom right, #fff, #ebf8ff); padding: 30px;">
+                <div class="encbam-feature-icon" style="background: #ebf8ff; color: #3182ce;"><i
+                        class="ri-truck-fill"></i>
                 </div>
                 <h3>2. Suppliers</h3>
                 <p style="font-size: 18px;"><strong>Problem:</strong> Supplier data is unreliable, incomplete, or late.
@@ -254,11 +698,12 @@
                         <li>Faster annual declarations</li>
                     </ul>
                 </div>
-                <p class="bold-stmt" style="color: #3182ce; font-size: 18px;">Result: Lower CBAM cost risk.</p>
+                <p class="encbam-bold-stmt" style="color: #3182ce; font-size: 18px;">Result: Lower CBAM cost risk.</p>
             </div>
 
-            <div class="card" style="background: linear-gradient(to bottom right, #fff, #fffaf0); padding: 30px;">
-                <div class="feature-icon" style="background: #FFFAF0; color: #DD6B20;"><i
+            <div class="encbam-card"
+                style="background: linear-gradient(to bottom right, #fff, #fffaf0); padding: 30px;">
+                <div class="encbam-feature-icon" style="background: #FFFAF0; color: #DD6B20;"><i
                         class="ri-shield-check-line"></i></div>
                 <h3>3. Auditors & Verifiers</h3>
                 <p style="font-size: 18px;"><strong>Problem:</strong> No traceability, no trust.</p>
@@ -271,20 +716,20 @@
                         <li>Evidence-linked data</li>
                     </ul>
                 </div>
-                <p class="bold-stmt" style="color: #DD6B20; font-size: 18px;">Result: Faster verification, fewer
+                <p class="encbam-bold-stmt" style="color: #DD6B20; font-size: 18px;">Result: Faster verification, fewer
                     disputes.</p>
             </div>
         </div>
     </div>
 
     <!-- PAGE 6: DASHBOARD MODULE -->
-    <div class="page" style="background: #F0FFF4;">
-        <div class="section-tag">Core Module 01</div>
-        <div class="grid-2" style="align-items: center; height: 100%;">
+    <div class="encbam-page" style="background: #F0FFF4;">
+        <div class="encbam-section-tag">Core Module 01</div>
+        <div class="encbam-grid-2" style="align-items: center; height: 100%;">
             <div>
                 <h2 style="font-size: 64px;">CBAM Dashboard</h2>
                 <p><strong>One‑screen CBAM readiness. Early detection of data gaps.</strong></p>
-                <div class="card" style="margin-top: 40px; border-left: 8px solid var(--emerald);">
+                <div class="encbam-card" style="margin-top: 40px; border-left: 8px solid var(--encbam-emerald);">
                     <p style="margin-bottom: 20px;"><strong>What it shows:</strong></p>
                     <ul>
                         <li>Total emissions snapshot</li>
@@ -294,59 +739,61 @@
                     </ul>
                 </div>
             </div>
-            <div class="screenshot-container">
+            <div class="encbam-screenshot-container">
                 <img src="https://a.lovart.ai/artifacts/user/HQhwZPf3Ehd8vt2T.png" alt="Dashboard">
             </div>
         </div>
     </div>
 
     <!-- PAGE 7: INSTALLATION & PRODUCT MANAGEMENT -->
-    <div class="page">
-        <div class="section-tag">Core Module 02 & 03</div>
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Core Module 02 & 03</div>
         <h2>Installation & Product Management</h2>
-        <div class="grid-2" style="margin-bottom: 40px;">
+        <div class="encbam-grid-2" style="margin-bottom: 40px;">
             <div>
-                <h3><span class="number-badge">2</span>Installation Management</h3>
+                <h3><span class="encbam-number-badge">2</span>Installation Management</h3>
                 <p>Factory‑level installation setup and one‑time configuration that forms the foundation for all CBAM
                     logic.</p>
-                <p class="bold-stmt" style="font-size: 22px; color: var(--text-light);"><i class="ri-check-double-line"
-                        style="color: var(--emerald);"></i> Solves: Confusion between furnaces, lines, and installations
+                <p class="encbam-bold-stmt" style="font-size: 22px; color: var(--encbam-text-light);"><i
+                        class="ri-check-double-line" style="color: var(--encbam-emerald);"></i> Solves: Confusion
+                    between furnaces, lines, and installations
                 </p>
             </div>
             <div>
-                <h3><span class="number-badge">3</span>Product Management</h3>
+                <h3><span class="encbam-number-badge">3</span>Product Management</h3>
                 <p>CBAM product mapping with CN‑Code alignment, production routes (primary, secondary, recycling), and
                     installation linkage.</p>
-                <p class="bold-stmt" style="font-size: 22px; color: var(--text-light);"><i class="ri-check-double-line"
-                        style="color: var(--emerald);"></i> Solves: Wrong CN codes → rejected filings</p>
+                <p class="encbam-bold-stmt" style="font-size: 22px; color: var(--encbam-text-light);"><i
+                        class="ri-check-double-line" style="color: var(--encbam-emerald);"></i> Solves: Wrong CN codes →
+                    rejected filings</p>
             </div>
         </div>
-        <div class="screenshot-container" style="flex: 1; max-height: 600px;">
+        <div class="encbam-screenshot-container" style="flex: 1; max-height: 600px;">
             <img src="https://a.lovart.ai/artifacts/user/JxDgK0AP1HklWdkh.png" alt="Products Interface"
                 style="object-fit: contain; background: #f7fafc;">
         </div>
     </div>
 
     <!-- PAGE 8: PRECURSOR CONFIGURATION -->
-    <div class="page page-gray">
-        <div class="section-tag">Core Module 04</div>
-        <div class="grid-2" style="align-items: start; gap: 40px;">
+    <div class="encbam-page encbam-page-gray">
+        <div class="encbam-section-tag">Core Module 04</div>
+        <div class="encbam-grid-2" style="align-items: start; gap: 40px;">
             <div class="h-full-flex">
                 <div>
                     <h2>Precursor Configuration</h2>
                     <p style="font-size: 28px;">Raw material mapping, Supplier & country attribution, CN‑code
                         validation.</p>
-                    <p class="bold-stmt">Pain solved: Precursor chaos and double counting.</p>
+                    <p class="encbam-bold-stmt">Pain solved: Precursor chaos and double counting.</p>
                 </div>
-                <div class="screenshot-container" style="margin-top: 20px;">
+                <div class="encbam-screenshot-container" style="margin-top: 20px;">
                     <img src="https://a.lovart.ai/artifacts/user/nJquGSze4Dyk0JDe.png" alt="Precursor Configuration">
                 </div>
             </div>
             <div class="h-full-flex">
-                <div class="screenshot-container">
+                <div class="encbam-screenshot-container">
                     <img src="https://a.lovart.ai/artifacts/user/GsROazIfzxPki0MP.png" alt="Monthly Precursor Data">
                 </div>
-                <div class="card" style="margin-top: 30px; background: #fff;">
+                <div class="encbam-card" style="margin-top: 30px; background: #fff;">
                     <p><strong>Monthly Tracking:</strong></p>
                     <p>Track quantities and suppliers monthly to ensure precise weighted average calculations at
                         year-end.</p>
@@ -356,14 +803,16 @@
     </div>
 
     <!-- PAGE 9: MONTHLY MONITORING ENGINE -->
-    <div class="page">
-        <div class="section-tag">Core Module 05</div>
-        <div class="grid-2" style="height: 100%; align-items: center;">
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Core Module 05</div>
+        <div class="encbam-grid-2" style="height: 100%; align-items: center;">
             <div>
                 <h2 style="font-size: 64px; white-space: nowrap;">Monthly Monitoring Engine</h2>
-                <p class="bold-stmt" style="font-size: 40px; margin-bottom: 40px;">This is the heart of EnCBAM.</p>
-                <div class="card" style="border-left: 8px solid var(--emerald); background: #F0FFF4;">
-                    <p style="font-size: 28px; font-weight: bold; color: var(--primary-green);">Why monthly matters:</p>
+                <p class="encbam-bold-stmt" style="font-size: 40px; margin-bottom: 40px;">This is the heart of EnCBAM.
+                </p>
+                <div class="encbam-card" style="border-left: 8px solid var(--encbam-emerald); background: #F0FFF4;">
+                    <p style="font-size: 28px; font-weight: bold; color: var(--encbam-primary-green);">Why monthly
+                        matters:</p>
                     <p>CBAM is annual on paper, but emissions are generated daily. EnCBAM enforces discipline before
                         panic starts.</p>
                 </div>
@@ -374,32 +823,35 @@
                     <li>Precursor consumption</li>
                 </ul>
             </div>
-            <div class="screenshot-container">
+            <div class="encbam-screenshot-container">
                 <img src="https://a.lovart.ai/artifacts/user/fEf275bvKuUuAIbV.png" alt="Production Data">
             </div>
         </div>
     </div>
 
     <!-- PAGE 10: EMISSIONS ENGINE -->
-    <div class="page page-gray">
-        <div class="section-tag">Core Module 06</div>
+    <div class="encbam-page encbam-page-gray">
+        <div class="encbam-section-tag">Core Module 06</div>
         <h2>Emissions Engine</h2>
         <p style="max-width: 900px; margin-bottom: 40px;">Direct emissions (combustion, mass balance) and Indirect
             emissions (electricity) with method-specific inputs. <strong>Solves incorrect formulas & inconsistent
                 methods.</strong></p>
 
-        <div class="grid-2" style="gap: 40px;">
+        <div class="encbam-grid-2" style="gap: 40px;">
             <div>
-                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--dark-gray);">Direct
+                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--encbam-dark-gray);">
+                    Direct
                     Emissions (Combustion/Mass Balance)</div>
-                <div class="screenshot-container">
-                    <img src="https://a.lovart.ai/artifacts/user/cMzWUFeUjZ4BTWEz.png" alt="Emissions Tracking">
+                <div class="encbam-screenshot-container">
+                    <img src="https://image2url.com/r2/default/images/1767547721350-35974185-fa7d-4029-a9e5-a4f955928dbf.png"
+                        alt="Emissions Tracking">
                 </div>
             </div>
             <div>
-                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--dark-gray);">Indirect
+                <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--encbam-dark-gray);">
+                    Indirect
                     Emissions (Electricity)</div>
-                <div class="screenshot-container">
+                <div class="encbam-screenshot-container">
                     <img src="https://a.lovart.ai/artifacts/user/d35jiexV0vMxmCPJ.png" alt="Electricity Data">
                 </div>
             </div>
@@ -407,28 +859,28 @@
     </div>
 
     <!-- PAGE 11: ATTRIBUTED EMISSIONS -->
-    <div class="page">
-        <div class="section-tag">Core Module 07</div>
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Core Module 07</div>
         <h2>Attributed Emissions Management</h2>
-        <div class="grid-2" style="margin-bottom: 40px;">
+        <div class="encbam-grid-2" style="margin-bottom: 40px;">
             <div>
                 <ul>
                     <li>Measurable heat</li>
                     <li>Waste gases</li>
                     <li>Shared emissions allocation</li>
                 </ul>
-                <p class="bold-stmt">Pain solved: Attribution errors between products.</p>
+                <p class="encbam-bold-stmt">Pain solved: Attribution errors between products.</p>
             </div>
         </div>
 
         <div style="position: relative; height: 600px; width: 100%; margin-top: 20px;">
             <!-- Top-Left Image -->
-            <div class="screenshot-container"
+            <div class="encbam-screenshot-container"
                 style="position: absolute; top: 0; left: 0; width: 70%; z-index: 1; transform: perspective(1000px) rotateY(10deg) rotateX(2deg); box-shadow: -20px 20px 50px rgba(0,0,0,0.3);">
                 <img src="https://a.lovart.ai/artifacts/user/1fQNUbdWO1wWYo7W.png" alt="Attributed Emissions Heat">
             </div>
             <!-- Bottom-Right Image (Overlapping diagonally) -->
-            <div class="screenshot-container"
+            <div class="encbam-screenshot-container"
                 style="position: absolute; bottom: 0; right: 0; width: 70%; z-index: 2; transform: perspective(1000px) rotateY(-10deg) rotateX(2deg); box-shadow: 20px 20px 50px rgba(0,0,0,0.3);">
                 <img src="https://a.lovart.ai/artifacts/user/Lf0w583z9uvfM8AY.png" alt="Precursors Detail">
             </div>
@@ -436,21 +888,21 @@
     </div>
 
     <!-- PAGE 12: AUDIT & REPORTING -->
-    <div class="page">
-        <div class="section-tag">Core Module 08 & 09</div>
-        <div class="grid-2" style="margin-bottom: 40px; align-items: flex-end;">
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Core Module 08 & 09</div>
+        <div class="encbam-grid-2" style="margin-bottom: 40px; align-items: flex-end;">
             <div>
                 <h2>Evidence & Audit Logs</h2>
                 <p style="font-size: 28px; margin-bottom: 30px;">Every action logged. Every change
                     traceable. JSON‑level detail available.</p>
                 <div
-                    style="padding: 20px; border: 1px solid var(--emerald); border-radius: 12px; display: inline-block;">
-                    <i class="ri-check-line" style="color: var(--emerald); margin-right: 10px;"></i> This is what
+                    style="padding: 20px; border: 1px solid var(--encbam-emerald); border-radius: 12px; display: inline-block;">
+                    <i class="ri-check-line" style="color: var(--encbam-emerald); margin-right: 10px;"></i> This is what
                     auditors love.
                 </div>
             </div>
             <div>
-                <h3 style="color: var(--emerald);">Reporting Readiness</h3>
+                <h3 style="color: var(--encbam-emerald);">Reporting Readiness</h3>
                 <ul>
                     <li>CBAM‑aligned data structure</li>
                     <li>Export‑ready datasets (EU XML compatible)</li>
@@ -458,23 +910,23 @@
                 </ul>
             </div>
         </div>
-        <div class="screenshot-container" style="border: none; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+        <div class="encbam-screenshot-container" style="border: none; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
             <img src="https://a.lovart.ai/artifacts/user/seO2fbX1mTFNjcyp.png" alt="Audit Trail Large">
         </div>
     </div>
 
     <!-- PAGE 13: COMPARISON -->
-    <div class="page">
-        <div class="section-tag">Value Proposition</div>
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Value Proposition</div>
         <h2 style="text-align: center; margin-bottom: 60px;">How EnCBAM Actually Solves CBAM</h2>
 
         <div style="max-width: 1400px; margin: 0 auto;">
-            <table class="comparison-table">
+            <table class="encbam-comparison-table">
                 <thead>
                     <tr>
                         <th style="width: 45%;">CBAM Pain</th>
                         <th style="width: 10%;"></th>
-                        <th style="width: 45%; color: var(--primary-green);">EnCBAM Solution</th>
+                        <th style="width: 45%; color: var(--encbam-primary-green);">EnCBAM Solution</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -520,12 +972,12 @@
     </div>
 
     <!-- PAGE 14: WHY DIFFERENT -->
-    <div class="page" style="background: var(--emerald-light);">
-        <div class="section-tag">Differentiation</div>
-        <div class="grid-2" style="align-items: center; height: 100%;">
+    <div class="encbam-page" style="background: var(--encbam-emerald-light);">
+        <div class="encbam-section-tag">Differentiation</div>
+        <div class="encbam-grid-2" style="align-items: center; height: 100%;">
             <div>
                 <h2>Why EnCBAM Is Different</h2>
-                <div class="card" style="margin-top: 40px; padding: 60px;">
+                <div class="encbam-card" style="margin-top: 40px; padding: 60px;">
                     <ul style="font-size: 28px;">
                         <li style="margin-bottom: 30px;">Built specifically for CBAM (not generic ESG)</li>
                         <li style="margin-bottom: 30px;">Mirrors sector-specific EU CBAM logic, not general guidelines
@@ -536,42 +988,43 @@
                 </div>
             </div>
             <div style="padding: 60px; text-align: right;">
-                <i class="ri-server-line" style="font-size: 200px; color: var(--emerald); opacity: 0.2;"></i>
-                <p class="bold-stmt"
-                    style="font-size: 64px; line-height: 1.2; color: var(--primary-green); text-align: right;">"This is
+                <i class="ri-server-line" style="font-size: 200px; color: var(--encbam-emerald); opacity: 0.2;"></i>
+                <p class="encbam-bold-stmt"
+                    style="font-size: 64px; line-height: 1.2; color: var(--encbam-primary-green); text-align: right;">
+                    "This is
                     not a slideware ESG tool. This is compliance infrastructure."</p>
             </div>
         </div>
     </div>
 
     <!-- PAGE 15: STRATEGIC IMPACT -->
-    <div class="page">
-        <div class="section-tag">Business Impact</div>
+    <div class="encbam-page">
+        <div class="encbam-section-tag">Business Impact</div>
         <h2>Strategic Impact</h2>
         <p style="font-size: 32px; margin-bottom: 60px;">Using EnCBAM enables:</p>
 
-        <div class="grid-3" style="margin-bottom: 40px;">
-            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
-                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+        <div class="encbam-grid-3" style="margin-bottom: 40px;">
+            <div class="encbam-card" style="text-align: center; border-top: 8px solid var(--encbam-emerald);">
+                <div style="font-size: 60px; color: var(--encbam-emerald); margin-bottom: 20px;"><i
                         class="ri-money-euro-circle-line"></i></div>
                 <h3 style="font-size: 32px;">Lower Costs</h3>
                 <p>Lower CBAM certificate costs through precise data vs defaults.</p>
             </div>
-            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
-                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+            <div class="encbam-card" style="text-align: center; border-top: 8px solid var(--encbam-emerald);">
+                <div style="font-size: 60px; color: var(--encbam-emerald); margin-bottom: 20px;"><i
                         class="ri-shake-hands-line"></i></div>
                 <h3 style="font-size: 32px;">Higher Trust</h3>
                 <p>Higher trust with EU buyers as a preferred, data-ready supplier.</p>
             </div>
-            <div class="card" style="text-align: center; border-top: 8px solid var(--emerald);">
-                <div style="font-size: 60px; color: var(--emerald); margin-bottom: 20px;"><i
+            <div class="encbam-card" style="text-align: center; border-top: 8px solid var(--encbam-emerald);">
+                <div style="font-size: 60px; color: var(--encbam-emerald); margin-bottom: 20px;"><i
                         class="ri-timer-flash-line"></i></div>
                 <h3 style="font-size: 32px;">Faster Audits</h3>
                 <p>Reduced verification time and legal exposure.</p>
             </div>
         </div>
-        <div class="card" style="text-align: center; background: var(--bg-gray);">
-            <div style="font-size: 60px; color: var(--dark-gray); margin-bottom: 20px;"><i
+        <div class="encbam-card" style="text-align: center; background: var(--encbam-bg-gray);">
+            <div style="font-size: 60px; color: var(--encbam-dark-gray); margin-bottom: 20px;"><i
                     class="ri-line-chart-line"></i></div>
             <h3 style="font-size: 32px;">Scalability</h3>
             <p>Scalable compliance infrastructure as CBAM tightens in 2026 and beyond.</p>
@@ -579,11 +1032,11 @@
     </div>
 
     <!-- PAGE 16: ENCBAM ARCHITECTURE -->
-    <div class="page">
+    <div class="encbam-page">
         <div style="position: relative; height: 100%;">
-            <div class="section-tag">System Architecture</div>
+            <div class="encbam-section-tag">System Architecture</div>
             <h2
-                style="text-align: center; margin-bottom: 30px; font-size: 44px; background: linear-gradient(135deg, var(--primary-green), var(--emerald)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                style="text-align: center; margin-bottom: 30px; font-size: 44px; background: linear-gradient(135deg, var(--encbam-primary-green), var(--encbam-emerald)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                 How EnCBAM Works</h2>
 
             <div
@@ -593,86 +1046,86 @@
                 <div>
                     <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
                         <div
-                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--primary-green), var(--emerald)); border-radius: 2px;">
+                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--encbam-primary-green), var(--encbam-emerald)); border-radius: 2px;">
                         </div>
                         <h3
-                            style="color: var(--primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
+                            style="color: var(--encbam-primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
                             Data Inputs</h3>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 14px;">
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Installation Data</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Facility setup
                                 & configuration</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Supplier & Precursor Data</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Raw material &
                                 sourcing</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Product Data</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">CN codes &
                                 specifications and monthly production reports</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Fuel Data</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Combustion &
                                 energy inputs</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Electricity Data</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Electricity
                                 consumption</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 System Boundary</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Scope
                                 definition & limits</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Evidence Upload</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Bills, BOMs,
                                 readings, packing lists, etc</div>
@@ -688,7 +1141,7 @@
                     <div
                         style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.12), rgba(5, 150, 105, 0.08)); border: 2px solid rgba(5, 150, 105, 0.3); border-radius: 50%; width: 240px; height: 240px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 60px rgba(5, 150, 105, 0.15), inset 0 0 40px rgba(5, 150, 105, 0.05); position: relative;">
                         <div
-                            style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.1), transparent); animation: spin 20s linear infinite;">
+                            style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.1), transparent); animation: encbam-spin 20s linear infinite;">
                         </div>
                         <div style="position: relative; z-index: 1; text-align: center;">
                         </div>
@@ -700,97 +1153,97 @@
                 <div>
                     <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
                         <div
-                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--primary-green), var(--emerald)); border-radius: 2px;">
+                            style="width: 4px; height: 24px; background: linear-gradient(180deg, var(--encbam-primary-green), var(--encbam-emerald)); border-radius: 2px;">
                         </div>
                         <h3
-                            style="color: var(--primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
+                            style="color: var(--encbam-primary-green); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.5px;">
                             Outcomes & Features</h3>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Direct & Indirect Emissions</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Accurate
                                 calculations</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Specific Embedded Emissions (SEE)</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">EU CBAM
                                 methodology</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 CBAM Report Generation</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">EU-compliant
                                 formats, Custom Date Ranges</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Continuous Monitoring</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Monthly
                                 tracking</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Data Storage & Management</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Secure,
                                 archivable and unified data management</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Immutable Audit Trail</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Every action
                                 logged</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Evidence Management</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Centralized
                                 document control</div>
                         </div>
                         <div
-                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
+                            style="background: linear-gradient(135deg, rgba(27, 127, 61, 0.08), rgba(5, 150, 105, 0.06)); border-left: 4px solid var(--encbam-emerald); padding: 14px 16px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;">
                             <div
-                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
+                                style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--encbam-emerald), transparent); opacity: 0.1; border-radius: 0 10px 0 20px;">
                             </div>
                             <div
-                                style="font-weight: 700; color: var(--primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
+                                style="font-weight: 700; color: var(--encbam-primary-green); margin-bottom: 3px; font-size: 13px; position: relative; z-index: 1;">
                                 Report</div>
                             <div style="color: #5a7c72; font-size: 11px; position: relative; z-index: 1;">Comprehensive
                                 insights</div>
@@ -851,7 +1304,7 @@
             </div>
 
             <style>
-                @keyframes spin {
+                @keyframes encbam-spin {
                     from {
                         transform: rotate(0deg);
                     }
@@ -866,8 +1319,8 @@
     </div>
 
     <!-- PAGE 18: FINAL WORD -->
-    <div class="page page-cover">
-        <div class="section-tag"
+    <div class="encbam-page encbam-page-cover">
+        <div class="encbam-section-tag"
             style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">EnCBAM -
             Enabling CBAM Compliance</div>
         <div
