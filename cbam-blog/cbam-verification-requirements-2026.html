@@ -267,6 +267,58 @@
             gap: 12px;
         }
 
+        /* References Section */
+        .references-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .references-section h2 {
+            border-bottom: 3px solid #2DF56D;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .references-section li::before {
+            content: "•";
+            color: #2DF56D;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .references-section a {
+            color: #1890ff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .references-section a:hover {
+            border-bottom: 2px solid #1890ff;
+        }
+
+        .references-section em {
+            display: block;
+            color: #666;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
         @media (max-width: 1024px) {
             .article-layout {
                 flex-direction: column;
@@ -330,6 +382,7 @@
                     <li><a href="#penalties"><i class="fas fa-chevron-right"></i> Penalties</a></li>
                     <li><a href="#timeline"><i class="fas fa-chevron-right"></i> Timeline</a></li>
                     <li><a href="#action-steps"><i class="fas fa-chevron-right"></i> Action Steps</a></li>
+                    <li><a href="#references"><i class="fas fa-chevron-right"></i> References</a></li>
                 </ul>
             </div>
         </aside>
@@ -517,6 +570,49 @@
                 <p>
                     As final implementing regulations are released in late 2025, stay vigilant for updates and refinements to these requirements. The verification landscape may evolve, but the fundamental need for accurate, verified emissions data will remain central to CBAM compliance.
                 </p>
+
+                <!-- References Section -->
+                <div class="references-section" id="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li>
+                            <strong>EU CBAM Portal:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en</a><br>
+                            <em>Official European Commission portal for CBAM information, guidance, and updates</em>
+                        </li>
+                        <li>
+                            <strong>CBAM Regulation (EU) 2023/956:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R0956" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956</a><br>
+                            <em>Full text of the Carbon Border Adjustment Mechanism regulation</em>
+                        </li>
+                        <li>
+                            <strong>CBAM Implementing Regulation (EU) 2023/1773:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1773" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1773</a><br>
+                            <em>Detailed implementing rules for the transitional period</em>
+                        </li>
+                        <li>
+                            <strong>CBAM Transitional Registry:</strong> <a href="https://cbam-registry.ec.europa.eu/" target="_blank">https://cbam-registry.ec.europa.eu/</a><br>
+                            <em>Official registry for CBAM reporting and declarations</em>
+                        </li>
+                        <li>
+                            <strong>EU ETS Verification Regulation (EU) 2018/2067:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R2067" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R2067</a><br>
+                            <em>Verification and accreditation standards applicable to CBAM</em>
+                        </li>
+                        <li>
+                            <strong>CBAM Guidance Documents:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/guidance-documents_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/guidance-documents_en</a><br>
+                            <em>Comprehensive guidance on CBAM implementation and compliance</em>
+                        </li>
+                        <li>
+                            <strong>ISO 14064-1:2018:</strong> <a href="https://www.iso.org/standard/66453.html" target="_blank">https://www.iso.org/standard/66453.html</a><br>
+                            <em>International standard for greenhouse gas emissions quantification and reporting</em>
+                        </li>
+                        <li>
+                            <strong>GHG Protocol:</strong> <a href="https://ghgprotocol.org/" target="_blank">https://ghgprotocol.org/</a><br>
+                            <em>Global standards for measuring and managing greenhouse gas emissions</em>
+                        </li>
+                        <li>
+                            <strong>EnCarbonSys CBAM Solutions:</strong> <a href="https://encarbonsys.com" target="_blank">https://encarbonsys.com</a><br>
+                            <em>Comprehensive CBAM compliance platform and expert guidance services</em>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </article>
     </div>
