@@ -447,6 +447,46 @@
             font-size: 18px;
         }
 
+        .references-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .references-section h2 {
+            color: #0a0a0a;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #FF9933;
+            padding-bottom: 15px;
+        }
+
+        .reference-item {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .reference-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #FF9933;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .reference-item a {
+            color: #1890ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .reference-item a:hover {
+            border-bottom-color: #1890ff;
+        }
+
         @media (max-width: 1024px) {
             .article-layout {
                 flex-direction: column;
@@ -504,741 +544,896 @@
         <!-- Table of Contents Sidebar -->
         <aside class="toc-sidebar">
             <div class="toc-sticky">
-                <div class="toc-title">EXPORTER'S GUIDE</div>
+                <div class="toc-title">Table of Contents</div>
                 <ul class="toc-list">
-                    <li><a href="#overview"><i class="fas fa-chevron-right"></i> CBAM Impact on India</a></li>
-                    <li><a href="#affected-sectors"><i class="fas fa-chevron-right"></i> Affected Sectors</a></li>
-                    <li><a href="#data-requirements"><i class="fas fa-chevron-right"></i> Data Requirements</a></li>
-                    <li><a href="#verification"><i class="fas fa-chevron-right"></i> Verification Process</a></li>
-                    <li><a href="#cost-impact"><i class="fas fa-chevron-right"></i> Cost Implications</a></li>
-                    <li><a href="#competitive-strategy"><i class="fas fa-chevron-right"></i> Competitive Strategy</a></li>
-                    <li><a href="#government-support"><i class="fas fa-chevron-right"></i> Government Support</a></li>
-                    <li><a href="#action-plan"><i class="fas fa-chevron-right"></i> Implementation Plan</a></li>
+                    <li><a href="#introduction"><i class="fas fa-circle"></i> Introduction</a></li>
+                    <li><a href="#what-is-cbam"><i class="fas fa-circle"></i> What is CBAM?</a></li>
+                    <li><a href="#indian-impact"><i class="fas fa-circle"></i> Impact on Indian Exporters</a></li>
+                    <li><a href="#data-requirements"><i class="fas fa-circle"></i> Data Requirements</a></li>
+                    <li><a href="#verification"><i class="fas fa-circle"></i> Verification Process</a></li>
+                    <li><a href="#cost-analysis"><i class="fas fa-circle"></i> Cost Analysis</a></li>
+                    <li><a href="#competitive-strategy"><i class="fas fa-circle"></i> Competitive Strategy</a></li>
+                    <li><a href="#government-support"><i class="fas fa-circle"></i> Government Support</a></li>
+                    <li><a href="#action-plan"><i class="fas fa-circle"></i> 90-Day Action Plan</a></li>
+                    <li><a href="#references"><i class="fas fa-circle"></i> References</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Article Content -->
-        <article class="article-container">
-            <a href="/cbam-blog/" class="back-link">
+        <div class="article-container">
+            <a href="/blog.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Blog
             </a>
 
-            <div class="article-header">
-                <div class="article-meta">
-                    <span><i class="far fa-calendar"></i> January 12, 2026</span>
-                    <span><i class="far fa-clock"></i> 18 min read</span>
-                    <span><i class="fas fa-tag"></i> India Exporters</span>
-                </div>
-                <h1>CBAM 2026 for Indian Exporters: Your Complete Compliance Roadmap</h1>
-                <p class="article-excerpt">
-                    The EU's Carbon Border Adjustment Mechanism is reshaping global trade. For Indian exporters of steel, aluminum, cement, and fertilizers, CBAM compliance is no longer optional—it's essential for market access. This comprehensive guide provides everything you need to navigate data collection, verification, cost management, and competitive positioning in the CBAM era.
-                </p>
-            </div>
-
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Indian Manufacturing Industry" class="featured-image">
-
-            <div class="article-content">
-                <h2 id="overview">Understanding CBAM's Impact on Indian Exports</h2>
-                
-                <p>
-                    The European Union's Carbon Border Adjustment Mechanism (CBAM) represents one of the most significant trade policy shifts in decades, and Indian exporters are directly in its crosshairs. With the EU being India's third-largest trading partner and a critical market for carbon-intensive products, CBAM compliance isn't just a regulatory checkbox—it's a strategic imperative for maintaining market access and competitiveness.
-                </p>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">$8.2B</span>
-                        <span class="stat-label">India's annual exports to EU in CBAM-covered sectors</span>
+            <article>
+                <header class="article-header">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> January 12, 2026</span>
+                        <span><i class="far fa-clock"></i> 25 min read</span>
+                        <span><i class="far fa-user"></i> EnCarbonSys Team</span>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">27%</span>
-                        <span class="stat-label">Share of India's steel exports going to EU</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">Jan 1, 2026</span>
-                        <span class="stat-label">CBAM definitive phase begins</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">€45-75/ton</span>
-                        <span class="stat-label">Estimated CBAM certificate cost range</span>
-                    </div>
-                </div>
-
-                <div class="impact-box india-flag-accent">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Why Indian Exporters Must Act Now</h3>
-                    <p>
-                        Starting January 1, 2026, EU importers of Indian steel, aluminum, cement, fertilizers, hydrogen, and electricity must purchase CBAM certificates to cover the embedded carbon emissions in these products. If you don't provide accurate emissions data, your EU buyers will face default values—typically 20-30% higher than actual emissions—making your products uncompetitive.
+                    <h1>CBAM 2026 for Indian Exporters: The Definitive Compliance Guide</h1>
+                    <p class="article-excerpt">
+                        The EU's Carbon Border Adjustment Mechanism enters its definitive phase in 2026. For Indian steel, aluminum, cement, and fertilizer exporters, this means mandatory carbon reporting, third-party verification, and financial obligations. This comprehensive guide breaks down exactly what you need to do, when, and how much it will cost.
                     </p>
+                </header>
+
+                <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Industrial Manufacturing Plant" class="featured-image">
+
+                <div class="article-content">
+                    <h2 id="introduction">Introduction: The CBAM Reality Check</h2>
+
+                    <p>
+                        If you're an Indian manufacturer exporting steel, aluminum, cement, fertilizers, or hydrogen to the European Union, January 1, 2026 marks a fundamental shift in how you do business. The EU's Carbon Border Adjustment Mechanism (CBAM) transitions from a "transitional" reporting phase to its <strong>definitive phase</strong>—meaning real financial obligations, mandatory third-party verification, and potential market access barriers for non-compliant exporters.
+                    </p>
+
+                    <p>
+                        This isn't a distant regulatory threat anymore. It's here, it's enforceable, and it will directly impact your bottom line. The good news? With the right preparation, CBAM compliance can become a competitive advantage rather than just a cost center.
+                    </p>
+
+                    <div class="impact-box india-flag-accent">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Why This Matters for Indian Exporters</h3>
+                        <p>
+                            India is the EU's largest source of steel imports and a major supplier of aluminum and cement. In 2025, Indian steel exports to the EU totaled approximately <strong>€4.2 billion</strong>. With CBAM's definitive phase, these exports face carbon costs that could range from <strong>3-8% of product value</strong> depending on production methods and carbon intensity.
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            For a mid-sized Indian steel exporter shipping 50,000 tons annually to the EU, CBAM could mean <strong>€500,000-€1.2 million in annual carbon costs</strong> by 2030 if no decarbonization measures are taken. The clock is ticking.
+                        </p>
+                    </div>
+
+                    <h2 id="what-is-cbam">What is CBAM? A Quick Primer</h2>
+
+                    <p>
+                        The Carbon Border Adjustment Mechanism is the EU's tool to prevent "carbon leakage"—the risk that European companies relocate production to countries with less stringent climate policies, or that EU products are replaced by more carbon-intensive imports. CBAM works by:
+                    </p>
+
+                    <ul>
+                        <li><strong>Measuring embedded emissions:</strong> Calculating the carbon footprint of imported goods based on their production process</li>
+                        <li><strong>Charging for carbon:</strong> Requiring importers to purchase CBAM certificates equivalent to the carbon price that would have been paid under the EU Emissions Trading System (ETS)</li>
+                        <li><strong>Crediting carbon prices paid abroad:</strong> Allowing deductions for carbon taxes or ETS costs already paid in the country of origin</li>
+                    </ul>
+
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Business Analysis and Charts" class="section-image">
+
+                    <h3>CBAM Covered Products (2026 Scope)</h3>
+
+                    <p>
+                        The definitive phase starting January 1, 2026 covers six product categories:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Product Category</th>
+                                <th>HS Codes (Examples)</th>
+                                <th>Indian Export Exposure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Iron & Steel</strong></td>
+                                <td>7206, 7207, 7208, 7209, 7210, 7211, 7212, 7213, 7214, 7215, 7216, 7217, 7218, 7219, 7220, 7221, 7222, 7223, 7224, 7225, 7226, 7227, 7228, 7229</td>
+                                <td>Very High (€4.2B annually)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aluminum</strong></td>
+                                <td>7601, 7603, 7604, 7605, 7606, 7607, 7608, 7609, 7610, 7611, 7612, 7613, 7614, 7615, 7616</td>
+                                <td>High (€800M annually)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cement</strong></td>
+                                <td>2507, 2523</td>
+                                <td>Moderate (€150M annually)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fertilizers</strong></td>
+                                <td>2808, 2814, 2834, 3102, 3105</td>
+                                <td>Moderate (€200M annually)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hydrogen</strong></td>
+                                <td>2804</td>
+                                <td>Low (emerging market)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Electricity</strong></td>
+                                <td>2716</td>
+                                <td>Not Applicable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="warning-box">
+                        <h3><i class="fas fa-info-circle"></i> Scope Expansion Coming</h3>
+                        <p style="margin-bottom: 0;">
+                            The EU plans to expand CBAM coverage to additional products by 2030, potentially including polymers, chemicals, and downstream products like automotive parts. Indian exporters in these sectors should begin preparing now, even if not immediately affected.
+                        </p>
+                    </div>
+
+                    <h2 id="indian-impact">The Impact on Indian Exporters: By the Numbers</h2>
+
+                    <p>
+                        Let's quantify what CBAM means for Indian manufacturers. The financial impact depends on three key variables:
+                    </p>
+
+                    <ol>
+                        <li><strong>Carbon intensity of your production:</strong> Tons of CO₂ emitted per ton of product</li>
+                        <li><strong>EU ETS carbon price:</strong> Currently around €80-90/ton, projected to reach €100-150/ton by 2030</li>
+                        <li><strong>Carbon price already paid in India:</strong> Currently minimal, but India is developing carbon pricing mechanisms</li>
+                    </ol>
+
+                    <h3>Example: Indian Steel Exporter</h3>
+
+                    <p>
+                        Consider a typical Indian integrated steel mill using blast furnace-basic oxygen furnace (BF-BOF) technology:
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">2.1</span>
+                            <span class="stat-label">Tons CO₂ per ton of crude steel (Indian average)</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">1.8</span>
+                            <span class="stat-label">Tons CO₂ per ton of crude steel (EU average)</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">€85</span>
+                            <span class="stat-label">Current EU ETS price per ton CO₂</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">€178.50</span>
+                            <span class="stat-label">CBAM cost per ton of steel exported (2.1 × €85)</span>
+                        </div>
+                    </div>
+
+                    <p>
+                        For a steel product selling at €800/ton, this represents a <strong>22% carbon surcharge</strong>. Even accounting for free allowances that will be phased out gradually (100% free in 2026, declining to 0% by 2034), the impact is substantial.
+                    </p>
+
+                    <div class="impact-box india-flag-accent">
+                        <h3><i class="fas fa-calculator"></i> Quick CBAM Cost Calculator</h3>
+                        <p>
+                            <strong>Your CBAM Cost = (Your Carbon Intensity - Free Allowance) × EU ETS Price × Export Volume</strong>
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            Example: (2.1 tCO₂/ton - 0 free allowance) × €85/tCO₂ × 50,000 tons = <strong>€8.925 million annually</strong>
+                        </p>
+                    </div>
+
+                    <h2 id="data-requirements">CBAM Data Requirements: What You Must Report</h2>
+
+                    <p>
+                        The definitive phase requires detailed, verifiable emissions data for every shipment. Here's exactly what you need to track and report:
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Data Analytics Dashboard" class="section-image">
+
+                    <h3>1. Direct Emissions (Scope 1)</h3>
+
+                    <p>
+                        Emissions from sources you own or control during the production process:
+                    </p>
+
+                    <ul>
+                        <li><strong>Fuel combustion:</strong> Coal, natural gas, fuel oil burned in furnaces, kilns, or boilers</li>
+                        <li><strong>Process emissions:</strong> Chemical reactions (e.g., limestone calcination in cement, reduction of iron ore in steel)</li>
+                        <li><strong>Fugitive emissions:</strong> Leaks from equipment, storage, or transport</li>
+                    </ul>
+
+                    <h3>2. Indirect Emissions (Scope 2)</h3>
+
+                    <p>
+                        Emissions from purchased electricity and heat used in production:
+                    </p>
+
+                    <ul>
+                        <li><strong>Electricity consumption:</strong> kWh purchased from the grid, with emissions calculated based on India's grid emission factor (currently ~0.82 kg CO₂/kWh)</li>
+                        <li><strong>Purchased heat/steam:</strong> If you buy thermal energy from external sources</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h3><i class="fas fa-bolt"></i> Renewable Energy Advantage</h3>
+                        <p style="margin-bottom: 0;">
+                            If you use renewable electricity (solar, wind, hydro) with valid Renewable Energy Certificates (RECs) or Power Purchase Agreements (PPAs), you can claim zero emissions for that portion of electricity. This can significantly reduce your CBAM exposure. Document everything meticulously!
+                        </p>
+                    </div>
+
+                    <h3>3. Precursor Materials (Embedded Emissions)</h3>
+
+                    <p>
+                        For certain products, you must also report emissions from key input materials:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Your Product</th>
+                                <th>Precursor Materials to Track</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Steel products</strong></td>
+                                <td>Iron ore pellets, sinter, pig iron, direct reduced iron (DRI), ferro-alloys</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aluminum products</strong></td>
+                                <td>Alumina, aluminum alloys, anodes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fertilizers</strong></td>
+                                <td>Ammonia, nitric acid, phosphoric acid</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cement</strong></td>
+                                <td>Clinker (if not produced in-house)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>4. Production Data</h3>
+
+                    <p>
+                        Beyond emissions, you need detailed production records:
+                    </p>
+
+                    <div class="checklist">
+                        <h3>Required Production Data</h3>
+                        <ul>
+                            <li>Total quantity of goods produced (tons)</li>
+                            <li>Quantity exported to EU (tons)</li>
+                            <li>Production route/technology used (e.g., BF-BOF vs. EAF for steel)</li>
+                            <li>Fuel consumption by type (coal, natural gas, etc.) in GJ or tons</li>
+                            <li>Electricity consumption in kWh</li>
+                            <li>Raw material inputs (quantities and sources)</li>
+                            <li>Production dates and batch numbers</li>
+                        </ul>
+                    </div>
+
+                    <h3>Data Collection Methods: Three Approaches</h3>
+
+                    <p>
+                        The EU allows three methods for calculating emissions, in order of preference:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Description</th>
+                                <th>Accuracy</th>
+                                <th>Recommended For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Method A: Calculation-Based</strong></td>
+                                <td>Use actual production data (fuel consumption, electricity use) with standard emission factors</td>
+                                <td>High</td>
+                                <td>Most exporters (preferred method)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Method B: Measurement-Based</strong></td>
+                                <td>Direct measurement of emissions using Continuous Emissions Monitoring Systems (CEMS)</td>
+                                <td>Very High</td>
+                                <td>Large facilities with existing CEMS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Default Values</strong></td>
+                                <td>Use EU-provided default emission factors (typically conservative/high)</td>
+                                <td>Low</td>
+                                <td>Only as last resort—results in higher CBAM costs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="success-box">
+                        <h3><i class="fas fa-lightbulb"></i> Pro Tip: Avoid Default Values</h3>
+                        <p style="margin-bottom: 0;">
+                            EU default values are intentionally set high to incentivize actual data reporting. For Indian steel, the default is around 2.5 tCO₂/ton—significantly higher than most Indian mills' actual emissions. Using real data can save you 15-25% on CBAM costs.
+                        </p>
+                    </div>
+
+                    <h2 id="verification">The Verification Requirement: Third-Party Audits</h2>
+
+                    <p>
+                        Unlike the transitional phase where self-reported data was acceptable, the definitive phase requires <strong>independent third-party verification</strong> of your emissions data. This is similar to financial audits—a qualified verifier must review your data, visit your facilities, and issue a verification report.
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Audit and Verification Process" class="section-image">
+
+                    <h3>Who Can Verify Your Data?</h3>
+
+                    <p>
+                        Verifiers must be accredited under:
+                    </p>
+
+                    <ul>
+                        <li><strong>EU accreditation:</strong> Bodies accredited by EU member states (ideal but limited availability in India)</li>
+                        <li><strong>Indian accreditation:</strong> Bodies accredited by the National Accreditation Board for Certification Bodies (NABCB) under ISO 14065 or equivalent</li>
+                        <li><strong>International accreditation:</strong> Bodies accredited under mutual recognition agreements with the EU</li>
+                    </ul>
+
+                    <div class="impact-box india-flag-accent">
+                        <h3><i class="fas fa-building"></i> Indian Verification Bodies</h3>
+                        <p>
+                            Several Indian certification bodies are seeking CBAM verification accreditation, including Bureau Veritas India, TÜV India, DNV India, and SGS India. Expect verification services to become more widely available throughout 2026, but early movers should secure verifier relationships now to avoid bottlenecks.
+                        </p>
+                    </div>
+
+                    <h3>The Verification Process: Step-by-Step</h3>
+
+                    <div class="action-steps">
+                        <h3>Typical Verification Timeline</h3>
+
+                        <div class="action-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Pre-Audit Preparation (2-4 weeks)</strong>
+                                You submit emissions data, production records, and supporting documentation to the verifier. They conduct a desk review and prepare an audit plan.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>On-Site Audit (2-5 days)</strong>
+                                Verifier visits your facility to inspect production processes, interview staff, review data collection systems, and verify calculations. Expect detailed questions about fuel consumption, electricity meters, production logs, and quality control.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Findings and Corrections (1-2 weeks)</strong>
+                                Verifier issues preliminary findings. If there are non-conformities or data gaps, you must address them and resubmit corrected data.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Verification Report (1 week)</strong>
+                                Once satisfied, the verifier issues a formal verification report confirming your emissions data. This report is submitted to your EU importer, who uses it to fulfill CBAM obligations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Common Verification Pitfalls to Avoid</h3>
+
+                    <ul>
+                        <li><strong>Incomplete data trails:</strong> Missing invoices, meter readings, or production logs can delay verification</li>
+                        <li><strong>Inconsistent methodologies:</strong> Switching calculation methods mid-year or using different emission factors for similar processes</li>
+                        <li><strong>Poor documentation:</strong> Lack of written procedures for data collection and quality control</li>
+                        <li><strong>Scope errors:</strong> Forgetting to include certain emission sources (e.g., backup generators, company vehicles)</li>
+                        <li><strong>Precursor material gaps:</strong> Not tracking embedded emissions in purchased inputs</li>
+                    </ul>
+
+                    <h2 id="cost-analysis">The True Cost of CBAM Compliance</h2>
+
+                    <p>
+                        CBAM creates two types of costs for Indian exporters: <strong>direct carbon costs</strong> (the CBAM certificates themselves) and <strong>compliance infrastructure costs</strong> (systems, staff, and verification). Let's break down both.
+                    </p>
+
+                    <h3>1. Direct Carbon Costs</h3>
+
+                    <p>
+                        These are the CBAM certificate purchases your EU importer must make, which will likely be passed back to you through lower purchase prices or explicit carbon charges. The cost depends on:
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">€85</span>
+                            <span class="stat-label">Current EU ETS price (Q4 2025)</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">€120</span>
+                            <span class="stat-label">Projected EU ETS price by 2030</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">3-8%</span>
+                            <span class="stat-label">Estimated margin impact for steel exporters</span>
+                        </div>
+                    </div>
+
+                    <h3>2. Compliance Infrastructure Costs</h3>
+
+                    <p>
+                        Building CBAM compliance capability requires upfront investment:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Cost Category</th>
+                                <th>One-Time Investment</th>
+                                <th>Annual Recurring Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Emissions Monitoring Systems</strong></td>
+                                <td>₹20-50 lakhs</td>
+                                <td>₹5-10 lakhs (maintenance)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data Management Software</strong></td>
+                                <td>₹10-25 lakhs</td>
+                                <td>₹3-8 lakhs (licenses, updates)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Verification Services</strong></td>
+                                <td>—</td>
+                                <td>₹5-15 lakhs per installation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Staff Training & Hiring</strong></td>
+                                <td>₹5-10 lakhs</td>
+                                <td>₹15-30 lakhs (salaries)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consulting & Advisory</strong></td>
+                                <td>₹8-20 lakhs</td>
+                                <td>₹5-12 lakhs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>₹43-105 lakhs</strong></td>
+                                <td><strong>₹33-75 lakhs/year</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="success-box">
+                        <h3><i class="fas fa-handshake"></i> How EnCarbonSys Can Help</h3>
+                        <p>
+                            At EnCarbonSys, we specialize in making CBAM compliance affordable and straightforward for Indian exporters. Our end-to-end solutions include:
+                        </p>
+                        <ul style="margin-top: 15px;">
+                            <li><strong>Emissions Assessment:</strong> We calculate your product carbon footprint using actual production data</li>
+                            <li><strong>Monitoring System Setup:</strong> We implement cost-effective data collection systems tailored to your operations</li>
+                            <li><strong>Verification Coordination:</strong> We work with accredited verifiers to streamline the audit process</li>
+                            <li><strong>Ongoing Reporting:</strong> We handle quarterly CBAM reports and maintain compliance documentation</li>
+                            <li><strong>Decarbonization Roadmap:</strong> We identify practical emissions reduction opportunities with positive ROI</li>
+                        </ul>
+                        <p style="margin-top: 15px; margin-bottom: 0;">
+                            Our typical engagement costs 40-60% less than building in-house capabilities, with faster time-to-compliance and expert guidance throughout. We understand the unique challenges facing Indian manufacturers and provide practical, cost-effective solutions.
+                        </p>
+                    </div>
+
+                    <h3>3. Decarbonization Investment (Long-Term)</h3>
+
+                    <p>
+                        The real strategic question: Should you invest in reducing emissions to lower CBAM exposure? This depends on:
+                    </p>
+
+                    <ul>
+                        <li><strong>Carbon price trajectory:</strong> If EU ETS prices rise to €100-150/ton (likely by 2030), decarbonization ROI improves significantly</li>
+                        <li><strong>Technology availability:</strong> Can you access proven low-carbon production methods?</li>
+                        <li><strong>Capital availability:</strong> Do you have funding for major process upgrades?</li>
+                        <li><strong>Market positioning:</strong> Can you command premium prices for low-carbon products?</li>
+                    </ul>
+
+                    <div class="success-box">
+                        <h3><i class="fas fa-chart-line"></i> The Green Premium Opportunity</h3>
+                        <p style="margin-bottom: 0;">
+                            Forward-thinking Indian exporters are positioning low-carbon products as premium offerings. EU buyers increasingly value supply chain decarbonization and may pay 2-5% premiums for verified low-carbon steel or aluminum. This can offset CBAM costs and create competitive differentiation.
+                        </p>
+                    </div>
+
+                    <h2 id="competitive-strategy">Turning CBAM into a Competitive Advantage</h2>
+
+                    <p>
+                        While CBAM presents challenges, it also creates opportunities for strategic Indian exporters. Here's how to position your business for success:
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Business Strategy Planning" class="section-image">
+
+                    <h3>Strategy 1: Become the "Low-Carbon Supplier"</h3>
+
+                    <p>
+                        Invest in emissions reduction and market yourself as the sustainable choice:
+                    </p>
+
+                    <ul>
+                        <li><strong>Energy efficiency upgrades:</strong> Optimize furnaces, kilns, and production processes to reduce fuel consumption</li>
+                        <li><strong>Renewable energy procurement:</strong> Switch to solar, wind, or hydro power to slash Scope 2 emissions</li>
+                        <li><strong>Process innovation:</strong> Adopt best available technologies (BAT) like electric arc furnaces for steel</li>
+                        <li><strong>Carbon capture:</strong> Explore emerging CCUS technologies for cement and steel</li>
+                    </ul>
+
+                    <div class="impact-box india-flag-accent">
+                        <h3><i class="fas fa-trophy"></i> Case Study: JSW Steel's Green Strategy</h3>
+                        <p style="margin-bottom: 0;">
+                            JSW Steel has committed to reducing carbon intensity by 42% by 2030 through renewable energy adoption, waste heat recovery, and process optimization. This positions them as a preferred supplier for EU buyers seeking to minimize CBAM exposure and meet their own Scope 3 targets.
+                        </p>
+                    </div>
+
+                    <h3>Strategy 2: Leverage India's Carbon Credit Potential</h3>
+
+                    <p>
+                        India is developing domestic carbon pricing mechanisms that could provide CBAM credits:
+                    </p>
+
+                    <ul>
+                        <li><strong>Indian Carbon Market:</strong> The government is establishing a carbon trading scheme under the Energy Conservation (Amendment) Act 2022</li>
+                        <li><strong>PAT Scheme:</strong> The Perform, Achieve, Trade (PAT) scheme for energy efficiency could be recognized for CBAM credits</li>
+                        <li><strong>Bilateral agreements:</strong> India and the EU are negotiating mutual recognition of carbon pricing systems</li>
+                    </ul>
+
+                    <h3>Strategy 3: Collaborate with EU Buyers</h3>
+
+                    <p>
+                        Your EU customers are also navigating CBAM. Build partnerships:
+                    </p>
+
+                    <ul>
+                        <li><strong>Joint compliance planning:</strong> Work together on data sharing, verification, and reporting</li>
+                        <li><strong>Long-term contracts:</strong> Secure commitments in exchange for transparency and decarbonization investments</li>
+                        <li><strong>Co-investment in green tech:</strong> Explore shared funding for emissions reduction projects</li>
+                    </ul>
+
+                    <h3>Strategy 4: Diversify Markets</h3>
+
+                    <p>
+                        Reduce EU dependency while maintaining access:
+                    </p>
+
+                    <ul>
+                        <li><strong>Explore non-EU markets:</strong> Asia, Middle East, and Africa don't have CBAM (yet)</li>
+                        <li><strong>Domestic market growth:</strong> India's infrastructure boom offers strong domestic demand</li>
+                        <li><strong>Product mix optimization:</strong> Focus on higher-value products where CBAM impact is proportionally smaller</li>
+                    </ul>
+
+                    <h2 id="government-support">Government Support and Industry Resources</h2>
+
+                    <p>
+                        The Indian government recognizes CBAM's impact on exporters and is developing support mechanisms:
+                    </p>
+
+                    <h3>Government Initiatives</h3>
+
+                    <ul>
+                        <li><strong>Ministry of Steel:</strong> Established a CBAM Task Force to guide steel exporters and coordinate with the EU</li>
+                        <li><strong>Ministry of Commerce:</strong> Providing technical assistance and negotiating with the EU on implementation details</li>
+                        <li><strong>Bureau of Energy Efficiency (BEE):</strong> Offering training on emissions monitoring and reporting</li>
+                        <li><strong>Quality Council of India (QCI):</strong> Accrediting Indian verification bodies for CBAM audits</li>
+                    </ul>
+
+                    <h3>Industry Associations</h3>
+
+                    <ul>
+                        <li><strong>Indian Steel Association (ISA):</strong> Hosting CBAM workshops and developing sector-specific guidance</li>
+                        <li><strong>Aluminium Association of India:</strong> Creating standardized emissions calculation methodologies</li>
+                        <li><strong>Cement Manufacturers' Association (CMA):</strong> Coordinating verification services and best practices</li>
+                        <li><strong>FICCI & CII:</strong> Advocating for Indian exporters in EU policy discussions</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h3><i class="fas fa-users"></i> Join Industry Working Groups</h3>
+                        <p style="margin-bottom: 0;">
+                            Don't navigate CBAM alone. Industry associations are pooling resources for shared verification services, data platforms, and collective advocacy. Membership can significantly reduce your compliance costs and provide valuable peer learning.
+                        </p>
+                    </div>
+
+                    <h2 id="action-plan">Your 90-Day CBAM Compliance Action Plan</h2>
+
+                    <p>
+                        Time is short. Here's a practical roadmap to achieve basic CBAM compliance by Q2 2026:
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Action Plan and Timeline" class="section-image">
+
+                    <h3>Days 1-30: Assessment and Planning</h3>
+
+                    <div class="action-steps">
+                        <div class="action-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Identify Affected Products</strong>
+                                Review your export portfolio and determine which products fall under CBAM scope. Check HS codes against the official CBAM product list.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Quantify EU Exposure</strong>
+                                Calculate the value and volume of CBAM-covered exports to the EU. Estimate potential carbon costs using preliminary emission factors.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Assess Current Data Capabilities</strong>
+                                Audit your existing data collection systems. Do you track fuel consumption, electricity use, and production volumes accurately? Identify gaps.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Engage EU Customers</strong>
+                                Contact your EU buyers to understand their CBAM compliance plans and data requirements. Clarify who will handle reporting and certificate purchases.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Budget for Compliance</strong>
+                                Estimate costs for monitoring systems, verification, staff, and potential carbon charges. Secure management approval and funding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Days 31-60: System Implementation</h3>
+
+                    <div class="action-steps">
+                        <div class="action-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Select Calculation Methodology</strong>
+                                Choose between calculation-based (Method A) or measurement-based (Method B) approaches. Document your methodology in a written procedure.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <strong>Implement Data Collection Systems</strong>
+                                Install or upgrade meters, sensors, and data logging systems. Ensure all emission sources are monitored. Train operators on data recording.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <strong>Establish Data Management Processes</strong>
+                                Create templates for data entry, calculation, and quality control. Assign responsibilities to specific staff members. Set up regular data reviews.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <strong>Select and Engage Verifier</strong>
+                                Research accredited verification bodies. Request proposals and select a verifier. Schedule initial consultation to review your methodology and data systems.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">10</div>
+                            <div class="step-content">
+                                <strong>Train Your Team</strong>
+                                Conduct CBAM training for production, quality, and logistics staff. Ensure everyone understands their role in data collection and compliance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Days 61-90: Data Collection and Verification</h3>
+
+                    <div class="action-steps">
+                        <div class="action-step">
+                            <div class="step-number">11</div>
+                            <div class="step-content">
+                                <strong>Collect Historical Data</strong>
+                                Gather 2025 production and emissions data. Calculate carbon intensity for each product category. Document data sources and assumptions.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">12</div>
+                            <div class="step-content">
+                                <strong>Internal Data Validation</strong>
+                                Conduct internal audit of data quality and completeness. Cross-check calculations. Identify and correct errors or inconsistencies.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">13</div>
+                            <div class="step-content">
+                                <strong>Initiate Verification Process</strong>
+                                Submit data to verifier for initial review. Respond to verifier questions and data requests. Schedule on-site audit.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">14</div>
+                            <div class="step-content">
+                                <strong>Prepare Reporting Templates</strong>
+                                Create standardized formats for sharing emissions data with EU buyers. Include all required CBAM data fields. Ensure consistency across shipments.
+                            </div>
+                        </div>
+
+                        <div class="action-step">
+                            <div class="step-number">15</div>
+                            <div class="step-content">
+                                <strong>Establish Ongoing Processes</strong>
+                                Document procedures for continuous data collection, quarterly reporting, and annual verification. Set up quality control checkpoints.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <h3><i class="fas fa-rocket"></i> Beyond 90 Days: Continuous Improvement</h3>
+                        <p>
+                            CBAM compliance isn't a one-time project—it's an ongoing operational requirement. After your initial 90-day sprint, focus on:
+                        </p>
+                        <ul style="margin-top: 15px;">
+                            <li>Refining data collection processes based on verification feedback</li>
+                            <li>Exploring emissions reduction opportunities with positive ROI</li>
+                            <li>Staying updated on CBAM regulatory changes and guidance</li>
+                            <li>Building stronger relationships with EU buyers around sustainability</li>
+                            <li>Benchmarking your performance against competitors and industry leaders</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-section">
+                        <h2>Expert CBAM Compliance Support for Indian Exporters</h2>
+                        <p style="margin-bottom: 30px; color: #e0e0e0;">EnCarbonSys specializes in helping Indian manufacturers navigate CBAM compliance—from emissions assessment and monitoring system setup to verification coordination and ongoing reporting. We understand the unique challenges facing Indian exporters and provide practical, cost-effective solutions.</p>
+                        <a href="mailto:contact@encarbonsys.com" class="cta-button">Schedule Free Consultation</a>
+                    </div>
+
+                    <h2>The Path Forward: Compliance as Competitive Advantage</h2>
+
+                    <p>
+                        CBAM is here to stay, and it's reshaping the competitive landscape for carbon-intensive exports. Indian manufacturers face a choice: view CBAM as a burden to be minimized, or embrace it as an opportunity to differentiate through sustainability leadership.
+                    </p>
+
+                    <p>
+                        The exporters who will thrive in the CBAM era are those who:
+                    </p>
+
+                    <ul>
+                        <li><strong>Act decisively</strong> on compliance infrastructure and data systems</li>
+                        <li><strong>Invest strategically</strong> in emissions reduction where ROI is positive</li>
+                        <li><strong>Communicate transparently</strong> with EU buyers about carbon footprints</li>
+                        <li><strong>Leverage government support</strong> and industry resources</li>
+                        <li><strong>Position sustainability</strong> as a core value proposition, not just a compliance checkbox</li>
+                    </ul>
+
+                    <p>
+                        The transition won't be easy, and costs will be real. But for Indian exporters who move quickly and strategically, CBAM can become a source of competitive advantage—a way to demonstrate quality, reliability, and forward-thinking that resonates with increasingly sustainability-conscious EU buyers.
+                    </p>
+
+                    <p>
+                        The definitive phase has begun. The question isn't whether to comply—it's how quickly and effectively you can build the capabilities to not just survive CBAM, but to use it as a springboard for growth in a carbon-constrained global economy.
+                    </p>
+
                     <p style="margin-bottom: 0;">
-                        <strong>The bottom line:</strong> Without proper CBAM compliance, you risk losing EU market access or being forced into price concessions that erode margins.
+                        <strong>Start today. Your EU market access depends on it.</strong>
                     </p>
-                </div>
 
-                <h2 id="affected-sectors">Which Indian Industries Are Affected?</h2>
-
-                <p>
-                    CBAM targets carbon-intensive sectors where there's a risk of "carbon leakage"—companies moving production to countries with weaker climate policies. For India, this covers several major export categories:
-                </p>
-
-                <img src="https://images.unsplash.com/photo-1565611211360-3ef18c8b2f8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Steel Manufacturing India" class="section-image">
-
-                <h3>1. Iron and Steel (Biggest Impact)</h3>
-                <p>
-                    India is the world's second-largest steel producer and exports approximately <strong>€3.2 billion worth of steel products to the EU annually</strong>. CBAM covers:
-                </p>
-                <ul>
-                    <li>Pig iron, crude steel, and semi-finished products</li>
-                    <li>Flat-rolled products (sheets, coils, plates)</li>
-                    <li>Long products (bars, rods, angles, sections)</li>
-                    <li>Tubes and pipes</li>
-                    <li>Iron ore pellets and sinter</li>
-                </ul>
-
-                <div class="warning-box">
-                    <h3><i class="fas fa-industry"></i> Steel Sector Reality Check</h3>
-                    <p>
-                        Indian steel has an average carbon intensity of <strong>2.5-2.8 tons CO₂/ton steel</strong>, compared to the EU average of 1.8 tons. This emissions gap translates to potential CBAM costs of €35-50 per ton of steel exported—a significant margin impact for commodity products.
-                    </p>
-                </div>
-
-                <h3>2. Aluminum</h3>
-                <p>
-                    India exports approximately <strong>€1.8 billion in aluminum products to the EU</strong>, including:
-                </p>
-                <ul>
-                    <li>Unwrought aluminum (primary and secondary)</li>
-                    <li>Aluminum products (sheets, foils, bars, profiles)</li>
-                    <li>Aluminum oxide (alumina)</li>
-                </ul>
-
-                <h3>3. Cement</h3>
-                <p>
-                    While cement exports are relatively small (€450 million annually), India's cement industry faces CBAM obligations for:
-                </p>
-                <ul>
-                    <li>Clinker (the primary cement component)</li>
-                    <li>Portland cement and other hydraulic cements</li>
-                </ul>
-
-                <h3>4. Fertilizers</h3>
-                <p>
-                    India's fertilizer exports to the EU (€380 million) include:
-                </p>
-                <ul>
-                    <li>Ammonia (anhydrous and aqueous)</li>
-                    <li>Nitric acid and mixed fertilizers</li>
-                    <li>Urea and ammonium nitrate</li>
-                </ul>
-
-                <h3>5. Hydrogen (Future Scope)</h3>
-                <p>
-                    While current hydrogen exports are minimal, India's green hydrogen ambitions make CBAM compliance critical for future market access.
-                </p>
-
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Sector</th>
-                            <th>Annual Exports to EU</th>
-                            <th>Typical Carbon Intensity</th>
-                            <th>CBAM Cost Estimate</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Steel</strong></td>
-                            <td>€3.2 billion</td>
-                            <td>2.5-2.8 t CO₂/t</td>
-                            <td>€35-50/ton</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Aluminum</strong></td>
-                            <td>€1.8 billion</td>
-                            <td>12-16 t CO₂/t</td>
-                            <td>€180-240/ton</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cement</strong></td>
-                            <td>€450 million</td>
-                            <td>0.7-0.9 t CO₂/t</td>
-                            <td>€30-45/ton</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fertilizers</strong></td>
-                            <td>€380 million</td>
-                            <td>2.5-3.5 t CO₂/t</td>
-                            <td>€40-60/ton</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2 id="data-requirements">What Data Do You Need to Collect?</h2>
-
-                <p>
-                    CBAM compliance starts with accurate emissions data. Your EU importers need detailed information about the carbon footprint of every shipment. Here's exactly what you must track:
-                </p>
-
-                <h3>Core Data Requirements</h3>
-
-                <div class="checklist">
-                    <h3>Mandatory Data Points for Every Shipment</h3>
-                    <ul>
-                        <li><strong>Direct Emissions (Scope 1):</strong> CO₂ from your production processes, fuel combustion, and chemical reactions</li>
-                        <li><strong>Indirect Emissions (Scope 2):</strong> Emissions from purchased electricity and heat used in production</li>
-                        <li><strong>Production Volume:</strong> Quantity of goods produced in the reporting period</li>
-                        <li><strong>Emission Factor:</strong> Tons of CO₂ per ton of product (calculated from above data)</li>
-                        <li><strong>Installation Details:</strong> Facility name, location, production technology used</li>
-                        <li><strong>Precursor Materials:</strong> Embedded emissions from key inputs (e.g., iron ore, coal, limestone)</li>
-                    </ul>
-                </div>
-
-                <h3>Calculation Methodology</h3>
-
-                <p>
-                    CBAM accepts four calculation methods, listed in order of preference:
-                </p>
-
-                <div class="action-steps">
-                    <div class="action-step">
-                        <div class="step-number">A</div>
-                        <div class="step-content">
-                            <strong>EU ETS Method (Gold Standard)</strong>
-                            Use the same monitoring methodology as EU installations. Requires continuous emissions monitoring systems (CEMS) or detailed calculation based on activity data and emission factors.
+                    <div class="references-section" id="references">
+                        <h2>References and Further Reading</h2>
+                        
+                        <div class="reference-item">
+                            <strong>European Commission - CBAM Official Portal:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en</a>
+                            <br><em>The official EU source for CBAM legislation, guidance documents, and updates.</em>
                         </div>
-                    </div>
 
-                    <div class="action-step">
-                        <div class="step-number">B</div>
-                        <div class="step-content">
-                            <strong>Equivalent Third-Country Method</strong>
-                            Use India's own emissions monitoring systems if they meet EU equivalence criteria. Currently, India does not have an officially recognized equivalent system.
+                        <div class="reference-item">
+                            <strong>Regulation (EU) 2023/956:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956</a>
+                            <br><em>The primary CBAM regulation establishing the mechanism and its requirements.</em>
                         </div>
-                    </div>
 
-                    <div class="action-step">
-                        <div class="step-number">C</div>
-                        <div class="step-content">
-                            <strong>Alternative Method</strong>
-                            Use internationally recognized standards like ISO 14064 or GHG Protocol with appropriate emission factors.
+                        <div class="reference-item">
+                            <strong>Commission Implementing Regulation (EU) 2023/1773:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1773" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1773</a>
+                            <br><em>Implementing regulation for the transitional period (October 2023 - December 2025).</em>
                         </div>
-                    </div>
 
-                    <div class="action-step">
-                        <div class="step-number">D</div>
-                        <div class="step-content">
-                            <strong>Default Values (Last Resort)</strong>
-                            If no actual data is provided, EU importers must use default values—typically the worst 10% performers in each sector. This makes your products uncompetitive.
+                        <div class="reference-item">
+                            <strong>CBAM Transitional Registry:</strong> <a href="https://ec.europa.eu/taxation_customs/dds2/cbam/cbam_home.jsp" target="_blank">https://ec.europa.eu/taxation_customs/dds2/cbam/cbam_home.jsp</a>
+                            <br><em>The EU portal for CBAM reporting and certificate management.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>European Commission CBAM Guidance Documents:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-guidance_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-guidance_en</a>
+                            <br><em>Detailed technical guidance on emissions calculation, reporting, and verification.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Ministry of Steel (India) - CBAM Task Force:</strong> <a href="https://steel.gov.in/" target="_blank">https://steel.gov.in/</a>
+                            <br><em>Indian government resources and guidance for steel exporters on CBAM compliance.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Indian Steel Association - CBAM Resources:</strong> <a href="https://www.indiansteel.in/" target="_blank">https://www.indiansteel.in/</a>
+                            <br><em>Industry association providing sector-specific CBAM guidance and workshops.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Quality Council of India (QCI):</strong> <a href="https://www.qcin.org/" target="_blank">https://www.qcin.org/</a>
+                            <br><em>Information on accreditation of Indian verification bodies for CBAM audits.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Bureau of Energy Efficiency (BEE) - PAT Scheme:</strong> <a href="https://beeindia.gov.in/en/programmes/perform-achieve-and-trade" target="_blank">https://beeindia.gov.in/en/programmes/perform-achieve-and-trade</a>
+                            <br><em>India's energy efficiency trading scheme that may provide CBAM credits.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>EU ETS Carbon Price Tracker:</strong> <a href="https://ember-climate.org/data/data-tools/carbon-price-viewer/" target="_blank">https://ember-climate.org/data/data-tools/carbon-price-viewer/</a>
+                            <br><em>Real-time tracking of EU ETS carbon prices (basis for CBAM certificate pricing).</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>World Steel Association - Climate Action:</strong> <a href="https://worldsteel.org/steel-topics/climate-change/" target="_blank">https://worldsteel.org/steel-topics/climate-change/</a>
+                            <br><em>Global steel industry resources on decarbonization and emissions measurement.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>International Aluminium Institute - GHG Protocols:</strong> <a href="https://international-aluminium.org/statistics/greenhouse-gas-emissions/" target="_blank">https://international-aluminium.org/statistics/greenhouse-gas-emissions/</a>
+                            <br><em>Standardized methodologies for calculating aluminum production emissions.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Global Cement and Concrete Association - Sustainability:</strong> <a href="https://gccassociation.org/sustainability/" target="_blank">https://gccassociation.org/sustainability/</a>
+                            <br><em>Cement industry guidance on emissions measurement and reduction strategies.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>ISO 14064-1:2018:</strong> <a href="https://www.iso.org/standard/66453.html" target="_blank">https://www.iso.org/standard/66453.html</a>
+                            <br><em>International standard for greenhouse gas emissions quantification and reporting.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>ISO 14065:2020:</strong> <a href="https://www.iso.org/standard/74257.html" target="_blank">https://www.iso.org/standard/74257.html</a>
+                            <br><em>Requirements for greenhouse gas validation and verification bodies.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>OECD - Carbon Pricing and CBAM Analysis:</strong> <a href="https://www.oecd.org/tax/tax-policy/carbon-pricing-and-energy-taxation.htm" target="_blank">https://www.oecd.org/tax/tax-policy/carbon-pricing-and-energy-taxation.htm</a>
+                            <br><em>Economic analysis and policy perspectives on carbon border adjustments.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Centre for Science and Environment (India) - CBAM Impact Studies:</strong> <a href="https://www.cseindia.org/" target="_blank">https://www.cseindia.org/</a>
+                            <br><em>Research on CBAM's impact on Indian industries and policy recommendations.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>FICCI - Trade and Climate Policy:</strong> <a href="https://ficci.in/" target="_blank">https://ficci.in/</a>
+                            <br><em>Federation of Indian Chambers of Commerce advocacy on CBAM and trade issues.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>Confederation of Indian Industry (CII) - Sustainability:</strong> <a href="https://www.cii.in/Sectors.aspx?enc=prvePUj2bdMtgTmvPwvisYH+5EnGjyGXO9hLECvTuNs=" target="_blank">https://www.cii.in/</a>
+                            <br><em>Industry resources on sustainability and CBAM compliance strategies.</em>
+                        </div>
+
+                        <div class="reference-item">
+                            <strong>EnCarbonSys - CBAM Compliance Solutions:</strong> <a href="https://encarbonsys.com" target="_blank">https://encarbonsys.com</a>
+                            <br><em>Specialized CBAM compliance services for Indian exporters including emissions assessment, verification coordination, and ongoing reporting support.</em>
                         </div>
                     </div>
                 </div>
-
-                <div class="warning-box">
-                    <h3><i class="fas fa-calculator"></i> Avoid Default Values at All Costs</h3>
-                    <p>
-                        Default values are punitive by design. For Indian steel, the default might be 3.2 tons CO₂/ton compared to your actual 2.6 tons. That 0.6-ton difference translates to €27-36 extra cost per ton—enough to price you out of competitive bids.
-                    </p>
-                </div>
-
-                <h3>Data Collection Infrastructure</h3>
-
-                <p>
-                    To generate this data consistently, you need:
-                </p>
-
-                <ul>
-                    <li><strong>Metering Systems:</strong> Track fuel consumption, electricity use, and raw material inputs at production unit level</li>
-                    <li><strong>Emissions Monitoring:</strong> Install CEMS or implement calculation-based monitoring with regular calibration</li>
-                    <li><strong>Data Management Software:</strong> Centralized system to aggregate, calculate, and report emissions data</li>
-                    <li><strong>Documentation Protocols:</strong> Maintain audit trails for all data sources, calculations, and assumptions</li>
-                    <li><strong>Quality Assurance:</strong> Regular internal audits and cross-checks to ensure data accuracy</li>
-                </ul>
-
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Data Analysis Manufacturing" class="section-image">
-
-                <h2 id="verification">The Verification Requirement: Finding Accredited Verifiers</h2>
-
-                <p>
-                    Here's where many Indian exporters hit a roadblock: <strong>Your emissions data must be verified by an EU-accredited verifier</strong>. This is non-negotiable for the definitive phase.
-                </p>
-
-                <h3>What Is CBAM Verification?</h3>
-
-                <p>
-                    Verification is an independent audit of your emissions data by an accredited third party. The verifier checks:
-                </p>
-
-                <ul>
-                    <li>Accuracy of your emissions calculations</li>
-                    <li>Completeness of data coverage (all emission sources included)</li>
-                    <li>Compliance with CBAM methodology requirements</li>
-                    <li>Quality of documentation and audit trails</li>
-                    <li>Reliability of monitoring equipment and procedures</li>
-                </ul>
-
-                <h3>The Indian Verifier Challenge</h3>
-
-                <div class="impact-box india-flag-accent">
-                    <h3><i class="fas fa-search"></i> Current Verification Landscape in India</h3>
-                    <p>
-                        As of January 2026, <strong>only a handful of verification bodies are accredited to conduct CBAM verification in India</strong>. Major international firms like TÜV, Bureau Veritas, DNV, and SGS are establishing CBAM verification services, but capacity is limited and costs are high.
-                    </p>
-                    <p style="margin-bottom: 0;">
-                        <strong>Expected verification costs:</strong> ₹5-15 lakhs per installation annually, depending on complexity and production volume.
-                    </p>
-                </div>
-
-                <h3>How to Find and Work with Verifiers</h3>
-
-                <div class="checklist">
-                    <h3>Verifier Selection Checklist</h3>
-                    <ul>
-                        <li>Confirm EU accreditation status (check EU CBAM registry)</li>
-                        <li>Verify experience with your specific sector (steel, aluminum, etc.)</li>
-                        <li>Check capacity and timeline—book early as demand is high</li>
-                        <li>Understand scope of verification (which installations, which emissions)</li>
-                        <li>Clarify deliverables (verification report format, data requirements)</li>
-                        <li>Negotiate multi-year contracts for cost stability</li>
-                    </ul>
-                </div>
-
-                <h3>Verification Timeline</h3>
-
-                <p>
-                    Plan for a <strong>3-4 month verification cycle</strong>:
-                </p>
-
-                <ul>
-                    <li><strong>Month 1:</strong> Initial assessment, data review, gap analysis</li>
-                    <li><strong>Month 2:</strong> On-site audit, equipment inspection, process review</li>
-                    <li><strong>Month 3:</strong> Data validation, calculation checks, documentation review</li>
-                    <li><strong>Month 4:</strong> Final report preparation, corrections, certification</li>
-                </ul>
-
-                <div class="success-box">
-                    <h3><i class="fas fa-lightbulb"></i> Pro Tip: Start Verification Early</h3>
-                    <p>
-                        Don't wait until your EU buyer requests verified data. Start the verification process now for your 2025 production data. This gives you time to fix any issues and establishes a baseline for ongoing compliance.
-                    </p>
-                </div>
-
-                <h2 id="cost-impact">Understanding the Financial Impact</h2>
-
-                <p>
-                    CBAM introduces three categories of costs for Indian exporters. Understanding and planning for these is critical to maintaining profitability.
-                </p>
-
-                <h3>1. Direct CBAM Certificate Costs</h3>
-
-                <p>
-                    Your EU importers must purchase CBAM certificates to cover your product's embedded emissions. While they technically pay this cost, it will flow back to you through:
-                </p>
-
-                <ul>
-                    <li><strong>Price negotiations:</strong> Buyers demanding lower prices to offset CBAM costs</li>
-                    <li><strong>Competitive pressure:</strong> Losing bids to lower-carbon competitors</li>
-                    <li><strong>Market share erosion:</strong> Buyers switching to EU or lower-emission suppliers</li>
-                </ul>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">€75</span>
-                        <span class="stat-label">Current EU ETS price (Jan 2026)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">€187</span>
-                        <span class="stat-label">Potential CBAM cost per ton of aluminum</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">3-8%</span>
-                        <span class="stat-label">Estimated margin impact for steel exporters</span>
-                    </div>
-                </div>
-
-                <h3>2. Compliance Infrastructure Costs</h3>
-
-                <p>
-                    Building CBAM compliance capability requires upfront investment:
-                </p>
-
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Cost Category</th>
-                            <th>One-Time Investment</th>
-                            <th>Annual Recurring Cost</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Emissions Monitoring Systems</strong></td>
-                            <td>₹20-50 lakhs</td>
-                            <td>₹5-10 lakhs (maintenance)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Data Management Software</strong></td>
-                            <td>₹10-25 lakhs</td>
-                            <td>₹3-8 lakhs (licenses, updates)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Verification Services</strong></td>
-                            <td>—</td>
-                            <td>₹5-15 lakhs per installation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Staff Training & Hiring</strong></td>
-                            <td>₹5-10 lakhs</td>
-                            <td>₹15-30 lakhs (salaries)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Consulting & Advisory</strong></td>
-                            <td>₹8-20 lakhs</td>
-                            <td>₹5-12 lakhs</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TOTAL</strong></td>
-                            <td><strong>₹43-105 lakhs</strong></td>
-                            <td><strong>₹33-75 lakhs/year</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>3. Decarbonization Investment (Long-Term)</h3>
-
-                <p>
-                    The real strategic question: Should you invest in reducing emissions to lower CBAM exposure? This depends on:
-                </p>
-
-                <ul>
-                    <li><strong>Carbon price trajectory:</strong> If EU ETS prices rise to €100-150/ton (likely by 2030), decarbonization ROI improves significantly</li>
-                    <li><strong>Technology availability:</strong> Can you access proven low-carbon production methods?</li>
-                    <li><strong>Capital availability:</strong> Do you have funding for major process upgrades?</li>
-                    <li><strong>Market positioning:</strong> Can you command premium prices for low-carbon products?</li>
-                </ul>
-
-                <div class="success-box">
-                    <h3><i class="fas fa-chart-line"></i> The Green Premium Opportunity</h3>
-                    <p>
-                        Forward-thinking Indian exporters are positioning low-carbon products as premium offerings. EU buyers increasingly value supply chain decarbonization and may pay 2-5% premiums for verified low-carbon steel or aluminum. This can offset CBAM costs and create competitive differentiation.
-                    </p>
-                </div>
-
-                <h2 id="competitive-strategy">Turning CBAM into a Competitive Advantage</h2>
-
-                <p>
-                    While CBAM presents challenges, it also creates opportunities for strategic Indian exporters. Here's how to position your business for success:
-                </p>
-
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Business Strategy Planning" class="section-image">
-
-                <h3>Strategy 1: Become the "Low-Carbon Supplier"</h3>
-
-                <p>
-                    Invest in emissions reduction and market yourself as the sustainable choice:
-                </p>
-
-                <ul>
-                    <li><strong>Energy efficiency upgrades:</strong> Optimize furnaces, kilns, and production processes to reduce fuel consumption</li>
-                    <li><strong>Renewable energy procurement:</strong> Switch to solar, wind, or hydro power to slash Scope 2 emissions</li>
-                    <li><strong>Process innovation:</strong> Adopt best available technologies (BAT) like electric arc furnaces for steel</li>
-                    <li><strong>Carbon capture:</strong> Explore emerging CCUS technologies for cement and steel</li>
-                </ul>
-
-                <div class="impact-box india-flag-accent">
-                    <h3><i class="fas fa-trophy"></i> Case Study: JSW Steel's Green Strategy</h3>
-                    <p>
-                        JSW Steel has committed to reducing carbon intensity by 42% by 2030 through renewable energy adoption, waste heat recovery, and process optimization. This positions them as a preferred supplier for EU buyers seeking to minimize CBAM exposure and meet their own Scope 3 targets.
-                    </p>
-                </div>
-
-                <h3>Strategy 2: Transparent Data = Trust = Business</h3>
-
-                <p>
-                    EU buyers are desperate for suppliers who can provide accurate, verified emissions data. Be that supplier:
-                </p>
-
-                <ul>
-                    <li>Invest in robust monitoring and reporting systems early</li>
-                    <li>Get verification done proactively, before buyers ask</li>
-                    <li>Provide detailed emissions breakdowns (Scope 1, Scope 2, precursors)</li>
-                    <li>Offer product-specific carbon footprints, not just facility averages</li>
-                    <li>Maintain transparent documentation and audit trails</li>
-                </ul>
-
-                <h3>Strategy 3: Diversify Your Market Portfolio</h3>
-
-                <p>
-                    Don't put all your eggs in the EU basket. CBAM makes this a good time to:
-                </p>
-
-                <ul>
-                    <li>Expand into non-EU markets (Middle East, Southeast Asia, Africa)</li>
-                    <li>Strengthen domestic market presence</li>
-                    <li>Explore markets with their own carbon pricing (UK, Canada, Japan)</li>
-                    <li>Build relationships with buyers who value sustainability</li>
-                </ul>
-
-                <h3>Strategy 4: Collaborate for Scale</h3>
-
-                <p>
-                    CBAM compliance is expensive for individual companies. Consider:
-                </p>
-
-                <ul>
-                    <li><strong>Industry consortiums:</strong> Pool resources for verification, data systems, and advocacy</li>
-                    <li><strong>Shared infrastructure:</strong> Joint investments in monitoring equipment or software platforms</li>
-                    <li><strong>Knowledge sharing:</strong> Learn from peers who've successfully navigated compliance</li>
-                    <li><strong>Collective bargaining:</strong> Negotiate better rates with verifiers and consultants</li>
-                </ul>
-
-                <h2 id="government-support">Government Support and Industry Initiatives</h2>
-
-                <p>
-                    The Indian government recognizes CBAM's impact on exports and is taking steps to support affected industries:
-                </p>
-
-                <h3>Current Government Initiatives</h3>
-
-                <div class="checklist">
-                    <h3>Available Support Programs</h3>
-                    <ul>
-                        <li><strong>Ministry of Commerce:</strong> Established CBAM task force to coordinate industry response and engage with EU on implementation</li>
-                        <li><strong>Ministry of Steel:</strong> Developing sector-specific guidance and emissions benchmarking for steel producers</li>
-                        <li><strong>Bureau of Energy Efficiency (BEE):</strong> Expanding PAT (Perform, Achieve, Trade) scheme to align with CBAM requirements</li>
-                        <li><strong>Quality Council of India (QCI):</strong> Working on accreditation framework for Indian verification bodies</li>
-                        <li><strong>Export Credit Guarantee Corporation (ECGC):</strong> Exploring insurance products for CBAM-related risks</li>
-                    </ul>
-                </div>
-
-                <h3>Industry Association Support</h3>
-
-                <p>
-                    Key industry bodies are providing resources and advocacy:
-                </p>
-
-                <ul>
-                    <li><strong>Confederation of Indian Industry (CII):</strong> CBAM helpdesk, training programs, and policy advocacy</li>
-                    <li><strong>Federation of Indian Chambers of Commerce (FICCI):</strong> Sector-specific working groups and EU engagement</li>
-                    <li><strong>Indian Steel Association (ISA):</strong> Technical guidance and emissions benchmarking for steel sector</li>
-                    <li><strong>Aluminium Association of India:</strong> Verification support and decarbonization roadmaps</li>
-                </ul>
-
-                <div class="success-box">
-                    <h3><i class="fas fa-hands-helping"></i> Leverage Available Resources</h3>
-                    <p>
-                        Don't navigate CBAM alone. Engage with your industry association, attend government workshops, and connect with other exporters facing similar challenges. The learning curve is steep, but shared knowledge accelerates compliance.
-                    </p>
-                </div>
-
-                <h3>Advocacy Priorities</h3>
-
-                <p>
-                    India is actively negotiating with the EU on several CBAM concerns:
-                </p>
-
-                <ul>
-                    <li><strong>Recognition of Indian carbon pricing:</strong> Seeking credit for existing carbon taxes and PAT scheme</li>
-                    <li><strong>Simplified compliance for SMEs:</strong> Requesting streamlined procedures for smaller exporters</li>
-                    <li><strong>Capacity building support:</strong> Asking EU to fund verification infrastructure in India</li>
-                    <li><strong>Transition period extension:</strong> Advocating for more time to build compliance systems</li>
-                    <li><strong>WTO compatibility:</strong> Challenging CBAM's consistency with international trade rules</li>
-                </ul>
-
-                <div class="warning-box">
-                    <h3><i class="fas fa-gavel"></i> Don't Wait for Policy Changes</h3>
-                    <p>
-                        While government advocacy continues, don't delay compliance in hopes of CBAM being modified or delayed. The regulation is in force, and EU importers need your data now. Build compliance capability while supporting industry advocacy efforts.
-                    </p>
-                </div>
-
-                <h2 id="action-plan">Your 90-Day CBAM Compliance Action Plan</h2>
-
-                <p>
-                    Ready to get started? Here's a practical, phased approach to building CBAM compliance capability:
-                </p>
-
-                <div class="action-steps">
-                    <h3>Phase 1: Assessment & Planning (Days 1-30)</h3>
-                    
-                    <div class="action-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <strong>Quantify Your EU Exposure</strong>
-                            Analyze your export portfolio: Which products go to EU? What volumes? Which buyers? What's the potential CBAM cost impact on margins?
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <strong>Conduct Emissions Baseline Assessment</strong>
-                            Estimate current carbon intensity using available data. Identify major emission sources. Compare to industry benchmarks and EU averages.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <strong>Gap Analysis</strong>
-                            Assess current monitoring capabilities vs. CBAM requirements. Identify data gaps, equipment needs, and process changes required.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <strong>Engage with EU Buyers</strong>
-                            Contact your EU customers to understand their CBAM compliance plans, data requirements, and timelines. Clarify who bears what costs.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">5</div>
-                        <div class="step-content">
-                            <strong>Budget and Resource Planning</strong>
-                            Estimate compliance costs (monitoring, software, verification, staff). Secure budget approval and identify funding sources.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="action-steps">
-                    <h3>Phase 2: Infrastructure Build (Days 31-60)</h3>
-                    
-                    <div class="action-step">
-                        <div class="step-number">6</div>
-                        <div class="step-content">
-                            <strong>Install Monitoring Systems</strong>
-                            Deploy emissions monitoring equipment, meters, and sensors. Calibrate and test for accuracy. Train operators on proper use.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">7</div>
-                        <div class="step-content">
-                            <strong>Implement Data Management System</strong>
-                            Select and deploy software for emissions calculation, data aggregation, and reporting. Integrate with existing ERP/production systems.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">8</div>
-                        <div class="step-content">
-                            <strong>Develop Calculation Methodology</strong>
-                            Document your emissions calculation approach aligned with CBAM requirements. Define emission factors, system boundaries, and allocation methods.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">9</div>
-                        <div class="step-content">
-                            <strong>Build Internal Capability</strong>
-                            Hire or train staff for CBAM compliance roles. Establish cross-functional team (production, quality, finance, exports). Assign clear responsibilities.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">10</div>
-                        <div class="step-content">
-                            <strong>Identify and Engage Verifier</strong>
-                            Research accredited verification bodies. Request proposals. Select verifier and schedule initial assessment.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="action-steps">
-                    <h3>Phase 3: Data Collection & Verification (Days 61-90)</h3>
-                    
-                    <div class="action-step">
-                        <div class="step-number">11</div>
-                        <div class="step-content">
-                            <strong>Collect Historical Data</strong>
-                            Gather 2025 production and emissions data. Calculate carbon intensity for each product category. Document data sources and assumptions.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">12</div>
-                        <div class="step-content">
-                            <strong>Internal Data Validation</strong>
-                            Conduct internal audit of data quality and completeness. Cross-check calculations. Identify and correct errors or inconsistencies.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">13</div>
-                        <div class="step-content">
-                            <strong>Initiate Verification Process</strong>
-                            Submit data to verifier for initial review. Respond to verifier questions and data requests. Schedule on-site audit.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">14</div>
-                        <div class="step-content">
-                            <strong>Prepare Reporting Templates</strong>
-                            Create standardized formats for sharing emissions data with EU buyers. Include all required CBAM data fields. Ensure consistency across shipments.
-                        </div>
-                    </div>
-
-                    <div class="action-step">
-                        <div class="step-number">15</div>
-                        <div class="step-content">
-                            <strong>Establish Ongoing Processes</strong>
-                            Document procedures for continuous data collection, quarterly reporting, and annual verification. Set up quality control checkpoints.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="success-box">
-                    <h3><i class="fas fa-rocket"></i> Beyond 90 Days: Continuous Improvement</h3>
-                    <p>
-                        CBAM compliance isn't a one-time project—it's an ongoing operational requirement. After your initial 90-day sprint, focus on:
-                    </p>
-                    <ul style="margin-top: 15px;">
-                        <li>Refining data collection processes based on verification feedback</li>
-                        <li>Exploring emissions reduction opportunities with positive ROI</li>
-                        <li>Staying updated on CBAM regulatory changes and guidance</li>
-                        <li>Building stronger relationships with EU buyers around sustainability</li>
-                        <li>Benchmarking your performance against competitors and industry leaders</li>
-                    </ul>
-                </div>
-
-                <div class="cta-section">
-                    <h2>Expert CBAM Compliance Support for Indian Exporters</h2>
-                    <p style="margin-bottom: 30px; color: #e0e0e0;">EnCarbonSys specializes in helping Indian manufacturers navigate CBAM compliance—from emissions assessment and monitoring system setup to verification coordination and ongoing reporting. We understand the unique challenges facing Indian exporters and provide practical, cost-effective solutions. <a href="/pricing.html" style="color: #FF9933; border-bottom: 2px solid #FF9933;">View our affordable pricing plans</a>.</p>
-                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Schedule Free Consultation</a>
-                </div>
-
-                <h2>The Path Forward: Compliance as Competitive Advantage</h2>
-
-                <p>
-                    CBAM is here to stay, and it's reshaping the competitive landscape for carbon-intensive exports. Indian manufacturers face a choice: view CBAM as a burden to be minimized, or embrace it as an opportunity to differentiate through sustainability leadership.
-                </p>
-
-                <p>
-                    The exporters who will thrive in the CBAM era are those who:
-                </p>
-
-                <ul>
-                    <li><strong>Act decisively</strong> on compliance infrastructure and data systems</li>
-                    <li><strong>Invest strategically</strong> in emissions reduction where ROI is positive</li>
-                    <li><strong>Communicate transparently</strong> with EU buyers about carbon footprints</li>
-                    <li><strong>Leverage government support</strong> and industry resources</li>
-                    <li><strong>Position sustainability</strong> as a core value proposition, not just a compliance checkbox</li>
-                </ul>
-
-                <p>
-                    The transition won't be easy, and costs will be real. But for Indian exporters who move quickly and strategically, CBAM can become a source of competitive advantage—a way to demonstrate quality, reliability, and forward-thinking that resonates with increasingly sustainability-conscious EU buyers.
-                </p>
-
-                <p>
-                    The definitive phase has begun. The question isn't whether to comply—it's how quickly and effectively you can build the capabilities to not just survive CBAM, but to use it as a springboard for growth in a carbon-constrained global economy.
-                </p>
-
-                <p style="margin-bottom: 0;">
-                    <strong>Start today. Your EU market access depends on it.</strong>
-                </p>
-            </div>
-        </article>
+            </article>
+        </div>
     </div>
 
     <script>
