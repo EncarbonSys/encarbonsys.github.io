@@ -305,6 +305,47 @@
             gap: 12px;
         }
 
+        /* References Section */
+        .references-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .references-section h2 {
+            color: #0a0a0a;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2DF56D;
+            padding-bottom: 15px;
+        }
+
+        .reference-item {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .reference-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2DF56D;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .reference-item a {
+            color: #1890ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .reference-item a:hover {
+            border-bottom-color: #1890ff;
+        }
+
         @media (max-width: 1024px) {
             .article-layout {
                 flex-direction: column;
@@ -371,6 +412,7 @@
                     <li><a href="#adaptation-strategies"><i class="fas fa-chevron-right"></i> Industry Response</a></li>
                     <li><a href="#technology-pathways"><i class="fas fa-chevron-right"></i> Tech Roadmap</a></li>
                     <li><a href="#future-outlook"><i class="fas fa-chevron-right"></i> Future Outlook</a></li>
+                    <li><a href="#references"><i class="fas fa-chevron-right"></i> References</a></li>
                 </ul>
             </div>
         </aside>
@@ -568,6 +610,60 @@
                 <p>
                     The global steel industry is being reshaped before our eyes. Those who embrace this transformation will define the industry's future. Those who resist will find themselves increasingly marginalized in a carbon-constrained world.
                 </p>
+
+                <div class="references-section" id="references">
+                    <h2>References and Further Reading</h2>
+                    
+                    <div class="reference-item">
+                        <strong>European Commission - CBAM Official Portal:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en</a>
+                        <br><em>Official EU source for CBAM legislation, guidance, and updates.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>World Steel Association - Steel Statistical Yearbook:</strong> <a href="https://worldsteel.org/steel-topics/statistics/steel-statistical-yearbook/" target="_blank">https://worldsteel.org/steel-topics/statistics/steel-statistical-yearbook/</a>
+                        <br><em>Comprehensive global steel production and trade statistics.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>International Energy Agency - Iron and Steel Technology Roadmap:</strong> <a href="https://www.iea.org/reports/iron-and-steel-technology-roadmap" target="_blank">https://www.iea.org/reports/iron-and-steel-technology-roadmap</a>
+                        <br><em>Detailed analysis of decarbonization pathways for the steel industry.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>HYBRIT - Fossil-Free Steel Initiative:</strong> <a href="https://www.hybritdevelopment.se/" target="_blank">https://www.hybritdevelopment.se/</a>
+                        <br><em>Leading hydrogen-based direct reduction iron project in Sweden.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>EU ETS Carbon Price Tracker:</strong> <a href="https://ember-climate.org/data/data-tools/carbon-price-viewer/" target="_blank">https://ember-climate.org/data/data-tools/carbon-price-viewer/</a>
+                        <br><em>Real-time tracking of EU ETS carbon prices affecting CBAM costs.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>OECD - Steel Market Developments:</strong> <a href="https://www.oecd.org/industry/ind/steel.htm" target="_blank">https://www.oecd.org/industry/ind/steel.htm</a>
+                        <br><em>Analysis of global steel market trends and policy impacts.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>Global Energy Monitor - Global Steel Plant Tracker:</strong> <a href="https://globalenergymonitor.org/projects/global-steel-plant-tracker/" target="_blank">https://globalenergymonitor.org/projects/global-steel-plant-tracker/</a>
+                        <br><em>Database of steel production facilities worldwide with emissions data.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>ResponsibleSteel - Certification Standard:</strong> <a href="https://www.responsiblesteel.org/" target="_blank">https://www.responsiblesteel.org/</a>
+                        <br><em>Global multi-stakeholder standard for responsible steel production.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>Mission Possible Partnership - Steel Transition Strategy:</strong> <a href="https://missionpossiblepartnership.org/action-sectors/steel/" target="_blank">https://missionpossiblepartnership.org/action-sectors/steel/</a>
+                        <br><em>Industry-led initiative for net-zero steel production pathways.</em>
+                    </div>
+
+                    <div class="reference-item">
+                        <strong>EnCarbonSys - CBAM Compliance Solutions:</strong> <a href="https://encarbonsys.com" target="_blank">https://encarbonsys.com</a>
+                        <br><em>Specialized CBAM compliance services for steel importers and producers.</em>
+                    </div>
+                </div>
             </div>
         </article>
     </div>
