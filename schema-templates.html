@@ -1,0 +1,331 @@
+<!-- 
+  SCHEMA MARKUP TEMPLATES FOR ENCARBONSYS
+  Copy and paste these into your page <head> sections
+  Replace [PLACEHOLDERS] with actual content
+-->
+
+<!-- ========================================
+     1. ORGANIZATION SCHEMA (Homepage)
+     Add to: index.html
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "EncarbonSys",
+  "url": "https://encarbonsys.com",
+  "logo": "https://encarbonsys.com/favicon.png",
+  "description": "CBAM compliance software and consulting services for Indian exporters. Simplify carbon border tax reporting with EnCBAM Pro.",
+  "foundingDate": "2024",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "email": "contact@encarbonsys.com"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/encarbonsys",
+    "https://twitter.com/encarbonsys"
+  ]
+}
+</script>
+
+
+<!-- ========================================
+     2. SOFTWARE PRODUCT SCHEMA
+     Add to: EnCBAM_pro.html
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EnCBAM Pro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based",
+  "description": "Comprehensive CBAM compliance software for Indian exporters. Automate carbon emissions reporting, verification, and EU carbon border tax compliance.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "INR",
+    "url": "https://encarbonsys.com/pricing.html",
+    "lowPrice": "15000",
+    "highPrice": "300000",
+    "offerCount": "3"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "25"
+  },
+  "featureList": [
+    "Automated CBAM reporting",
+    "Carbon emissions calculation",
+    "Supplier data management",
+    "Verification support",
+    "EU compliance tracking"
+  ],
+  "screenshot": "https://encarbonsys.com/encbam-screenshot.jpg",
+  "provider": {
+    "@type": "Organization",
+    "name": "EncarbonSys"
+  }
+}
+</script>
+
+
+<!-- ========================================
+     3. ARTICLE SCHEMA (Blog Posts)
+     Add to: All blog articles
+     Replace: [TITLE], [DATE], [DESCRIPTION]
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[ARTICLE TITLE - e.g., CBAM India Exporters Guide 2026]",
+  "description": "[META DESCRIPTION - 150-160 characters]",
+  "image": "https://encarbonsys.com/blog-images/[article-image].jpg",
+  "datePublished": "[2026-01-12T10:00:00+05:30]",
+  "dateModified": "[2026-01-12T10:00:00+05:30]",
+  "author": {
+    "@type": "Organization",
+    "name": "EncarbonSys",
+    "url": "https://encarbonsys.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EncarbonSys",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://encarbonsys.com/favicon.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://encarbonsys.com/cbam-blog/[article-url].html"
+  },
+  "keywords": "CBAM, carbon border tax, Indian exporters, compliance, [specific keywords]",
+  "articleSection": "CBAM Compliance",
+  "wordCount": "[1500]"
+}
+</script>
+
+
+<!-- ========================================
+     4. BREADCRUMB SCHEMA (Blog Articles)
+     Add to: Blog posts for better navigation
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://encarbonsys.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CBAM Blog",
+      "item": "https://encarbonsys.com/cbam-blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "[Article Title]",
+      "item": "https://encarbonsys.com/cbam-blog/[article-url].html"
+    }
+  ]
+}
+</script>
+
+
+<!-- ========================================
+     5. FAQ SCHEMA (For FAQ sections)
+     Add to: Pages with FAQ sections
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CBAM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CBAM (Carbon Border Adjustment Mechanism) is the EU's carbon border tax that requires importers to report and pay for embedded carbon emissions in imported goods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who needs to comply with CBAM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indian exporters of steel, aluminum, cement, fertilizers, hydrogen, and electricity to the EU must comply with CBAM reporting requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does CBAM start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CBAM transitional phase started October 2023. The definitive phase with financial obligations begins January 1, 2026."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ========================================
+     6. HOW-TO SCHEMA (For Guide Articles)
+     Add to: Step-by-step guides
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Comply with CBAM as an Indian Exporter",
+  "description": "Step-by-step guide for Indian exporters to comply with EU CBAM requirements",
+  "image": "https://encarbonsys.com/guide-image.jpg",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Register in CBAM Registry",
+      "text": "Create an account in the EU CBAM Transitional Registry portal",
+      "url": "https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Calculate Embedded Emissions",
+      "text": "Use EnCBAM Pro to calculate carbon emissions for your exported goods",
+      "url": "https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html#step2"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Submit Quarterly Reports",
+      "text": "File CBAM reports quarterly with verified emissions data",
+      "url": "https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html#step3"
+    }
+  ]
+}
+</script>
+
+
+<!-- ========================================
+     7. WEBSITE SCHEMA (Add to all pages)
+     General website information
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "EncarbonSys",
+  "url": "https://encarbonsys.com",
+  "description": "CBAM compliance solutions for Indian exporters",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://encarbonsys.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+<!-- ========================================
+     8. SERVICE SCHEMA (For service pages)
+     Add to: Pricing, consulting pages
+     ======================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "CBAM Compliance Consulting",
+  "provider": {
+    "@type": "Organization",
+    "name": "EncarbonSys"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "CBAM Compliance Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "EnCBAM Pro - Basic",
+          "description": "Essential CBAM compliance software"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "EnCBAM Pro - Professional",
+          "description": "Advanced CBAM compliance with consulting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "EnCBAM Pro - Enterprise",
+          "description": "Full-service CBAM compliance solution"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+
+<!-- ========================================
+     IMPLEMENTATION INSTRUCTIONS
+     ======================================== -->
+
+<!--
+  HOW TO USE THESE TEMPLATES:
+
+  1. Copy the relevant schema for each page type
+  2. Paste into the <head> section of your HTML
+  3. Replace [PLACEHOLDERS] with actual content
+  4. Test using: https://validator.schema.org/
+  5. Verify in Google Search Console after deployment
+
+  PRIORITY ORDER:
+  1. Organization Schema → index.html (HIGHEST PRIORITY)
+  2. Software Schema → EnCBAM_pro.html
+  3. Article Schema → All blog posts
+  4. Breadcrumb Schema → All blog posts
+  5. FAQ Schema → Pages with FAQs
+  6. How-To Schema → Guide articles
+  7. Service Schema → pricing.html
+
+  TESTING:
+  - Schema Validator: https://validator.schema.org/
+  - Rich Results Test: https://search.google.com/test/rich-results
+  - Google Search Console: Monitor rich results performance
+
+  TIPS:
+  - Keep schemas updated with actual content
+  - Use real dates in ISO 8601 format
+  - Include high-quality images (1200x630px for articles)
+  - Update dateModified when content changes
+  - Monitor Google Search Console for errors
+-->
