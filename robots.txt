@@ -1,21 +1,77 @@
-# EnCarbonSys Robots.txt
-# Allow all search engines to crawl the site
+# EnCarbonSys Robots.txt - SEO Optimized
+# Updated: January 12, 2026
 
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-# Sitemap locations
+# Sitemap locations (Primary)
 Sitemap: https://encarbonsys.com/sitemap.xml
 Sitemap: https://encarbonsys.com/sitemap-blog.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+# Disallow template and guide files (not for indexing)
+Disallow: /ARTICLE-TEMPLATE.html
+Disallow: /schema-templates.html
+Disallow: /meta-tags-template.html
+Disallow: /blog-widget.html
+Disallow: /navbar.html
+Disallow: /*.md$
+Disallow: /*.py$
 
-# Allow specific important pages
-Allow: /cbam-blog/
+# Disallow temporary files
+Disallow: /cbam-blog/temp-references-section.html
+
+# Allow important pages (explicit)
+Allow: /index.html
+Allow: /EnCBAM_pro.html
 Allow: /pricing.html
+Allow: /client%20_resource.html
 Allow: /october.html
+Allow: /cbam-blog/
+
+# Allow CSS and JS files for rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Allow images
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Allow PDFs (important documents)
+Allow: /brochure.pdf
+Allow: /EnCarbonSys%20PRIVACY%20POLICY.pdf
+Allow: /Refund%20%26%20Cancellation%20Policy%20(1).pdf
+Allow: /Terms%20%26%20Conditions.pdf
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots (optional - uncomment if needed)
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# User-agent: MJ12bot
+# Disallow: /
