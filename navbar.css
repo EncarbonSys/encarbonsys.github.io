@@ -108,6 +108,78 @@
     width: 100%;
 }
 
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.dropdown-toggle i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 50, 35, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 0.5rem;
+}
+
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 255, 136, 0.1);
+    border-left-color: var(--cosmic-green);
+    color: var(--cosmic-green);
+    padding-left: 1.75rem;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
 .nav-cta, .nav-cta1 {
     background: linear-gradient(135deg, var(--cosmic-green) 0%, var(--cosmic-accent) 100%);
     color: #000000;
@@ -233,6 +305,40 @@
         width: 80%;
     }
     
+    /* Mobile Dropdown Styles */
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-toggle {
+        justify-content: center;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 90%;
+        margin: 0.5rem auto;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    .dropdown-menu a {
+        text-align: center;
+        border-left: none;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    }
+    
+    .dropdown-menu a:hover {
+        padding-left: 1.5rem;
+    }
+    
     .nav-cta, .nav-cta1 {
         width: 80%;
         text-align: center;
@@ -261,5 +367,9 @@
     .nav-cta, .nav-cta1 {
         padding: 0.7rem 1.4rem;
         font-size: 0.9rem;
+    }
+    
+    .dropdown-menu {
+        min-width: 200px;
     }
 }
