@@ -412,7 +412,22 @@
     <script>
         fetch('/components/navbar.html')
             .then(r => r.text())
-            .then(html => document.getElementById('navbar').innerHTML = html);
+            .then(html => {
+                const navbarContainer = document.getElementById('navbar');
+                navbarContainer.innerHTML = html;
+                
+                // Extract and execute scripts from the injected HTML
+                const scripts = navbarContainer.getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    const newScript = document.createElement('script');
+                    if (scripts[i].src) {
+                        newScript.src = scripts[i].src;
+                    } else {
+                        newScript.textContent = scripts[i].textContent;
+                    }
+                    document.body.appendChild(newScript);
+                }
+            });
     </script>
 
     <div class="article-layout">
