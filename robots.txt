@@ -1,5 +1,5 @@
 # EnCarbonSys Robots.txt - SEO Optimized
-# Updated: January 12, 2026
+# Updated: February 23, 2026
 
 # Allow all search engines to crawl the site
 User-agent: *
@@ -12,43 +12,27 @@ Sitemap: https://encarbonsys.com/sitemap-blog.xml
 # Crawl-delay for polite crawling
 Crawl-delay: 1
 
-# Disallow template and guide files (not for indexing)
-Disallow: /ARTICLE-TEMPLATE.html
-Disallow: /schema-templates.html
-Disallow: /meta-tags-template.html
-Disallow: /blog-widget.html
-Disallow: /navbar.html
+# Disallow internal/template files (not for indexing)
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /components/meta-tags-template.html
+Disallow: /components/blog-widget.html
+Disallow: /cbam-blog/temp-references-section.html
 Disallow: /*.md$
 Disallow: /*.py$
 
-# Disallow temporary files
-Disallow: /cbam-blog/temp-references-section.html
-
 # Allow important pages (explicit)
-Allow: /index.html
-Allow: /EnCBAM_pro.html
-Allow: /pricing.html
-Allow: /client%20_resource.html
-Allow: /october.html
+Allow: /
+Allow: /pages/encbam-pro.html
+Allow: /pages/pricing.html
+Allow: /pages/client-resource.html
 Allow: /cbam-blog/
 
-# Allow CSS and JS files for rendering
-Allow: /*.css$
-Allow: /*.js$
-
-# Allow images
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-
-# Allow PDFs (important documents)
-Allow: /brochure.pdf
-Allow: /EnCarbonSys%20PRIVACY%20POLICY.pdf
-Allow: /Refund%20%26%20Cancellation%20Policy%20(1).pdf
-Allow: /Terms%20%26%20Conditions.pdf
+# Allow CSS, JS, images for rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Allow: /assets/pdf/brochure.pdf
 
 # Specific bot instructions
 User-agent: Googlebot
@@ -62,16 +46,21 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-User-agent: Slurp
+# Allow AI/LLM crawlers for GEO (Generative Engine Optimisation)
+User-agent: GPTBot
 Allow: /
-Crawl-delay: 2
 
-# Block bad bots (optional - uncomment if needed)
-# User-agent: AhrefsBot
-# Disallow: /
+User-agent: anthropic-ai
+Allow: /
 
-# User-agent: SemrushBot
-# Disallow: /
+User-agent: Claude-Web
+Allow: /
 
-# User-agent: MJ12bot
-# Disallow: /
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /

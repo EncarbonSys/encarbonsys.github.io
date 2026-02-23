@@ -33,11 +33,49 @@
     <meta name="twitter:image"
         content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <title>EnCBAM™ - EU CBAM Compliance Solution | Fast & Affordable Reports</title>
+    <link rel="canonical" href="https://encarbonsys.com/" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
+    <!-- JSON-LD Structured Data: Organisation + Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://encarbonsys.com/#organization",
+          "name": "EnCarbonSys",
+          "url": "https://encarbonsys.com",
+          "logo": "https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png",
+          "description": "EnCarbonSys provides fast, affordable and ISO-compliant EU CBAM (Carbon Border Adjustment Mechanism) compliance reports for exporters of steel, aluminum, cement, fertilizers and electricity. Our EnCBAM™ platform simplifies carbon data collection, calculation and submission.",
+          "foundingDate": "2024",
+          "areaServed": ["IN", "EU", "GB", "TR", "ZA"],
+          "serviceType": "CBAM Compliance Consulting",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@encarbonsys.com",
+            "telephone": "+919620828005",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+          },
+          "sameAs": [
+            "https://encarbonsys.com"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://encarbonsys.com/#website",
+          "url": "https://encarbonsys.com",
+          "name": "EnCarbonSys - EU CBAM Compliance",
+          "description": "Expert CBAM compliance reports for Indian and global exporters. Fast, accurate, EU-regulation-ready.",
+          "publisher": { "@id": "https://encarbonsys.com/#organization" }
+        }
+      ]
+    }
+    </script>
 
     <style>
         * {
@@ -204,6 +242,92 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+
+        .dropdown-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1rem;
+            background: rgba(30, 50, 35, 0.97);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            width: auto;
+            text-align: left;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding-left: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                border-radius: 8px;
+                margin: 0.5rem 1rem;
+                display: none;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
         }
 
         .nav-cta {
@@ -1508,6 +1632,17 @@
                 <li><a href="#solution">Solution</a></li>
                 <li><a href="/cbam-blog/">Blog</a></li>
                 <li><a href="#about">About</a></li>
+                <li class="dropdown" id="toolsDropdown">
+                    <a href="#" class="dropdown-toggle" style="display:flex;align-items:center;gap:0.3rem;">
+                        Tools <i class="fas fa-chevron-down"
+                            style="font-size:0.7rem;transition:transform 0.3s ease;"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/tools/cn-code-checker.html">CN Code Checker</a></li>
+                        <li><a href="/tools/emissions-calculator.html">Emissions Calculator</a></li>
+                        <li><a href="/tools/cbam-cost-estimator.html">CBAM Cost Estimator</a></li>
+                    </ul>
+                </li>
                 <li><a href="/pages/client-resource.html">Client Hub</a></li>
                 <li><a href="#cta" class="nav-cta">Get Started</a></li>
             </ul>
@@ -2449,9 +2584,28 @@ INTEGRATION INSTRUCTIONS:
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
+            const toolsDropdown = document.getElementById('toolsDropdown');
             mobileMenuBtn.addEventListener('click', function (e) {
                 e.stopPropagation();
                 navLinks.classList.toggle('active');
+            });
+            // Mobile dropdown toggle for Tools
+            if (toolsDropdown) {
+                const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
+                dropdownToggle.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toolsDropdown.classList.toggle('active');
+                    }
+                });
+            }
+            // Close menus when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    if (toolsDropdown) toolsDropdown.classList.remove('active');
+                }
             });
             // Close mobile menu when clicking a link (but preserve functionality)
             document.querySelectorAll('.nav-links a').forEach(link => {

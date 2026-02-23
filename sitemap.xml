@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Main Pages - Highest Priority -->
   <url>
     <loc>https://encarbonsys.com/</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/EnCBAM_pro.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/pages/encbam-pro.html</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/pricing.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/pages/pricing.html</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/client%20_resource.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/pages/client-resource.html</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/october.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/pages/october.html</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,37 +40,50 @@
   <!-- Blog Hub - High Priority -->
   <url>
     <loc>https://encarbonsys.com/cbam-blog/</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog Articles - Comprehensive Coverage -->
-  <!-- Latest & Most Important Articles -->
+  <!-- Blog Articles: Latest & Most Important -->
+  <url>
+    <loc>https://encarbonsys.com/cbam-blog/hs-hsn-cn-taric-codes-complete-guide.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-india-exporters-guide-2026.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-2026-definitive-phase-guide.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-verification-requirements-2026.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-updates-april-2025.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -78,36 +91,29 @@
   <!-- Industry-Specific Guides -->
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-impact-steel-industry.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-developing-countries-impact.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Regulatory & Compliance Articles -->
   <url>
-    <loc>https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-omnibus-new-rules.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/navigating-cbam-changes.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -115,44 +121,45 @@
   <!-- Operational Guides -->
   <url>
     <loc>https://encarbonsys.com/cbam-blog/supplier-data-management.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://encarbonsys.com/cbam-blog/cbam-six-pains-predictions.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
-  <!-- Documents & Resources -->
+  <!-- Assets (PDFs) -->
   <url>
-    <loc>https://encarbonsys.com/brochure.pdf</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/assets/pdf/brochure.pdf</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/EnCarbonSys%20PRIVACY%20POLICY.pdf</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/assets/pdf/privacy-policy.pdf</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/Refund%20%26%20Cancellation%20Policy%20(1).pdf</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/assets/pdf/refund-cancellation-policy.pdf</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
-  
+
   <url>
-    <loc>https://encarbonsys.com/Terms%20%26%20Conditions.pdf</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://encarbonsys.com/assets/pdf/terms-conditions.pdf</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
+
 </urlset>
