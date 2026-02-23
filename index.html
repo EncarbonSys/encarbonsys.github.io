@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSFR9S0QX"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-5KSFR9S0QX');
+        gtag('config', 'G-5KSFR9S0QX');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EnCBAM™ - EU CBAM Compliance Solution for Steel, Aluminum, Fertilizers, Cement & Electricity Exporters. Fast, Affordable, ISO Compliant Reports.">
-    <meta name="keywords" content="CBAM, Carbon Border Adjustment Mechanism, EU export, steel compliance, aluminum compliance, fertilizer compliance, cement compliance, electricity compliance, carbon reporting, ISO 14064, ISO 14067, EnCarbonSys, EnCBAM">
+    <meta name="description"
+        content="EnCBAM™ - EU CBAM Compliance Solution for Steel, Aluminum, Fertilizers, Cement & Electricity Exporters. Fast, Affordable, ISO Compliant Reports.">
+    <meta name="keywords"
+        content="CBAM, Carbon Border Adjustment Mechanism, EU export, steel compliance, aluminum compliance, fertilizer compliance, cement compliance, electricity compliance, carbon reporting, ISO 14064, ISO 14067, EnCarbonSys, EnCBAM">
     <meta name="author" content="EnCarbonSys">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="EnCBAM™ - Simplify Your EU CBAM Compliance">
-    <meta property="og:description" content="Fast, affordable, and ISO-compliant CBAM reporting for exporters. Get your EU-ready XLS and PDF reports in hours, not weeks.">
+    <meta property="og:description"
+        content="Fast, affordable, and ISO-compliant CBAM reporting for exporters. Get your EU-ready XLS and PDF reports in hours, not weeks.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.EnCarbonSys.com">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EnCBAM™ - Simplify Your EU CBAM Compliance">
-    <meta name="twitter:description" content="Fast, affordable, and ISO-compliant CBAM reporting for exporters. Get your EU-ready XLS and PDF reports in hours, not weeks.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:description"
+        content="Fast, affordable, and ISO-compliant CBAM reporting for exporters. Get your EU-ready XLS and PDF reports in hours, not weeks.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <title>EnCBAM™ - EU CBAM Compliance Solution | Fast & Affordable Reports</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
 
     <style>
         * {
@@ -38,6 +45,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --cosmic-green: #00ff88;
             --dark-cosmic: #0a1a0f;
@@ -49,6 +57,7 @@
             --glass-border: rgba(255, 255, 255, 0.15);
             --problem-red: #ff6b6b;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
@@ -56,6 +65,7 @@
             color: var(--cosmic-text);
             line-height: 1.6;
         }
+
         /* Animated Background */
         body::before {
             content: '';
@@ -64,13 +74,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, var(--cosmic-glow) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, var(--cosmic-glow) 0%, transparent 50%);
             animation: cosmicPulse 12s ease-in-out infinite alternate;
             z-index: -2;
         }
+
         body::after {
             content: '';
             position: fixed;
@@ -78,7 +89,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.1), transparent),
                 radial-gradient(2px 2px at 40px 70px, rgba(0, 255, 136, 0.1), transparent),
                 radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.08), transparent),
@@ -88,14 +99,29 @@
             animation: sparkle 20s linear infinite;
             z-index: -1;
         }
+
         @keyframes cosmicPulse {
-            0% { opacity: 0.4; transform: scale(1); }
-            100% { opacity: 0.7; transform: scale(1.1); }
+            0% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
         }
+
         @keyframes sparkle {
-            0% { transform: translateY(0px) translateX(0px); }
-            100% { transform: translateY(-150px) translateX(-75px); }
+            0% {
+                transform: translateY(0px) translateX(0px);
+            }
+
+            100% {
+                transform: translateY(-150px) translateX(-75px);
+            }
         }
+
         /* Navigation */
         .navbar {
             position: fixed;
@@ -109,6 +135,7 @@
             padding: 0.5rem 0;
             transition: all 0.3s ease;
         }
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -117,6 +144,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 1.9rem;
             font-weight: 750;
@@ -131,20 +159,24 @@
             gap: 0.5rem;
             filter: drop-shadow(0 0 0 transparent);
         }
+
         .logo img {
             height: 60px;
             transition: all 0.3s ease;
         }
+
         .logo:hover img {
             transform: scale(1.1);
             filter: brightness(1.2) contrast(1.1);
         }
+
         .nav-links {
             display: flex;
             gap: 1.5rem;
             list-style: none;
             align-items: center;
         }
+
         .nav-links a {
             color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
@@ -154,6 +186,7 @@
             font-size: 0.95rem;
             letter-spacing: 0.5px;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -164,14 +197,17 @@
             background: var(--cosmic-green);
             transition: width 0.3s ease;
         }
+
         .nav-links a:hover {
             color: var(--cosmic-green);
         }
+
         .nav-links a:hover::after {
             width: 100%;
         }
+
         .nav-cta {
-            
+
             color: #000000;
             padding: 0.8rem 1.8rem;
             border: none;
@@ -186,6 +222,7 @@
             overflow: hidden;
             border: 1px solid rgba(0, 255, 136, 0.3);
         }
+
         .nav-cta::before {
             content: '';
             position: absolute;
@@ -197,15 +234,18 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
+
         .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #191d1b 0%, #69e6b8 100%);
             color: #000000;
         }
+
         .nav-cta:hover::before {
             left: 100%;
         }
+
         /* Mobile Menu Toggle */
         .mobile-menu-btn {
             display: none;
@@ -215,6 +255,7 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
+
         /* Mobile Menu Styles */
         @media (max-width: 768px) {
             .nav-links {
@@ -232,12 +273,15 @@
                 z-index: 999;
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .mobile-menu-btn {
                 display: block;
             }
+
             .nav-links a {
                 font-size: 1.1rem;
                 padding: 0.8rem 0;
@@ -245,10 +289,11 @@
                 text-align: center;
             }
         }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: 
+            background:
                 linear-gradient(135deg, rgba(10, 26, 15, 0.8) 0%, rgba(15, 36, 25, 0.7) 50%, rgba(26, 42, 32, 0.8) 100%),
                 url('https://image2url.com/images/1754851641495-a1a462df-0ea3-4b04-9383-42d9467bd240.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
@@ -260,6 +305,7 @@
             padding: 120px 1.5rem 60px;
             overflow: hidden;
         }
+
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -271,19 +317,23 @@
             z-index: 2;
             width: 100%;
         }
+
         .hero-content {
             animation: fadeInUp 1.2s ease-out;
         }
+
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .hero-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
@@ -296,10 +346,19 @@
             -webkit-text-fill-color: transparent;
             animation: fadeInUp 1.2s ease-out 0.2s both, titleGlow 4s ease-in-out infinite;
         }
+
         @keyframes titleGlow {
-            0%, 100% { text-shadow: 0 0 20px var(--cosmic-glow); }
-            50% { text-shadow: 0 0 40px var(--cosmic-glow); }
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px var(--cosmic-glow);
+            }
+
+            50% {
+                text-shadow: 0 0 40px var(--cosmic-glow);
+            }
         }
+
         .hero-subtitle {
             font-size: clamp(1.1rem, 2.5vw, 1.5rem);
             font-weight: 600;
@@ -309,6 +368,7 @@
             max-width: 600px;
             animation: fadeInUp 1.2s ease-out 0.4s both;
         }
+
         .cta-buttons {
             display: flex;
             gap: 1.2rem;
@@ -316,6 +376,7 @@
             animation: fadeInUp 1.2s ease-out 0.6s both;
             flex-wrap: wrap;
         }
+
         .btn-primary {
             background: linear-gradient(135deg, var(--cosmic-green) 0%, var(--cosmic-accent) 100%);
             color: var(--dark-cosmic);
@@ -338,6 +399,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -349,28 +411,34 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 40px var(--cosmic-glow);
                 transform: scale(1);
             }
+
             50% {
                 box-shadow: 0 0 60px var(--cosmic-glow);
                 transform: scale(1.02);
             }
+
             100% {
                 box-shadow: 0 0 40px var(--cosmic-glow);
                 transform: scale(1);
             }
         }
+
         .btn-primary:hover {
             transform: translateY(-4px) scale(1.05);
             box-shadow: 0 15px 60px var(--cosmic-glow);
             background: linear-gradient(135deg, #00ff99 0%, #2ff2f6 100%);
         }
+
         .btn-primary:hover::before {
             left: 100%;
         }
+
         .btn-secondary {
             background: var(--glass-bg);
             color: white;
@@ -392,6 +460,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .btn-secondary::before {
             content: '';
             position: absolute;
@@ -403,6 +472,7 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
+
         .btn-secondary:hover {
             border-color: var(--cosmic-green);
             box-shadow: 0 0 30px var(--cosmic-glow);
@@ -410,15 +480,18 @@
             background: rgba(0, 255, 136, 0.15);
             color: var(--cosmic-green);
         }
+
         .btn-secondary:hover::before {
             left: 100%;
         }
+
         .trust-signals {
             display: flex;
             gap: 1rem;
             animation: fadeInUp 1.2s ease-out 0.8s both;
             flex-wrap: wrap;
         }
+
         .trust-item {
             display: flex;
             align-items: center;
@@ -433,28 +506,39 @@
             backdrop-filter: blur(15px);
             transition: all 0.3s ease;
         }
+
         .trust-item:hover {
             background: rgba(0, 255, 136, 0.15);
             border-color: rgba(0, 255, 136, 0.4);
             transform: translateY(-3px);
             box-shadow: 0 8px 25px var(--cosmic-glow);
         }
+
         .check-icon {
             color: var(--cosmic-green);
             font-size: 1rem;
             animation: bounce 2s infinite;
         }
+
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(-4px);
             }
+
             60% {
                 transform: translateY(-2px);
             }
         }
+
         /* Dashboard Mockup */
         .dashboard-mockup {
             background: var(--glass-bg);
@@ -463,13 +547,14 @@
             padding: 2rem;
             backdrop-filter: blur(30px);
             animation: float 8s ease-in-out infinite, fadeInUp 1.2s ease-out 1s both;
-            box-shadow: 
+            box-shadow:
                 0 30px 100px rgba(0, 0, 0, 0.5),
                 0 0 80px var(--cosmic-glow);
             max-width: 100%;
             position: relative;
             overflow: hidden;
         }
+
         .dashboard-mockup::before {
             content: '';
             position: absolute;
@@ -480,14 +565,29 @@
             background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
             animation: shimmer 4s infinite;
         }
+
         @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
         }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotateY(0deg); }
-            50% { transform: translateY(-25px) rotateY(2deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotateY(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotateY(2deg);
+            }
         }
+
         .dashboard-header {
             display: flex;
             justify-content: space-between;
@@ -496,6 +596,7 @@
             padding-bottom: 1.2rem;
             border-bottom: 1px solid var(--glass-border);
         }
+
         .dashboard-title {
             color: white;
             font-size: 1.4rem;
@@ -504,6 +605,7 @@
             align-items: center;
             gap: 0.7rem;
         }
+
         .dashboard-status {
             background: linear-gradient(135deg, var(--cosmic-green) 0%, var(--cosmic-accent) 100%);
             color: var(--dark-cosmic);
@@ -514,23 +616,28 @@
             animation: pulse-badge 2s infinite;
             box-shadow: 0 0 25px var(--cosmic-glow);
         }
+
         @keyframes pulse-badge {
             0% {
                 box-shadow: 0 0 25px var(--cosmic-glow);
             }
+
             50% {
                 box-shadow: 0 0 40px var(--cosmic-glow);
             }
+
             100% {
                 box-shadow: 0 0 25px var(--cosmic-glow);
             }
         }
+
         .metrics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.2rem;
             margin-bottom: 2rem;
         }
+
         .metric-card {
             background: rgba(255, 255, 255, 0.08);
             padding: 1.5rem;
@@ -542,6 +649,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .metric-card::before {
             content: '';
             position: absolute;
@@ -553,15 +661,18 @@
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
+
         .metric-card:hover {
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.12);
             border-color: rgba(0, 255, 136, 0.4);
             box-shadow: 0 15px 40px var(--cosmic-glow);
         }
+
         .metric-card:hover::before {
             transform: scaleX(1);
         }
+
         .metric-value {
             color: var(--cosmic-green);
             font-size: 1.8rem;
@@ -573,11 +684,13 @@
             justify-content: center;
             gap: 0.3rem;
         }
+
         .metric-label {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.85rem;
             font-weight: 500;
         }
+
         .chart-placeholder {
             background: linear-gradient(135deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 232, 153, 0.2) 100%);
             height: 120px;
@@ -594,12 +707,14 @@
             position: relative;
             overflow: hidden;
         }
+
         /* Main Content Sections */
         .main-content {
             padding: 100px 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .section {
             margin-bottom: 100px;
             opacity: 0;
@@ -607,13 +722,15 @@
             transition: opacity 0.8s ease, transform 0.8s ease;
             will-change: opacity, transform;
         }
+
         .section.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         /* Section-specific backgrounds */
         .section-problem {
-            background: 
+            background:
                 linear-gradient(135deg, rgba(10, 26, 15, 0.85) 0%, rgba(26, 42, 32, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -622,10 +739,11 @@
             border-radius: 24px;
             position: relative;
             overflow: hidden;
-            
+
         }
+
         .section-solution {
-            background: 
+            background:
                 linear-gradient(135deg, rgba(15, 36, 25, 0.85) 0%, rgba(10, 26, 15, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -635,8 +753,9 @@
             position: relative;
             overflow: hidden;
         }
+
         .section-process {
-            background: 
+            background:
                 linear-gradient(135deg, rgba(26, 42, 32, 0.85) 0%, rgba(15, 36, 25, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -646,8 +765,9 @@
             position: relative;
             overflow: hidden;
         }
+
         .section-savings {
-            background: 
+            background:
                 linear-gradient(135deg, rgba(10, 26, 15, 0.85) 0%, rgba(26, 42, 32, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -657,8 +777,9 @@
             position: relative;
             overflow: hidden;
         }
+
         .section-audience {
-            background: 
+            background:
                 linear-gradient(135deg, rgba(15, 36, 25, 0.85) 0%, rgba(10, 26, 15, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -668,6 +789,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .section-card {
             background: rgba(255, 255, 255, 0.12);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -679,6 +801,7 @@
             overflow: hidden;
             will-change: transform;
         }
+
         .section-card::before {
             content: '';
             position: absolute;
@@ -691,14 +814,17 @@
             transition: transform 0.4s ease;
             transform-origin: left;
         }
+
         .section-card:hover {
             transform: translateY(-5px);
             border-color: rgba(0, 255, 136, 0.4);
             box-shadow: 0 20px 60px rgba(0, 255, 136, 0.2);
         }
+
         .section-card:hover::before {
             transform: scaleX(1);
         }
+
         .section-title {
             font-size: clamp(1.8rem, 4vw, 3rem);
             font-weight: 800;
@@ -707,29 +833,34 @@
             align-items: center;
             gap: 0.8rem;
         }
+
         .section-title.problem {
             background: linear-gradient(135deg, var(--problem-red) 0%, #ff8e8e 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .section-title.solution {
             background: linear-gradient(135deg, var(--cosmic-green) 0%, #00ff88 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .section-content {
             font-size: 1rem;
             line-height: 1.7;
             color: rgba(255, 255, 255, 0.9);
         }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
+
         .feature-card {
             background: rgba(255, 255, 255, 0.08);
             padding: 2rem;
@@ -742,6 +873,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -756,89 +888,116 @@
             z-index: -1;
             transition: opacity 0.3s ease;
         }
+
         .feature-card:hover {
             transform: translateY(-5px);
             background: rgba(0, 255, 136, 0.12);
             border-color: rgba(0, 255, 136, 0.4);
             box-shadow: 0 15px 40px rgba(0, 255, 136, 0.25);
         }
+
         .feature-card:hover::before {
             opacity: 0.30;
         }
+
         .feature-card .feature-content {
             position: relative;
             z-index: 2;
         }
+
         /* Specific card backgrounds */
         .card-delays::before {
             background-image: url('https://image2url.com/images/1754845919687-1aa4d075-25df-4e8c-a83c-427b4241241f.jpg?ixlib=rb-4.0.9&auto=format&fit=crop&w=800&q=80')
         }
+
         .card-penalties::before {
             background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.9&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-buyers::before {
             background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-xls::before {
             background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-pdf::before {
             background-image: url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-calculations::before {
             background-image: url('https://image2url.com/images/1754846811625-058e8eb7-3294-4117-90ef-7458ee42be1f.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-delivery::before {
             background-image: url('https://image2url.com/images/1754846969035-0d0bd1e1-bd26-43c7-ab5f-bb919e2175ce.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-upload::before {
             background-image: url('https://image2url.com/images/1754847188456-cf1fa0cc-1b28-4c30-95d3-1e9831d418bc.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-calculate::before {
             background-image: url('https://image2url.com/images/1754847071272-ef2b2f2f-ac6e-4f16-b414-c9254a65d9b7.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-reports::before {
             background-image: url('https://image2url.com/images/1754847687503-9dccd0b0-21c0-4763-8970-194ca973a19a.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-submit::before {
             background-image: url('https://image2url.com/images/1754847840541-aa6c7289-e2c2-4baa-854c-acfaaee2cf21.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-steel::before {
             background-image: url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-fertilizer::before {
             background-image: url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-hydrogen::before {
             background-image: url('https://image2url.com/images/1758303026877-f5d14dcf-0bc2-4e95-80b2-cff0eee4e852.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-consultants::before {
             background-image: url('https://image2url.com/images/1754847943532-66afff73-511c-4852-a7e0-b1315d362577.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-legal::before {
             background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-msmes::before {
             background-image: url('https://image2url.com/images/1754848115627-d0694fa1-5dd3-4f71-8da7-3474257cd2f5.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-exporters::before {
             background-image: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-engine::before {
             background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-iso::before {
             background-image: url('https://image2url.com/images/1754848384251-43cb8039-eccb-4c43-aa24-684b31e5577b.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-outputs::before {
             background-image: url('https://image2url.com/images/1754848657296-ef5edec1-ddf6-4be2-bb73-3e5def0ac4a2.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-india::before {
             background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .card-payment::before {
             background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
+
         .feature-icon {
             font-size: 2.5rem;
             color: var(--cosmic-green);
@@ -846,20 +1005,31 @@
             display: inline-block;
             animation: gentle-bounce 4s ease-in-out infinite;
         }
+
         @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
+
         .feature-title {
             font-size: 1.3rem;
             font-weight: 700;
             color: white;
             margin-bottom: 0.8rem;
         }
+
         .feature-description {
             color: rgba(255, 255, 255, 0.958);
             line-height: 1.5;
         }
+
         /* Pricing Section */
         .pricing-grid {
             display: grid;
@@ -867,6 +1037,7 @@
             gap: 2rem;
             margin-top: 2rem;
         }
+
         .pricing-card {
             background: var(--glass-bg);
             border: 2px solid var(--glass-border);
@@ -878,16 +1049,19 @@
             position: relative;
             overflow: hidden;
         }
+
         .pricing-card.featured {
             border-color: var(--cosmic-green);
             box-shadow: 0 0 60px var(--cosmic-glow);
             transform: scale(1.02);
         }
+
         .pricing-card:hover {
             transform: translateY(-10px) scale(1.02);
             border-color: var(--cosmic-green);
             box-shadow: 0 25px 80px var(--cosmic-glow);
         }
+
         .price {
             font-size: 2.5rem;
             font-weight: 900;
@@ -895,6 +1069,7 @@
             margin: 1rem 0;
             text-shadow: 0 0 20px var(--cosmic-glow);
         }
+
         /* Stats Section */
         .stats-grid {
             display: grid;
@@ -902,6 +1077,7 @@
             gap: 1.5rem;
             margin-top: 2rem;
         }
+
         .stat-card {
             text-align: center;
             padding: 1.5rem;
@@ -911,6 +1087,7 @@
             backdrop-filter: blur(15px);
             transition: all 0.4s ease;
         }
+
         .stat-card::before {
             content: '';
             position: absolute;
@@ -921,24 +1098,29 @@
             transition: all 0.4s ease;
             z-index: -1;
         }
+
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px var(--cosmic-glow);
         }
+
         .stat-card:hover::before {
             left: 0%;
         }
+
         .stat-number {
             font-size: 2rem;
             font-weight: 900;
             color: var(--cosmic-green);
             text-shadow: 0 0 15px var(--cosmic-glow);
         }
+
         .stat-label {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.8);
             margin-top: 0.5rem;
         }
+
         /* Timeline Image Styles */
         .timeline-image {
             width: 100%;
@@ -958,6 +1140,7 @@
             padding: 1.5rem;
             border: 1px solid var(--glass-border);
         }
+
         .timeline-image img {
             width: 100%;
             border-radius: 16px;
@@ -965,6 +1148,7 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 255, 136, 0.2);
         }
+
         .timeline-image::before {
             content: '';
             position: absolute;
@@ -977,15 +1161,18 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .timeline-image:hover {
             transform: translateY(-5px);
             box-shadow: 0 25px 60px rgba(0, 255, 136, 0.3);
             opacity: 1;
             border-color: rgba(0, 255, 136, 0.5);
         }
+
         .timeline-image:hover::before {
             opacity: 1;
         }
+
         .timeline-image::after {
             content: '';
             position: absolute;
@@ -998,22 +1185,27 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .timeline-image:hover::after {
             opacity: 1;
         }
+
         /* Image enhancement for all feature cards */
         .feature-card::before {
             filter: brightness(0.7) contrast(1.1);
             transition: all 0.3s ease;
         }
+
         .feature-card:hover::before {
             filter: brightness(0.9) contrast(1.2);
             transform: scale(1.05);
         }
+
         /* Enhanced glow effect for all sections */
         .section-card {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+
         .section-card::after {
             content: '';
             position: absolute;
@@ -1026,9 +1218,11 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .section-card:hover::after {
             opacity: 1;
         }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .hero-container {
@@ -1036,123 +1230,157 @@
                 gap: 2.5rem;
                 text-align: center;
             }
+
             .hero {
                 background-attachment: scroll;
             }
+
             .dashboard-mockup {
                 max-width: 500px;
                 margin: 0 auto;
             }
+
             .section-card {
                 padding: 2rem 1.5rem;
             }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
+
             .btn-primary,
             .btn-secondary {
                 width: 100%;
                 max-width: 280px;
             }
+
             .metrics-grid {
                 grid-template-columns: 1fr;
             }
+
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
+
             .pricing-card.featured {
                 transform: none;
             }
+
             .timeline-image {
                 margin: 2rem auto;
                 padding: 1rem;
             }
         }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
+
             .hero {
                 padding: 100px 1rem 60px;
             }
+
             .main-content {
                 padding: 80px 1rem;
             }
+
             .section-card {
                 padding: 1.5rem 1rem;
             }
+
             .section-title {
                 font-size: 1.8rem;
             }
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
             .trust-signals {
                 flex-direction: column;
                 align-items: center;
             }
+
             .hero-title {
                 font-size: 2.2rem;
             }
+
             .hero-subtitle {
                 font-size: 1.1rem;
             }
+
             .cta-buttons {
                 gap: 1rem;
             }
+
             .btn-primary,
             .btn-secondary {
                 padding: 1rem 1.5rem;
                 font-size: 0.9rem;
             }
         }
+
         @media (max-width: 480px) {
             .dashboard-mockup {
                 padding: 1.2rem;
             }
+
             .trust-signals {
                 flex-direction: column;
                 align-items: center;
             }
+
             .section-card {
                 padding: 1.5rem 1rem;
             }
+
             .section-title {
                 font-size: 1.5rem;
             }
+
             .hero-title {
                 font-size: 1.8rem;
             }
+
             .hero-subtitle {
                 font-size: 1rem;
             }
+
             .metrics-grid {
                 gap: 1rem;
             }
+
             .metric-value {
                 font-size: 1.5rem;
             }
+
             .feature-title {
                 font-size: 1.1rem;
             }
+
             .feature-icon {
                 font-size: 2rem;
             }
+
             .section-content {
                 font-size: 0.95rem;
             }
         }
+
         /* Scroll animations */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease;
         }
+
         .scroll-reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         /* Loading animation */
         .loading-overlay {
             position: fixed;
@@ -1167,6 +1395,7 @@
             z-index: 9999;
             transition: opacity 0.5s ease;
         }
+
         .loading-spinner {
             width: 50px;
             height: 50px;
@@ -1175,10 +1404,17 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
+
         /* Custom Form Styles */
         .form-success {
             display: none;
@@ -1192,10 +1428,19 @@
             font-weight: 600;
             animation: fadeIn 0.5s ease;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .form-error {
             display: none;
             background: rgba(255, 107, 107, 0.1);
@@ -1207,12 +1452,14 @@
             color: #ff6b6b;
             font-weight: 600;
         }
+
         .form-loading {
             display: none;
             text-align: center;
             padding: 1.5rem;
             color: var(--cosmic-accent);
         }
+
         .form-loading:after {
             content: '';
             display: inline-block;
@@ -1224,18 +1471,22 @@
             animation: spin 1s linear infinite;
             margin-left: 10px;
         }
+
         /* Updated CTA Section */
         .cta-section {
             text-align: center;
         }
+
         .cta-section h2 {
             margin-bottom: 1rem;
         }
+
         .cta-section p {
             margin-bottom: 1.5rem;
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
@@ -1245,7 +1496,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo" id="logoLink">
-                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys Logo">
+                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png"
+                    alt="EnCarbonSys Logo">
                 EnCarbonSys
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1256,7 +1508,7 @@
                 <li><a href="#solution">Solution</a></li>
                 <li><a href="/cbam-blog/">Blog</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="/client _resource.html">Client Hub</a></li>
+                <li><a href="/pages/client-resource.html">Client Hub</a></li>
                 <li><a href="#cta" class="nav-cta">Get Started</a></li>
             </ul>
         </div>
@@ -1265,8 +1517,8 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">EnCBAM™ 
-                    </h1>
+                <h1 class="hero-title">EnCBAM™
+                </h1>
                 <p style="font-size: 3rem; line-height: 1.8; margin-bottom: 0.5em; margin-top: 0.1em ; font-weight: 1000;color: white;
             background: linear-gradient(135deg, #ffffff 0%, var(--cosmic-green) 50%, #f0f5f0 100%);
             background-clip: text;
@@ -1276,8 +1528,9 @@
         @keyframes titleGlow {
             0%, 100% { text-shadow: 0 0 20px var(--cosmic-glow); }
             50% { text-shadow: 0 0 40px var(--cosmic-glow); }
-        }">Enabling CBAM Compliance</p>    
-                <p class="hero-subtitle">EnCBAM™ is the flagship solution from EnCarbonSys - built to simplify Carbon Border Adjustment Mechanism (CBAM) compliance for EU exporters. </p>
+        }">Enabling CBAM Compliance</p>
+                <p class="hero-subtitle">EnCBAM™ is the flagship solution from EnCarbonSys - built to simplify Carbon
+                    Border Adjustment Mechanism (CBAM) compliance for EU exporters. </p>
                 <div class="cta-buttons">
                     <a href="#cta" class="btn-primary">
                         <i class="fas fa-rocket"></i>
@@ -1370,20 +1623,25 @@
                     The Problem
                 </h2>
                 <div class="section-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The EU's Carbon Border Adjustment Mechanism (CBAM) is non-negotiable. If you're exporting steel, aluminium, fertilizers, cement, hydrogen, or electricity — you <strong style="color: var(--problem-red);">must</strong> submit emission reports. No valid XLS = No entry to the EU.</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The EU's Carbon Border Adjustment Mechanism
+                        (CBAM) is non-negotiable. If you're exporting steel, aluminium, fertilizers, cement, hydrogen,
+                        or electricity — you <strong style="color: var(--problem-red);">must</strong> submit emission
+                        reports. No valid XLS = No entry to the EU.</p>
                     <div class="features-grid">
                         <div class="feature-card card-delays">
                             <div class="feature-content">
                                 <div class="feature-icon"><i class="fas fa-clock"></i></div>
                                 <div class="feature-title">Shipment Delays</div>
-                                <div class="feature-description">Missing CBAM reports can delay your shipments and disrupt supply chains</div>
+                                <div class="feature-description">Missing CBAM reports can delay your shipments and
+                                    disrupt supply chains</div>
                             </div>
                         </div>
                         <div class="feature-card card-penalties">
                             <div class="feature-content">
                                 <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
                                 <div class="feature-title">Penalties from Customs</div>
-                                <div class="feature-description">Non-compliance results in hefty fines and customs penalties</div>
+                                <div class="feature-description">Non-compliance results in hefty fines and customs
+                                    penalties</div>
                             </div>
                         </div>
                         <div class="feature-card card-buyers">
@@ -1394,10 +1652,13 @@
                             </div>
                         </div>
                     </div>
-                    <p style="font-size: 1.1rem; margin-top: 1.5rem; color: var(--cosmic-green); font-weight: 600;">Most Exporters and MSME's lack the tools. EnCBAM enables CBAM compliance - fast, credible and export-ready.</p>
+                    <p style="font-size: 1.1rem; margin-top: 1.5rem; color: var(--cosmic-green); font-weight: 600;">Most
+                        Exporters and MSME's lack the tools. EnCBAM enables CBAM compliance - fast, credible and
+                        export-ready.</p>
                     <!-- Timeline Image merged into the Problem section tile -->
                     <div class="timeline-image" style="margin-top: 2rem;">
-                        <img src="https://image2url.com/images/1758297999206-4d237a79-5129-4e6e-a64c-0ad55ec0b0c0.png" alt="Timeline of CBAM regulation">
+                        <img src="https://image2url.com/images/1758297999206-4d237a79-5129-4e6e-a64c-0ad55ec0b0c0.png"
+                            alt="Timeline of CBAM regulation">
                     </div>
                 </div>
             </div>
@@ -1414,28 +1675,32 @@
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-file-code"></i></div>
                             <div class="feature-title">EU-validated report</div>
-                            <div class="feature-description">Submission-ready reports that meet all EU CBAM requirements</div>
+                            <div class="feature-description">Submission-ready reports that meet all EU CBAM requirements
+                            </div>
                         </div>
                     </div>
                     <div class="feature-card card-pdf">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
                             <div class="feature-title">Professional PDF report</div>
-                            <div class="feature-description">Professionally designed reports for submitting to the importer or for stakeholder presentations</div>
+                            <div class="feature-description">Professionally designed reports for submitting to the
+                                importer or for stakeholder presentations</div>
                         </div>
                     </div>
                     <div class="feature-card card-calculations">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-calculator"></i></div>
                             <div class="feature-title">Emission calculations</div>
-                            <div class="feature-description">Using official CBAM values, both default and actual emissions  for accurate compliance</div>
+                            <div class="feature-description">Using official CBAM values, both default and actual
+                                emissions for accurate compliance</div>
                         </div>
                     </div>
                     <div class="feature-card card-delivery">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-bolt"></i></div>
                             <div class="feature-title">Fast delivery</div>
-                            <div class="feature-description">No code, no setup required. Just Fill the form or book a call and receive immediate response</div>
+                            <div class="feature-description">No code, no setup required. Just Fill the form or book a
+                                call and receive immediate response</div>
                         </div>
                     </div>
                 </div>
@@ -1453,14 +1718,16 @@
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
                             <div class="feature-title">Tell Us What You Export</div>
-                            <div class="feature-description">Share your export data (spreadsheet, invoice, or email) or talk to our expert</div>
+                            <div class="feature-description">Share your export data (spreadsheet, invoice, or email) or
+                                talk to our expert</div>
                         </div>
                     </div>
                     <div class="feature-card card-calculate">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-calculator"></i></div>
                             <div class="feature-title">We Calculate</div>
-                            <div class="feature-description">We calculate emissions using CBAM defaults and actual emissions</div>
+                            <div class="feature-description">We calculate emissions using CBAM defaults and actual
+                                emissions</div>
                         </div>
                     </div>
                     <div class="feature-card card-reports">
@@ -1480,7 +1747,8 @@
                 </div>
                 <!-- Steps to Comply Image merged into the How It Works section tile -->
                 <div class="timeline-image" style="margin-top: 2rem;">
-                    <img src="https://image2url.com/images/1754834833556-5ea228c6-667d-409e-b754-b71243864999.png" alt="Timeline of CBAM regulation">
+                    <img src="https://image2url.com/images/1754834833556-5ea228c6-667d-409e-b754-b71243864999.png"
+                        alt="Timeline of CBAM regulation">
                 </div>
             </div>
         </section>
@@ -1495,12 +1763,20 @@
                     <div class="pricing-card">
                         <h2 style="color: #ff6b6b; margin-bottom: 1rem;">Traditional Route</h2>
                         <div class="features-grid" style="grid-template-columns: 1fr;">
-                            <div style="background: rgba(255, 107, 107, 0.1); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255, 107, 107, 0.3);">
+                            <div
+                                style="background: rgba(255, 107, 107, 0.1); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255, 107, 107, 0.3);">
                                 <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>₹1,50,000+ in consultant and compliance fees</li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>2–4 weeks of delays </li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Risk of errors, rework, and non-compliance</li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times" style="color: #ff6b6b; margin-right: 0.5rem;"></i>Stress, uncertainty, and paperwork overload</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times"
+                                            style="color: #ff6b6b; margin-right: 0.5rem;"></i>₹1,50,000+ in consultant
+                                        and compliance fees</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times"
+                                            style="color: #ff6b6b; margin-right: 0.5rem;"></i>2–4 weeks of delays </li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times"
+                                            style="color: #ff6b6b; margin-right: 0.5rem;"></i>Risk of errors, rework,
+                                        and non-compliance</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-times"
+                                            style="color: #ff6b6b; margin-right: 0.5rem;"></i>Stress, uncertainty, and
+                                        paperwork overload</li>
                                 </ul>
                             </div>
                         </div>
@@ -1508,12 +1784,21 @@
                     <div class="pricing-card featured">
                         <h2 style="color: var(--cosmic-green); margin-bottom: 1rem;">EnCarbonSys Route</h2>
                         <div class="features-grid" style="grid-template-columns: 1fr;">
-                            <div style="background: rgba(0, 255, 136, 0.1); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(0, 255, 136, 0.3);">
+                            <div
+                                style="background: rgba(0, 255, 136, 0.1); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(0, 255, 136, 0.3);">
                                 <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Most Affordable in the space</li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Delivered in hours not weeks</li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>EU-compliant and audit-ready reports</li>
-                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Clarity, speed, and zero drama</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check"
+                                            style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Most
+                                        Affordable in the space</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check"
+                                            style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Delivered in
+                                        hours not weeks</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check"
+                                            style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>EU-compliant
+                                        and audit-ready reports</li>
+                                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-check"
+                                            style="color: var(--cosmic-green); margin-right: 0.5rem;"></i>Clarity,
+                                        speed, and zero drama</li>
                                 </ul>
                             </div>
                         </div>
@@ -1553,11 +1838,12 @@
                             <div class="feature-description">Chemical and construction material exporters</div>
                         </div>
                     </div>
-                     <div class="feature-card card-hydrogen">
+                    <div class="feature-card card-hydrogen">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-bolt"></i></div>
                             <div class="feature-title">Hydrogen and Electricity</div>
-                            <div class="feature-description">Producers, distributors, and energy trading companies supplying to the EU </div>
+                            <div class="feature-description">Producers, distributors, and energy trading companies
+                                supplying to the EU </div>
                         </div>
                     </div>
                     <div class="feature-card card-consultants">
@@ -1603,14 +1889,16 @@
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-cogs"></i></div>
                             <div class="feature-title">Automated emissions calculation Engine</div>
-                            <div class="feature-description">Default and Actual emissions calculations using official CBAM values</div>
+                            <div class="feature-description">Default and Actual emissions calculations using official
+                                CBAM values</div>
                         </div>
                     </div>
                     <div class="feature-card card-iso">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
                             <div class="feature-title">ISO Aligned</div>
-                            <div class="feature-description">ISO:14064 and ISO:14067 standards Carbon Footprinting </div>
+                            <div class="feature-description">ISO:14064 and ISO:14067 standards Carbon Footprinting
+                            </div>
                         </div>
                     </div>
                     <div class="feature-card card-outputs">
@@ -1619,7 +1907,7 @@
                             <div class="feature-title">PDF & XLS Outputs</div>
                             <div class="feature-description">Submission-ready formats for EU portals</div>
                         </div>
-                    </div>    
+                    </div>
                     <div class="feature-card card-india">
                         <div class="feature-content">
                             <div class="feature-icon"><i class="fas fa-flag"></i></div>
@@ -1638,33 +1926,47 @@
                     About EnCarbonSys
                 </h2>
                 <div class="section-content">
-                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">At EnCarbonSys, we believe the future of business is carbon-transparent and energy-intelligent. We exist to help companies navigate this transformation with confidence. Our flagship solution, EnCBAM™, is a compliance automation engine that takes the complexity out of the EU Carbon Border Adjustment Mechanism (CBAM). With EnCBAM, exporters can stay compliant, credible, and ready for global trade — without drowning in bureaucracy.</p>
-                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">Beyond CBAM, we specialize in hydrocarbon accounting, carbon compliance, and digital sustainability solutions — giving organizations clarity, credibility, and control over their energy, carbon, and business performance.</p>
-                <p style="font-size: 1.2rem; line-height: 1.7; color: var(--cosmic-green); font-weight: 800;">EnCarbonSys — Energy.Carbon.Systems</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">At EnCarbonSys, we believe
+                        the future of business is carbon-transparent and energy-intelligent. We exist to help companies
+                        navigate this transformation with confidence. Our flagship solution, EnCBAM™, is a compliance
+                        automation engine that takes the complexity out of the EU Carbon Border Adjustment Mechanism
+                        (CBAM). With EnCBAM, exporters can stay compliant, credible, and ready for global trade —
+                        without drowning in bureaucracy.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">Beyond CBAM, we specialize in
+                        hydrocarbon accounting, carbon compliance, and digital sustainability solutions — giving
+                        organizations clarity, credibility, and control over their energy, carbon, and business
+                        performance.</p>
+                    <p style="font-size: 1.2rem; line-height: 1.7; color: var(--cosmic-green); font-weight: 800;">
+                        EnCarbonSys — Energy.Carbon.Systems</p>
                 </div>
             </div>
         </section>
         <!-- CTA Section with Merge of "Act Before Penalties Hit" and Form -->
         <section id="cta" class="section scroll-reveal">
-            <div class="section-card cta-section" style="background: var(--glass-bg); border-radius: 24px; padding: 3rem 1.5rem; backdrop-filter: blur(20px); border: 1px solid var(--glass-border);">
-                <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 0.5rem; color: var(--problem-red); text-align: center;">
-                    ACT    BEFORE    PENALTIES    HIT
+            <div class="section-card cta-section"
+                style="background: var(--glass-bg); border-radius: 24px; padding: 3rem 1.5rem; backdrop-filter: blur(20px); border: 1px solid var(--glass-border);">
+                <h2
+                    style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 0.5rem; color: var(--problem-red); text-align: center;">
+                    ACT BEFORE PENALTIES HIT
                 </h2>
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--cosmic-accent); text-align: center;">
                     CBAM reporting is already active. In 2026, financial enforcement begins.
                 </p>
                 <!-- Centered Book a Free Call Button -->
                 <div class="center-button-container">
-                    <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?"  
-                       class="btn-secondary" style="font-size: 1.1rem; padding: 1.2rem 2rem; background: var(--cosmic-green); color: #000000; border: 1px solid var(--cosmic-green);">
+                    <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?"
+                        class="btn-secondary"
+                        style="font-size: 1.1rem; padding: 1.2rem 2rem; background: var(--cosmic-green); color: #000000; border: 1px solid var(--cosmic-green);">
                         <i class="fas fa-phone"></i>
                         Book a Free Call
                     </a>
                 </div>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; margin-top: 1.5rem; color: var(--cosmic-accent); text-align: center;"> 
+                <p
+                    style="font-size: 1.2rem; margin-bottom: 1.5rem; margin-top: 1.5rem; color: var(--cosmic-accent); text-align: center;">
                     Or
                 </p>
-                <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 2rem; color: var(--cosmic-accent); text-align: center;"> 
+                <p
+                    style="font-size: 1.2rem; font-weight: 600; margin-bottom: 2rem; color: var(--cosmic-accent); text-align: center;">
                     Fill the form below. Let's get you CBAM compliant!
                 </p>
                 <!-- Form Container -->
@@ -1673,38 +1975,65 @@
                     <form id="contactForm" style="display: grid; gap: 1.2rem; max-width: 700px; margin: 0 auto;">
                         <!-- Company Name -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Company Name <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="company_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Shree Steel Pvt Ltd">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Company
+                                Name <span style="color: var(--cosmic-green);">*</span></label>
+                            <input type="text" id="company_name" required
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                placeholder="e.g. Shree Steel Pvt Ltd">
                         </div>
                         <!-- Contact Person -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Contact Person Name <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="contact_name" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Rajesh Kumar">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Contact
+                                Person Name <span style="color: var(--cosmic-green);">*</span></label>
+                            <input type="text" id="contact_name" required
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                placeholder="e.g. Rajesh Kumar">
                         </div>
                         <!-- Work Email -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Email <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="email" id="work_email" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. rajesh@shreesteel.com">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Email
+                                <span style="color: var(--cosmic-green);">*</span></label>
+                            <input type="email" id="work_email" required
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                placeholder="e.g. rajesh@shreesteel.com">
                         </div>
                         <!-- Phone / WhatsApp -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Phone / WhatsApp <span style="color: var(--cosmic-green);">*</span></label>
-                            <input type="text" id="phone" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. +91 98765 43210">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Phone
+                                / WhatsApp <span style="color: var(--cosmic-green);">*</span></label>
+                            <input type="text" id="phone" required
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                placeholder="e.g. +91 98765 43210">
                         </div>
                         <!-- HS Code -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Product HS Code(s) <span style="color: #ccc; font-weight: 400;">
-                            <input type="text" id="hs_code" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. 7207.11, 7606.12">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Product
+                                HS Code(s) <span style="color: #ccc; font-weight: 400;">
+                                    <input type="text" id="hs_code"
+                                        style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                        placeholder="e.g. 7207.11, 7606.12">
                         </div>
                         <!-- Product Description -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Product Description <span style="color: #ccc; font-weight: 400;">
-                            <textarea id="product_description" required rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="e.g. Hot-rolled carbon steel coils, 3mm thickness, exported to Germany"></textarea>
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Product
+                                Description <span style="color: #ccc; font-weight: 400;">
+                                    <textarea id="product_description" required rows="3"
+                                        style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                        placeholder="e.g. Hot-rolled carbon steel coils, 3mm thickness, exported to Germany"></textarea>
                         </div>
                         <!-- Export Destination Country -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left;margin-bottom: 0.5rem;">Export Destination Country <span style="color: var(--cosmic-green);">*</span></label>
-                            <select id="export_country" required style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: rgb(14, 78, 19); border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left;margin-bottom: 0.5rem;">Export
+                                Destination Country <span style="color: var(--cosmic-green);">*</span></label>
+                            <select id="export_country" required
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: rgb(14, 78, 19); border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
                                 <option value="">Select a country</option>
                                 <option value="Germany">Germany</option>
                                 <option value="France">France</option>
@@ -1719,21 +2048,33 @@
                         </div>
                         <!-- Estimated Quantity -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Estimated Annual Export Quantity <span style="color: #ccc; font-weight: 400;">
-                            <input type="number" id="quantity" step="any" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(0px);" placeholder="e.g. 500">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Estimated
+                                Annual Export Quantity <span style="color: #ccc; font-weight: 400;">
+                                    <input type="number" id="quantity" step="any"
+                                        style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(0px);"
+                                        placeholder="e.g. 500">
                         </div>
                         <!-- File Upload -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Upload Supporting Files <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
-                            <input type="file" id="file" multiple style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Upload
+                                Supporting Files <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
+                            <input type="file" id="file" multiple
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);">
                         </div>
                         <!-- Additional Notes -->
                         <div>
-                            <label style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Additional Notes <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
-                            <textarea id="notes" rows="3" style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);" placeholder="Any special requirements or questions?"></textarea>
+                            <label
+                                style="display: block; color: white; font-weight: 600; text-align: left; margin-bottom: 0.5rem;">Additional
+                                Notes <span style="color: #ccc; font-weight: 400;">(optional)</span></label>
+                            <textarea id="notes" rows="3"
+                                style="width: 100%; padding: 1rem; border: 1px solid var(--glass-border); background: rgba(195, 242, 215, 0.493); color: white; border-radius: 12px; font-size: 1rem; backdrop-filter: blur(10px);"
+                                placeholder="Any special requirements or questions?"></textarea>
                         </div>
                         <!-- Submit Button -->
-                        <button type="submit" id="submitBtn" class="btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2rem; width: 100%; max-width: 250px; margin: 1.5rem auto 0;">
+                        <button type="submit" id="submitBtn" class="btn-primary"
+                            style="font-size: 1.1rem; padding: 1.2rem 2rem; width: 100%; max-width: 250px; margin: 1.5rem auto 0;">
                             <i class="fas fa-paper-plane"></i>
                             SUBMIT
                         </button>
@@ -1758,249 +2099,256 @@
             </div>
         </section>
 
-   <!-- Latest Blog Articles Widget -->
-<!-- Add this section to your homepage where you want blog articles to appear -->
+        <!-- Latest Blog Articles Widget -->
+        <!-- Add this section to your homepage where you want blog articles to appear -->
 
-<style>
-    .blog-widget {
-        max-width: 1200px;
-        margin: 80px auto;
-        padding: 60px 30px;
-        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        border-radius: 20px;
-    }
+        <style>
+            .blog-widget {
+                max-width: 1200px;
+                margin: 80px auto;
+                padding: 60px 30px;
+                background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+                border-radius: 20px;
+            }
 
-    .blog-widget-header {
-        text-align: center;
-        margin-bottom: 50px;
-    }
+            .blog-widget-header {
+                text-align: center;
+                margin-bottom: 50px;
+            }
 
-    .blog-widget-header h2 {
-        font-size: 42px;
-        font-weight: 800;
-        color: #0a0a0a;
-        margin-bottom: 15px;
-    }
+            .blog-widget-header h2 {
+                font-size: 42px;
+                font-weight: 800;
+                color: #0a0a0a;
+                margin-bottom: 15px;
+            }
 
-    .blog-widget-header p {
-        font-size: 18px;
-        color: #4a4a4a;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+            .blog-widget-header p {
+                font-size: 18px;
+                color: #4a4a4a;
+                max-width: 600px;
+                margin: 0 auto;
+            }
 
-    .blog-articles-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        margin-bottom: 40px;
-    }
+            .blog-articles-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 30px;
+                margin-bottom: 40px;
+            }
 
-    .blog-article-card {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-    }
+            .blog-article-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+                display: flex;
+                flex-direction: column;
+            }
 
-    .blog-article-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-    }
+            .blog-article-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            }
 
-    .blog-article-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
+            .blog-article-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
 
-    .blog-article-content {
-        padding: 25px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
+            .blog-article-content {
+                padding: 25px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
 
-    .blog-article-meta {
-        display: flex;
-        gap: 15px;
-        font-size: 13px;
-        color: #999;
-        margin-bottom: 12px;
-    }
+            .blog-article-meta {
+                display: flex;
+                gap: 15px;
+                font-size: 13px;
+                color: #999;
+                margin-bottom: 12px;
+            }
 
-    .blog-article-meta span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
+            .blog-article-meta span {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
 
-    .blog-article-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #0a0a0a;
-        margin-bottom: 12px;
-        line-height: 1.3;
-    }
+            .blog-article-title {
+                font-size: 20px;
+                font-weight: 700;
+                color: #0a0a0a;
+                margin-bottom: 12px;
+                line-height: 1.3;
+            }
 
-    .blog-article-excerpt {
-        font-size: 15px;
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        flex-grow: 1;
-    }
+            .blog-article-excerpt {
+                font-size: 15px;
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                flex-grow: 1;
+            }
 
-    .blog-read-more {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: #2DF56D;
-        font-weight: 600;
-        font-size: 15px;
-        transition: gap 0.3s ease;
-    }
+            .blog-read-more {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #2DF56D;
+                font-weight: 600;
+                font-size: 15px;
+                transition: gap 0.3s ease;
+            }
 
-    .blog-article-card:hover .blog-read-more {
-        gap: 12px;
-    }
+            .blog-article-card:hover .blog-read-more {
+                gap: 12px;
+            }
 
-    .blog-view-all {
-        text-align: center;
-    }
+            .blog-view-all {
+                text-align: center;
+            }
 
-    .blog-view-all-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: #2DF56D;
-        color: #0a0a0a;
-        padding: 15px 35px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        transition: all 0.3s ease;
-    }
+            .blog-view-all-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: #2DF56D;
+                color: #0a0a0a;
+                padding: 15px 35px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                transition: all 0.3s ease;
+            }
 
-    .blog-view-all-btn:hover {
-        background: #1aa347;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(45, 245, 109, 0.3);
-    }
+            .blog-view-all-btn:hover {
+                background: #1aa347;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(45, 245, 109, 0.3);
+            }
 
-    @media (max-width: 768px) {
-        .blog-widget {
-            margin: 50px 20px;
-            padding: 40px 20px;
-        }
+            @media (max-width: 768px) {
+                .blog-widget {
+                    margin: 50px 20px;
+                    padding: 40px 20px;
+                }
 
-        .blog-widget-header h2 {
-            font-size: 32px;
-        }
+                .blog-widget-header h2 {
+                    font-size: 32px;
+                }
 
-        .blog-articles-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+                .blog-articles-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
 
-<section class="blog-widget">
-    <div class="blog-widget-header">
-        <h2>Latest CBAM Insights</h2>
-        <p>Stay ahead with expert analysis, regulatory updates, and practical compliance guides</p>
-    </div>
-
-    <div class="blog-articles-grid">
-        <!-- Article 1 -->
-        <a href="/cbam-blog/cbam-verification-requirements-2026.html" class="blog-article-card">
-            <img src="https://images.unsplash.com/photo-1588582669551-8617e4a757bb?w=600&h=400&fit=crop" alt="CBAM Verification Requirements" class="blog-article-image">
-            <div class="blog-article-content">
-                <div class="blog-article-meta">
-                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
-                    <span><i class="far fa-clock"></i> 8 min read</span>
-                </div>
-                <h3 class="blog-article-title">CBAM Verification Requirements 2026: Your Complete Guide</h3>
-                <p class="blog-article-excerpt">Everything importers need to know about accredited verifiers, site visits, and compliance deadlines for the definitive phase.</p>
-                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+        <section class="blog-widget">
+            <div class="blog-widget-header">
+                <h2>Latest CBAM Insights</h2>
+                <p>Stay ahead with expert analysis, regulatory updates, and practical compliance guides</p>
             </div>
-        </a>
 
-        <!-- Article 2 -->
-        <a href="/cbam-blog/cbam-impact-steel-industry.html" class="blog-article-card">
-            <img src="https://images.unsplash.com/photo-1734864220078-c7354732aa7d?w=600&h=400&fit=crop" alt="CBAM Steel Industry Impact" class="blog-article-image">
-            <div class="blog-article-content">
-                <div class="blog-article-meta">
-                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
-                    <span><i class="far fa-clock"></i> 10 min read</span>
-                </div>
-                <h3 class="blog-article-title">How CBAM is Reshaping the Global Steel Industry</h3>
-                <p class="blog-article-excerpt">Explore CBAM's transformative impact on steel trade, cost implications, and how manufacturers are adapting to the new landscape.</p>
-                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+            <div class="blog-articles-grid">
+                <!-- Article 1 -->
+                <a href="/cbam-blog/cbam-verification-requirements-2026.html" class="blog-article-card">
+                    <img src="https://images.unsplash.com/photo-1588582669551-8617e4a757bb?w=600&h=400&fit=crop"
+                        alt="CBAM Verification Requirements" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <div class="blog-article-meta">
+                            <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3 class="blog-article-title">CBAM Verification Requirements 2026: Your Complete Guide</h3>
+                        <p class="blog-article-excerpt">Everything importers need to know about accredited verifiers,
+                            site visits, and compliance deadlines for the definitive phase.</p>
+                        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="/cbam-blog/cbam-impact-steel-industry.html" class="blog-article-card">
+                    <img src="https://images.unsplash.com/photo-1734864220078-c7354732aa7d?w=600&h=400&fit=crop"
+                        alt="CBAM Steel Industry Impact" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <div class="blog-article-meta">
+                            <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                            <span><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <h3 class="blog-article-title">How CBAM is Reshaping the Global Steel Industry</h3>
+                        <p class="blog-article-excerpt">Explore CBAM's transformative impact on steel trade, cost
+                            implications, and how manufacturers are adapting to the new landscape.</p>
+                        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="/cbam-blog/cbam-developing-countries-impact.html" class="blog-article-card">
+                    <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=600&h=400&fit=crop"
+                        alt="CBAM Developing Countries" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <div class="blog-article-meta">
+                            <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
+                            <span><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <h3 class="blog-article-title">CBAM's Impact on Developing Countries</h3>
+                        <p class="blog-article-excerpt">How the Carbon Border Adjustment Mechanism affects emerging
+                            economies and their export competitiveness in EU markets.</p>
+                        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
             </div>
-        </a>
 
-        <!-- Article 3 -->
-        <a href="/cbam-blog/cbam-developing-countries-impact.html" class="blog-article-card">
-            <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=600&h=400&fit=crop" alt="CBAM Developing Countries" class="blog-article-image">
-            <div class="blog-article-content">
-                <div class="blog-article-meta">
-                    <span><i class="far fa-calendar"></i> Dec 16, 2024</span>
-                    <span><i class="far fa-clock"></i> 12 min read</span>
-                </div>
-                <h3 class="blog-article-title">CBAM's Impact on Developing Countries</h3>
-                <p class="blog-article-excerpt">How the Carbon Border Adjustment Mechanism affects emerging economies and their export competitiveness in EU markets.</p>
-                <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+            <div class="blog-view-all">
+                <a href="/cbam-blog/" class="blog-view-all-btn">
+                    View All Articles <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-        </a>
-    </div>
+        </section>
 
-    <div class="blog-view-all">
-        <a href="/cbam-blog/" class="blog-view-all-btn">
-            View All Articles <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-</section>
-
-<!-- 
+        <!-- 
 INTEGRATION INSTRUCTIONS:
 1. Copy this entire file content
 2. Paste it into your index.html where you want the blog section to appear
 3. Recommended placement: After the "About" section, before the footer
 4. The widget is fully responsive and matches your site's design
 5. Update article links and images as you publish new content
--->                         
+-->
     </main>
     <!-- Footer -->
-<footer style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); backdrop-filter: blur(20px); text-align: center; padding: 2rem 1.5rem; margin-top: 0.1rem;">
-    
-    <p style="color: var(--cosmic-accent); font-weight: 600; margin-bottom: 0.5rem;">
-        • EnCarbonSys © 2025 • 
-    </p>
+    <footer
+        style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); backdrop-filter: blur(20px); text-align: center; padding: 2rem 1.5rem; margin-top: 0.1rem;">
 
-    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; margin-bottom: 0.8rem;">
-        MSME Ready | Startup India Aligned | Privacy-First | contact@encarbonsys.com
-    </p>
+        <p style="color: var(--cosmic-accent); font-weight: 600; margin-bottom: 0.5rem;">
+            • EnCarbonSys © 2025 •
+        </p>
 
-    <!-- Legal Links -->
-    <p style="margin-top: 0.8rem;">
-        <a href="/Terms & Conditions.pdf" 
-           style="color: var(--cosmic-accent); font-size: 0.85rem; margin-right: 1rem; text-decoration: none;">
-            Terms & Conditions
-        </a>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; margin-bottom: 0.8rem;">
+            MSME Ready | Startup India Aligned | Privacy-First | contact@encarbonsys.com
+        </p>
 
-        <a href="/EnCarbonSys PRIVACY POLICY.pdf" 
-           style="color: var(--cosmic-accent); font-size: 0.85rem; text-decoration: none;">
-            Privacy Policy
-        </a>
-    </p>
+        <!-- Legal Links -->
+        <p style="margin-top: 0.8rem;">
+            <a href="/assets/pdf/terms-conditions.pdf"
+                style="color: var(--cosmic-accent); font-size: 0.85rem; margin-right: 1rem; text-decoration: none;">
+                Terms & Conditions
+            </a>
 
-</footer>
+            <a href="/assets/pdf/privacy-policy.pdf"
+                style="color: var(--cosmic-accent); font-size: 0.85rem; text-decoration: none;">
+                Privacy Policy
+            </a>
+        </p>
+
+    </footer>
     <script>
         // Loading screen
         window.addEventListener('load', () => {
@@ -2091,7 +2439,7 @@ INTEGRATION INSTRUCTIONS:
                 lastScrollTop = scrollTop;
             });
             // Logo click to scroll to top
-            document.getElementById('logoLink').addEventListener('click', function(e) {
+            document.getElementById('logoLink').addEventListener('click', function (e) {
                 e.preventDefault();
                 window.scrollTo({
                     top: 0,
@@ -2101,13 +2449,13 @@ INTEGRATION INSTRUCTIONS:
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
-            mobileMenuBtn.addEventListener('click', function(e) {
+            mobileMenuBtn.addEventListener('click', function (e) {
                 e.stopPropagation();
                 navLinks.classList.toggle('active');
             });
             // Close mobile menu when clicking a link (but preserve functionality)
             document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Only close menu on mobile if it's actually open
                     if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
@@ -2115,7 +2463,7 @@ INTEGRATION INSTRUCTIONS:
                 });
             });
             // Handle window resize to reset menu state
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 if (window.innerWidth > 768) {
                     navLinks.classList.remove('active');
                 }
@@ -2127,7 +2475,7 @@ INTEGRATION INSTRUCTIONS:
             const errorMessage = document.getElementById('errorMessage');
             const loadingIndicator = document.getElementById('loadingIndicator');
             const submitBtn = document.getElementById('submitBtn');
-            form.addEventListener('submit', async function(e) {
+            form.addEventListener('submit', async function (e) {
                 e.preventDefault();
                 // Show loading state
                 formContainer.style.display = 'none';
@@ -2206,17 +2554,5 @@ INTEGRATION INSTRUCTIONS:
         });
     </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

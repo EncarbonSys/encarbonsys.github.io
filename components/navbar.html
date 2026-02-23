@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
             padding: 0.5rem 0;
             transition: all 0.3s ease;
         }
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -26,6 +28,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 1.9rem;
             font-weight: 750;
@@ -40,20 +43,24 @@
             gap: 0.5rem;
             filter: drop-shadow(0 0 0 transparent);
         }
+
         .logo img {
             height: 60px;
             transition: all 0.3s ease;
         }
+
         .logo:hover img {
             transform: scale(1.1);
             filter: brightness(1.2) contrast(1.1);
         }
+
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
             align-items: center;
         }
+
         .nav-links a {
             color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
@@ -63,6 +70,7 @@
             font-size: 0.95rem;
             letter-spacing: 0.5px;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -73,30 +81,36 @@
             background: #00ff88;
             transition: width 0.3s ease;
         }
+
         .nav-links a:hover {
             color: #00ff88;
         }
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         /* Dropdown Styles */
         .dropdown {
             position: relative;
         }
+
         .dropdown-toggle {
             display: flex;
             align-items: center;
             gap: 0.3rem;
             cursor: pointer;
         }
+
         .dropdown-toggle i {
             font-size: 0.7rem;
             transition: transform 0.3s ease;
         }
+
         .dropdown:hover .dropdown-toggle i {
             transform: rotate(180deg);
         }
+
         .dropdown-menu {
             position: absolute;
             top: 100%;
@@ -114,14 +128,17 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
             margin-top: 0.5rem;
         }
+
         .dropdown-menu li {
             list-style: none;
         }
+
         .dropdown-menu a {
             display: block;
             padding: 0.75rem 1.5rem;
@@ -130,25 +147,29 @@
             transition: all 0.3s ease;
             font-size: 0.9rem;
         }
+
         .dropdown-menu a::after {
             display: none;
         }
+
         .dropdown-menu a:hover {
             background: rgba(0, 255, 136, 0.1);
             color: #00ff88;
             padding-left: 2rem;
         }
-        
+
         /* Get Started Button - MUCH WIDER NOW */
         .nav-cta {
             color: #000000;
-            padding: 0.9rem 3.5rem !important;  /* MUCH WIDER - 3.5rem instead of 2.5rem */
+            padding: 0.9rem 3.5rem !important;
+            /* MUCH WIDER - 3.5rem instead of 2.5rem */
             border: none;
             border-radius: 12px;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.4s ease;
-            font-size: 1.05rem;  /* Slightly larger text */
+            font-size: 1.05rem;
+            /* Slightly larger text */
             box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
             text-shadow: none;
             position: relative;
@@ -156,9 +177,12 @@
             border: 1px solid rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #00ff88 0%, #34d399 100%);
             white-space: nowrap;
-            margin-left: 1.5rem;  /* More spacing from other links */
-            min-width: 160px;  /* Minimum width to ensure it's never too small */
+            margin-left: 1.5rem;
+            /* More spacing from other links */
+            min-width: 160px;
+            /* Minimum width to ensure it's never too small */
         }
+
         .nav-cta::before {
             content: '';
             position: absolute;
@@ -170,19 +194,22 @@
             transition: all 0.6s ease;
             z-index: 0;
         }
+
         .nav-cta::after {
             display: none !important;
         }
+
         .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
             background: linear-gradient(135deg, #34d399 0%, #00ff88 100%);
             color: #000000;
         }
+
         .nav-cta:hover::before {
             left: 100%;
         }
-        
+
         /* Mobile Menu Toggle */
         .mobile-menu-btn {
             display: none;
@@ -192,7 +219,7 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* Mobile Menu Styles */
         @media (max-width: 768px) {
             .nav-links {
@@ -210,24 +237,29 @@
                 z-index: 999;
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .mobile-menu-btn {
                 display: block;
             }
+
             .nav-links a {
                 font-size: 1.1rem;
                 padding: 0.8rem 0;
                 width: 100%;
                 text-align: center;
             }
+
             .nav-cta {
                 margin-left: 0 !important;
-                padding: 0.9rem 3rem !important;  /* Keep it wide on mobile too */
+                padding: 0.9rem 3rem !important;
+                /* Keep it wide on mobile too */
                 min-width: 200px;
             }
-            
+
             /* Mobile Dropdown */
             .dropdown-menu {
                 position: static;
@@ -240,25 +272,30 @@
                 margin: 0.5rem 1rem;
                 display: none;
             }
+
             .dropdown.active .dropdown-menu {
                 display: block;
             }
+
             .dropdown-toggle {
                 width: 100%;
                 justify-content: center;
             }
+
             .dropdown-menu a:hover {
                 padding-left: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="logo" id="logoLink">
-                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys Logo">
+                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png"
+                    alt="EnCarbonSys Logo">
                 EnCarbonSys
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -279,7 +316,7 @@
                         <li><a href="/tools/cbam-cost-estimator.html">CBAM Cost Estimator</a></li>
                     </ul>
                 </li>
-                <li><a href="/client_resource.html">Client Hub</a></li>
+                <li><a href="/pages/client-resource.html">Client Hub</a></li>
                 <li><a href="/#cta" class="nav-cta">Get Started</a></li>
             </ul>
         </div>
@@ -290,32 +327,32 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         const toolsDropdown = document.getElementById('toolsDropdown');
-        
-        mobileMenuBtn.addEventListener('click', function(e) {
+
+        mobileMenuBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
         });
-        
+
         // Mobile dropdown toggle
         if (window.innerWidth <= 768) {
             const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
-            dropdownToggle.addEventListener('click', function(e) {
+            dropdownToggle.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 toolsDropdown.classList.toggle('active');
             });
         }
-        
+
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navLinks.classList.remove('active');
                 toolsDropdown.classList.remove('active');
             }
         });
-        
+
         // Update resize handler
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             if (window.innerWidth > 768) {
                 navLinks.classList.remove('active');
                 toolsDropdown.classList.remove('active');
@@ -323,4 +360,5 @@
         });
     </script>
 </body>
+
 </html>

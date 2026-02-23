@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="/assets/css/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -475,7 +475,7 @@
 <body>
     <div id="navbar"></div>
         <script>
-          fetch('/navbar.html')
+          fetch('/components/navbar.html')
             .then(r => r.text())
             .then(html => document.getElementById('navbar').innerHTML = html);
         </script>
@@ -671,7 +671,7 @@
             <div class="cta-buttons">
                 <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?" class="cta-button"><i class="fas fa-phone-alt"></i> Book a Free CBAM Readiness Call</a>
                 <a href="/index.html#cta" class="cta-button secondary"><i class="fas fa-bolt"></i> GET QUOTE NOW</a>
-                <a href="/RESOURCE HUB.html" class="cta-button"><i class="fas fa-external-link-alt"></i> Go To Client Hub</a>
+                <a href="/pages/client-resource.html" class="cta-button"><i class="fas fa-external-link-alt"></i> Go To Client Hub</a>
             </div>
         </section>
         
@@ -681,7 +681,7 @@
                 <div class="footer-content">
                     <div class="footer-contact">
                         <a href="mailto:ash@encarbonsys.com"><i class="fas fa-envelope"></i> contact@encarbonsys.com</a>
-                        <a href="/Refund & Cancellation Policy (1).pdf"><i class="fas fa-hand-holding-usd"></i> Refund and Cancellation</a>
+                        <a href="/assets/pdf/refund-cancellation-policy.pdf"><i class="fas fa-hand-holding-usd"></i> Refund and Cancellation</a>
                         <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?"><i class="fas fa-phone"></i> +91 9620828005</a>
                         <a href="https://encarbonsys.com"><i class="fas fa-globe"></i> www.encarbonsys.com</a>
                     </div>
@@ -711,7 +711,7 @@
             });
         });
     </script>
-    <script src="/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 </body>
 </html>
