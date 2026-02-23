@@ -505,6 +505,7 @@
         }
 
         @media (max-width: 768px) {
+            .mobile-only-icon { display: inline-block !important; }
             .toc-sidebar {
                 display: none;
             }
@@ -1480,10 +1481,21 @@
         const tocToggle = document.getElementById('mobileTocToggle');
         const tocList = document.querySelector('.toc-list');
         
-        if (tocToggle && tocList && window.innerWidth <= 768) {
-            tocToggle.addEventListener('click', function() {
-                tocList.classList.toggle('active');
-                this.classList.toggle('expanded');
+        if (tocToggle && tocList) {
+            const toggleMenu = () => {
+                if (window.innerWidth <= 768) {
+                    const isActive = tocList.classList.toggle('active');
+                    tocToggle.classList.toggle('expanded');
+                    tocToggle.setAttribute('aria-expanded', String(isActive));
+                }
+            };
+
+            tocToggle.addEventListener('click', toggleMenu);
+            tocToggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleMenu();
+                }
             });
             
             // Close TOC when a link is clicked on mobile
@@ -1493,8 +1505,18 @@
                     if (window.innerWidth <= 768) {
                         tocList.classList.remove('active');
                         tocToggle.classList.remove('expanded');
+                        tocToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
+            });
+
+            // Reset state on resize to handle rotation/resizing gracefully
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    tocList.classList.remove('active');
+                    tocToggle.classList.remove('expanded');
+                    tocToggle.setAttribute('aria-expanded', 'false');
+                }
             });
         }
 </script>

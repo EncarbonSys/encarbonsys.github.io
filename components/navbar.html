@@ -339,12 +339,14 @@
         });
 
         // Mobile dropdown toggle
-        if (window.innerWidth <= 768) {
+        if (toolsDropdown) {
             const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
             dropdownToggle.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                toolsDropdown.classList.toggle('active');
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toolsDropdown.classList.toggle('active');
+                }
             });
         }
 
