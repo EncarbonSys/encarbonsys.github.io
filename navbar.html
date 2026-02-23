@@ -139,16 +139,16 @@
             padding-left: 2rem;
         }
         
-        /* Get Started Button - FIXED: Wider and Better Spacing */
+        /* Get Started Button - MUCH WIDER NOW */
         .nav-cta {
             color: #000000;
-            padding: 0.85rem 2.5rem;
+            padding: 0.9rem 3.5rem !important;  /* MUCH WIDER - 3.5rem instead of 2.5rem */
             border: none;
             border-radius: 12px;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.4s ease;
-            font-size: 1rem;
+            font-size: 1.05rem;  /* Slightly larger text */
             box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
             text-shadow: none;
             position: relative;
@@ -156,7 +156,8 @@
             border: 1px solid rgba(0, 255, 136, 0.3);
             background: linear-gradient(135deg, #00ff88 0%, #34d399 100%);
             white-space: nowrap;
-            margin-left: 1rem;
+            margin-left: 1.5rem;  /* More spacing from other links */
+            min-width: 160px;  /* Minimum width to ensure it's never too small */
         }
         .nav-cta::before {
             content: '';
@@ -222,8 +223,9 @@
                 text-align: center;
             }
             .nav-cta {
-                margin-left: 0;
-                padding: 0.85rem 2rem;
+                margin-left: 0 !important;
+                padding: 0.9rem 3rem !important;  /* Keep it wide on mobile too */
+                min-width: 200px;
             }
             
             /* Mobile Dropdown */
@@ -304,27 +306,19 @@
             });
         }
         
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
-            link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-        
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navLinks.classList.remove('active');
                 toolsDropdown.classList.remove('active');
             }
         });
         
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        // Update resize handler
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
                 navLinks.classList.remove('active');
+                toolsDropdown.classList.remove('active');
             }
         });
     </script>
