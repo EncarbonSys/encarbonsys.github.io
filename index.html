@@ -1410,40 +1410,102 @@
                 padding: 80px 1rem;
             }
 
-            .section-card {
-                padding: 1.5rem 1rem;
+            .dashboard-mockup {
+                padding: 1.5rem;
+                margin: 0 0.5rem;
+                border-radius: 16px;
             }
 
-            .section-title {
-                font-size: 1.8rem;
+            .dashboard-title {
+                font-size: 1.2rem;
             }
 
-            .features-grid {
+            .metrics-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
-            .trust-signals {
-                flex-direction: column;
-                align-items: center;
+            .metric-card {
+                padding: 1.2rem;
+            }
+
+            .metric-value {
+                font-size: 2rem;
             }
 
             .hero-title {
-                font-size: 2.2rem;
+                font-size: clamp(2rem, 8vw, 3rem);
             }
 
             .hero-subtitle {
                 font-size: 1.1rem;
             }
 
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
             .cta-buttons {
-                gap: 1rem;
+                width: 100%;
             }
 
             .btn-primary,
             .btn-secondary {
+                width: 100%;
                 padding: 1rem 1.5rem;
-                font-size: 0.9rem;
             }
+
+            .dashboard-mockup {
+                padding: 1rem;
+                margin: 0;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+
+            .metric-value {
+                font-size: 1.7rem;
+            }
+        }
+
+        .section-card {
+            padding: 1.5rem 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .trust-signals {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            gap: 1rem;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 480px) {

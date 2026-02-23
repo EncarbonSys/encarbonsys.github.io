@@ -297,11 +297,48 @@
 
         @media (max-width: 768px) {
             .toc-sidebar {
-                display: none;
+                /* Changed to block to allow customization */
+                display: block;
+                margin-top: 80px; /* Space for navbar */
+            }
+
+            .toc-sticky {
+                padding: 15px; /* Smaller padding on mobile */
+            }
+
+            .toc-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 0; /* Remove margin when collapsed */
+                border-bottom: none; /* Add border gracefully on expand */
+            }
+
+            .mobile-only-icon { display: none; }
+            @media (max-width: 768px) { .mobile-only-icon { display: inline-block !important; } }
+            .toc-title i {
+                transition: transform 0.3s ease;
+            }
+
+            .toc-title.expanded i {
+                transform: rotate(180deg);
+            }
+
+            .toc-list {
+                display: none; /* Hidden by default on mobile */
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 2px solid #e9ecef;
+                animation: slideDown 0.3s ease-out;
+            }
+            
+            .toc-list.active {
+                display: block;
             }
 
             .article-layout {
-                margin-top: 80px;
+                margin-top: 20px; /* Reduced from 80px since TOC handles it */
                 padding: 0 20px;
             }
 
@@ -315,6 +352,11 @@
 
             .featured-image {
                 height: 250px;
+            }
+            
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
             }
         }
     </style>
@@ -377,7 +419,7 @@
         <!-- Table of Contents Sidebar -->
         <aside class="toc-sidebar">
             <div class="toc-sticky">
-                <div class="toc-title">ON THIS PAGE</div>
+                <div class="toc-title" id="mobileTocToggle">ON THIS PAGE <i class="fas fa-chevron-down mobile-only-icon" style="display:none;"></i></div>
                 <ul class="toc-list">
                     <li><a href="#why-need-status"><i class="fas fa-chevron-right"></i> No Authorization = No Imports</a></li>
                     <li><a href="#how-to-become"><i class="fas fa-chevron-right"></i> The Five-Step Authorization Journey</a></li>
@@ -578,6 +620,28 @@
                 }
             });
         });
-    </script>
+    
+        // Mobile TOC Toggle
+        const tocToggle = document.getElementById('mobileTocToggle');
+        const tocList = document.querySelector('.toc-list');
+        
+        if (tocToggle && tocList && window.innerWidth <= 768) {
+            tocToggle.addEventListener('click', function() {
+                tocList.classList.toggle('active');
+                this.classList.toggle('expanded');
+            });
+            
+            // Close TOC when a link is clicked on mobile
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        tocList.classList.remove('active');
+                        tocToggle.classList.remove('expanded');
+                    }
+                });
+            });
+        }
+</script>
 </body>
 </html>

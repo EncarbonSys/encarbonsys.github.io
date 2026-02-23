@@ -1475,6 +1475,28 @@
                 }
             });
         });
-    </script>
+    
+        // Mobile TOC Toggle
+        const tocToggle = document.getElementById('mobileTocToggle');
+        const tocList = document.querySelector('.toc-list');
+        
+        if (tocToggle && tocList && window.innerWidth <= 768) {
+            tocToggle.addEventListener('click', function() {
+                tocList.classList.toggle('active');
+                this.classList.toggle('expanded');
+            });
+            
+            // Close TOC when a link is clicked on mobile
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        tocList.classList.remove('active');
+                        tocToggle.classList.remove('expanded');
+                    }
+                });
+            });
+        }
+</script>
 </body>
 </html>
