@@ -133,7 +133,7 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-10px);
     background: rgba(10, 26, 15, 0.98);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 255, 136, 0.2);
@@ -152,7 +152,7 @@
 .dropdown.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 .dropdown-menu li {
@@ -183,15 +183,13 @@
 .nav-cta,
 .nav-cta1 {
     color: #000000;
-    padding: 0.9rem 3.5rem !important;
-    /* MUCH WIDER */
+    padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 12px;
     font-weight: 700;
     text-decoration: none;
     transition: all 0.4s ease;
-    font-size: 1.05rem;
-    /* Slightly larger text */
+    font-size: 0.95rem;
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
     text-shadow: none;
     position: relative;
@@ -199,10 +197,7 @@
     border: 1px solid rgba(0, 255, 136, 0.3);
     background: linear-gradient(135deg, #00ff88 0%, #34d399 100%);
     white-space: nowrap;
-    margin-left: 1.5rem;
-    /* More spacing from other links */
-    min-width: 160px;
-    /* Minimum width to ensure it's never too small */
+    margin-left: 1rem;
     display: inline-block;
 }
 
@@ -361,9 +356,9 @@
     .nav-cta,
     .nav-cta1 {
         margin-left: 0 !important;
-        padding: 0.9rem 3rem !important;
-        /* Keep it wide on mobile too */
-        min-width: 200px;
+        padding: 0.9rem 3.5rem !important;
+        /* Keep it wide on mobile for prominence */
+        min-width: 240px;
         text-align: center;
         margin-top: 0.5rem;
     }

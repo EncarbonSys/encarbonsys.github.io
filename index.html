@@ -1446,20 +1446,63 @@
             }
         }
 
+        .dashboard-mockup {
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .dashboard-header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+        }
+
+        .section-card {
+            padding: 2.5rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .trust-signals {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+        }
+
         @media (max-width: 480px) {
-            .cta-buttons {
-                width: 100%;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                padding: 1rem 1.5rem;
-            }
-
             .dashboard-mockup {
                 padding: 1rem;
-                margin: 0;
             }
 
             .dashboard-header {
@@ -1471,46 +1514,17 @@
             .metric-value {
                 font-size: 1.7rem;
             }
-        }
 
-        .section-card {
-            padding: 1.5rem 1rem;
-        }
+            .section-card {
+                padding: 1.5rem 1rem;
+            }
 
-        .section-title {
-            font-size: 1.8rem;
-        }
+            .section-title {
+                font-size: 1.8rem;
+            }
 
-        .features-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .trust-signals {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-title {
-            font-size: 2.2rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .cta-buttons {
-            gap: 1rem;
-        }
-
-        .btn-primary,
-        .btn-secondary {
-            padding: 1rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            .dashboard-mockup {
-                padding: 1.2rem;
+            .features-grid {
+                grid-template-columns: 1fr;
             }
 
             .trust-signals {
@@ -1518,40 +1532,24 @@
                 align-items: center;
             }
 
-            .section-card {
-                padding: 1.5rem 1rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
             .hero-title {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
 
             .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .metrics-grid {
-                gap: 1rem;
-            }
-
-            .metric-value {
-                font-size: 1.5rem;
-            }
-
-            .feature-title {
                 font-size: 1.1rem;
             }
 
-            .feature-icon {
-                font-size: 2rem;
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            .section-content {
-                font-size: 0.95rem;
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                padding: 1rem 1.5rem;
+                font-size: 0.9rem;
             }
         }
 

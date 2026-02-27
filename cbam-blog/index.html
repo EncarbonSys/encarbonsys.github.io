@@ -449,5 +449,43 @@
             </article>
         </section>
     </div>
+<script>
+        // Mobile TOC Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const tocToggle = document.getElementById('mobileTocToggle');
+            const tocList = document.querySelector('.toc-list');
+            
+            if (tocToggle && tocList) {
+                // Support keyboard interaction for accessibility
+                tocToggle.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+                
+                tocToggle.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                        this.setAttribute('aria-expanded', !isExpanded);
+                        tocList.classList.toggle('active');
+                        this.classList.toggle('expanded');
+                    }
+                });
+                
+                // Close TOC when a link is clicked on mobile
+                const tocLinks = document.querySelectorAll('.toc-list a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768) {
+                            tocToggle.setAttribute('aria-expanded', 'false');
+                            tocList.classList.remove('active');
+                            tocToggle.classList.remove('expanded');
+                        }
+                    });
+                });
+            }
+        });
+</script>
 </body>
 </html>

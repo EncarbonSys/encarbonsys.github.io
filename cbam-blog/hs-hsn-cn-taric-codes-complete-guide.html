@@ -468,30 +468,62 @@
         /* Stats Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 30px 20px;
             text-align: center;
-            border: 2px solid #dee2e6;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 140px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+            border-color: #2DF56D;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #2DF56D;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-card:hover::after {
+            opacity: 1;
         }
 
         .stat-number {
-            font-size: 48px;
+            display: block;
+            font-size: 28px;
             font-weight: 800;
-            color: #2DF56D;
-            margin-bottom: 10px;
+            color: #0a0a0a;
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            font-size: 16px;
-            color: #495057;
-            font-weight: 600;
+            font-size: 15px;
+            color: #6c757d;
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         .cta-section {
@@ -733,7 +765,9 @@
         <!-- Table of Contents Sidebar -->
         <aside class="toc-sidebar">
             <div class="toc-sticky">
-                <div class="toc-title" id="mobileTocToggle" role="button" aria-expanded="false" tabindex="0" aria-label="Toggle Table of Contents">ON THIS PAGE <i class="fas fa-chevron-down mobile-only-icon"></i></div>
+                <div class="toc-title" id="mobileTocToggle" role="button" aria-expanded="false" tabindex="0"
+                    aria-label="Toggle Table of Contents">ON THIS PAGE <i
+                        class="fas fa-chevron-down mobile-only-icon"></i></div>
                 <ul class="toc-list">
                     <li><a href="#introduction"><i class="fas fa-chevron-right"></i> Introduction</a></li>
                     <li><a href="#the-confusion"><i class="fas fa-chevron-right"></i> The Confusion Explained</a></li>
@@ -906,7 +940,8 @@
                     </ul>
 
                     <p><strong>Example:</strong> If HS code for cotton jacket is <code>610120</code>, the HSN might be
-                        <code>61012010</code> (with India-specific subcategory)</p>
+                        <code>61012010</code> (with India-specific subcategory)
+                    </p>
 
                     <div class="warning-box">
                         <h3><i class="fas fa-info-circle"></i> Important for Indian Exporters</h3>
@@ -1512,11 +1547,11 @@
                 }
             });
         });
-    
+
         // Mobile TOC Toggle
         const tocToggle = document.getElementById('mobileTocToggle');
         const tocList = document.querySelector('.toc-list');
-        
+
         if (tocToggle && tocList) {
             const toggleMenu = () => {
                 if (window.innerWidth <= 768) {
@@ -1533,7 +1568,7 @@
                     toggleMenu();
                 }
             });
-            
+
             // Close TOC when a link is clicked on mobile
             const tocLinks = document.querySelectorAll('.toc-list a');
             tocLinks.forEach(link => {
@@ -1555,7 +1590,7 @@
                 }
             });
         }
-</script>
+    </script>
 </body>
 
 </html>
