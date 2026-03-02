@@ -486,6 +486,31 @@
         .reference-item a:hover {
             border-bottom-color: #1890ff;
         }
+        .toc-sticky {
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f8f9fa;
+        }
+
+        /* Custom Scrollbar Styling */
+        .toc-sticky::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-thumb:hover {
+            background: #2DF56D;
+        }
 
         @media (max-width: 1024px) {
             .article-layout {
@@ -500,35 +525,71 @@
             .toc-sticky {
                 position: relative;
                 top: 0;
-                max-height: none;
+                max-height: none; /* No scroll on mobile since it collapses */
+                overflow-y: visible;
             }
         }
 
         @media (max-width: 768px) {
-            .mobile-only-icon { display: inline-block !important; }
             .toc-sidebar {
-                display: none;
+                /* Changed to block to allow customization */
+                display: block;
+                margin-top: 80px; /* Space for navbar */
+            }
+
+            .toc-sticky {
+                padding: 15px; /* Smaller padding on mobile */
+            }
+
+            .toc-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 0; /* Remove margin when collapsed */
+                border-bottom: none; /* Add border gracefully on expand */
+            }
+
+            .toc-title i {
+                transition: transform 0.3s ease;
+            }
+
+            .toc-title.expanded i {
+                transform: rotate(180deg);
+            }
+
+            .toc-list {
+                display: none; /* Hidden by default on mobile */
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 2px solid #e9ecef;
+                animation: slideDown 0.3s ease-out;
+            }
+            
+            .toc-list.active {
+                display: block;
             }
 
             .article-layout {
-                margin-top: 80px;
+                margin-top: 20px; /* Reduced from 80px since TOC handles it */
                 padding: 0 20px;
             }
 
-            .article-header h1 {
-                font-size: 36px;
+            h1 {
+                font-size: 32px;
             }
 
-            .article-content {
-                font-size: 16px;
+            .article-content h2 {
+                font-size: 26px;
             }
 
-            .featured-image, .section-image {
+            .featured-image {
                 height: 250px;
             }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
+            
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
             }
         }
     </style>

@@ -6,7 +6,33 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.dirname(script_dir)
 blog_dir = os.path.join(root_dir, 'cbam-blog')
 
-TOC_CSS = '''        @media (max-width: 1024px) {
+TOC_CSS = '''        .toc-sticky {
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f8f9fa;
+        }
+
+        /* Custom Scrollbar Styling */
+        .toc-sticky::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .toc-sticky::-webkit-scrollbar-thumb:hover {
+            background: #2DF56D;
+        }
+
+        @media (max-width: 1024px) {
             .article-layout {
                 flex-direction: column;
             }
@@ -19,6 +45,8 @@ TOC_CSS = '''        @media (max-width: 1024px) {
             .toc-sticky {
                 position: relative;
                 top: 0;
+                max-height: none; /* No scroll on mobile since it collapses */
+                overflow-y: visible;
             }
         }
 
@@ -181,15 +209,36 @@ for filename in os.listdir(blog_dir):
 
     changed = False
 
-    # 1. Update CSS
-    if old_media_query in content:
-        content = content.replace(old_media_query, TOC_CSS, 1)
-        changed = True
+    # 1. Update CSS using regex for more robustness
+    # This regex looks for the block starting at @media (max-width: 1024px) and tries to match until the end of the TOC-related media queries
+    toc_css_pattern = r'        @media \(max-width: 1024px\) \{.*?@media \(max-width: 768px\) \{.*?\}\s*\}'
+    # Wait, the nested braces can be tricky. Let's use a simpler marker if possible.
+    # Actually, the TOC_CSS I want to inject is quite specific.
+    
+    # Let's try to match from @media (max-width: 1024px) until the end of the next block
+    # Since we know the structure from previous runs:
+    if '@media (max-width: 1024px)' in content and '@media (max-width: 768px)' in content:
+        # Simple string replacement for what's likely there in most files
+        # We'll try to find the whole block.
+        # If it doesn't match exactly, we'll try a regex.
         
-    # Idempotent CSS addition
-    if '.mobile-only-icon { display: none; }' not in content and '.toc-title i {' in content:
-        content = content.replace('.toc-title i {', '.mobile-only-icon { display: none; }\n            @media (max-width: 768px) { .mobile-only-icon { display: inline-block !important; } }\n            .toc-title i {')
-        changed = True
+        # Let's use a regex that matches the start of the block and looks for the likely end.
+        import re
+        # This matches from @media (max-width: 1024px) until the closing brace of the 768px block
+        # We use a greedy inner match for the 768px block but anchored to the next closing brace at column 8
+        pattern = re.compile(r'[ \t]*@media \(max-width: 1024px\) \{.*?@media \(max-width: 768px\) \{.*?\n[ \t]*\}', re.DOTALL)
+        # Wait, that's still not quite right for the nested braces. 
+        # Let's just find the START and then go until we find the END of the style tag or another known marker.
+        # Actually, let's just find the broad block:
+        pattern = re.compile(r'\s*@media \(max-width: 1024px\) \{.*?@media \(max-width: 768px\) \{.*?\n\s*\}\s*\}', re.DOTALL)
+        
+        if pattern.search(content):
+            content = pattern.sub('\n' + TOC_CSS, content)
+            changed = True
+        elif 'max-height: calc(100vh - 140px);' not in content and '.toc-sticky {' in content:
+            # If the media query block is missing but toc-sticky is there, let's just add it before the closing </style>
+            content = content.replace('</style>', TOC_CSS + '\n    </style>')
+            changed = True
 
     # 2. Update HTML (using regex to make sure we don't duplicate attributes if already changed)
     if 'id="mobileTocToggle"' not in content:
