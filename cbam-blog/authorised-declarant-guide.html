@@ -69,6 +69,34 @@
             border-bottom: 2px solid #2DF56D;
         }
 
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 90px auto 0;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #2DF56D;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            margin: 0 8px;
+        }
+
+        .breadcrumb .current {
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+
         .toc-list {
             list-style: none;
             padding: 0;
@@ -458,27 +486,15 @@
     <link rel="canonical" href="https://encarbonsys.com/cbam-blog/authorised-declarant-guide.html" />
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-        fetch('/components/navbar.html')
-            .then(r => r.text())
-            .then(html => {
-                const navbarContainer = document.getElementById('navbar');
-                navbarContainer.innerHTML = html;
-                
-                // Extract and execute scripts from the injected HTML
-                const scripts = navbarContainer.getElementsByTagName('script');
-                for (let i = 0; i < scripts.length; i++) {
-                    const newScript = document.createElement('script');
-                    if (scripts[i].src) {
-                        newScript.src = scripts[i].src;
-                    } else {
-                        newScript.textContent = scripts[i].textContent;
-                    }
-                    document.body.appendChild(newScript);
-                }
-            });
-    </script>
+    <div id="navbar-placeholder"></div>
+
+    <nav class="breadcrumb" style="max-width: 1400px; margin: 90px auto 0; padding: 15px 30px; font-size: 14px; color: #666;">
+        <a href="/" style="color: #666; text-decoration: none;">Home</a>
+        <span style="margin: 0 10px;">&gt;</span>
+        <a href="/cbam-blog/" style="color: #666; text-decoration: none;">Blog</a>
+        <span style="margin: 0 10px;">&gt;</span>
+        <span style="color: #2DF56D; font-weight: 500;">Authorised Declarant Guide</span>
+    </nav>
 
     <div class="article-layout">
         <!-- Table of Contents Sidebar -->
@@ -486,25 +502,23 @@
             <div class="toc-sticky">
                 <div class="toc-title" id="mobileTocToggle" role="button" aria-expanded="false" tabindex="0" aria-label="Toggle Table of Contents">ON THIS PAGE <i class="fas fa-chevron-down mobile-only-icon"></i></div>
                 <ul class="toc-list">
-                    <li><a href="#why-need-status"><i class="fas fa-chevron-right"></i> No Authorization = No Imports</a></li>
-                    <li><a href="#how-to-become"><i class="fas fa-chevron-right"></i> The Five-Step Authorization Journey</a></li>
-                    <li><a href="#step-1"><i class="fas fa-chevron-right"></i> Electronic Application Submission</a></li>
-                    <li><a href="#step-2"><i class="fas fa-chevron-right"></i> The 120-Day Review Window</a></li>
-                    <li><a href="#step-3"><i class="fas fa-chevron-right"></i> Proving Financial & Operational Readiness</a></li>
-                    <li><a href="#step-4"><i class="fas fa-chevron-right"></i> Approval: Your CBAM Account Number</a></li>
-                    <li><a href="#step-5"><i class="fas fa-chevron-right"></i> Maintaining Authorization Status</a></li>
-                    <li><a href="#key-deadlines"><i class="fas fa-chevron-right"></i> Critical Dates You Cannot Miss</a></li>
-                    <li><a href="#if-rejected"><i class="fas fa-chevron-right"></i> Rejection Scenarios & Recovery Options</a></li>
-                    <li><a href="#prepare-now"><i class="fas fa-chevron-right"></i> Pre-Application Preparation Checklist</a></li>
+                    <li><a href="#why-need-status"><i class="fas fa-lock"></i> Mandatory Status</a></li>
+                    <li><a href="#how-to-become"><i class="fas fa-map-signs"></i> Authorization Roadmap</a></li>
+                    <li><a href="#step-1"><i class="fas fa-file-signature"></i> 1. Registry Submission</a></li>
+                    <li><a href="#step-2"><i class="fas fa-hourglass-half"></i> 2. Review Period</a></li>
+                    <li><a href="#step-3"><i class="fas fa-verify"></i> 3. Capacity Audit</a></li>
+                    <li><a href="#step-4"><i class="fas fa-id-badge"></i> 4. Account Issuance</a></li>
+                    <li><a href="#step-5"><i class="fas fa-sync"></i> 5. Ongoing Status</a></li>
+                    <li><a href="#key-deadlines"><i class="fas fa-calendar-check"></i> 2026 Deadlines</a></li>
+                    <li><a href="#if-rejected"><i class="fas fa-undo"></i> Rejection Scenarios</a></li>
+                    <li><a href="#prepare-now"><i class="fas fa-tasks"></i> Readiness Checklist</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Article Content -->
         <article class="article-container">
-            <a href="/cbam-blog/" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Blog
-            </a>
+            <nav class="breadcrumb" style="display: none;"></nav>
 
             <header class="article-header">
                 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Shipping containers at port" class="featured-image">
@@ -621,10 +635,19 @@
                     <li><strong>Monitor CBAM price dynamics</strong> – Since CBAM certificate costs are linked to the EU Emissions Trading System (ETS), closely track ETS price trends</li>
                 </ul>
 
-                <div class="cta-section">
-                    <h2>Need Help with Your CBAM Application?</h2>
-                    <p>EnCarbonSys provides comprehensive support for CBAM Authorised Declarant applications. <a href="/pages/pricing.html" style="color: #2DF56D; border-bottom: 2px solid #2DF56D;">View our affordable pricing plans</a>.</p>
-                    <a href="mailto:contact@encarbonsys.com" class="cta-button">Get Expert Guidance</a>
+                <div class="cta-section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 60px; border-radius: 20px; text-align: center; margin: 60px 0; border: 1px solid #2DF56D;">
+                    <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">Need Help with Your CBAM Application?</h2>
+                    <p style="color: #ccc; font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        EnCarbonSys provides comprehensive support for CBAM Authorised Declarant applications. Join hundreds of importers using <a href="https://encbam.encarbonsys.com/login" style="color: #2DF56D; text-decoration: underline;">EnCBAM</a>.
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://encbam.encarbonsys.com/login" class="cta-button" style="background: #2DF56D; color: #000; padding: 15px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-rocket"></i> Start 21-Day Free Trial
+                        </a>
+                        <a href="https://wa.me/919620828005" class="cta-button" style="background: transparent; color: #2DF56D; border: 2px solid #2DF56D; padding: 15px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                            <i class="fab fa-whatsapp"></i> Talk to CBAM Expert
+                        </a>
+                    </div>
                 </div>
 
                 <h2>The Bottom Line: Act Now to Secure EU Market Access</h2>
@@ -633,7 +656,23 @@
 
                 <p>By preparing applications early, ensuring internal compliance, and securing the necessary financial and administrative resources, you can protect your supply chains, mitigate risk, and stay competitive in a low-carbon economy.</p>
 
-                <p>At EnCarbonSys, we help businesses navigate the entire CBAM compliance journey—from application preparation to ongoing reporting and verification support.</p>
+                <p>At EnCarbonSys, we help businesses navigate the entire CBAM compliance journey—from application preparation to ongoing reporting and verification support using the <a href="https://encbam.encarbonsys.com/login" target="_blank" style="color: #2DF56D; text-decoration: underline;">EnCBAM platform</a>.</p>
+                
+                <div class="cta-section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 60px; border-radius: 20px; text-align: center; margin: 60px 0; border: 1px solid #2DF56D;">
+                    <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">🚀 Secure Your EU Market Access Today</h2>
+                    <p style="color: #ccc; font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        EnCarbonSys and the <a href="https://encbam.encarbonsys.com/login" style="color: #2DF56D; text-decoration: underline;">EnCBAM platform</a> provide the end-to-end infrastructure for CBAM compliance.
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://encbam.encarbonsys.com/login" class="cta-button" style="background: #2DF56D; color: #000; padding: 15px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-gift"></i> Start 21-Day Free Trial
+                        </a>
+                        <a href="https://wa.me/919620828005" class="cta-button" style="background: transparent; color: #2DF56D; border: 2px solid #2DF56D; padding: 15px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                            <i class="fab fa-whatsapp"></i> Talk to CBAM Expert
+                        </a>
+                    </div>
+                </div>
+                <!-- Removed Redundant Offering Box -->
             </div>
 
             <div class="resources-section">
@@ -651,29 +690,43 @@
     </div>
 
     <script>
+        // Load Universal Navbar
+        fetch('/components/navbar.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+                const scripts = document.getElementById('navbar-placeholder').getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    const newScript = document.createElement('script');
+                    if (scripts[i].src) {
+                        newScript.src = scripts[i].src;
+                    } else {
+                        newScript.textContent = scripts[i].textContent;
+                    }
+                    document.body.appendChild(newScript);
+                }
+            });
+
         // Smooth scroll for TOC links
         document.querySelectorAll('.toc-list a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
         // Highlight active section in TOC
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.article-content h2[id]');
+            const sections = document.querySelectorAll('h2[id], h3[id]');
             const tocLinks = document.querySelectorAll('.toc-list a');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 150) {
+                if (window.pageYOffset >= sectionTop - 120) {
                     current = section.getAttribute('id');
                 }
             });
@@ -685,49 +738,35 @@
                 }
             });
         });
-    
-        // Mobile TOC Toggle
-        const tocToggle = document.getElementById('mobileTocToggle');
-        const tocList = document.querySelector('.toc-list');
-        
-        if (tocToggle && tocList) {
-            const toggleMenu = () => {
-                if (window.innerWidth <= 768) {
-                    const isActive = tocList.classList.toggle('active');
-                    tocToggle.classList.toggle('expanded');
-                    tocToggle.setAttribute('aria-expanded', String(isActive));
-                }
-            };
 
-            tocToggle.addEventListener('click', toggleMenu);
-            tocToggle.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleMenu();
+        // Mobile TOC Toggle Logic
+        const tocBtn = document.getElementById('mobileTocToggle');
+        const tocSidebar = document.querySelector('.toc-sidebar');
+        if (tocBtn && tocSidebar) {
+            tocBtn.addEventListener('click', () => {
+                if (tocSidebar.style.display === 'block') {
+                    tocSidebar.style.display = 'none';
+                } else {
+                    tocSidebar.style.display = 'block';
+                    tocSidebar.style.position = 'fixed';
+                    tocSidebar.style.top = '0';
+                    tocSidebar.style.left = '0';
+                    tocSidebar.style.width = '100%';
+                    tocSidebar.style.height = '100%';
+                    tocSidebar.style.zIndex = '999';
+                    tocSidebar.style.background = '#fff';
+                    tocSidebar.style.padding = '80px 20px';
                 }
             });
-            
-            // Close TOC when a link is clicked on mobile
-            const tocLinks = document.querySelectorAll('.toc-list a');
-            tocLinks.forEach(link => {
+
+            document.querySelectorAll('.toc-list a').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        tocList.classList.remove('active');
-                        tocToggle.classList.remove('expanded');
-                        tocToggle.setAttribute('aria-expanded', 'false');
+                    if (window.innerWidth <= 1024) {
+                        tocSidebar.style.display = 'none';
                     }
                 });
             });
-
-            // Reset state on resize to handle rotation/resizing gracefully
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    tocList.classList.remove('active');
-                    tocToggle.classList.remove('expanded');
-                    tocToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
         }
-</script>
+    </script>
 </body>
 </html>

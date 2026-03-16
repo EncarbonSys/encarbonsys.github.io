@@ -15,32 +15,30 @@
     <title>Pricing & Service Models | EnCarbonSys — CBAM Compliance</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
 
     <style>
         :root {
-            /* EnCBAM Emerald Design System */
-            --emerald-primary: #10b981;
-            --emerald-dark: #064e3b;
-            --emerald-deep: #065f46;
-            --emerald-light: #ecfdf5;
-            --slate-900: #0f172a;
-            --slate-800: #1e293b;
-            --slate-600: #475569;
-            --slate-400: #94a3b8;
+            /* EnCBAM Premium Design System */
+            --cosmic-green: #2DF56D;
+            --brand-dark: #0a0a0a;
+            --brand-gray: #1a1a1a;
+            --brand-light: #f8fafc;
+            --text-main: #2d2d2d;
+            --text-muted: #666;
             --white: #ffffff;
-            --bg-gray: #f8fafc;
-            --gold: #c9a84c;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Inter', sans-serif; 
-            background: var(--bg-gray); 
-            color: var(--slate-800); 
-            line-height: 1.6;
+            background: var(--brand-light); 
+            color: var(--brand-dark); 
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
@@ -48,11 +46,11 @@
 
         /* ═══════════════════ HERO ═══════════════════ */
         .pricing-hero {
-            background: var(--emerald-dark);
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
             padding: 160px 0 100px;
             position: relative;
             overflow: hidden;
-            color: var(--white);
+            color: var(--brand-dark);
             text-align: center;
         }
 
@@ -60,7 +58,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+            background: radial-gradient(circle at 80% 20%, rgba(45, 245, 109, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -68,26 +66,27 @@
             font-size: 11px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--emerald-primary);
+            color: var(--brand-dark);
+            opacity: 0.6;
             font-weight: 700;
             margin-bottom: 20px;
             display: block;
         }
 
         .pricing-hero h1 {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 64px;
-            font-weight: 600;
+            font-weight: 800;
             line-height: 1.1;
             margin-bottom: 10px;
+            color: var(--brand-dark);
         }
 
-        .pricing-hero h1 em { font-style: italic; color: var(--emerald-primary); }
+        .pricing-hero h1 em { font-style: normal; color: var(--cosmic-green); }
 
         .hero-sub {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 32px;
-            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            color: var(--brand-gray);
             margin-bottom: 40px;
         }
 
@@ -95,9 +94,9 @@
             max-width: 650px;
             margin: 0 auto;
             font-size: 18px;
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.6);
-            border-left: 3px solid var(--emerald-primary);
+            font-weight: 400;
+            color: var(--text-muted);
+            border-left: 4px solid var(--cosmic-green);
             padding-left: 25px;
             text-align: left;
         }
@@ -105,20 +104,20 @@
         /* ═══════════════════ OBLIGATIONS ═══════════════════ */
         .landscape { padding: 100px 0; background: var(--white); }
         .section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
-        .sl-dash { width: 32px; height: 1.5px; background: var(--emerald-primary); }
-        .sl-text { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--emerald-deep); font-weight: 600; }
+        .sl-dash { width: 32px; height: 2px; background: var(--cosmic-green); }
+        .sl-text { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--brand-dark); font-weight: 700; opacity: 0.6; }
         
-        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--emerald-dark); margin-bottom: 50px; }
+        .section-title { font-size: 44px; font-weight: 800; color: var(--brand-dark); margin-bottom: 50px; }
 
         .obl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .obl-card {
-            background: var(--bg-gray);
-            border: 1px solid #e2e8f0;
+            background: var(--white);
+            border: 1px solid #eef2f6;
             border-radius: 16px;
             padding: 30px;
             transition: 0.3s;
         }
-        .obl-card:hover { border-color: var(--emerald-primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .obl-card:hover { border-color: var(--cosmic-green); transform: translateY(-5px); box-shadow: var(--shadow-hover); }
         .obl-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #cbd5e1; font-weight: 700; line-height: 1; margin-bottom: 15px; }
         .obl-card h4 { font-size: 18px; color: var(--emerald-dark); margin-bottom: 10px; font-weight: 700; }
         .obl-card p { font-size: 14px; color: var(--slate-600); line-height: 1.6; }
@@ -139,44 +138,44 @@
         }
 
         .tier-card.featured {
-            background: var(--emerald-dark);
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
             color: var(--white);
             transform: scale(1.05);
             z-index: 2;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border-color: var(--emerald-primary);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            border-color: var(--cosmic-green);
         }
 
-        .tier-card.featured .tier-name, .tier-card.featured .price-amount { color: var(--white); }
-        .tier-card.featured .tier-label { color: var(--emerald-primary); opacity: 1; }
+        .tier-card.featured .tier-name, .tier-card.featured .price-amount { color: var(--white) !important; }
+        .tier-card.featured .tier-label { color: var(--cosmic-green); opacity: 1; }
         .tier-card.featured .tier-features li { color: rgba(255,255,255,0.8); }
 
         .tier-label { 
             font-size: 11px; letter-spacing: 2px; text-transform: uppercase; 
-            color: var(--emerald-deep); font-weight: 800; margin-bottom: 15px; opacity: 0.7;
+            color: var(--brand-dark); font-weight: 800; margin-bottom: 15px; opacity: 0.5;
         }
 
-        .tier-name { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; margin-bottom: 20px; color: var(--emerald-dark); }
+        .tier-name { font-size: 28px; font-weight: 800; margin-bottom: 20px; color: var(--brand-dark); }
         
         .tier-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 30px; border-bottom: 1px solid #efefef; padding-bottom: 30px; }
         .tier-card.featured .tier-price { border-color: rgba(255,255,255,0.1); }
         
-        .price-currency { font-size: 24px; font-weight: 400; opacity: 0.6; }
-        .price-amount { font-size: 48px; font-weight: 800; color: var(--emerald-dark); }
-        .price-period { font-size: 14px; opacity: 0.5; }
+        .price-currency { font-size: 24px; font-weight: 800; color: var(--cosmic-green); }
+        .price-amount { font-size: 44px; font-weight: 800; color: var(--brand-dark); }
+        .price-period { font-size: 14px; opacity: 0.5; margin-left: 5px; }
 
         .tier-features { list-style: none; flex-grow: 1; }
         .tier-features li { display: flex; gap: 12px; margin-bottom: 16px; font-size: 14px; color: var(--slate-600); }
-        .tier-features li i { color: var(--emerald-primary); margin-top: 4px; }
+        .tier-features li i { color: var(--cosmic-green); margin-top: 4px; }
 
         .btn-tier {
             display: block; width: 100%; padding: 18px; text-align: center; border-radius: 12px;
             text-decoration: none; font-weight: 700; margin-top: 40px; transition: 0.3s;
         }
-        .btn-light { border: 2px solid var(--emerald-dark); color: var(--emerald-dark); }
-        .btn-light:hover { background: var(--emerald-dark); color: var(--white); }
-        .btn-primary { background: var(--emerald-primary); color: var(--emerald-dark); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+        .btn-light { border: 2px solid var(--brand-dark); color: var(--brand-dark); }
+        .btn-light:hover { background: var(--brand-dark); color: var(--white); }
+        .btn-primary { background: var(--cosmic-green); color: var(--brand-dark); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(45, 245, 109, 0.4); }
 
         /* ═══════════════════ COMPARISON ═══════════════════ */
         .comparison { padding: 100px 0; background: var(--white); }
@@ -197,10 +196,10 @@
         .dash-icon { color: #cbd5e1; font-weight: 300; }
 
         /* ═══════════════════ FOOTER CTA ═══════════════════ */
-        .footer-cta { background: var(--emerald-dark); padding: 80px 0; color: var(--white); text-align: center; }
-        .cta-box { max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 60px; border-radius: 30px; border: 1px solid rgba(16, 185, 129, 0.2); }
-        .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 36px; margin-bottom: 20px; }
-        .cta-box p { font-size: 16px; opacity: 0.7; margin-bottom: 30px; }
+        .footer-cta { background: var(--brand-light); padding: 80px 0; color: var(--brand-dark); text-align: center; }
+        .cta-box { max-width: 900px; margin: 0 auto; background: var(--white); padding: 60px; border-radius: 30px; border: 1px solid #eef2f6; box-shadow: var(--shadow); }
+        .cta-box h3 { font-size: 36px; font-weight: 800; margin-bottom: 20px; }
+        .cta-box p { font-size: 18px; color: var(--text-muted); margin-bottom: 30px; line-height: 1.8; }
 
         /* Responsive */
         @media (max-width: 1024px) {
@@ -223,11 +222,11 @@
         <!-- Hero Section -->
         <section class="pricing-hero">
             <div class="container">
-                <span class="hero-label">EnCarbonSys Service Models</span>
+                <span class="hero-label">The Right Model Starts Here</span>
                 <h1>CBAM <em>Compliance</em></h1>
-                <div class="hero-sub">Your Way, Your Pace</div>
+                <div class="hero-sub">A Plan That Scales With You</div>
                 <div class="hero-desc">
-                    We offer three distinct engagement levels — from lightweight software tools to complete end-to-end delegation. Select the roadmap that fits your manufacturing capacity and operational speed.
+                    We offer three distinct engagement levels — from lightweight software tools to complete end-to-end delegation. Every plan includes the ability to add modular services as your needs grow.
                 </div>
             </div>
         </section>
@@ -292,12 +291,12 @@
                         <h3 class="tier-name">EnCBAM™ Self-Service</h3>
                         <div class="tier-price">
                             <span class="price-currency">₹</span>
-                            <span class="price-amount">1.25</span>
-                            <span class="price-period">Lac / Year / Factory*</span>
+                            <span class="price-amount">1,25,000</span>
+                            <span class="price-period">/ Year / Factory*</span>
                         </div>
                         <ul class="tier-features">
-                            <li><i class="fas fa-check"></i> EnCBAM™ Software Access (Limited)</li>
-                            <li><i class="fas fa-check"></i> Emissions Calculator</li>
+                            <li><i class="fas fa-check"></i> <a href="https://encbam.encarbonsys.com/login" target="_blank" style="color: inherit; text-decoration: underline;">EnCBAM™ Platform Access</a></li>
+                            <li><i class="fas fa-plus"></i> Add-ons Available For All Features</li>
                             <li><i class="fas fa-check"></i> Report Generation Tools</li>
                             <li><i class="fas fa-check"></i> Self-Guided Data Upload</li>
                             <li><i class="fas fa-check"></i> Standard Audit-Ready Logic</li>
@@ -308,13 +307,14 @@
                     <!-- Managed Service (Flagship highlighted) -->
                     <div class="tier-card featured">
                         <span class="tier-label">Model 03 — Full Delegation</span>
-                        <h3 class="tier-name">Compliance as a Service</h3>
+                        <h3 class="tier-name">Elite Partnership</h3>
                         <div class="tier-price">
                             <span class="price-currency">₹</span>
-                            <span class="price-amount">4.50</span>
-                            <span class="price-period">Lac / Year / Factory*</span>
+                            <span class="price-amount">4,50,000</span>
+                            <span class="price-period">/ Year / Factory*</span>
                         </div>
                         <ul class="tier-features">
+                            <li><i class="fas fa-check"></i> <a href="https://encbam.encarbonsys.com/login" target="_blank" style="color: #2DF56D; text-decoration: underline;">Full EnCBAM™ Enterprise Access</a></li>
                             <li><i class="fas fa-check"></i> All 6 EU Obligations Covered</li>
                             <li><i class="fas fa-check"></i> Full O3CI Registry Delegation</li>
                             <li><i class="fas fa-check"></i> Full Monitoring Plan Development</li>
@@ -330,12 +330,12 @@
                         <h3 class="tier-name">Managed Reporting</h3>
                         <div class="tier-price">
                             <span class="price-currency">₹</span>
-                            <span class="price-amount">2.50</span>
-                            <span class="price-period">Lac / Year / Factory*</span>
+                            <span class="price-amount">2,50,000</span>
+                            <span class="price-period">/ Year / Factory*</span>
                         </div>
                         <ul class="tier-features">
-                            <li><i class="fas fa-check"></i> Software Access (Standard)</li>
-                            <li><i class="fas fa-check"></i> Evidence Review & Processing</li>
+                            <li><i class="fas fa-check"></i> <a href="https://encbam.encarbonsys.com/login" target="_blank" style="color: inherit; text-decoration: underline;">EnCBAM™ Standard Access</a></li>
+                            <li><i class="fas fa-plus"></i> Add-ons Available For All Features</li>
                             <li><i class="fas fa-check"></i> We Calculate YourSEE</li>
                             <li><i class="fas fa-check"></i> Submission-Ready XML Reports</li>
                             <li><i class="fas fa-check"></i> Monthly Compliance Reviews</li>
@@ -437,9 +437,9 @@
         <section class="footer-cta">
             <div class="container">
                 <div class="cta-box">
-                    <h3>Additional Compliance Services</h3>
-                    <p>All other statutory obligations beyond the standard scope are available as tailored add-on services. Let's discuss a compliance roadmap that scales with your export volume.</p>
-                    <a href="https://wa.me/919620828005" class="btn-tier btn-primary" style="max-width: 320px; margin: 0 auto;">Speak with an Expert</a>
+                    <h3>Flexible Compliance That Grows With You</h3>
+                    <p>All plans come with the foundation needed for CBAM. Need more? Modular add-ons for SEFA, Audit coordination, and Registry management can be added to any model at any time.</p>
+                    <a href="https://wa.me/919620828005" class="btn-tier btn-primary" style="max-width: 320px; margin: 0 auto; color: #000;">Speak with an Expert</a>
                 </div>
             </div>
         </section>
@@ -448,8 +448,8 @@
     <!-- Global Footer -->
     <footer style="background: #000; color: #fff; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
-            <h2 style="font-family:'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 20px; color: var(--emerald-primary);">ENCARBONSYS</h2>
-            <p style="color: rgba(255,255,255,0.4); font-size: 13px; margin-bottom: 30px;">Built for the future of global trade and sustainability.</p>
+            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 20px; color: var(--cosmic-green);">ENCARBONSYS</h2>
+            <p style="color: rgba(255,255,255,0.4); font-size: 13px; margin-bottom: 30px;">Premium CBAM Compliance Infrastructure for Global Manufacturers.</p>
             <div style="display:flex; justify-content:center; gap:25px; font-size: 14px;">
                 <a href="/" style="color: white; text-decoration: none;">Home</a>
                 <a href="/cbam-blog/" style="color: white; text-decoration: none;">Blog</a>
