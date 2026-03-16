@@ -1,105 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSFR9S0QX"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5KSFR9S0QX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5KSFR9S0QX');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Non-Negotiable CBAM Obligations Every Exporter Must Master in 2026 | EnCarbonSys</title>
-    <meta name="description" content="Master the 6 mandatory CBAM obligations for exporters. Miss any one and face EU market exclusion. Complete compliance checklist inside.">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-    
-    <!-- External Resources -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <title>6 Mandatory CBAM Obligations for Exporters: 2026 Compliance Guide | EnCarbonSys</title>
+    <meta name="description"
+        content="Master the 6 non-negotiable CBAM obligations for third-country exporters. Complete guide on O3CI registration, monitoring plans, and EU verification requirements.">
+    <meta name="keywords"
+        content="CBAM obligations, exporter requirements, CBAM compliance, O3CI registry, carbon border tax India, EU verification, monitoring plan, SEE calculation">
+    <meta name="author" content="EnCarbonSys">
+    <link rel="canonical" href="https://encarbonsys.com/cbam-blog/cbam-exporter-obligations-guide-2026.html">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/navbar.css">
 
     <style>
-        :root {
-            --cosmic-green: #2DF56D;
-            --emerald-dark: #064e3b;
-            --slate-900: #0f172a;
-            --slate-800: #1e293b;
-            --slate-600: #475569;
-            --white: #ffffff;
-            --bg-light: #f8fafc;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--slate-800); background: var(--white); }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
 
-        /* Premium Article Layout */
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 90px auto 0;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #2DF56D;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            margin: 0 8px;
+        }
+
+        .breadcrumb .current {
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+
+        /* Main Layout with Sidebar */
         .article-layout {
             max-width: 1400px;
-            margin: 120px auto 60px;
+            margin: 20px auto 60px;
             padding: 0 30px;
             display: flex;
-            gap: 50px;
+            gap: 40px;
             position: relative;
         }
 
-        /* Sidebar TOC */
-        .toc-sidebar { width: 300px; flex-shrink: 0; }
-        .toc-sticky { position: sticky; top: 120px; background: var(--bg-light); border-radius: 16px; padding: 30px; border: 1px solid #e2e8f0; }
-        .toc-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--emerald-dark); margin-bottom: 20px; border-bottom: 2px solid var(--cosmic-green); padding-bottom: 10px; }
-        .toc-list { list-style: none; }
-        .toc-list li { margin-bottom: 10px; }
-        .toc-list a { text-decoration: none; color: var(--slate-600); font-size: 14px; font-weight: 500; transition: 0.3s; display: block; padding: 8px 12px; border-radius: 8px; }
-        .toc-list a:hover { color: var(--slate-900); background: #e2e8f0; transform: translateX(5px); }
+        /* Table of Contents Sidebar */
+        .toc-sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
 
-        /* Main Content */
-        .article-main { flex: 1; max-width: 850px; }
-        .article-header { margin-bottom: 50px; }
-        .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1.2; color: var(--slate-900); margin-bottom: 20px; }
-        .subtitle { font-size: 20px; color: var(--slate-600); font-weight: 400; margin-bottom: 30px; border-left: 4px solid var(--cosmic-green); padding-left: 20px; }
+        .toc-sticky {
+            position: sticky;
+            top: 100px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+        }
 
-        .article-meta { display: flex; gap: 20px; font-size: 13px; color: var(--slate-400); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2DF56D;
+        }
 
-        /* Content Styling */
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--emerald-dark); margin: 60px 0 25px; }
-        .article-content p { margin-bottom: 25px; font-size: 17px; color: #334155; }
-        
-        .critical-alert { background: #7f1d1d; color: white; padding: 35px; border-radius: 16px; margin: 40px 0; }
-        .critical-alert h3 { color: #fecaca; margin-bottom: 15px; font-size: 24px; }
-        
-        .obligation-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid #e1e8ed; padding-bottom: 15px; }
-        .mandatory-badge { background: #ef4444; color: white; padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
 
-        .article-image { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .toc-list li {
+            margin-bottom: 8px;
+        }
 
-        .legal-requirement { background: #f0f9ff; border-left: 5px solid #0ea5e9; padding: 30px; border-radius: 12px; margin: 35px 0; }
-        .legal-requirement h3 { color: #0369a1; margin-bottom: 15px; font-size: 20px; }
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
 
-        .non-negotiable-steps { background: #fffbeb; border: 1px solid #fde68a; padding: 30px; border-radius: 16px; margin: 35px 0; }
-        .non-negotiable-steps h3 { color: #92400e; margin-bottom: 15px; }
-        .non-negotiable-steps li { margin-bottom: 12px; font-weight: 500; color: #78350f; }
+        .toc-list a:hover {
+            background: #2DF56D;
+            color: #0a0a0a;
+            transform: translateX(5px);
+        }
 
-        .penalty-box { background: #fef2f2; border: 2px solid #fee2e2; padding: 20px; border-radius: 12px; margin: 30px 0; text-align: center; color: #991b1b; font-weight: 700; }
+        .toc-list a.active {
+            background: #2DF56D;
+            color: #0a0a0a;
+        }
 
-        /* Checklist */
-        .checklist-container { background: var(--bg-light); padding: 40px; border-radius: 24px; margin: 60px 0; }
-        .checklist-section { background: white; padding: 25px; border-radius: 16px; margin-bottom: 20px; border-left: 4px solid var(--cosmic-green); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .checklist-section h4 { color: var(--slate-900); margin-bottom: 15px; font-size: 18px; }
-        .checklist { list-style: none; }
-        .checklist li { margin-bottom: 10px; font-size: 15px; display: flex; align-items: center; gap: 10px; }
-        .checklist li::before { content: '☐'; color: var(--cosmic-green); font-weight: bold; }
+        /* Article Container */
+        .article-container {
+            flex: 1;
+            max-width: 900px;
+        }
 
-        /* Mobile TOC Toggle */
-        .mobile-toc-btn {
+        .article-header {
+            margin-bottom: 40px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .article-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0a0a0a;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-excerpt {
+            font-size: 20px;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            border-left: 4px solid #2DF56D;
+            padding-left: 20px;
+        }
+
+        /* Social Share Buttons */
+        .social-share {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .share-twitter { background: #1DA1F2; color: white; }
+        .share-linkedin { background: #0077B5; color: white; }
+
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #2a2a2a;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 40px 0 20px;
+            scroll-margin-top: 100px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin: 30px 0 15px;
+        }
+
+        .article-content p { margin-bottom: 20px; }
+
+        /* Component Styles */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #2DF56D;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff2f2 0%, #fee2e2 100%);
+            border-left: 4px solid #ef4444;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .action-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+            border-color: #2DF56D;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 14px;
+            font-weight: 800;
+            color: #2DF56D;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #0a0a0a;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2DF56D;
+            color: #0a0a0a;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .references-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .reference-item {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .reference-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2DF56D;
+            font-size: 24px;
+        }
+
+        /* Mobile Utility */
+        #mobileTocToggle {
             display: none;
             position: fixed;
             bottom: 30px;
             right: 30px;
             z-index: 1000;
-            background: var(--cosmic-green);
+            background: #2DF56D;
             color: #000;
             width: 60px;
             height: 60px;
@@ -108,20 +355,15 @@
             box-shadow: 0 10px 25px rgba(45, 245, 109, 0.4);
             cursor: pointer;
             font-size: 24px;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Footer CTA */
-        .cta-section { margin-top: 80px; }
-        .cta-box { background: var(--emerald-dark); color: white; padding: 60px; border-radius: 30px; text-align: center; position: relative; overflow: hidden; }
-        .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 36px; margin-bottom: 20px; }
-        .cta-box .btn-primary { background: var(--cosmic-green); color: #000; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; margin: 20px 0; transition: 0.3s; }
-        .cta-box .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(45, 245, 109, 0.3); }
-
-        /* Responsive */
         @media (max-width: 1024px) {
             .toc-sidebar { display: none; }
-            .mobile-toc-btn { display: flex; align-items: center; justify-content: center; }
-            .article-layout { margin-top: 80px; }
+            #mobileTocToggle { display: flex; }
+            .article-layout { flex-direction: column; }
+            .article-header h1 { font-size: 36px; }
         }
     </style>
 </head>
@@ -129,293 +371,203 @@
 <body>
     <div id="navbar-placeholder"></div>
 
-    <button id="mobile-toc-toggle" class="mobile-toc-btn" aria-label="Toggle Table of Contents">
-        <i class="fas fa-list-ul"></i>
-    </button>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>&gt;</span>
+        <a href="/cbam-blog/">CBAM Blog</a>
+        <span>&gt;</span>
+        <span class="current">6 Mandatory CBAM Obligations</span>
+    </nav>
 
     <div class="article-layout">
-        <!-- Sticky Sidebar -->
+        <!-- Sidebar TOC -->
         <aside class="toc-sidebar">
             <div class="toc-sticky">
-                <div class="toc-title">Article Summary</div>
+                <div class="toc-title">Guide Navigation</div>
                 <ul class="toc-list">
-                    <li><a href="#introduction">Compliance Overview</a></li>
-                    <li><a href="#obligation-1">1. O3CI Registry Entry</a></li>
-                    <li><a href="#obligation-2">2. Monitoring Plan</a></li>
-                    <li><a href="#obligation-3">3. SEE Calculation</a></li>
-                    <li><a href="#obligation-4">4. SEFA Financials</a></li>
-                    <li><a href="#obligation-5">5. EU Verification</a></li>
-                    <li><a href="#obligation-6">6. Anti-Circumvention</a></li>
-                    <li><a href="#compliance-checklist">Action Checklist</a></li>
+                    <li><a href="#introduction"><i class="fas fa-info-circle"></i> Overview</a></li>
+                    <li><a href="#obligation-1"><i class="fas fa-registered"></i> 1. O3CI Registry</a></li>
+                    <li><a href="#obligation-2"><i class="fas fa-file-contract"></i> 2. Monitoring Plan</a></li>
+                    <li><a href="#obligation-3"><i class="fas fa-calculator"></i> 3. SEE Calculation</a></li>
+                    <li><a href="#obligation-4"><i class="fas fa-dollar-sign"></i> 4. Carbon Pricing</a></li>
+                    <li><a href="#obligation-5"><i class="fas fa-user-check"></i> 5. Verification</a></li>
+                    <li><a href="#obligation-6"><i class="fas fa-shield-alt"></i> 6. Transparency</a></li>
+                    <li><a href="#checklist"><i class="fas fa-tasks"></i> Action Checklist</a></li>
+                    <li><a href="#conclusion"><i class="fas fa-flag-checkered"></i> Conclusion</a></li>
                 </ul>
             </div>
         </aside>
 
-        <!-- Main Content -->
-        <main class="article-main">
-            <div class="breadcrumb" style="margin-bottom: 30px; font-size: 13px;">
-                <a href="/cbam-blog/" style="text-decoration: none; color: var(--cosmic-green); font-weight: 700;">← Back to Reports</a>
-            </div>
-
+        <!-- Article content -->
+        <main class="article-container">
             <header class="article-header">
                 <div class="article-meta">
-                    <span>Definitive Phase 2026</span>
-                    <span>•</span>
-                    <span>12 Min Read</span>
+                    <span><i class="far fa-calendar-alt"></i> March 2026</span>
+                    <span><i class="far fa-clock"></i> 15 Min Read</span>
                 </div>
-                <h1>6 Non-Negotiable CBAM Obligations Every Exporter Must Master in 2026</h1>
-                <p class="subtitle">Miss any one of these mandatory requirements and face immediate EU market exclusion. Here's your complete compliance checklist.</p>
+                <h1>6 Mandatory CBAM Obligations Every Exporter Must Master in 2026</h1>
+                <div class="article-excerpt">
+                    The EU's Definitive Phase has zero tolerance for ambiguity. Miss even one of these mandatory requirements, and your EU market access ends immediately.
+                </div>
+                
+                <div class="social-share">
+                    <a href="#" class="share-btn share-twitter"><i class="fab fa-twitter"></i> Share</a>
+                    <a href="#" class="share-btn share-linkedin"><i class="fab fa-linkedin-in"></i> Share</a>
+                </div>
             </header>
+
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="CBAM Compliance Systems" class="featured-image">
 
             <article class="article-content">
                 <section id="introduction">
-                    <div class="critical-alert">
-                        <h3>⚠️ CRITICAL: Definitive Phase Integrity</h3>
-                        <p>The EU's CBAM definitive period has zero tolerance for non-compliance. Every single obligation below is <strong>mandatory</strong> - not optional, not recommended, but <strong>required by law</strong> for continued EU market access.</p>
+                    <h2>The High Stakes of 2026 Compliance</h2>
+                    <p>
+                        As of January 1, 2026, the Carbon Border Adjustment Mechanism (CBAM) shifts from simple reporting to a full-scale financial obligation. For third-country exporters, this means that simple "best effort" data is no longer sufficient. You are now legally required to align your production and data management with EU Regulation 2023/956.
+                    </p>
+                    <div class="warning-box">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Zero Tolerance Policy</h3>
+                        <p>Under the definitive phase, failure to comply with any single obligation below leads to <strong>shipment rejections</strong> and financial penalties ranging from €120M to €180M annually for non-compliant installations.</p>
                     </div>
-
-                    <p>As a third-country operator (exporter), you now have legal obligations under EU Regulation 2023/956. Failure to meet any of these six requirements results in immediate consequences:</p>
-
-                    <ul style="margin-bottom: 30px; padding-left: 20px; color: #ef4444; font-weight: 600;">
-                        <li>🚫 Shipment rejections at EU borders</li>
-                        <li>💰 Financial penalties up to €180M annually</li>
-                        <li>📋 Importer liability - your EU customers face fines</li>
-                        <li>🏭 Market exclusion - permanent supplier blacklisting</li>
-                    </ul>
                 </section>
 
+                <h2 id="obligations-summary">At a Glance: The 6 Strategic Obligations</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 1</span>
+                        <span class="stat-label">O3CI Facility Registration</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 2</span>
+                        <span class="stat-label">Formal Monitoring Plan</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 3</span>
+                        <span class="stat-label">Calculated SEE Reports</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 4</span>
+                        <span class="stat-label">Carbon Price Proof</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 5</span>
+                        <span class="stat-label">Accredited Verification</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Obligation 6</span>
+                        <span class="stat-label">Traceability Trails</span>
+                    </div>
+                </div>
+
                 <section id="obligation-1">
-                    <div class="obligation-header">
-                        <h2>Obligation 1: O3CI Registry Registration</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" alt="CBAM O3CI Registry Portal" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Under Article 17 of Regulation (EU) 2023/956, <strong>every operator must register in the CBAM Registry via O3CI portal</strong> before any goods can enter the EU market.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Steps:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>EU Login Creation:</strong> Establish EU Access credentials.</li>
-                            <li><strong>Installation Registration:</strong> Register every production facility individually.</li>
-                            <li><strong>Operator Profile:</strong> Complete full company verification process.</li>
-                            <li><strong>Digital Signature:</strong> Implement qualified electronic signature capability.</li>
-                        </ol>
-                    </div>
-
-                    <div class="penalty-box">
-                        Penalty: Immediate shipment rejection. No registration = No EU market access.
+                    <h2>1. O3CI Registry Registration</h2>
+                    <p>Every production facility (installation) exporting CBAM goods to the EU must be registered in the CBAM Registry via the <strong>O3CI portal</strong>. This is your digital passport to the EU market.</p>
+                    <div class="action-box">
+                        <h3><i class="fas fa-clipboard-list"></i> Mandatory Steps:</h3>
+                        <ul>
+                            <li>Obtain an EU Login and EORI (if applicable).</li>
+                            <li>Register every production line and facility individually.</li>
+                            <li>Provide full operator profile details for legal verification.</li>
+                        </ul>
                     </div>
                 </section>
 
                 <section id="obligation-2">
-                    <div class="obligation-header">
-                        <h2>Obligation 2: Monitoring Plan Implementation</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop" alt="Industrial monitoring systems" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Article 14 mandates a <strong>documented Monitoring Plan in English</strong> defining system boundaries, measurement methodologies, and data collection procedures.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Elements:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>System Boundaries:</strong> Define exactly what emissions are included.</li>
-                            <li><strong>Data Hierarchy:</strong> Prioritize actual measurements over default values.</li>
-                            <li><strong>Measurement Points:</strong> Install monitoring equipment at all emission sources.</li>
-                            <li><strong>Quality Assurance:</strong> Implement data validation systems.</li>
-                        </ol>
-                    </div>
-
-                    <div class="penalty-box">
-                        Penalty: Default values applied (30-50% higher costs) + verification failure.
+                    <h2>2. Documented Monitoring Plan</h2>
+                    <p>You can no longer rely on ad-hoc spreadsheets. Article 14 mandates a formal, documented Monitoring Plan written in English that defines exactly how you measure emissions.</p>
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-check-circle"></i> Must Include:</h3>
+                        <p>System boundaries, measurement methodologies for direct/indirect emissions, and data quality assurance protocols.</p>
                     </div>
                 </section>
 
                 <section id="obligation-3">
-                    <div class="obligation-header">
-                        <h2>Obligation 3: SEE Calculation & Reporting</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop" alt="Emissions calculation dashboard" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Article 7 requires <strong>Specific Embedded Emissions (SEE) calculation</strong> for every good produced, covering direct and indirect emissions with recursive precursor tracking.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Calculations:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>Direct Emissions:</strong> Combustion + process emissions.</li>
-                            <li><strong>Indirect Emissions:</strong> Electricity consumption with hourly matching.</li>
-                            <li><strong>Precursor Tracking:</strong> Emissions from all input materials (recursive).</li>
-                            <li><strong>Mass Balance:</strong> Complete material flow documentation.</li>
-                        </ol>
-                    </div>
-
-                    <div class="penalty-box">
-                        Penalty: €120M-€180M annual penalties through default value application.
+                    <h2>3. Specific Embedded Emissions (SEE) Calculation</h2>
+                    <p>Calculating emissions for your goods is the core of CBAM. You must report the direct and indirect emissions for every ton of product, including recursive tracking for precursors.</p>
+                    <div class="warning-box">
+                        <h3><i class="fas fa-times-circle"></i> The Penalty of Defaults</h3>
+                        <p>If you fail to provide actual data, the EU will apply <strong>Default Values</strong>, which are intentionally punitive (often 30-50% higher than actuals), leading to massive certificate costs.</p>
                     </div>
                 </section>
 
                 <section id="obligation-4">
-                    <div class="obligation-header">
-                        <h2>Obligation 4: SEFA Financial Documentation</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop" alt="Financial compliance documentation" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Article 9 mandates <strong>Specific Embedded Free Allocation (SEFA) calculation</strong> and carbon price documentation for financial adjustments.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Documentation:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>SEFA Calculation:</strong> Use EU benchmarks and correction factors.</li>
-                            <li><strong>Carbon Price Proof:</strong> Independent verification of domestic costs.</li>
-                            <li><strong>Financial Records:</strong> Audit-ready documentation for 6+ years.</li>
-                            <li><strong>Independent Attestation:</strong> Third-party person attestation required.</li>
-                        </ol>
-                    </div>
-
-                    <div class="penalty-box">
-                        Penalty: Loss of carbon price deductions + full CBAM certificate costs.
-                    </div>
+                    <h2>4. Proof of Domestic Carbon Pricing</h2>
+                    <p>If you have already paid a carbon price in your home country (like a carbon tax or ETS), you are entitled to a deduction. However, you must provide verified, third-party documented proof of payment.</p>
                 </section>
 
                 <section id="obligation-5">
-                    <div class="obligation-header">
-                        <h2>Obligation 5: EU-Accredited Verification</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop" alt="Industrial verification audit" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Article 10 mandates <strong>third-party verification by EU-accredited verifiers only</strong> with mandatory site visits and materiality thresholds.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Verification:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>EU Accreditation:</strong> Only EU-accredited verifiers accepted.</li>
-                            <li><strong>Site Visits:</strong> Mandatory physical inspection in Year 1.</li>
-                            <li><strong>5% Materiality:</strong> Data errors above 5% = failure.</li>
-                            <li><strong>Annual Verification:</strong> Required every calendar year.</li>
-                        </ol>
-                    </div>
-
-                    <div class="penalty-box">
-                        Penalty: Data rejection + forced default values + market exclusion.
-                    </div>
+                    <h2>5. EU-Accredited Verification</h2>
+                    <p>Self-certification is dead. All reported emissions data must be verified by a third-party verifier who is <strong>accredited by an EU Member State</strong>. This often requires mandatory site visits during the first year of the definitive phase.</p>
                 </section>
 
                 <section id="obligation-6">
-                    <div class="obligation-header">
-                        <h2>Obligation 6: Anti-Circumvention Compliance</h2>
-                        <div class="mandatory-badge">MANDATORY</div>
-                    </div>
+                    <h2>6. Anti-Circumvention & Traceability</h2>
+                    <p>The EU is actively watching for "resource-shuffling" (sending low-carbon goods to the EU while using high-carbon goods stay home). You must maintain a 6-year paper trail proving the origin and production methodology of every shipment.</p>
+                </section>
 
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop" alt="Supply chain traceability documentation" class="article-image">
-
-                    <div class="legal-requirement">
-                        <h3>Legal Requirement</h3>
-                        <p>Article 11 requires <strong>complete traceability evidence</strong> and anti-circumvention measures to prevent manipulation.</p>
-                    </div>
-
-                    <div class="non-negotiable-steps">
-                        <h3>Non-Negotiable Evidence:</h3>
-                        <ol style="padding-left: 20px;">
-                            <li><strong>Mill Certificates:</strong> Test certificates proving actual production.</li>
-                            <li><strong>Supply Chain Mapping:</strong> Complete precursor origin origin.</li>
-                            <li><strong>6-Year Retention:</strong> Complete record keeping active.</li>
+                <section id="checklist">
+                    <h2 id="practical-steps">Practical Steps for Compliance</h2>
+                    <div class="action-box">
+                        <h3><i class="fas fa-list-check"></i> Readiness Checklist</h3>
+                        <ol>
+                            <li><strong>Gap Analysis:</strong> Compare your current data against O3CI requirements.</li>
+                            <li><strong>Monitoring Audit:</strong> Verify all emission points are metered.</li>
+                            <li><strong>Engage Verifiers:</strong> Secure an EU-accredited verifier early (demand is high).</li>
+                            <li><strong>Data retention:</strong> Move from spreadsheets to audit-ready digital platforms.</li>
                         </ol>
                     </div>
-
-                    <div class="penalty-box">
-                        Penalty: Circumvention penalties + criminal liability + permanent ban.
-                    </div>
                 </section>
 
-                <section id="compliance-checklist">
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; margin-bottom: 30px;">Your CBAM Compliance Checklist</h2>
-
-                    <div class="checklist-container">
-                        <div class="checklist-section">
-                            <h4>Obligation 1 & 2: Infrastructure</h4>
-                            <ul class="checklist">
-                                <li>All installations registered in O3CI</li>
-                                <li>Monitoring Plan documented in English</li>
-                                <li>System boundaries clearly defined</li>
-                            </ul>
-                        </div>
-
-                        <div class="checklist-section">
-                            <h4>Obligation 3 & 4: Operations</h4>
-                            <ul class="checklist">
-                                <li>Direct and Indirect emissions calculated</li>
-                                <li>Precursor tracking implemented (Recursive)</li>
-                                <li>SEFA calculations certified</li>
-                            </ul>
-                        </div>
-
-                        <div class="checklist-section">
-                            <h4>Obligation 5 & 6: Assurance</h4>
-                            <ul class="checklist">
-                                <li>EU-accredited verifier engaged</li>
-                                <li>Site visit scheduled/completed</li>
-                                <li>Supply chain traceability mapping complete</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="final-warning">
-                        <h3 style="color: white;">⚠️ Final Warning</h3>
-                        <p><strong>ALL 6 obligations must be 100% complete.</strong> There is no partial compliance in CBAM. Missing even one element results in immediate market exclusion.</p>
-                    </div>
-                </section>
-
-                <!-- CTA Section -->
                 <div class="cta-section">
-                    <div class="cta-box">
-                        <h3>🚨 Don't Risk EU Market Exclusion</h3>
-                        <p>These 6 obligations are non-negotiable. Get them wrong and face immediate shipment rejections and financial penalties.</p>
-                        <a href="https://wa.me/919620828005" class="btn-primary">Get Compliance Audit Now</a>
-                        <p style="font-size: 13px; opacity: 0.6; margin-top: 15px;">✅ 100% EU Compliance Guaranteed | ✅ Expert Implementation</p>
+                    <h2>Ready to Secure Your EU Market Access?</h2>
+                    <p>EnCarbonSys provides the end-to-end infrastructure for CBAM compliance, from O3CI registration to audit-ready emissions calculation.</p>
+                    <a href="https://wa.me/919620828005" class="cta-button">Speak with an Expert</a>
+                </div>
+
+                <h2 id="conclusion">Conclusion: Compliance as a Competitive Edge</h2>
+                <p>
+                    In 2026, CBAM compliance is no longer a "green" initiative—it is a core business survival strategy. Exporters who master these 6 obligations early will not only avoid penalties but will have privileged access to EU importers who are desperately seeking compliant suppliers.
+                </p>
+
+                <div class="references-section" id="references">
+                    <h2>References & Resources</h2>
+                    <div class="reference-item">
+                        <strong>EU CBAM Official Portal:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">Official EU Taxation & Customs Website</a>
+                    </div>
+                    <div class="reference-item">
+                        <strong>Regulation (EU) 2023/956:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R0956" target="_blank">Full Text of the CBAM Regulation</a>
+                    </div>
+                    <div class="reference-item">
+                        <strong>EnCarbonSys Knowledge Base:</strong> <a href="/cbam-blog/">More CBAM Guides for Exporters</a>
                     </div>
                 </div>
             </article>
+
+            <!-- Related Articles (Example) -->
+            <section class="related-articles" style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
+                <h3 style="margin-bottom: 25px;">Recommended Reading</h3>
+                <div class="stats-grid">
+                    <a href="/cbam-blog/" style="text-decoration: none; color: inherit;">
+                        <div class="stat-card">
+                            <span class="stat-number">Article</span>
+                            <span class="stat-label">HS vs HSN Codes Guide</span>
+                        </div>
+                    </a>
+                    <a href="/cbam-blog/authorised-declarant-guide.html" style="text-decoration: none; color: inherit;">
+                        <div class="stat-card">
+                            <span class="stat-number">Article</span>
+                            <span class="stat-label">Authorised Declarant Guide</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
 
-    <!-- Universal Footer -->
-    <footer style="background: #000; color: #fff; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family:'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 20px; color: var(--cosmic-green);">ENCARBONSYS</h2>
-            <p style="color: rgba(255,255,255,0.4); font-size: 13px; margin-bottom: 30px;">Built for the future of global trade and sustainability.</p>
-            <div style="display:flex; justify-content:center; gap:25px; font-size: 14px;">
-                <a href="/" style="color: white; text-decoration: none;">Home</a>
-                <a href="/cbam-blog/" style="color: white; text-decoration: none;">Blog</a>
-                <a href="/pages/pricing.html" style="color: white; text-decoration: none;">Pricing</a>
-            </div>
-            <p style="margin-top: 40px; font-size: 11px; opacity: 0.2;">© 2026 EnCarbonSys Private Limited. MSME Registered.</p>
-        </div>
-    </footer>
+    <button id="mobileTocToggle" aria-label="Toggle Table of Contents">
+        <i class="fas fa-list-ul"></i>
+    </button>
 
+    <!-- Footer scripts -->
     <script>
         // Load Universal Navbar
         fetch('/components/navbar.html')
@@ -434,14 +586,68 @@
                 }
             });
 
-        // Mobile TOC Toggle
-        const mobileTocBtn = document.getElementById('mobile-toc-toggle');
-        const sidebar = document.querySelector('.toc-sidebar');
-        mobileTocBtn.addEventListener('click', () => {
-            alert('Navigation opened. Use the sidebar to browse sections.');
-            // Implementation for a real drawer would go here, 
-            // but alert is used for simplicity in this standardized template.
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile TOC Toggle Logic
+        const tocBtn = document.getElementById('mobileTocToggle');
+        const tocSidebar = document.querySelector('.toc-sidebar');
+        tocBtn.addEventListener('click', () => {
+            if (tocSidebar.style.display === 'block') {
+                tocSidebar.style.display = 'none';
+            } else {
+                tocSidebar.style.display = 'block';
+                tocSidebar.style.position = 'fixed';
+                tocSidebar.style.top = '0';
+                tocSidebar.style.left = '0';
+                tocSidebar.style.width = '100%';
+                tocSidebar.style.height = '100%';
+                tocSidebar.style.zIndex = '999';
+                tocSidebar.style.background = '#fff';
+                tocSidebar.style.padding = '80px 20px';
+                
+                // Add close button functionality inside toc sidebar if we wanted, 
+                // but simpler for now just to click any link to close.
+            }
+        });
+
+        document.querySelectorAll('.toc-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    tocSidebar.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
+
 </html>
