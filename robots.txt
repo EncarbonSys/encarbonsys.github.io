@@ -7,7 +7,6 @@ Allow: /
 
 # Sitemap locations (Primary)
 Sitemap: https://encarbonsys.com/sitemap.xml
-Sitemap: https://encarbonsys.com/sitemap-blog.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
