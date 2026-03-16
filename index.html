@@ -161,6 +161,23 @@
             }
         }
 
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 20px var(--cosmic-glow); }
+            50% { text-shadow: 0 0 40px var(--cosmic-glow); }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Navigation */
         .navbar {
             position: fixed;
@@ -1669,6 +1686,27 @@
         .cta-section p {
             margin-bottom: 1.5rem;
         }
+
+        /* Hero Title Gradient */
+        .hero-gradient-title {
+            font-size: 3rem;
+            line-height: 1.8;
+            margin-bottom: 0.5em;
+            margin-top: 0.1em;
+            font-weight: 1000;
+            color: white;
+            background: linear-gradient(135deg, #ffffff 0%, var(--cosmic-green) 50%, #f0f5f0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1.2s ease-out 0.2s both, titleGlow 4s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .hero-gradient-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -1685,7 +1723,7 @@
                     alt="EnCarbonSys Logo">
                 EnCarbonSys
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
@@ -1694,7 +1732,7 @@
                 <li><a href="/cbam-blog/">Blog</a></li>
                 <li><a href="#about">About</a></li>
                 <li class="dropdown" id="toolsDropdown">
-                    <a href="#" class="dropdown-toggle" style="display:flex;align-items:center;gap:0.3rem;">
+                    <a href="#" class="dropdown-toggle" style="display:flex;align-items:center;gap:0.3rem;" role="button" aria-haspopup="true" aria-expanded="false">
                         Tools <i class="fas fa-chevron-down"
                             style="font-size:0.7rem;transition:transform 0.3s ease;"></i>
                     </a>
@@ -1715,18 +1753,8 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">EnCBAM™
-                </h1>
-                <p style="font-size: 3rem; line-height: 1.8; margin-bottom: 0.5em; margin-top: 0.1em ; font-weight: 1000;color: white;
-            background: linear-gradient(135deg, #ffffff 0%, var(--cosmic-green) 50%, #f0f5f0 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInUp 1.2s ease-out 0.2s both, titleGlow 4s ease-in-out infinite;
-        @keyframes titleGlow {
-            0%, 100% { text-shadow: 0 0 20px var(--cosmic-glow); }
-            50% { text-shadow: 0 0 40px var(--cosmic-glow); }
-        }">Enabling CBAM Compliance</p>
+                <h1 class="hero-title">EnCBAM™</h1>
+                <p class="hero-gradient-title">Enabling CBAM Compliance</p>
                 <p class="hero-subtitle">EnCBAM™ is the flagship solution from EnCarbonSys - built to simplify Carbon
                     Border Adjustment Mechanism (CBAM) compliance for EU exporters. </p>
                 <div class="cta-buttons">
@@ -2548,15 +2576,25 @@ INTEGRATION INSTRUCTIONS:
     </footer>
     <script>
         // Loading screen
+        // Loading screen
         window.addEventListener('load', () => {
+            hidePreloader();
+        });
+
+        // Safety fallback: Hide preloader after 5 seconds regardless of load state
+        setTimeout(() => {
+            hidePreloader();
+        }, 5000);
+
+        function hidePreloader() {
             const loadingOverlay = document.getElementById('loadingOverlay');
-            setTimeout(() => {
+            if (loadingOverlay && loadingOverlay.style.display !== 'none') {
                 loadingOverlay.style.opacity = '0';
                 setTimeout(() => {
                     loadingOverlay.style.display = 'none';
                 }, 500);
-            }, 1000);
-        });
+            }
+        }
         // Counter Animation
         function animateCounter(element, target, duration = 1200) {
             const start = 0;
