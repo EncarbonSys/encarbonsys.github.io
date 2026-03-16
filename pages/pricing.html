@@ -7,711 +7,684 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-5KSFR9S0QX');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style1.css">
+    <title>Pricing & Service Models | EnCarbonSys — CBAM Compliance</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 
-    <title>EnCarbonSys Pricing & Packages</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
+        :root {
+            --cosmic-green: #2DF56D;
+            --cosmic-accent: #34d399;
+            --forest: #0a2e16;
+            --pine: #134d26;
+            --ink: #101810;
+            --paper: #fdfcf9;
+            --slate: #4a5449;
+            --glass-bg: rgba(10, 26, 15, 0.9);
+            --glass-border: rgba(45, 245, 109, 0.2);
+            --gold: #c9a84c;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
+            font-family: 'Outfit', sans-serif;
+            background: #050a06;
             color: #ffffff;
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
+            line-height: 1.7;
             overflow-x: hidden;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0;
+
+        /* ═══════════════════ HERO SECTION ═══════════════════ */
+        .hero {
             position: relative;
+            padding: 160px 20px 80px;
+            background: radial-gradient(circle at top right, rgba(45, 245, 109, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at bottom left, rgba(10, 46, 22, 0.4) 0%, transparent 50%);
+            text-align: center;
+            overflow: hidden;
         }
-        
-        .background {
-            position: fixed;
+
+        .hero::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-            z-index: -1;
+            background: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.3;
+            pointer-events: none;
         }
-        
-        .section {
-            padding: 60px 40px;
-            position: relative;
-        }
-        
-        .glass-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(45, 245, 109, 0.15);
-            border-color: rgba(45, 245, 109, 0.3);
-        }
-        
-        .header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(10,10,10,0.9) 100%);
-            border-bottom: 1px solid rgba(45, 245, 109, 0.3);
-            position: relative;
-        }
-        
-        .client-info {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: right;
-        }
-        
-        .header h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #ffffff, #2DF56D);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(45, 245, 109, 0.3);
-        }
-        
-        .header p {
-            font-size: 20px;
-            max-width: 800px;
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #ffffff;
             position: relative;
-            display: inline-block;
+            z-index: 2;
         }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: #2DF56D;
-            border-radius: 2px;
+
+        .hero-overline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 24px;
         }
-        
-        h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #2DF56D;
+
+        .hero-overline-line {
+            width: 40px;
+            height: 1.5px;
+            background: var(--cosmic-green);
         }
-        
-        p {
-            margin-bottom: 20px;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
+
+        .hero-overline-text {
+            color: var(--cosmic-green);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
         }
-        
-        .highlight {
-            color: #2DF56D;
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
             font-weight: 600;
-        }
-        
-        .pricing-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .pricing-card {
-            flex: 1;
-            min-width: 300px;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(45, 245, 109, 0.15);
-            border-color: rgba(45, 245, 109, 0.3);
-        }
-        
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #2DF56D, rgba(45, 245, 109, 0.3));
-        }
-        
-        .pricing-card h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        
-        .pricing-card .icon {
-            font-size: 32px;
-            color: #2DF56D;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        
-        .pricing-card ul {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-        
-        .pricing-card ul li {
+            line-height: 1.1;
             margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
+            letter-spacing: -1px;
         }
-        
-        .pricing-card ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 8px;
-            height: 8px;
-            background-color: #2DF56D;
-            border-radius: 50%;
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--cosmic-green);
         }
-        
-        .price {
-            font-size: 28px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .price .currency {
-            font-size: 18px;
-            vertical-align: super;
-        }
-        
-        .price .period {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.6);
+
+        .hero-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
             font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
         }
-        
-        .why-section {
-            background-color: rgba(45, 245, 109, 0.05);
+
+        .hero-desc {
+            max-width: 600px;
+            margin: 0 auto 50px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            border-left: 2px solid rgba(45, 245, 109, 0.3);
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        /* ═══════════════════ OBLIGATIONS SECTION ═══════════════════ */
+        .obligations {
+            padding: 100px 20px;
+            background: #080f0a;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sl-dash { width: 30px; height: 1.5px; background: var(--cosmic-green); }
+        .sl-text { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cosmic-accent); font-weight: 600; }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        .obl-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .obl-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             padding: 30px;
-            margin: 40px 0;
-            border-left: 4px solid #2DF56D;
+            position: relative;
+            transition: all 0.3s ease;
         }
-        
-        .why-section h3 {
-            color: #ffffff;
-            margin-bottom: 20px;
+
+        .obl-card:hover {
+            border-color: var(--cosmic-green);
+            transform: translateY(-5px);
+            background: rgba(45, 245, 109, 0.05);
         }
-        
-        .why-points {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+
+        .obl-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            color: rgba(45, 245, 109, 0.15);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 15px;
         }
-        
-        .why-point {
-            flex: 1;
-            min-width: 250px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
+
+        .obl-card h4 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: white;
         }
-        
-        .why-point .icon {
-            font-size: 24px;
-            color: #2DF56D;
+
+        .obl-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
         }
-        
-        .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
+
+        /* ═══════════════════ PRICING TIERS ═══════════════════ */
+        .pricing {
+            padding: 100px 20px;
+            background: #050a06;
         }
-        
-        .benefit {
-            flex: 1;
-            min-width: 250px;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .benefit .icon {
-            font-size: 24px;
-            color: #2DF56D;
-        }
-        
-        .cta-section {
-            text-align: center;
-            padding: 80px 0;
-            background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(0,0,0,0.95) 100%);
-            border-top: 1px solid rgba(45, 245, 109, 0.3);
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
             margin-top: 60px;
         }
-        
-        .cta-buttons {
+
+        .tier-card {
+            background: #0d1a10;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #2DF56D, #1aa347);
-            color: #000000;
-            font-size: 18px;
+
+        .tier-card.featured {
+            border: 2px solid var(--cosmic-green);
+            transform: scale(1.05);
+            z-index: 5;
+            box-shadow: 0 20px 50px rgba(45, 245, 109, 0.15);
+        }
+
+        .tier-header {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tier-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cosmic-accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tier-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .tier-price {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .price-amount {
+            font-size: 42px;
             font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(45, 245, 109, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(45, 245, 109, 0.6);
+
+        .price-currency { font-size: 24px; font-weight: 400; opacity: 0.8; }
+        .price-period { font-size: 14px; color: rgba(255, 255, 255, 0.5); }
+
+        .tier-body {
+            padding: 40px;
+            flex: 1;
         }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: #2DF56D;
-            border: 2px solid #2DF56D;
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 40px;
         }
-        
-        .footer {
+
+        .tier-features li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .tier-features li i {
+            color: var(--cosmic-green);
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .tier-cta {
+            padding: 0 40px 40px;
+        }
+
+        .btn-tier {
+            display: block;
+            width: 100%;
+            padding: 18px;
             text-align: center;
-            padding: 40px 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-top: 1px solid rgba(45, 245, 109, 0.2);
-        }
-        
-        .footer-content {
-            display: inline-flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        
-        .footer-logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-        
-        .footer-logo span {
-            color: #2DF56D;
-        }
-        
-        .footer-contact {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .footer-contact a {
-            color: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
             text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
         }
-        
-        .footer-contact a:hover {
-            color: #2DF56D;
+
+        .btn-self { border: 1px solid rgba(255,255,255,0.2); color: white; }
+        .btn-managed { background: var(--cosmic-green); color: #000; }
+        .btn-caas { border: 1px solid var(--cosmic-green); color: var(--cosmic-green); }
+
+        .btn-tier:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(45, 245, 109, 0.2);
         }
-        
-        .footer-contact a i {
+
+        /* ═══════════════════ COMPARISON TABLE ═══════════════════ */
+        .comparison {
+            padding: 100px 20px;
+            background: #080f0a;
+        }
+
+        .compare-container {
+            overflow-x: auto;
+            margin-top: 50px;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .compare-table th {
+            padding: 25px;
+            text-align: left;
+            border-bottom: 2px solid var(--cosmic-green);
             font-size: 16px;
         }
-        
-        .copyright {
-            margin-top: 20px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
+
+        .compare-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.7);
         }
-        
-        /* Circuit elements */
-        .circuit-line {
-            position: absolute;
-            background-color: rgba(45, 245, 109, 0.2);
-            height: 1px;
-            z-index: -1;
+
+        .compare-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
         }
-        
-        .circuit-dot {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: rgba(45, 245, 109, 0.4);
-            z-index: -1;
+
+        .check-green { color: var(--cosmic-green); font-size: 18px; }
+        .check-gold { color: var(--gold); }
+
+        /* ═══════════════════ ADD-ONS ═══════════════════ */
+        .addons {
+            padding: 80px 20px;
+            text-align: center;
         }
-        
-        .circuit-line-1 {
-            width: 200px;
-            top: 150px;
-            right: 50px;
-            transform: rotate(30deg);
+
+        .addon-box {
+            background: linear-gradient(135deg, rgba(45, 245, 109, 0.1) 0%, transparent 100%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        
-        .circuit-line-2 {
-            width: 300px;
-            bottom: 200px;
-            left: 100px;
-            transform: rotate(-20deg);
+
+        /* ═══════════════════ FOOTER ═══════════════════ */
+        .footer {
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            background: #050a06;
         }
-        
-        .circuit-dot-1 {
-            top: 150px;
-            right: 50px;
-        }
-        
-        .circuit-dot-2 {
-            bottom: 200px;
-            left: 100px;
-        }
-        
-        /* Glow effects */
-        .glow {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(45, 245, 109, 0.2) 0%, rgba(45, 245, 109, 0) 70%);
-            z-index: -1;
-            filter: blur(20px);
-        }
-        
-        .glow-1 {
-            top: 10%;
-            right: 5%;
-        }
-        
-        .glow-2 {
-            bottom: 20%;
-            left: 10%;
-        }
-        
+
+        .footer-logo { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--cosmic-green); }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--cosmic-green); }
+
         /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-cards { grid-template-columns: 1fr; }
+            .tier-card.featured { transform: scale(1); }
+            .obl-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 768px) {
-            .pricing-cards {
-                flex-direction: column;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .footer-contact {
-                flex-direction: column;
-                align-items: center;
-            }
+            .hero h1 { font-size: 48px; }
+            .hero-sub { font-size: 24px; }
+            .obl-grid { grid-template-columns: 1fr; }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="navbar"></div>
-        <script>
-          fetch('/components/navbar.html')
-            .then(r => r.text())
-            .then(html => document.getElementById('navbar').innerHTML = html);
-        </script>
+    <div id="navbar-placeholder"></div>
 
-    <img class="background" src="https://assets-persist.lovart.ai/agent_images/7daba098-acbf-49db-bdf2-6c89689843ea.png" alt="Background">
-    
-    <!-- Circuit elements -->
-    <div class="circuit-line circuit-line-1"></div>
-    <div class="circuit-line circuit-line-2"></div>
-    <div class="circuit-dot circuit-dot-1"></div>
-    <div class="circuit-dot circuit-dot-2"></div>
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    
-    <div class="container">
-        <!-- Header Section -->
-        <section class="header">
-            <h1>EnCarbonSys</h1>
-            <p>CBAM Reporting & Compliance Solutions</p>
-            <p>Helping Exporters Stay Ahead of EU's Carbon Border Adjustment Mechanism</p>
-        </section>
-        
-        <!-- Phase 1 Section -->
-        <section class="section">
-            <h2><i class="fas fa-bolt highlight"></i> Phase 1: The Urgency Era (Now → Dec 2025)</h2>
-            <div class="glass-card">
-                <p>CBAM quarterly reporting is already mandatory. Many MSMEs are unprepared. EU importers are demanding immediate compliance proof — and late starters are paying consultants a fortune.</p>
-                <p class="highlight"><i class="fas fa-check-circle"></i> EnCarbonSys is the affordable, fast, and accurate alternative.</p>
-            </div>
-            
-            <h3>Current Offerings (Pre-2026)</h3>
-            <div class="pricing-cards">
-                <!-- Pricing Card 1 -->
-                <div class="pricing-card">
-                    <div class="icon"><i class="fas fa-rocket"></i></div>
-                    <h3>CBAM Quick-Start Report</h3>
-                    <p>One-Time Solution</p>
-                    <ul>
-                        <li>Data collection + processing for one reporting quarter</li>
-                        <li>EU-compliant PDF + XML files ready to submit</li>
-                        <li>Guided support for your first report</li>
-                        <li>For Exporters shipping multiple CN codes</li>
-                    </ul>
-                    <div class="price">
-                        <span class="currency">₹</span> 88,000 onwards*
-                        <p><span class="period">(999 USD)</span>
-                        <span class="period">per report*</span></p>
-                        <p><span class = "period">*Final price will be based upon the complexity of the data and tonnage.</span></p>
-                    </div>
-                </div>
-                
-                <!-- Pricing Card 2 -->
-                <div class="pricing-card">
-                    <div class="icon"><i class="fas fa-sync-alt"></i></div>
-                    <h3>CBAM Compliance Subscription</h3>
-                    <p>Quarterly Retainer</p>
-                    <ul>
-                        <li>Done-for-you report preparation every quarter</li>
-                        <li>Dedicated compliance manager</li>
-                        <li>Priority filing support + last-minute fixes</li>
-                    </ul>
-                    <div class="price">
-                        <span class="currency">₹</span>70,000 onwards*
-                        <p><span class="period">(799 USD)</span>
-                        <span class="period">per report*</span></p>
-                        <p><span class = "period">*Upon subscription of minimum 1 year</span></p>
-                        <p><span class = "period">*Final price will be based upon the complexity of the data and tonnage.</span></p>
-                    </div>
-                </div>
-                
-                <!-- Pricing Card 3 -->
-                <div class="pricing-card">
-                    <div class="icon"><i class="fas fa-building"></i></div>
-                    <h3>MSME Partner Package</h3>
-                    <p>Lightweight Solution</p>
-                    <ul>
-                        <li>Valid Udyam MSME certificate number to be produced</li>
-                        <li>Tailored for small exporters with <5 products </li>
-                        <li>Simplified reporting + guided onboarding</li>
-                        <li>One-click submission files</li>
-                    </ul>
-                    <div class="price">
-                        <span class="currency">₹</span>48000 onwards*
-                        <p><span class="period">(549 USD)</span>
-                        <span class="period">per report*</span></p>
-                        <p><span class = "period"> *Final price will be based upon the complexity of the data and tonnage.</span></p>
-
-                    </div>
-                </div>
-            </div>
-                        
-            <!-- Why this pricing section -->
-            <div class="why-section">
-                <h3><i class="fas fa-exclamation-triangle"></i> Why this pricing?</h3>
-                <div class="why-points">
-                    <div class="why-point">
-                        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-                        <div>
-                            <p>EU deadlines are already live → demand is high</p>
-                        </div>
-                    </div>
-                    <div class="why-point">
-                        <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
-                        <div>
-                            <p>MSMEs need affordability → we undercut consultants by 60–70%</p>
-                        </div>
-                    </div>
-                    <div class="why-point">
-                        <div class="icon"><i class="fas fa-door-open"></i></div>
-                        <div>
-                            <p>It's a foot-in-the-door model → once you trust us, you stay for 2026</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Phase 2 Section -->
-        <section class="section">
-            <h2><i class="fas fa-rocket highlight"></i> Phase 2: The Compliance Era (Jan 2026 onwards)</h2>
-            <div class="glass-card">
-                <p>From 2026, CBAM stops being "just reporting" → actual carbon payments begin. Every tonne of embedded carbon in exports = direct cost to the importer/exporter.</p>
-                <p>This changes the game → reporting isn't optional; it directly hits revenue.</p>
-            </div>
-            
-            <h3>Offerings (From 2026)</h3>
-            <div class="pricing-cards">
-                <!-- Pricing Card 1 -->
-                <div class="pricing-card">
-                    <div class="icon"><i class="fas fa-crown"></i></div>
-                    <h3>Compliance-as-a-Service</h3>
-                    <p>Enterprise Solution</p>
-                    <ul>
-                        <li>End-to-end CBAM management</li>
-                        <li>Quarterly filings + strategy for reducing CBAM costs</li>
-                        <li>Carbon offset advisory + EU liaison support</li>
-                    </ul>
-                    <div class="price">
-                        <span class="currency">  </span>COMING SOON
-                        <span class="period"></span>
-                    </div>
-                    <p><small>Customized for enterprise exporters</small></p>
-                </div>
-                
-                <!-- Pricing Card 2 -->
-                <div class="pricing-card">
-                    <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
-                    <h3>Add-On Services</h3>
-                    <p>Coming Soon</p>
-                    <ul>
-                        <li>Staff training workshops ($599+)</li>
-                        <li>Carbon footprint audit</li>
-                        <li>More services coming soon...</li>
-                    </ul>
-                    <div class="price">
-                        <span>Contact for pricing</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Why EnCarbonSys Section -->
-        <section class="section">
-            <h2><i class="fas fa-trophy highlight"></i> Why EnCarbonSys?</h2>
-            <div class="benefits">
-                <div class="benefit">
-                    <div class="icon"><i class="fas fa-industry"></i></div>
-                    <div>
-                        <h4>Built for exporters</h4>
-                        <p>From MSMEs today to large enterprises tomorrow</p>
-                    </div>
-                </div>
-                <div class="benefit">
-                    <div class="icon"><i class="fas fa-globe"></i></div>
-                    <div>
-                        <h4>Bridges the gap</h4>
-                        <p>Between expensive consultants and DIY confusion</p>
-                    </div>
-                </div>
-                <div class="benefit">
-                    <div class="icon"><i class="fas fa-expand-arrows-alt"></i></div>
-                    <div>
-                        <h4>Scalable solutions</h4>
-                        <p>Simple, and affordable compliance solutions</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Ready to ensure CBAM compliance?</h2>
-            <div class="cta-buttons">
-                <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?" class="cta-button"><i class="fas fa-phone-alt"></i> Book a Free CBAM Readiness Call</a>
-                <a href="/index.html#cta" class="cta-button secondary"><i class="fas fa-bolt"></i> GET QUOTE NOW</a>
-                <a href="/pages/client-resource.html" class="cta-button"><i class="fas fa-external-link-alt"></i> Go To Client Hub</a>
-            </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="footer">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-contact">
-                        <a href="mailto:ash@encarbonsys.com"><i class="fas fa-envelope"></i> contact@encarbonsys.com</a>
-                        <a href="/assets/pdf/refund-cancellation-policy.pdf"><i class="fas fa-hand-holding-usd"></i> Refund and Cancellation</a>
-                        <a href="https://wa.me/919620828005?text=Hi%20EnCarbonSys,%20I%20need%20help%20with%20CBAM%20compliance.%20Can%20you%20generate%20a%20report%20for%20me?"><i class="fas fa-phone"></i> +91 9620828005</a>
-                        <a href="https://encarbonsys.com"><i class="fas fa-globe"></i> www.encarbonsys.com</a>
-                    </div>
+                <div class="hero-overline">
+                    <div class="hero-overline-line"></div>
+                    <span class="hero-overline-text">ENCARBONSYS SERVICE OFFERINGS</span>
                 </div>
-                <div class="copyright">
-                    <p>© 2025 EnCarbonSys. All rights reserved.</p>
+                <h1><em>CBAM</em> Compliance</h1>
+                <div class="hero-sub">Simplified Excellence for Global Exporters</div>
+                <div class="hero-desc">
+                    EnCarbonSys provides three distinct service models — from pure software to end-to-end compliance management. Choose the plan that aligns with your team's capacity and your business goals.
                 </div>
             </div>
-        </footer>
-    </div>
-    
-    <script>
-        // JavaScript for accordion functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add hover effect to pricing cards
-            const pricingCards = document.querySelectorAll('.pricing-card');
-            pricingCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 15px 50px rgba(45, 245, 109, 0.2)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
-                });
-            });
-        });
-    </script>
-    <script src="/assets/js/main.js"></script>
+        </section>
 
+        <!-- Obligations Section -->
+        <section class="obligations">
+            <div class="container">
+                <div class="section-label">
+                    <div class="sl-dash"></div>
+                    <span class="sl-text">The Compliance Landscape</span>
+                </div>
+                <h2 class="section-title">Six Mandatory <em>EU Obligations</em></h2>
+                
+                <div class="obl-grid">
+                    <div class="obl-card">
+                        <div class="obl-num">01</div>
+                        <h4>O3CI Registry Entry</h4>
+                        <p>Registration on the official EU operator portal to manage installation-specific carbon data.</p>
+                    </div>
+                    <div class="obl-card">
+                        <div class="obl-num">02</div>
+                        <h4>Monitoring Plan (MP)</h4>
+                        <p>Development of a CBAM-compliant methodology document in English, detailing all production processes.</p>
+                    </div>
+                    <div class="obl-card">
+                        <div class="obl-num">03</div>
+                        <h4>Emissions Monitoring</h4>
+                        <p>Recursive tracking of direct and indirect embedded emissions across the entire production chain.</p>
+                    </div>
+                    <div class="obl-card">
+                        <div class="obl-num">04</div>
+                        <h4>Unified CBAM Reports</h4>
+                        <p>Generation of quarterly and annual reports in EU-mandated XML and PDF formats.</p>
+                    </div>
+                    <div class="obl-card">
+                        <div class="obl-num">05</div>
+                        <h4>Independent Audits</h4>
+                        <p>Coordination with EU-accredited verifiers for mandatory site visits and data verification.</p>
+                    </div>
+                    <div class="obl-card">
+                        <div class="obl-num">06</div>
+                        <h4>SEFA Calculations</h4>
+                        <p>Precise calculation of free allocations and carbon prices paid in home countries to optimize costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-label">
+                    <div class="sl-dash"></div>
+                    <span class="sl-text">Select Your Model</span>
+                </div>
+                <h2 class="section-title">Investment <em>Plans</em></h2>
+
+                <div class="pricing-cards">
+                    <!-- Self Service -->
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <span class="tier-label">Model 01 — Software Only</span>
+                            <h3 class="tier-name">EnCBAM™ Self-Service</h3>
+                            <div class="tier-price">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">1.25</span>
+                                <span class="price-period">Lac / Year*</span>
+                            </div>
+                        </div>
+                        <div class="tier-body">
+                            <ul class="tier-features">
+                                <li><i class="fas fa-check"></i> EnCBAM™ Software Access</li>
+                                <li><i class="fas fa-check"></i> Unlimited Reports</li>
+                                <li><i class="fas fa-check"></i> ISO 14064/67 Aligned</li>
+                                <li><i class="fas fa-check"></i> Basic Support Tickets</li>
+                                <li><i class="fas fa-check"></i> Self-Guided Onboarding</li>
+                            </ul>
+                        </div>
+                        <div class="tier-cta">
+                            <a href="https://wa.me/919620828005?text=Hi,%20I'm%20interested%20in%20the%20Self-Service%20plan." class="btn-tier btn-self">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Managed Service -->
+                    <div class="tier-card featured">
+                        <div class="tier-header">
+                            <span class="tier-label">Model 02 — Most Popular</span>
+                            <h3 class="tier-name">Managed Reporting</h3>
+                            <div class="tier-price">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">2.50</span>
+                                <span class="price-period">Lac / Year*</span>
+                            </div>
+                        </div>
+                        <div class="tier-body">
+                            <ul class="tier-features">
+                                <li><i class="fas fa-check"></i> Everything in Self-Service</li>
+                                <li><i class="fas fa-check"></i> We Process Your Evidence</li>
+                                <li><i class="fas fa-check"></i> Expert Calculation Support</li>
+                                <li><i class="fas fa-check"></i> Submission-Ready XMLs</li>
+                                <li><i class="fas fa-check"></i> Quarterly Strategy Calls</li>
+                            </ul>
+                        </div>
+                        <div class="tier-cta">
+                            <a href="https://wa.me/919620828005?text=Hi,%20I'm%20interested%20in%20the%20Managed%20Reporting%20plan." class="btn-tier btn-managed">Choose Plan</a>
+                        </div>
+                    </div>
+
+                    <!-- CaaS -->
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <span class="tier-label">Model 03 — Full Delegation</span>
+                            <h3 class="tier-name">Compliance as a Service</h3>
+                            <div class="tier-price">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">4.50</span>
+                                <span class="price-period">Lac / Year*</span>
+                            </div>
+                        </div>
+                        <div class="tier-body">
+                            <ul class="tier-features">
+                                <li><i class="fas fa-check"></i> All 6 EU Obligations Covered</li>
+                                <li><i class="fas fa-check"></i> O3CI Portal Management</li>
+                                <li><i class="fas fa-check"></i> Monitoring Plan Blueprint</li>
+                                <li><i class="fas fa-check"></i> Audit Coordination</li>
+                                <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                            </ul>
+                        </div>
+                        <div class="tier-cta">
+                            <a href="https://wa.me/919620828005?text=Hi,%20I'm%20interested%20in%20the%20CaaS%20Elite%20plan." class="btn-tier btn-caas">Go Elite</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; text-align: center; color: rgba(255,255,255,0.4); font-size: 13px;">*Pricing is per year per factory. Taxes as applicable.</p>
+            </div>
+        </section>
+
+        <!-- Ideal For / Who this is for Section -->
+        <section class="ideal-for" style="padding: 100px 20px; background: #050a06;">
+            <div class="container">
+                <div class="section-label">
+                    <div class="sl-dash"></div>
+                    <span class="sl-text">Recommended Engagement</span>
+                </div>
+                <h2 class="section-title">Is This <em>For You?</em></h2>
+                
+                <div class="pricing-cards" style="margin-top: 40px;">
+                    <div class="glass-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px;">
+                        <h4 style="color: var(--cosmic-green); margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; font-size: 24px;">Self-Service is Ideal For:</h4>
+                        <ul style="list-style: none; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Teams with dedicated finance or sustainability staff.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Companies wanting full hands-on control of their data.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Exporters with established data collection processes.</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card" style="background: rgba(45, 245, 109, 0.03); border: 1px solid rgba(45, 245, 109, 0.1); padding: 30px; border-radius: 20px;">
+                        <h4 style="color: var(--cosmic-green); margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; font-size: 24px;">Managed Service is Ideal For:</h4>
+                        <ul style="list-style: none; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Exporters lacking in-house CBAM calculation expertise.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Businesses exporting to multiple EU buyers consistently.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Teams wanting to outsource reporting with oversight.</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px;">
+                        <h4 style="color: var(--cosmic-green); margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; font-size: 24px;">CaaS Elite is Ideal For:</h4>
+                        <ul style="list-style: none; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Enterprises seeking 100% regulatory certainty.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Exporters wanting to delegate the entire operational burden.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="font-size: 10px; color: var(--cosmic-green); margin-right: 10px;"></i>Businesses scaling EU exports rapidly across borders.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="comparison">
+            <div class="container">
+                <div class="section-label">
+                    <div class="sl-dash"></div>
+                    <span class="sl-text">Detail Breakdown</span>
+                </div>
+                <h2 class="section-title">Capability <em>Matrix</em></h2>
+
+                <div class="compare-container">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature / Service</th>
+                                <th>Self-Service</th>
+                                <th>Managed</th>
+                                <th>CaaS Elite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EnCBAM™ Software Access</td>
+                                <td><i class="fas fa-check check-green"></i></td>
+                                <td><i class="fas fa-check check-green"></i></td>
+                                <td><i class="fas fa-check check-green"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Emissions Calculation</td>
+                                <td>User Guided</td>
+                                <td><i class="fas fa-check check-green"></i> Managed</td>
+                                <td><i class="fas fa-check check-green"></i> Fully Outsourced</td>
+                            </tr>
+                            <tr>
+                                <td>O3CI Portal Management</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><i class="fas fa-check check-green"></i> Full Delegation</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Monitoring Plan</td>
+                                <td>Template Only</td>
+                                <td>Review Support</td>
+                                <td><i class="fas fa-check check-green"></i> Full Development</td>
+                            </tr>
+                            <tr>
+                                <td>Verification Coordination</td>
+                                <td>Documentation Support</td>
+                                <td>Strategic Prep</td>
+                                <td><i class="fas fa-check check-green"></i> Full Liaison</td>
+                            </tr>
+                            <tr>
+                                <td>Add-on Obligations Access</td>
+                                <td>Available Extra</td>
+                                <td>Included</td>
+                                <td>Priority Executive Support</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="addons">
+            <div class="container">
+                <div class="addon-box">
+                    <h3 style="font-family:'Cormorant Garamond', serif; font-size: 36px; margin-bottom: 20px;">Custom Requirements?</h3>
+                    <p style="margin-bottom: 30px; color: rgba(255,255,255,0.7);">Our modular system allows for flexible add-on services for specific regulatory needs beyond the standard tiers. Let's discuss a roadmap tailored to your specific supply chain.</p>
+                    <a href="https://wa.me/919620828005" class="btn-tier btn-managed" style="max-width:300px; margin:0 auto;">Request Custom Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">ENCARBON<span>SYS</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/cbam-blog/">Reports & Insights</a>
+                <a href="/pages/pricing.html">Pricing</a>
+                <a href="mailto:contact@encarbonsys.com">Contact</a>
+            </div>
+            <p style="color:rgba(255,255,255,0.3); font-size:12px;">© 2026 EnCarbonSys. All Rights Reserved. Built for global exporters.</p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('/components/navbar.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+                const scripts = document.getElementById('navbar-placeholder').getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    const newScript = document.createElement('script');
+                    if (scripts[i].src) {
+                        newScript.src = scripts[i].src;
+                    } else {
+                        newScript.textContent = scripts[i].textContent;
+                    }
+                    document.body.appendChild(newScript);
+                }
+            });
+    </script>
 </body>
 </html>

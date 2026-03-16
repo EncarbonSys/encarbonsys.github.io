@@ -48,6 +48,14 @@
 
     <!-- Blog Articles - All High Priority for SEO -->
     
+    <!-- CBAM Exporter Obligations Guide - NEW -->
+    <url>
+        <loc>https://encarbonsys.com/cbam-blog/cbam-exporter-obligations-guide-2026.html</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <!-- HS vs HSN vs CN vs TARIC Codes Guide - NEW -->
     <url>
         <loc>https://encarbonsys.com/cbam-blog/hs-hsn-cn-taric-codes-complete-guide.html</loc>
