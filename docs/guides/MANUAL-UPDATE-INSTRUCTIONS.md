@@ -59,7 +59,7 @@ Find the line with `</style>` and ADD THIS BEFORE IT:
     letter-spacing: 0.5px;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #2DF56D;
+    border-bottom: 2px solid #059669;
 }
 
 .toc-list {
@@ -85,14 +85,14 @@ Find the line with `</style>` and ADD THIS BEFORE IT:
 }
 
 .toc-list a:hover {
-    background: #2DF56D;
-    color: #0a0a0a;
+    background: #059669;
+    color: #ffffff;
     transform: translateX(5px);
 }
 
 .toc-list a.active {
-    background: #2DF56D;
-    color: #0a0a0a;
+    background: #059669;
+    color: #ffffff;
 }
 
 .article-container {
@@ -112,8 +112,8 @@ Find the line with `</style>` and ADD THIS BEFORE IT:
 
 .cta-button {
     display: inline-block;
-    background: #2DF56D;
-    color: #0a0a0a;
+    background: #059669;
+    color: #ffffff;
     padding: 15px 40px;
     border-radius: 8px;
     text-decoration: none;
@@ -124,7 +124,7 @@ Find the line with `</style>` and ADD THIS BEFORE IT:
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(45, 245, 109, 0.3);
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
 }
 
 @media (max-width: 1024px) {
