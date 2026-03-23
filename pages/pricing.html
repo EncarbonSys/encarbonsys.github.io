@@ -580,8 +580,9 @@
     <header class="pricing-header">
         <div class="container">
             <div class="section-tag animate-in">The Right Model Starts Here</div>
-            <h1 class="animate-in"><em>CBAM</em> Compliance</h1>
+            <h1 class="animate-in">CBAM Compliance</h1>
             <p class="animate-in" style="font-size:22px;font-weight:600;color:white;margin-bottom:12px;">Your Way, Your Pace</p>
+            <p id="geoPricingInfo" class="animate-in" style="font-size:14px;color:#b5e8b4; margin-bottom:16px;">Detecting your region...</p>
             <p class="animate-in">EnCarbonSys offers three distinct service models — from self
 service software to complete end-to-end compliance
 management. Choose the level of support that fits your team,
@@ -597,8 +598,8 @@ your capacity, and your ambition.</p>
                 <div class="tier-meta">
                     <span class="tier-id">Model 01</span>
                     <h3 class="tier-title">EnCBAM™<br>Self-Service</h3>
-                    <div class="tier-price">
-                        <span class="currency">₹</span>1,25,000<span class="period">/yr /factory</span>
+                    <div class="tier-price" data-base-inr="125000" data-period="/yr /factory">
+                        <span class="currency">₹</span><span class="amount">1,25,000</span><span class="period">/yr /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">Ideal for teams with dedicated staff who want expert-grade tooling to run compliance
@@ -621,8 +622,8 @@ your capacity, and your ambition.</p>
                 <div class="tier-meta">
                     <span class="tier-id">Model 02</span>
                     <h3 class="tier-title">Managed<br>Reporting</h3>
-                    <div class="tier-price">
-                        <span class="currency">₹</span>2,50,000<span class="period">/yr /factory</span>
+                    <div class="tier-price" data-base-inr="250000" data-period="/yr /factory">
+                        <span class="currency">₹</span><span class="amount">2,50,000</span><span class="period">/yr /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">You share documents — we process and generate your CBAM reports from scratch.</p>
@@ -645,8 +646,8 @@ your capacity, and your ambition.</p>
                 <div class="tier-meta">
                     <span class="tier-id">Model 03</span>
                     <h3 class="tier-title">Compliance as a Service (CaaS)</h3>
-                    <div class="tier-price">
-                        <span class="currency">₹</span>4,50,000<span class="period">/yr /factory</span>
+                    <div class="tier-price" data-base-inr="450000" data-period="/yr /factory">
+                        <span class="currency">₹</span><span class="amount">4,50,000</span><span class="period">/yr /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">Complete delegation. We act as your technical CBAM partner across all EU
@@ -778,12 +779,12 @@ your capacity, and your ambition.</p>
                 <div>
                     <span class="addon-tag">Flexible Support Scaling</span>
                     <h2 class="addon-title">Additional Expert<br>Support Services</h2>
-                    <p style="color: var(--text-muted); font-size: 16px; font-weight: 300; margin-bottom: 32px;">If
-                        you're in Model 01 or 02, you can add any of these expert-led services extra upon your package
-                        at any time.</p>
+                    <p style="color: var(--text-muted); font-size: 16px; font-weight: 300; margin-bottom: 32px;">
+                        Boost your Model 01 or 02 package with these expert-led add-ons. 
+                        </p>
                     <a href="EnCarbonSys_Services_Brochure-2026.html" class="cta-button secondary"
                         style="display: inline-flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-file-download"></i> Download Detailed Service Brochure
+                        <i class="fas fa-file-download"></i> Download Service Brochure
                     </a>
                 </div>
                 <div>
@@ -807,11 +808,7 @@ your capacity, and your ambition.</p>
                         <a href="https://wa.me/919620828005" class="addon-price" style="text-decoration:none;">Contact
                             Us &#x2192;</a>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">Managed Quarterly XML</span>
-                        <a href="https://wa.me/919620828005" class="addon-price" style="text-decoration:none;">Contact
-                            Us &#x2192;</a>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -891,6 +888,97 @@ your capacity, and your ambition.</p>
                 if (toolsDropdown) toolsDropdown.classList.remove('active');
             }
         });
+
+        // Regional pricing display based on user location
+        async function setRegionalPricing() {
+            const regionMsg = document.getElementById('geoPricingInfo');
+            if (!regionMsg) return;
+
+            try {
+                const geoRes = await fetch('https://ipapi.co/json/');
+                if (!geoRes.ok) throw new Error('Geo lookup failed');
+                const geo = await geoRes.json();
+
+                const userCurrency = (geo.currency || 'INR').toUpperCase();
+                const userCountry = (geo.country_name || 'India');
+
+                const fallbackRates = {
+                    INR: 1,
+                    USD: 0.012,
+                    EUR: 0.011,
+                    NGN: 15.84,
+                    GBP: 0.0097,
+                    AED: 0.044,
+                    EUR: 0.011,
+                    CAD: 0.016,
+                    AUD: 0.018,
+                    SGD: 0.017,
+                    ZAR: 0.22,
+                };
+
+                const symbolMap = {
+                    INR: '₹',
+                    USD: '$',
+                    EUR: '€',
+                    NGN: '₦',
+                    GBP: '£',
+                    AED: 'د.إ',
+                    CAD: 'C$',
+                    AUD: 'A$',
+                    SGD: 'S$',
+                    ZAR: 'R',
+                };
+
+                const targetCurrency = symbolMap[userCurrency] ? userCurrency : 'USD';
+                let conversionRate = 1;
+
+                try {
+                    const rateRes = await fetch(`https://api.exchangerate.host/convert?from=INR&to=${targetCurrency}&amount=1`);
+                    if (rateRes.ok) {
+                        const rateData = await rateRes.json();
+                        if (rateData && rateData.info && rateData.result) {
+                            conversionRate = rateData.info.rate;
+                        } else if (fallbackRates[targetCurrency]) {
+                            conversionRate = fallbackRates[targetCurrency];
+                        }
+                    } else if (fallbackRates[targetCurrency]) {
+                        conversionRate = fallbackRates[targetCurrency];
+                    }
+                } catch (fErr) {
+                    conversionRate = fallbackRates[targetCurrency] || 1;
+                }
+
+                const currencySymbol = symbolMap[targetCurrency] || '$';
+
+                document.querySelectorAll('.tier-price').forEach(card => {
+                    const baseInr = Number(card.dataset.baseInr || card.dataset.inr || 0);
+                    if (!baseInr) return;
+
+                    const converted = baseInr * conversionRate;
+                    const amountEl = card.querySelector('.amount');
+                    const currencyEl = card.querySelector('.currency');
+                    const periodEl = card.querySelector('.period');
+
+                    if (currencyEl) currencyEl.textContent = currencySymbol;
+
+                    if (amountEl) {
+                        const locale = userCurrency === 'INR' ? 'en-IN' : 'en-US';
+                        amountEl.textContent = Number(converted).toLocaleString(locale, {
+                            maximumFractionDigits: 0,
+                        });
+                    }
+
+                    if (periodEl) periodEl.textContent = card.dataset.period || periodEl.textContent;
+                });
+
+                regionMsg.textContent = `${userCountry} detected — Pricing shown in ${targetCurrency}`;
+            } catch (err) {
+                regionMsg.textContent = 'Could not detect location; defaulting to INR pricing.';
+                console.warn('Regional pricing detection failed:', err);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', setRegionalPricing);
     </script>
 
 </body>
