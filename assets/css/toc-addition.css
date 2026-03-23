@@ -107,6 +107,19 @@
     box-shadow: 0 10px 25px rgba(45, 245, 109, 0.3);
 }
 
+.cta-button.secondary {
+    background: transparent;
+    color: #2DF56D;
+    border: 2px solid #2DF56D;
+    padding: 12px 32px;
+    font-size: 16px;
+}
+
+.cta-button.secondary:hover {
+    background: #2DF56D;
+    color: #0a0a0a;
+}
+
 /* Mobile Responsive Updates */
 @media (max-width: 1024px) {
     .article-layout {
