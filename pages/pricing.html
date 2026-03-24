@@ -1241,6 +1241,37 @@ your capacity, and your ambition.</p>
                 const geo = await geoRes.json();
 
                 const userCurrency = (geo.currency || 'INR').toUpperCase();
+                const userCountry = (geo.country || 'IN').toUpperCase();
+
+                // Specific currencies for certain countries
+                const specificCurrencies = {
+                    IN: 'INR', // India
+                    JP: 'JPY', // Japan
+                    NG: 'NGN', // Nigeria
+                    GB: 'GBP', // UK
+                    AE: 'AED', // UAE
+                    CA: 'CAD', // Canada
+                    AU: 'AUD', // Australia
+                    SG: 'SGD', // Singapore
+                    ZA: 'ZAR', // South Africa
+                };
+
+                // European countries that should use EUR
+                const europeanCountries = [
+                    'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
+                    'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
+                    'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'EU' // EU as fallback
+                ];
+
+                let targetCurrency = 'USD'; // default
+
+                if (specificCurrencies[userCountry]) {
+                    targetCurrency = specificCurrencies[userCountry];
+                } else if (europeanCountries.includes(userCountry)) {
+                    targetCurrency = 'EUR';
+                } else {
+                    targetCurrency = 'USD';
+                }
 
                 const fallbackRates = {
                     INR: 1,
@@ -1249,7 +1280,6 @@ your capacity, and your ambition.</p>
                     NGN: 15.84,
                     GBP: 0.0097,
                     AED: 0.044,
-                    EUR: 0.011,
                     CAD: 0.016,
                     AUD: 0.018,
                     SGD: 0.017,
@@ -1270,8 +1300,6 @@ your capacity, and your ambition.</p>
                     ZAR: 'R',
                     JPY: '¥',
                 };
-
-                const targetCurrency = symbolMap[userCurrency] ? userCurrency : 'USD';
                 let conversionRate = 1;
 
                 try {
