@@ -925,9 +925,8 @@
     <header class="pricing-header">
         <div class="container">
             <div class="section-tag animate-in">The Right Model Starts Here</div>
-            <h1 class="animate-in">CBAM Compliance</h1>
+            <h1 class="animate-in"><span style="color: var(--leaf);">CBAM</span> Compliance</h1>
             <p class="animate-in" style="font-size:22px;font-weight:600;color:white;margin-bottom:12px;">Your Way, Your Pace</p>
-            <p id="geoPricingInfo" class="animate-in" style="font-size:14px;color:#b5e8b4; margin-bottom:16px;">Detecting your region...</p>
             <p class="animate-in">EnCarbonSys offers three distinct service models — from self
 service software to complete end-to-end compliance
 management. Choose the level of support that fits your team,
@@ -1014,7 +1013,7 @@ your capacity, and your ambition.</p>
         <!-- Obligations Context -->
         <section class="section-intro">
             <div class="section-tag">The Regulatory Landscape</div>
-            <h2>Six Mandatory <em>EU Obligations</em></h2>
+            <h2>Six Mandatory EU Obligations</h2>
             <p>Every exporter must meet these six statutory requirements to maintain permanent EU market access.</p>
         </section>
 
@@ -1236,16 +1235,12 @@ your capacity, and your ambition.</p>
 
         // Regional pricing display based on user location
         async function setRegionalPricing() {
-            const regionMsg = document.getElementById('geoPricingInfo');
-            if (!regionMsg) return;
-
             try {
                 const geoRes = await fetch('https://ipapi.co/json/');
                 if (!geoRes.ok) throw new Error('Geo lookup failed');
                 const geo = await geoRes.json();
 
                 const userCurrency = (geo.currency || 'INR').toUpperCase();
-                const userCountry = (geo.country_name || 'India');
 
                 const fallbackRates = {
                     INR: 1,
@@ -1259,6 +1254,7 @@ your capacity, and your ambition.</p>
                     AUD: 0.018,
                     SGD: 0.017,
                     ZAR: 0.22,
+                    JPY: 1.8,
                 };
 
                 const symbolMap = {
@@ -1272,6 +1268,7 @@ your capacity, and your ambition.</p>
                     AUD: 'A$',
                     SGD: 'S$',
                     ZAR: 'R',
+                    JPY: '¥',
                 };
 
                 const targetCurrency = symbolMap[userCurrency] ? userCurrency : 'USD';
@@ -1315,10 +1312,7 @@ your capacity, and your ambition.</p>
 
                     if (periodEl) periodEl.textContent = card.dataset.period || periodEl.textContent;
                 });
-
-                regionMsg.textContent = `${userCountry} detected — Pricing shown in ${targetCurrency}`;
             } catch (err) {
-                regionMsg.textContent = 'Could not detect location; defaulting to INR pricing.';
                 console.warn('Regional pricing detection failed:', err);
             }
         }
