@@ -14,11 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | EnCBAM Managed Compliance</title>
-    <meta name="description" content="EnCBAM pricing plans - Choose from Self-Service, Managed Reporting, or Compliance as a Service (CaaS). Flexible CBAM compliance solutions for every business size.">
-    <meta name="keywords" content="CBAM pricing, EnCBAM cost, CBAM compliance cost, carbon border adjustment pricing, EU CBAM services">
+    <meta name="description"
+        content="EnCBAM pricing plans - Choose from Self-Service, Managed Reporting, or Compliance as a Service (CaaS). Flexible CBAM compliance solutions for every business size.">
+    <meta name="keywords"
+        content="CBAM pricing, EnCBAM cost, CBAM compliance cost, carbon border adjustment pricing, EU CBAM services">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="CBAM Compliance Pricing - EnCBAM">
-    <meta property="og:description" content="Flexible CBAM compliance pricing for every business size. Self-Service, Managed, or CaaS plans.">
+    <meta property="og:description"
+        content="Flexible CBAM compliance pricing for every business size. Self-Service, Managed, or CaaS plans.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://encarbonsys.com/pages/pricing.html">
 
@@ -29,7 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
+
     <link rel="stylesheet" href="/assets/css/toc-addition.css">
     <style>
         :root {
@@ -362,7 +365,12 @@
 
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         th {
@@ -371,22 +379,44 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--mint);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            background: rgba(45, 179, 84, 0.12);
+            border-bottom: 2px solid var(--leaf);
+            backdrop-filter: blur(10px);
+        }
+
+        tbody tr {
+            transition: background 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(45, 179, 84, 0.05);
         }
 
         td {
             padding: 24px;
-            color: var(--text-main);
+            color: var(--text-muted);
             font-size: 15px;
-            font-weight: 300;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-weight: 400;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
+            transition: color 0.3s ease;
+        }
+
+        tbody tr:hover td {
+            color: #ffffff;
         }
 
         td:first-child {
             font-weight: 600;
             color: white;
             width: 35%;
+            border-left: 3px solid transparent;
+            transition: border-left-color 0.3s ease;
+        }
+
+        tbody tr:hover td:first-child {
+            border-left-color: var(--leaf);
         }
 
         .check-icon {
@@ -627,7 +657,8 @@
                 margin-bottom: 48px;
             }
 
-            th, td {
+            th,
+            td {
                 padding: 20px 12px;
                 font-size: 13px;
             }
@@ -803,7 +834,8 @@
                 margin-bottom: 32px;
             }
 
-            th, td {
+            th,
+            td {
                 padding: 16px 8px;
                 font-size: 12px;
             }
@@ -812,7 +844,8 @@
                 width: 40%;
             }
 
-            .check-icon, .minus-icon {
+            .check-icon,
+            .minus-icon {
                 font-size: 16px;
             }
 
@@ -878,36 +911,133 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <style>
+    .navbar {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        backdrop-filter: blur(25px);
+        background: rgba(10, 26, 15, 0.95);
+        border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        padding: 0.4rem 0;
+        transition: all 0.3s ease;
+    }
+    .nav-container {
+        max-width: 1400px; margin: 0 auto; padding: 0 1.5rem;
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+        font-size: 1.6rem; font-weight: 750; color: white; text-decoration: none;
+        background: linear-gradient(135deg, var(--cosmic-green, #00df81) 0%, var(--cosmic-accent, #7dd49a) 100%);
+        background-clip: text;
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        display: flex; align-items: center; gap: 0.4rem;
+        filter: drop-shadow(0 0 0 transparent); transition: all 0.3s ease;
+    }
+    .logo:hover { filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.6)); }
+    .logo img { height: 48px; transition: all 0.3s ease; }
+    .logo:hover img { transform: scale(1.05); filter: brightness(1.2); }
+    .nav-links {
+        display: flex; gap: 1.5rem; list-style: none; align-items: center;
+    }
+    .nav-links a {
+        color: rgba(255, 255, 255, 0.9); text-decoration: none;
+        font-weight: 500; transition: all 0.3s ease; position: relative;
+        font-size: 0.9rem; letter-spacing: 0.5px; padding: 0.5rem 0;
+    }
+    .nav-links a::after {
+        content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+        background: var(--cosmic-green, #00df81); transition: width 0.3s ease; box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+    }
+    .nav-links a:hover { color: var(--cosmic-green, #00df81); text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: #00ff88; }
+    .nav-links a.active::after { width: 100%; }
+    .dropdown { position: relative; }
+    .dropdown-toggle { display: flex; align-items: center; gap: 0.3rem; cursor: pointer; }
+    .dropdown-toggle i { font-size: 0.75rem; transition: transform 0.3s ease; }
+    .dropdown:hover .dropdown-toggle i { transform: rotate(180deg); }
+    .dropdown-menu {
+        position: absolute; top: 100%; left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(10, 26, 15, 0.98); backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 8px;
+        padding: 0.5rem 0; min-width: 220px; list-style: none;
+        opacity: 0; visibility: hidden; transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    .dropdown:hover .dropdown-menu {
+        opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+    }
+    .dropdown-menu li { width: 100%; }
+    .dropdown-menu a {
+        display: block; padding: 0.75rem 1.5rem; color: rgba(255, 255, 255, 0.9);
+        text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+    }
+    .dropdown-menu a:hover {
+        background: rgba(0, 255, 136, 0.1); border-left-color: #00ff88;
+        color: #00ff88; padding-left: 1.75rem;
+    }
+    .nav-login, .nav-cta {
+        text-decoration: none !important; display: inline-flex !important;
+        align-items: center; justify-content: center;
+    }
+    .nav-login::after, .nav-cta::after { display: none !important; }
+    .nav-login {
+        color: var(--cosmic-green, #00df81) !important; padding: 0.65rem 1.8rem !important;
+        border: 1px solid rgba(0, 255, 136, 0.5); border-radius: 50px; font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.88rem;
+        backdrop-filter: blur(10px); background: rgba(0, 255, 136, 0.05);
+    }
+    .nav-login:hover {
+        background: rgba(0, 255, 136, 0.15); box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        border-color: var(--cosmic-green, #00df81); transform: translateY(-2px);
+    }
+    .nav-cta {
+        color: #000 !important; padding: 0.75rem 2rem !important;
+        border-radius: 50px; font-weight: 750; text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.9rem;
+        box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+        background: linear-gradient(135deg, var(--cosmic-green, #00df81) 0%, var(--cosmic-accent, #7dd49a) 100%);
+        border: none; white-space: nowrap;
+    }
+    .nav-cta:hover {
+        transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+        filter: brightness(1.1);
+    }
+    @media (max-width: 768px) {
+        .nav-links { display: none; }
+    }
+    </style>
+
+    <nav class="navbar" id="encarbonsys-navbar">
         <div class="nav-container">
-            <a href="/" class="logo" id="logoLink">
-                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png"
-                    alt="EnCarbonSys Logo">
+            <a href="../index-new.html" class="logo">
+                <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys Logo">
                 EnCarbonSys
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="encav-mobileBtn" aria-label="Toggle Navigation" style="display:none;">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/#problem">Problem</a></li>
-                <li><a href="/#solution">Solution</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/cbam-blog/">Blog</a></li>
-                <li class="dropdown" id="toolsDropdown">
+            <ul class="nav-links" id="encav-navLinks">
+                <li><a href="../index-new.html#problem">Problem</a></li>
+                <li><a href="../index-new.html#solution">Solution</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li class="dropdown" id="encav-toolsDropdown">
                     <a href="#" class="dropdown-toggle">
                         Tools <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="https://cbam-tools.encarbonsys.com">CN Code Checker</a></li>
-                        <li><a href="https://cbam-tools.encarbonsys.com/tools/emissions-calculator">Emissions
-                                Calculator</a></li>
-                        <li><a href="https://cbam-tools.encarbonsys.com/tools/cbam-cost-estimator">CBAM Cost
-                                Estimator</a></li>
+                        <li><a href="https://cbam-tools.encarbonsys.com/tools/emissions-calculator">Emissions Calculator</a></li>
+                        <li><a href="https://cbam-tools.encarbonsys.com/tools/cbam-cost-estimator">CBAM Cost Estimator</a></li>
                     </ul>
                 </li>
-                <li><a href="/pages/client-resource.html">Client Hub</a></li>
-                <li><a href="/#cta" class="nav-cta">Get Started</a></li>
+                <li><a href="../cbam-blog/">Blog</a></li>
+                <li><a href="../index-new.html#faq">FAQ</a></li>
+                <li class="nav-cta-group" style="display:flex;align-items:center;gap:0.8rem;margin-left:1rem;">
+                    <a href="https://encam.encarbonsys.com/login" class="nav-login">Login</a>
+                    <a href="../index-new.html#cta" class="nav-cta">Get Started</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -926,11 +1056,12 @@
         <div class="container">
             <div class="section-tag animate-in">The Right Model Starts Here</div>
             <h1 class="animate-in"><span style="color: var(--leaf);">CBAM</span> Compliance</h1>
-            <p class="animate-in" style="font-size:22px;font-weight:600;color:white;margin-bottom:12px;">Your Way, Your Pace</p>
+            <p class="animate-in" style="font-size:22px;font-weight:600;color:white;margin-bottom:12px;">Your Way, Your
+                Pace</p>
             <p class="animate-in">EnCarbonSys offers three distinct service models — from self
-service software to complete end-to-end compliance
-management. Choose the level of support that fits your team,
-your capacity, and your ambition.</p>
+                service software to complete end-to-end compliance
+                management. Choose the level of support that fits your team,
+                your capacity, and your ambition.</p>
         </div>
     </header>
 
@@ -943,7 +1074,8 @@ your capacity, and your ambition.</p>
                     <span class="tier-id">Model 01</span>
                     <h3 class="tier-title">EnCBAM™<br>Self-Service</h3>
                     <div class="tier-price" data-base-inr="125000" data-period="/yr /factory">
-                        <span class="currency">₹</span><span class="amount">1,25,000</span><span class="period">/yr /factory</span>
+                        <span class="currency">₹</span><span class="amount">1,25,000</span><span class="period">/yr
+                            /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">Ideal for teams with dedicated staff who want expert-grade tooling to run compliance
@@ -967,7 +1099,8 @@ your capacity, and your ambition.</p>
                     <span class="tier-id">Model 02</span>
                     <h3 class="tier-title">Managed<br>Reporting</h3>
                     <div class="tier-price" data-base-inr="250000" data-period="/yr /factory">
-                        <span class="currency">₹</span><span class="amount">2,50,000</span><span class="period">/yr /factory</span>
+                        <span class="currency">₹</span><span class="amount">2,50,000</span><span class="period">/yr
+                            /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">You share documents — we process and generate your CBAM reports from scratch.</p>
@@ -991,7 +1124,8 @@ your capacity, and your ambition.</p>
                     <span class="tier-id">Model 03</span>
                     <h3 class="tier-title">Compliance as a Service (CaaS)</h3>
                     <div class="tier-price" data-base-inr="450000" data-period="/yr /factory">
-                        <span class="currency">₹</span><span class="amount">4,50,000</span><span class="period">/yr /factory</span>
+                        <span class="currency">₹</span><span class="amount">4,50,000</span><span class="period">/yr
+                            /factory</span>
                     </div>
                 </div>
                 <p class="tier-for">Complete delegation. We act as your technical CBAM partner across all EU
@@ -1007,46 +1141,6 @@ your capacity, and your ambition.</p>
                 </ul>
                 <a href="https://encbam.encarbonsys.com/login#create-account" class="btn-pricing">Start Your Free
                     Trial</a>
-            </div>
-        </div>
-
-        <!-- Obligations Context -->
-        <section class="section-intro">
-            <div class="section-tag">The Regulatory Landscape</div>
-            <h2>Six Mandatory EU Obligations</h2>
-            <p>Every exporter must meet these six statutory requirements to maintain permanent EU market access.</p>
-        </section>
-
-        <div class="obligations-grid">
-            <div class="obl-card">
-                <div class="obl-num">01</div>
-                <h4>O3CI Portal Registration</h4>
-                <p>Establishing presence on the official operator portal to maintain verified registry data.</p>
-            </div>
-            <div class="obl-card">
-                <div class="obl-num">02</div>
-                <h4>Monitoring Plan</h4>
-                <p>Drafting a CBAM-compliant Monitoring Methodology Document—the bedrock of your compliance.</p>
-            </div>
-            <div class="obl-card">
-                <div class="obl-num">03</div>
-                <h4>Embedded Emissions</h4>
-                <p>Tracking direct and indirect emissions with audit-defensible records across all processes.</p>
-            </div>
-            <div class="obl-card">
-                <div class="obl-num">04</div>
-                <h4>Annual CBAM Reports</h4>
-                <p>Producing and submitting reports in official EU formats every reporting period without fail.</p>
-            </div>
-            <div class="obl-card">
-                <div class="obl-num">05</div>
-                <h4>Third-Party Verification</h4>
-                <p>Coordinating reviews by EU-accredited independent verifiers to ensure regulatory trust.</p>
-            </div>
-            <div class="obl-card">
-                <div class="obl-num">06</div>
-                <h4>SEFA & Carbon Price</h4>
-                <p>Calculating allocations and carbon pricing logic to avoid double taxation penalties.</p>
             </div>
         </div>
 
@@ -1124,8 +1218,8 @@ your capacity, and your ambition.</p>
                     <span class="addon-tag">Flexible Support Scaling</span>
                     <h2 class="addon-title">Additional Expert<br>Support Services</h2>
                     <p style="color: var(--text-muted); font-size: 16px; font-weight: 300; margin-bottom: 32px;">
-                        Boost your Model 01 or 02 package with these expert-led add-ons. 
-                        </p>
+                        Boost your Model 01 or 02 package with these expert-led add-ons.
+                    </p>
                     <a href="EnCarbonSys_Services_Brochure-2026.html" class="cta-button secondary"
                         style="display: inline-flex; align-items: center; gap: 10px;">
                         <i class="fas fa-file-download"></i> Download Service Brochure
@@ -1152,7 +1246,7 @@ your capacity, and your ambition.</p>
                         <a href="https://wa.me/919620828005" class="addon-price" style="text-decoration:none;">Contact
                             Us &#x2192;</a>
                     </div>
-                   
+
                 </div>
             </div>
         </div>

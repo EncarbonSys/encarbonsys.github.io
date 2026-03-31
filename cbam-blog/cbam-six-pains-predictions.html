@@ -19,7 +19,7 @@
     <link rel="canonical" href="https://encarbonsys.com/cbam-blog/cbam-six-pains-predictions.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
+    
     <style>
         * {
             margin: 0;
@@ -480,27 +480,8 @@
     <link rel="canonical" href="https://encarbonsys.com/cbam-blog/cbam-six-pains-predictions.html" />
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-        fetch('/components/navbar.html')
-            .then(r => r.text())
-            .then(html => {
-                const navbarContainer = document.getElementById('navbar');
-                navbarContainer.innerHTML = html;
-                
-                // Extract and execute scripts from the injected HTML
-                const scripts = navbarContainer.getElementsByTagName('script');
-                for (let i = 0; i < scripts.length; i++) {
-                    const newScript = document.createElement('script');
-                    if (scripts[i].src) {
-                        newScript.src = scripts[i].src;
-                    } else {
-                        newScript.textContent = scripts[i].textContent;
-                    }
-                    document.body.appendChild(newScript);
-                }
-            });
-    </script>
+    <div id="navbar-placeholder"></div>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <div class="article-layout">
         <!-- Table of Contents Sidebar -->
