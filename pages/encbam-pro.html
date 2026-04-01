@@ -451,6 +451,106 @@
                 display: none !important;
             }
         }
+
+        @media (max-width: 768px) {
+            .encbam-page {
+                padding: 40px 1.5rem;
+                min-height: auto;
+                height: auto;
+            }
+
+            .encbam-grid-2, .encbam-grid-3 {
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+            }
+
+            .encbam-page h1 {
+                font-size: clamp(2.5rem, 10vw, 4rem) !important;
+                line-height: 1.1;
+                margin: 40px 0 20px 0 !important;
+            }
+
+            .encbam-page h2 {
+                font-size: clamp(2rem, 8vw, 3rem) !important;
+            }
+
+            .encbam-page h3 {
+                font-size: clamp(1.5rem, 6vw, 2rem) !important;
+            }
+
+            .encbam-page p {
+                font-size: 1.1rem !important;
+            }
+
+            .encbam-tagline {
+                font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+                margin-bottom: 30px !important;
+            }
+
+            .encbam-subtitle {
+                font-size: 1.1rem !important;
+            }
+
+            .encbam-page li {
+                font-size: 1.1rem !important;
+                padding-left: 30px;
+            }
+
+            .encbam-page li::before {
+                font-size: 20px;
+            }
+
+            .encbam-quote-box {
+                font-size: 1.25rem !important;
+                padding: 2rem !important;
+                border-left-width: 6px !important;
+                border-radius: 12px 12px 12px 12px !important;
+            }
+
+            .encbam-comparison-table th {
+                display: none;
+            }
+
+            .encbam-comparison-table td {
+                display: block;
+                width: 100%;
+                font-size: 16px !important;
+                padding: 1rem !important;
+            }
+
+            .encbam-comparison-table tr td:first-child,
+            .encbam-comparison-table tr td:last-child {
+                border-radius: 8px !important;
+                margin-top: 10px;
+            }
+
+            /* Architecture Grid Stacking */
+            div[style*="grid-template-columns: 1.1fr 320px 1.1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            div[style*="width: 240px; height: 240px"] {
+                width: 180px !important;
+                height: 180px !important;
+                margin: 0 auto;
+            }
+
+            /* Final Hero Page */
+            .encbam-page-cover h2 {
+                font-size: clamp(2.5rem, 10vw, 4rem) !important;
+            }
+            
+            .encbam-page-cover p {
+                font-size: 1.25rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            div[style*="font-size: 64px; font-weight: bold"] {
+                font-size: 1.5rem !important;
+                padding: 20px !important;
+            }
+        }
     </style>
 </head>
 

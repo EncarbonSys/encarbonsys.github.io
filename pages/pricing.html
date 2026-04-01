@@ -481,32 +481,30 @@
             .addon-grid,
             .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             h1 {
                 font-size: clamp(2.5rem, 8vw, 4rem);
             }
 
-            .addon-grid {
-                gap: 40px;
-            }
-
-            .comparison-wrap {
+            .addon-section {
                 padding: 40px 20px;
             }
-
-            .addon-section {
-                padding: 40px;
+            
+            .pricing-card {
+                max-width: 500px;
+                margin: 0 auto;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px;
+                padding: 0 1.5rem;
             }
 
             .pricing-header {
-                padding: 120px 0 60px;
+                padding: 100px 0 40px;
                 text-align: center;
             }
 
@@ -517,59 +515,79 @@
             }
 
             .pricing-header p {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 margin-bottom: 20px;
             }
 
             .pricing-grid {
-                gap: 24px;
-                margin-bottom: 60px;
+                gap: 1.5rem;
+                margin-bottom: 4rem;
             }
 
             .pricing-card {
-                padding: 40px 24px;
-                border-radius: 24px;
+                padding: 2rem 1.5rem;
+                border-radius: 20px;
             }
 
             .tier-title {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             .tier-price {
-                font-size: 32px;
+                font-size: 28px;
                 margin-bottom: 8px;
             }
+            
+            .tier-price .amount { font-size: 1.2em; }
 
             /* Table Mobile Fix */
             .comparison-wrap h2 {
-                font-size: 2rem;
-                margin-bottom: 32px;
+                font-size: 1.75rem;
+                margin-bottom: 2rem;
+                text-align: center;
             }
 
             .table-responsive {
-                margin: 0 -20px;
-                padding: 0 20px;
-                -webkit-overflow-scrolling: touch;
+                margin: 0 -1.5rem;
+                padding: 0 1.5rem;
+                position: relative;
+            }
+            
+            .table-responsive::after {
+                content: 'Scroll →';
+                position: absolute;
+                bottom: -20px;
+                right: 1.5rem;
+                font-size: 10px;
+                color: var(--leaf);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                opacity: 0.7;
             }
 
             table {
-                min-width: 600px;
+                min-width: 700px;
             }
 
             th, td {
-                padding: 16px 12px;
+                padding: 1rem 0.75rem;
                 font-size: 13px;
             }
 
             .addon-title {
-                font-size: 2rem;
+                font-size: 1.75rem;
+                text-align: center;
             }
 
             .addon-item {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
+                align-items: center;
+                text-align: center;
+                gap: 0.5rem;
+                padding: 1.5rem 0;
             }
+            
+            .addon-name { font-size: 15px; }
         }
     </style>
 </head>
