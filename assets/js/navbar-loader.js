@@ -140,6 +140,15 @@
         color: #00ff88;
         padding-left: 1.75rem;
     }
+    
+    /* Desktop Hover Support */
+    @media (min-width: 769px) {
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
     .nav-login {
         color: rgba(255, 255, 255, 0.85) !important;
         padding: 0.45rem 1.8rem;
@@ -262,7 +271,7 @@
             <li><a href="/cbam-blog/">Blog</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li class="nav-cta-group" style="display:flex;align-items:center;gap:1rem;margin-left:1rem;">
-                <a href="https://encam.encarbonsys.com/login" class="nav-login">Login</a>
+                <a href="https://encbam.encarbonsys.com/login" class="nav-login">Login</a>
                 <a href="/#cta" class="nav-cta">Get Started</a>
             </li>
         </ul>
@@ -295,7 +304,8 @@
 
         if (toolsDrop) {
             toolsDrop.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
+                // Toggle on click for all devices (useful for touch and accessibility)
+                if (e.target.closest('.dropdown-toggle')) {
                     e.preventDefault();
                     e.stopPropagation();
                     this.classList.toggle('active');

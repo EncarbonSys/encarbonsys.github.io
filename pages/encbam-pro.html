@@ -176,6 +176,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
+            align-items: center;
+        }
+
+        .encbam-grid-screenshot {
+            grid-template-columns: 0.8fr 1.2fr !important;
         }
 
         .encbam-grid-3 {
@@ -233,17 +238,28 @@
         }
 
         .encbam-screenshot-container {
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            border: 8px solid var(--encbam-white);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             width: 100%;
+            transform: perspective(2000px) rotateY(-10deg) rotateX(5deg) skewY(-1deg);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: var(--encbam-white);
+            position: relative;
+        }
+
+        .encbam-screenshot-container:hover {
+            transform: perspective(2000px) rotateY(0deg) rotateX(0deg) skewY(0deg) scale(1.02);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+            z-index: 10;
         }
 
         .encbam-screenshot-container img {
             width: 100%;
             height: auto;
             display: block;
+            filter: brightness(1.02);
         }
 
         .encbam-quote-box {
@@ -423,6 +439,17 @@
 
             to {
                 transform: rotate(360deg);
+            }
+        }
+
+        @keyframes encbam-pulse {
+            0%, 100% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4));
+            }
+            50% {
+                transform: scale(1.15);
+                filter: drop-shadow(0 0 40px rgba(16, 185, 129, 0.6));
             }
         }
 
@@ -837,7 +864,7 @@
     <!-- PAGE 6: DASHBOARD MODULE -->
     <div class="encbam-page" style="background: #F0FFF4;">
         <div class="encbam-section-tag">Core Module 01</div>
-        <div class="encbam-grid-2" style="align-items: center; height: 100%;">
+        <div class="encbam-grid-2 encbam-grid-screenshot" style="align-items: center; height: 100%;">
             <div>
                 <h2 style="font-size: 64px;">CBAM Dashboard</h2>
                 <p><strong>One‑screen CBAM readiness. Early detection of data gaps.</strong></p>
@@ -895,7 +922,7 @@
     <!-- PAGE 8: PRECURSOR CONFIGURATION -->
     <div class="encbam-page encbam-page-gray">
         <div class="encbam-section-tag">Core Module 04</div>
-        <div class="encbam-grid-2" style="align-items: start; gap: 40px;">
+        <div class="encbam-grid-2 encbam-grid-screenshot" style="align-items: start; gap: 40px;">
             <div class="h-full-flex">
                 <div>
                     <h2>Precursor Configuration</h2>
@@ -920,7 +947,7 @@
     <!-- PAGE 9: MONTHLY MONITORING ENGINE -->
     <div class="encbam-page">
         <div class="encbam-section-tag">Core Module 05</div>
-        <div class="encbam-grid-2" style="height: 100%; align-items: center;">
+        <div class="encbam-grid-2 encbam-grid-screenshot" style="height: 100%; align-items: center;">
             <div>
                 <h2 style="font-size: 64px; white-space: nowrap;">Monthly Monitoring Engine</h2>
                 <p class="encbam-bold-stmt" style="font-size: 40px; margin-bottom: 40px;">This is the heart of EnCBAM.
@@ -952,7 +979,7 @@
             emissions (electricity) with method-specific inputs. <strong>Solves incorrect formulas & inconsistent
                 methods.</strong></p>
 
-        <div class="encbam-grid-2" style="gap: 40px;">
+        <div class="encbam-grid-2 encbam-grid-screenshot" style="gap: 40px;">
             <div>
                 <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--encbam-dark-gray);">
                     Direct
@@ -989,7 +1016,7 @@
 
         <div style="width: 100%; margin-top: 20px;">
             <div class="encbam-screenshot-container"
-                style="width: 100%; z-index: 1; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+                style="width: 100%; z-index: 1;">
                 <img src="../assets/images/attributed.png" alt="Attributed Emissions">
             </div>
         </div>
@@ -998,7 +1025,7 @@
     <!-- PAGE 12: AUDIT & REPORTING -->
     <div class="encbam-page">
         <div class="encbam-section-tag">Core Module 08 & 09</div>
-        <div class="encbam-grid-2" style="margin-bottom: 40px; align-items: flex-end;">
+        <div class="encbam-grid-2 encbam-grid-screenshot" style="margin-bottom: 40px; align-items: flex-end;">
             <div>
                 <h2>Evidence & Audit Logs</h2>
                 <p style="font-size: 28px; margin-bottom: 30px;">Every action logged. Every change
@@ -1258,7 +1285,10 @@
                         <div
                             style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.1), transparent); animation: encbam-spin 20s linear infinite;">
                         </div>
-                        <div style="position: relative; z-index: 1; text-align: center;">
+                        <div style="position: relative; z-index: 1; text-align: center; transform: scale(1.1);">
+                            <img src="https://image2url.com/r2/default/images/1767526716014-7ef837d0-8f5e-4306-858a-ab330facbb42.png" 
+                                 alt="EnCarbonSys Core" 
+                                 style="width: 160px; height: auto; opacity: 1; filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4)); animation: encbam-pulse 4s ease-in-out infinite;">
                         </div>
                     </div>
 
