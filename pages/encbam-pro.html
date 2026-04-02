@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnCBAM Product Pitch</title>
+    <title>EnCBAM Features</title>
     <meta name="description"
         content="EnCBAM Pro - Automated CBAM compliance solution for Indian exporters. Calculate emissions, manage supplier data, and submit EU reports effortlessly.">
     <meta name="robots" content="index, follow">
@@ -179,8 +179,12 @@
             align-items: center;
         }
 
-        .encbam-grid-screenshot {
-            grid-template-columns: 0.8fr 1.2fr !important;
+        .encbam-grid-screenshot-left {
+            grid-template-columns: 1.3fr 0.7fr !important;
+        }
+
+        .encbam-grid-screenshot-right {
+            grid-template-columns: 0.7fr 1.3fr !important;
         }
 
         .encbam-grid-3 {
@@ -443,10 +447,13 @@
         }
 
         @keyframes encbam-pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1.1);
                 filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4));
             }
+
             50% {
                 transform: scale(1.15);
                 filter: drop-shadow(0 0 40px rgba(16, 185, 129, 0.6));
@@ -486,7 +493,8 @@
                 height: auto;
             }
 
-            .encbam-grid-2, .encbam-grid-3 {
+            .encbam-grid-2,
+            .encbam-grid-3 {
                 grid-template-columns: 1fr !important;
                 gap: 2rem;
             }
@@ -556,7 +564,7 @@
                 grid-template-columns: 1fr !important;
                 gap: 2rem !important;
             }
-            
+
             div[style*="width: 240px; height: 240px"] {
                 width: 180px !important;
                 height: 180px !important;
@@ -567,12 +575,12 @@
             .encbam-page-cover h2 {
                 font-size: clamp(2.5rem, 10vw, 4rem) !important;
             }
-            
+
             .encbam-page-cover p {
                 font-size: 1.25rem !important;
                 margin-bottom: 2rem !important;
             }
-            
+
             div[style*="font-size: 64px; font-weight: bold"] {
                 font-size: 1.5rem !important;
                 padding: 20px !important;
@@ -922,24 +930,22 @@
     <!-- PAGE 8: PRECURSOR CONFIGURATION -->
     <div class="encbam-page encbam-page-gray">
         <div class="encbam-section-tag">Core Module 04</div>
-        <div class="encbam-grid-2 encbam-grid-screenshot" style="align-items: start; gap: 40px;">
-            <div class="h-full-flex">
-                <div>
-                    <h2>Precursor Configuration</h2>
-                    <p style="font-size: 28px;">Raw material mapping, Supplier & country attribution, CN‑code
-                        validation.</p>
-                    <p class="encbam-bold-stmt">Pain solved: Precursor chaos and double counting.</p>
-                </div>
-                <div class="encbam-screenshot-container" style="margin-top: 20px;">
-                    <img src="../assets/images/precursor.png" alt="Precursor Configuration">
-                </div>
+        <div class="encbam-grid-2 encbam-grid-screenshot-left" style="align-items: center; gap: 60px;">
+            <div class="encbam-screenshot-container">
+                <img src="../assets/images/precursor.png" alt="Precursor Configuration">
             </div>
-            <div class="h-full-flex">
-                <div class="encbam-card" style="margin-top: 30px; background: #fff;">
-                    <p><strong>Monthly Tracking:</strong></p>
-                    <p>Track quantities and suppliers monthly to ensure precise weighted average calculations at
-                        year-end.</p>
+            <div>
+                <h2>Precursor Configuration</h2>
+                <p style="font-size: 24px; line-height: 1.4;">Raw material mapping, Supplier & country attribution,
+                    CN‑code validation.</p>
+                <div class="encbam-card" style="margin-top: 30px; background: #fff; padding: 30px;">
+                    <p style="color: var(--encbam-primary-green); font-weight: bold; margin-bottom: 10px;">Monthly
+                        Tracking:</p>
+                    <p style="font-size: 18px;">Track quantities and suppliers monthly to ensure precise weighted
+                        average calculations at year-end.</p>
                 </div>
+                <p class="encbam-bold-stmt" style="margin-top: 30px;">Pain solved: Precursor chaos and double counting.
+                </p>
             </div>
         </div>
     </div>
@@ -947,7 +953,7 @@
     <!-- PAGE 9: MONTHLY MONITORING ENGINE -->
     <div class="encbam-page">
         <div class="encbam-section-tag">Core Module 05</div>
-        <div class="encbam-grid-2 encbam-grid-screenshot" style="height: 100%; align-items: center;">
+        <div class="encbam-grid-2 encbam-grid-screenshot-right" style="height: 100%; align-items: center;">
             <div>
                 <h2 style="font-size: 64px; white-space: nowrap;">Monthly Monitoring Engine</h2>
                 <p class="encbam-bold-stmt" style="font-size: 40px; margin-bottom: 40px;">This is the heart of EnCBAM.
@@ -979,7 +985,7 @@
             emissions (electricity) with method-specific inputs. <strong>Solves incorrect formulas & inconsistent
                 methods.</strong></p>
 
-        <div class="encbam-grid-2 encbam-grid-screenshot" style="gap: 40px;">
+        <div class="encbam-grid-2" style="gap: 40px;">
             <div>
                 <div style="font-weight: bold; margin-bottom: 15px; font-size: 24px; color: var(--encbam-dark-gray);">
                     Direct
@@ -1015,8 +1021,7 @@
         </div>
 
         <div style="width: 100%; margin-top: 20px;">
-            <div class="encbam-screenshot-container"
-                style="width: 100%; z-index: 1;">
+            <div class="encbam-screenshot-container" style="width: 100%; z-index: 1;">
                 <img src="../assets/images/attributed.png" alt="Attributed Emissions">
             </div>
         </div>
@@ -1286,9 +1291,9 @@
                             style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.1), transparent); animation: encbam-spin 20s linear infinite;">
                         </div>
                         <div style="position: relative; z-index: 1; text-align: center; transform: scale(1.1);">
-                            <img src="https://image2url.com/r2/default/images/1767526716014-7ef837d0-8f5e-4306-858a-ab330facbb42.png" 
-                                 alt="EnCarbonSys Core" 
-                                 style="width: 160px; height: auto; opacity: 1; filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4)); animation: encbam-pulse 4s ease-in-out infinite;">
+                            <img src="https://image2url.com/r2/default/images/1767526716014-7ef837d0-8f5e-4306-858a-ab330facbb42.png"
+                                alt="EnCarbonSys Core"
+                                style="width: 160px; height: auto; opacity: 1; filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4)); animation: encbam-pulse 4s ease-in-out infinite;">
                         </div>
                     </div>
 
