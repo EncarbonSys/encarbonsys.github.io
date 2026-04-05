@@ -865,7 +865,7 @@
                     </div>
                     <div class="reference-item">
                         <strong>O3CI Operators Portal:</strong> <a
-                            href="https://taxation-customs.ec.europa.eu/customs-4/carbon-border-adjustment-mechanism_en"
+                            href="https://cbam.ec.europa.eu/o3cinstallation/"
                             target="_blank" rel="noopener">Access Registry Portal</a>
                     </div>
                 </div>
@@ -929,13 +929,13 @@
 
         // Highlight active section in TOC
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
+            const sections = document.querySelectorAll('section[id], h2[id], h3[id]');
             const tocLinks = document.querySelectorAll('.toc-list a');
 
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 120) {
+                if (window.pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });

@@ -697,7 +697,7 @@
                 <ul>
                     <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2025/486/oj" target="_blank">Commission Implementing Regulation (EU) 2025/486 - Authorised Declarant Requirements</a></li>
                     <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
-                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                    <li><a href="https://cbam.ec.europa.eu/o3cinstallation/" target="_blank">European Commission - O3CI Registration Portal</a></li>
                     <li><a href="https://ec.europa.eu/taxation_customs/dds2/eos/eori_home.jsp" target="_blank">EORI Number Registration System</a></li>
                     <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU ETS - Carbon Pricing Information</a></li>
                     <li><a href="https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-import-and-export-0/customs-procedures/economic-operators-registration-and-identification-number-eori_en" target="_blank">EORI Registration Guide</a></li>
@@ -737,13 +737,13 @@
 
         // Highlight active section in TOC
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('h2[id], h3[id]');
+            const sections = document.querySelectorAll('section[id], h2[id], h3[id]');
             const tocLinks = document.querySelectorAll('.toc-list a');
 
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 120) {
+                if (window.pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });

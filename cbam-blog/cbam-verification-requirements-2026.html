@@ -739,7 +739,8 @@
                     <h2>References</h2>
                     <ul>
                         <li>
-                            <strong>EU CBAM Portal:</strong> <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en</a><br>
+                            <strong>European Commission - O3CI Registration Portal:</strong> <a href="https://cbam.ec.europa.eu/o3cinstallation/" target="_blank">https://cbam.ec.europa.eu/o3cinstallation/</a>
+<br>
                             <em>Official European Commission portal for CBAM information, guidance, and updates</em>
                         </li>
                         <li>
@@ -797,9 +798,9 @@
 
         // Highlight active section in TOC
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.article-content h2[id], .article-content h3[id]');
+            const sections = document.querySelectorAll('section[id], h2[id], h3[id]');
             const tocLinks = document.querySelectorAll('.toc-list a');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;

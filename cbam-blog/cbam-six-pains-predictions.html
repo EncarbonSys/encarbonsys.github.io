@@ -690,7 +690,7 @@
                 <h2><i class="fas fa-book"></i> Official Resources & Citations</h2>
                 <ul>
                     <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank">EU CBAM Regulation (EU) 2023/956 - Official Text</a></li>
-                    <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank">European Commission - CBAM Official Page</a></li>
+                    <li><a href="https://cbam.ec.europa.eu/o3cinstallation/" target="_blank">European Commission - O3CI Registration Portal</a></li>
                     <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank">EU Emissions Trading System (EU ETS)</a></li>
                     <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2023_228_R_0006" target="_blank">CBAM Implementing Regulation - Emissions Calculation Methods</a></li>
                     <li><a href="https://ghgprotocol.org/corporate-standard" target="_blank">GHG Protocol - Corporate Accounting and Reporting Standard</a></li>
@@ -719,7 +719,7 @@
 
         // Highlight active section in TOC
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.article-content h2[id]');
+            const sections = document.querySelectorAll('section[id], h2[id], h3[id]');
             const tocLinks = document.querySelectorAll('.toc-list a');
             
             let current = '';
