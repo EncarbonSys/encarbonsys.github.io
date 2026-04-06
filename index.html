@@ -41,8 +41,7 @@
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/whatsapp-widget.css">
     <!-- Animation Libraries (GSAP) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <!-- JSON-LD Structured Data: Organisation + Website -->
     <script type="application/ld+json">
     {
@@ -122,6 +121,7 @@
                 radial-gradient(circle at 40% 40%, var(--cosmic-glow) 0%, transparent 50%);
             animation: cosmicPulse 12s ease-in-out infinite alternate;
             z-index: -2;
+            will-change: transform, opacity;
         }
 
         body::after {
@@ -140,6 +140,7 @@
             background-size: 200px 150px;
             animation: sparkle 20s linear infinite;
             z-index: -1;
+            will-change: transform;
         }
 
         @keyframes cosmicPulse {
@@ -2869,7 +2870,7 @@
                         One System. Full CBAM Lifecycle</h3>
                     <div class="animation-container"
                         style="width: 100%; max-width: 1200px; margin: 0 auto; border: 1px solid rgba(0, 255, 136, 0.2); box-shadow: 0 0 50px rgba(0, 255, 136, 0.1);">
-                        <iframe src="components/product_launch_animation.html" scrolling="no"></iframe>
+                        <iframe src="components/product_launch_animation.html" scrolling="no" loading="lazy"></iframe>
                     </div>
 
                     <!-- CTA Buttons below the Modal -->
@@ -3934,15 +3935,15 @@ INTEGRATION INSTRUCTIONS:
     </footer>
     <script>
         // Loading screen
-        // Loading screen
-        window.addEventListener('load', () => {
-            hidePreloader();
+        document.addEventListener('DOMContentLoaded', () => {
+            // Give a tiny bit of extra time for critical DOM pieces to settle
+            setTimeout(hidePreloader, 300);
         });
 
-        // Safety fallback: Hide preloader after 5 seconds regardless of load state
+        // Safety fallback: Hide preloader after 3 seconds regardless of load state
         setTimeout(() => {
             hidePreloader();
-        }, 5000);
+        }, 3000);
 
         function hidePreloader() {
             const loadingOverlay = document.getElementById('loadingOverlay');
@@ -3976,10 +3977,7 @@ INTEGRATION INSTRUCTIONS:
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
-                    // Add small delay to prevent overlapping animations
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, 100);
+                    entry.target.classList.add('visible');
                     // Animate counters when dashboard comes into view
                     const counters = entry.target.querySelectorAll('.counter');
                     counters.forEach(counter => {
@@ -4020,17 +4018,38 @@ INTEGRATION INSTRUCTIONS:
                 });
             });
             // Navbar scroll effect
+            // Local variables for scroll tracking
             let lastScrollTop = 0;
             const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
+            let scrollTicking = false;
+
+            function onScroll() {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
+                
+                // Navbar hide/show logic
+                if (Math.abs(lastScrollTop - scrollTop) > 5) { // Threshold to prevent jitter
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        navbar.style.transform = 'translateY(-101%)'; // Slightly more to hide shadow
+                    } else {
+                        navbar.style.transform = 'translateY(0)';
+                    }
                 }
+                
+                // Parallax logic
+                if (scrollTop < window.innerHeight) {
+                    updateParallax(scrollTop);
+                }
+                
                 lastScrollTop = scrollTop;
-            });
+                scrollTicking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!scrollTicking) {
+                    requestAnimationFrame(onScroll);
+                    scrollTicking = true;
+                }
+            }, { passive: true });
             // Logo click to scroll to top
             document.getElementById('logoLink').addEventListener('click', function (e) {
                 e.preventDefault();
@@ -4149,21 +4168,20 @@ INTEGRATION INSTRUCTIONS:
             });
         });
         // Optimized parallax effect with throttling
-        let ticking = false;
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
+        // Re-use the ticking logic for parallax if needed, or keep separate but throttled
+        // Note: Parallax is already using requestAnimationFrame above. 
+        // I'll group it into the main scroll listener for maximum performance.
+        
+        function updateParallax(scrolled) {
             const hero = document.querySelector('.hero');
             if (hero && scrolled < window.innerHeight) {
                 hero.style.transform = `translateY(${scrolled * 0.3}px)`;
             }
-            ticking = false;
         }
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
+        
+        // Revised main scroll listener already added above. 
+        // I will now append parallax call to the onScroll function in the next step or here.
+        // Actually, let's keep parallax separate but ensures it is also efficient.
 
         // Carousel Rotation Animation - Pure CSS driven
         // Animation delays handle the smooth vertical scrolling effect
@@ -4245,6 +4263,8 @@ INTEGRATION INSTRUCTIONS:
             }
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </body>
 
 </html>
