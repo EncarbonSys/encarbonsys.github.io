@@ -136,7 +136,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
-            margin-bottom: 120px;
+            margin-bottom: 60px;
         }
 
         .pricing-card {
@@ -281,6 +281,38 @@
             color: var(--forest);
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(45, 179, 84, 0.4);
+        }
+
+        .msme-notice {
+            text-align: left;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin: 32px 0 80px;
+            font-weight: 300;
+        }
+
+        .msme-notice strong {
+            color: var(--leaf);
+            font-weight: 600;
+        }
+
+        .msme-notice a {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: rgba(45, 179, 84, 0.1);
+            border: 1px solid rgba(45, 179, 84, 0.3);
+            color: var(--leaf);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-left: 8px;
+            transition: all 0.3s;
+        }
+
+        .msme-notice a:hover {
+            background: var(--leaf);
+            color: var(--forest);
         }
 
         /* Comparison Table Revamp */
@@ -704,6 +736,10 @@
                 <a href="https://encbam.encarbonsys.com/login#create-account" class="btn-pricing">Start Your Free
                     Trial</a>
             </div>
+        </div>
+        <!-- MSME Notice -->
+        <div class="msme-notice animate-in">
+            * This pricing is for MSME. For <strong>Enterprise</strong>, <a href="mailto:contact@encarbonsys.com">Contact Us</a>
         </div>
 
         <!-- Capability Comparison Table -->
