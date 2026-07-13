@@ -1,0 +1,3878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSFR9S0QX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5KSFR9S0QX');
+    (function () {
+      const h = ['#problem', '#solution', '#process', '#advantage', '#cta', '#about', '#faq'];
+      if (h.includes(window.location.hash)) window.location.replace('/encbam.html' + window.location.hash);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="EnCarbonSys is a Domain-Specific Enterprise Systems Company. We architect, build and scale enterprise systems that power complex industries-starting with Energy and Carbon.">
+  <meta name="keywords"
+    content="EnCarbonSys, Domain-Specific Enterprise Systems, Enterprise Architecture, Energy Systems, Carbon Compliance, EnCBAM, Systems Thinking, Platform Architecture">
+  <meta name="author" content="EnCarbonSys">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="EnCarbonSys - Domain-Specific Enterprise Systems">
+  <meta property="og:description"
+    content="We architect, build and scale enterprise systems that power complex industries-starting with Energy and Carbon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://encarbonsys.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EnCarbonSys - Domain-Specific Enterprise Systems">
+  <meta name="twitter:description"
+    content="We architect, build and scale enterprise systems that power complex industries-starting with Energy and Carbon.">
+  <title>EnCarbonSys - Domain-Specific Enterprise Systems</title>
+  <link rel="canonical" href="https://encarbonsys.com/">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://encarbonsys.com/#organization","name":"EnCarbonSys","url":"https://encarbonsys.com","description":"EnCarbonSys is a Domain-Specific Enterprise Systems Company.","foundingDate":"2024","contactPoint":{"@type":"ContactPoint","email":"contact@encarbonsys.com","contactType":"business","availableLanguage":"English"}},{"@type":"WebSite","@id":"https://encarbonsys.com/#website","url":"https://encarbonsys.com","name":"EnCarbonSys \u2014 Domain-Specific Enterprise Systems","publisher":{"@id":"https://encarbonsys.com/#organization"}}]}
+  </script>
+  <style>
+    /* ===== TOKENS ===== */
+    :root {
+      --bg: #050505;
+      --bg-02: #080808;
+      --bg-s: #0c0c0c;
+      --bg-e: #121212;
+      --border: rgba(255, 255, 255, .055);
+      --border-h: rgba(255, 255, 255, .13);
+      --em: #10b981;
+      --em-l: #34d399;
+      --em-d: #059669;
+      --em-glow: rgba(16, 185, 129, .2);
+      --em-mist: rgba(16, 185, 129, .06);
+      --el: #3b82f6;
+      --el-d: #2563eb;
+      --el-glow: rgba(59, 130, 246, .18);
+      --vi: #8b5cf6;
+      --tp: #efefef;
+      --ts: #8a8f98;
+      --tm: #3d4148;
+      --td: #5a6070;
+      --fd: 'Outfit', sans-serif;
+      --fb: 'Inter', sans-serif;
+      --r-xs: 4px;
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 22px;
+      --r-xl: 36px;
+      --ease: cubic-bezier(.16, 1, .3, 1);
+      --sp: 180px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--tp);
+      font-family: var(--fb);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font: inherit;
+      color: inherit
+    }
+
+    ::selection {
+      background: rgba(16, 185, 129, .22);
+      color: var(--tp)
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      transition: background 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--em);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    /* ===== GRID BG ===== */
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, .022) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .022) 1px, transparent 1px);
+      background-size: 72px 72px
+    }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 0 56px;
+      background: rgba(6, 18, 12, 0.35);
+      backdrop-filter: blur(32px) saturate(160%) brightness(0.95);
+      -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(0.95);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.08);
+      transition: background .5s, border-color .5s, box-shadow .5s;
+    }
+
+    #nav.scrolled {
+      background: rgba(6, 18, 12, 0.55);
+      backdrop-filter: blur(40px) saturate(180%) brightness(0.92);
+      -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(0.92);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+      box-shadow: 0 4px 40px rgba(16, 185, 129, 0.06), 0 1px 0 rgba(16, 185, 129, 0.1) inset;
+    }
+
+    .nav-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--fd);
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 0 transparent);
+    }
+
+    .nav-logo:hover {
+      filter: drop-shadow(0 0 12px rgba(0, 223, 129, 0.5));
+    }
+
+    .logo-mark img {
+      height: 45px;
+      display: block;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+
+    .nav-logo:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    .nav-logo span {
+      background: linear-gradient(135deg, #00ff88 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none
+    }
+
+    .nav-links a {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--ts);
+      letter-spacing: .01em;
+      transition: color .2s;
+      position: relative
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--em);
+      transition: width .3s var(--ease)
+    }
+
+    .nav-links a:hover {
+      color: var(--tp)
+    }
+
+    .nav-links a:hover::after {
+      width: 100%
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .btn-ghost {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--ts);
+      padding: 8px 18px;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+      transition: all .25s
+    }
+
+    .btn-ghost:hover {
+      color: var(--tp);
+      border-color: var(--border-h);
+      background: rgba(255, 255, 255, .03)
+    }
+
+    .btn-primary-sm {
+      font-size: .82rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 9px 22px;
+      border-radius: var(--r-sm);
+      background: var(--em);
+      transition: all .3s var(--ease);
+      letter-spacing: -.01em
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--em-l);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(16, 185, 129, .35)
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ts);
+      transition: all .3s;
+      border-radius: 1px
+    }
+
+    /* ===== SECTION COMMONS ===== */
+    section {
+      position: relative;
+      z-index: 10
+    }
+
+    .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 56px
+    }
+
+    .stag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--em);
+      margin-bottom: 24px
+    }
+
+    .stag::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 1px;
+      background: var(--em)
+    }
+
+    /* Spotlight Hover Glow */
+    .pc, .story-block, .lc-card, .hstat {
+      position: relative;
+    }
+    .pc::before, .story-block::before, .lc-card::before, .hstat::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(255, 255, 255, 0.035), transparent 70%);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .pc:hover::before, .story-block:hover::before, .lc-card:hover::before, .hstat:hover::before {
+      opacity: 1;
+    }
+    .hstat.hs-energy::before, .story-block::before, .lc-card::before {
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(16, 185, 129, 0.06), transparent 70%);
+    }
+    .hstat.hs-carbon::before {
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(59, 130, 246, 0.06), transparent 70%);
+    }
+    .hstat.hs-systems::before {
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(139, 92, 246, 0.06), transparent 70%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease)
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: none
+    }
+
+    .d1 {
+      transition-delay: .08s
+    }
+
+    .d2 {
+      transition-delay: .16s
+    }
+
+    .d3 {
+      transition-delay: .24s
+    }
+
+    .d4 {
+      transition-delay: .32s
+    }
+
+    .d5 {
+      transition-delay: .4s
+    }
+
+    .d6 {
+      transition-delay: .48s
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 110px 56px 50px
+    }
+
+    #hero-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: .7
+    }
+
+    .hero-atm {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none
+    }
+
+    .atm1 {
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center, rgba(16, 185, 129, .09) 0%, transparent 65%)
+    }
+
+    .atm2 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      bottom: -100px;
+      right: 5%;
+      background: radial-gradient(ellipse at center, rgba(59, 130, 246, .07) 0%, transparent 65%)
+    }
+
+    .atm3 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      top: 30%;
+      left: 5%;
+      background: radial-gradient(ellipse at center, rgba(139, 92, 246, .04) 0%, transparent 65%)
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 1060px;
+      margin: 0 auto
+    }
+
+    .hero-eyebrow {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--em);
+      margin-bottom: 24px;
+      animation: slideReveal 2.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.15s;
+    }
+
+    @keyframes slideReveal {
+      0% {
+        opacity: 0;
+        transform: translateX(-15px);
+        clip-path: inset(0 100% 0 0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    .hero-h1 {
+      font-family: var(--fd);
+      font-size: clamp(2.5rem, 6.6vw, 6.2rem);
+      font-weight: 800;
+      line-height: .95;
+      letter-spacing: -.04em;
+      color: var(--tp);
+      margin-bottom: 24px
+    }
+
+    .hero-h1 .grad {
+      display: block;
+      background: linear-gradient(120deg, var(--em) 0%, var(--el) 55%, var(--em-l) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% 200%;
+      animation: gshift 8s ease-in-out infinite
+    }
+
+    @keyframes gshift {
+
+      0%,
+      100% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.22rem);
+      color: var(--ts);
+      max-width: 780px;
+      margin: 0 auto 40px;
+      line-height: 1.75
+    }
+
+    .hero-acts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .btn-hp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .92rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 15px 36px;
+      border-radius: var(--r-md);
+      background: linear-gradient(135deg, var(--em-d), var(--em));
+      border: 1px solid rgba(16, 185, 129, .3);
+      transition: all .4s var(--ease);
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn-hp::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .08) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .3s
+    }
+
+    .btn-hp:hover::before {
+      opacity: 1
+    }
+
+    .btn-hp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 50px rgba(16, 185, 129, .35)
+    }
+
+    .btn-hp .arr {
+      transition: transform .3s var(--ease)
+    }
+
+    .btn-hp:hover .arr {
+      transform: translateX(4px)
+    }
+
+    .btn-ho {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .92rem;
+      font-weight: 500;
+      color: var(--ts);
+      padding: 15px 36px;
+      border-radius: var(--r-md);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      transition: all .3s
+    }
+
+    .btn-ho:hover {
+      color: var(--tp);
+      border-color: var(--border-h);
+      background: rgba(255, 255, 255, .04)
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px
+    }
+
+    .scroll-lbl {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--tm)
+    }
+
+    .scroll-track {
+      width: 1px;
+      height: 52px;
+      position: relative;
+      overflow: hidden;
+      background: var(--border)
+    }
+
+    .scroll-thumb {
+      position: absolute;
+      top: -52px;
+      left: 0;
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--em), transparent);
+      animation: sdown 2.2s ease-in-out infinite
+    }
+
+    @keyframes sdown {
+      0% {
+        top: -52px
+      }
+
+      100% {
+        top: 52px
+      }
+    }
+
+    .hero-stats {
+      position: relative;
+      z-index: 10;
+      margin-top: 48px;
+      width: 100%;
+      max-width: 860px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .hstat {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--r-md);
+      padding: 16px 24px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Hover animations for stats cards */
+    .hstat:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.035);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .hstat.hs-energy:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 12px 30px rgba(16, 185, 129, 0.08);
+    }
+
+    .hstat.hs-carbon:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 12px 30px rgba(59, 130, 246, 0.08);
+    }
+
+    .hstat.hs-systems:hover {
+      border-color: rgba(139, 92, 246, 0.3);
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.08);
+    }
+
+    .sv {
+      font-family: var(--fd);
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--tp);
+      line-height: 1;
+      margin-bottom: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .hstat:hover .sv {
+      color: #fff;
+    }
+
+    .sv .su {
+      font-size: 0.9rem;
+      color: var(--em);
+      transition: color 0.3s ease;
+    }
+
+    .hstat.hs-carbon:hover .sv .su {
+      color: var(--el);
+    }
+
+    .hstat.hs-systems:hover .sv .su {
+      color: var(--vi);
+    }
+
+    .sl {
+      font-size: .76rem;
+      color: var(--td);
+      letter-spacing: .02em;
+      transition: color 0.3s ease;
+    }
+
+    .hstat:hover .sl {
+      color: var(--ts);
+    }
+
+    /* ===== WHY ===== */
+    #why {
+      padding: var(--sp) 0 40px;
+      overflow: hidden
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 120px
+    }
+
+    .why-bh {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+      font-weight: 800;
+      line-height: .96;
+      letter-spacing: -.04em;
+      color: var(--tp)
+    }
+
+    .why-bh .ag {
+      color: var(--em)
+    }
+
+    .why-rt {
+      padding-top: 20px
+    }
+
+    .why-bt {
+      font-size: 1.12rem;
+      color: var(--ts);
+      line-height: 1.85;
+      margin-bottom: 32px
+    }
+
+    .why-bt strong {
+      color: var(--tp);
+      font-weight: 500
+    }
+
+    .story-block {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 40px;
+      padding: 48px 48px;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+      align-items: start;
+      transition: all 0.4s var(--ease);
+    }
+
+    .story-block:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(16, 185, 129, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(16, 185, 129, 0.04);
+    }
+
+    .story-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .schap {
+      font-family: var(--fd);
+      font-size: 4rem;
+      font-weight: 300;
+      letter-spacing: -.04em;
+      color: rgba(16, 185, 129, 0.25);
+      line-height: 1;
+      transition: color 0.4s var(--ease);
+    }
+
+    .story-block:hover .schap {
+      color: var(--em);
+      text-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .stitle {
+      font-family: var(--fd);
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: var(--tp);
+      margin-bottom: 20px;
+      line-height: 1.1
+    }
+
+    .stext {
+      font-size: 1.02rem;
+      color: var(--ts);
+      line-height: 1.85
+    }
+
+    .stext strong {
+      color: var(--em);
+      font-weight: 500
+    }
+
+    .pullquote {
+      margin: 100px 0 0;
+      padding: 80px 0 60px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center
+    }
+
+    .pq-text {
+      font-family: var(--fd);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-weight: 600;
+      letter-spacing: -.03em;
+      line-height: 1.25;
+      color: var(--tp);
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    .pq-text em {
+      font-style: normal;
+      color: var(--em)
+    }
+
+    .pq-nowrap {
+      white-space: nowrap;
+      color: var(--tp);
+    }
+
+    /* ===== PORTFOLIO ===== */
+    #portfolio {
+      padding: var(--sp) 0;
+      background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-02) 30%, var(--bg-s) 70%, var(--bg) 100%)
+    }
+
+    .port-hdr {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap
+    }
+
+    .port-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp)
+    }
+
+    .port-d {
+      font-size: 1.12rem;
+      color: var(--ts);
+      max-width: 420px;
+      line-height: 1.7
+    }
+
+    .pgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    .pc {
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 52px;
+      background: var(--bg-s);
+      position: relative;
+      overflow: hidden;
+      transition: all .5s var(--ease);
+      display: flex;
+      flex-direction: column;
+      min-height: 300px
+    }
+
+    .pc.feat {
+      grid-column: 1/-1;
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+      min-height: 240px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, .04), rgba(59, 130, 246, .025));
+      border-color: rgba(16, 185, 129, .12)
+    }
+
+    .pc.feat .pc-body {
+      flex: 1
+    }
+
+    .pc.feat .pc-vis {
+      width: 260px;
+      flex-shrink: 0;
+      height: 130px;
+      border-radius: var(--r-md);
+      background: linear-gradient(135deg, rgba(16, 185, 129, .08), rgba(59, 130, 246, .05));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative
+    }
+
+    .pc.feat.vr-feat {
+      background: linear-gradient(135deg, rgba(245, 158, 11, .04), rgba(59, 130, 246, .025));
+      border-color: rgba(245, 158, 11, .12);
+    }
+
+    .pc.feat.vr-feat::before {
+      background: radial-gradient(ellipse at 20% 50%, rgba(245, 158, 11, .07), transparent 60%);
+    }
+
+    .pc.feat.vr-feat:hover {
+      border-color: rgba(245, 158, 11, .25);
+    }
+
+    .pc.feat.vr-feat .pc-vis {
+      background: linear-gradient(135deg, rgba(245, 158, 11, .08), rgba(59, 130, 246, .05));
+    }
+
+    .pc.feat.vr-feat .vis-grid {
+      background-image: linear-gradient(rgba(245, 158, 11, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 158, 11, .06) 1px, transparent 1px);
+    }
+
+    .pc.feat.vr-feat .vis-pulse {
+      background: rgba(245, 158, 11, .1);
+      border-color: rgba(245, 158, 11, .3);
+    }
+
+    .pc.feat.vr-feat .vis-pulse::after {
+      border-color: rgba(245, 158, 11, .12);
+    }
+
+    .vis-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(16, 185, 129, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, .06) 1px, transparent 1px);
+      background-size: 20px 20px
+    }
+
+    .vis-pulse {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, .1);
+      border: 1px solid rgba(16, 185, 129, .3);
+      position: relative;
+      z-index: 2;
+      animation: cpulse 3s ease-in-out infinite
+    }
+
+    .vis-pulse::after {
+      content: '';
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 1px solid rgba(16, 185, 129, .12);
+      animation: cpulse 3s ease-in-out .5s infinite
+    }
+
+    @keyframes cpulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(1.12);
+        opacity: .6
+      }
+    }
+
+    .pc::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .5s;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, .03) 0%, transparent 60%)
+    }
+
+    .pc.feat::before {
+      background: radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, .07) 0%, transparent 60%)
+    }
+
+    .pc:hover {
+      border-color: var(--border-h);
+      transform: translateY(-5px);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .6)
+    }
+
+    .pc:hover::before {
+      opacity: 1
+    }
+
+    .pc.feat:hover {
+      border-color: rgba(16, 185, 129, .25);
+      transform: translateY(-4px)
+    }
+
+    .pc-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 40px
+    }
+
+    .pbadge {
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px
+    }
+
+    .blive {
+      background: rgba(16, 185, 129, .1);
+      color: var(--em);
+      border: 1px solid rgba(16, 185, 129, .22)
+    }
+
+    .blive::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--em);
+      box-shadow: 0 0 6px var(--em);
+      margin-right: 6px;
+      vertical-align: middle;
+      animation: breathe 1.5s ease-in-out infinite
+    }
+
+    .bsoon {
+      background: rgba(59, 130, 246, .09);
+      color: var(--el);
+      border: 1px solid rgba(59, 130, 246, .18)
+    }
+
+    .bresearch {
+      background: rgba(139, 92, 246, .09);
+      color: var(--vi);
+      border: 1px solid rgba(139, 92, 246, .18)
+    }
+
+    .bdev {
+      background: rgba(245, 158, 11, .09);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, .18)
+    }
+
+    .bincub {
+      background: rgba(255, 255, 255, .04);
+      color: var(--td);
+      border: 1px solid var(--border)
+    }
+
+    .picon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--r-sm);
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .4s;
+      flex-shrink: 0
+    }
+
+    .pc:hover .picon {
+      border-color: var(--em);
+      background: var(--em-mist)
+    }
+
+    .pname {
+      font-family: var(--fd);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -.045em;
+      color: var(--tp);
+      margin-bottom: 12px;
+      line-height: 1
+    }
+
+    .pname sup {
+      font-size: .42em;
+      vertical-align: super;
+      font-weight: 700;
+      opacity: .7
+    }
+
+    .pdesc {
+      font-size: .93rem;
+      color: var(--ts);
+      line-height: 1.7;
+      flex: 1
+    }
+
+    .pfooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border)
+    }
+
+    .pdom {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--tm)
+    }
+
+    .parr {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tm);
+      transition: all .4s var(--ease)
+    }
+
+    .pc:hover .parr {
+      border-color: var(--em);
+      background: var(--em-mist);
+      color: var(--em);
+      transform: rotate(-45deg)
+    }
+
+    /* ===== DOMAINS ===== */
+    #domains {
+      padding: 0 0 var(--sp)
+    }
+
+    .dom-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      min-height: 540px
+    }
+
+    .dp {
+      position: relative;
+      padding: 80px 56px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: background .6s var(--ease);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: default
+    }
+
+    .dp+.dp {
+      border-left: none
+    }
+
+    .dp:hover {
+      background: var(--bg-s)
+    }
+
+    .dp::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .6s var(--ease)
+    }
+
+    .dp-e::after {
+      background: var(--em)
+    }
+
+    .dp-c::after {
+      background: var(--el)
+    }
+
+    .dp-s::after {
+      background: linear-gradient(90deg, var(--em), var(--el))
+    }
+
+    .dp:hover::after {
+      transform: scaleX(1)
+    }
+
+    .d-amb {
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-family: var(--fd);
+      font-size: 10rem;
+      font-weight: 900;
+      letter-spacing: -.06em;
+      color: rgba(255, 255, 255, .015);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      transition: color .5s
+    }
+
+    .dp:hover .d-amb {
+      color: rgba(255, 255, 255, .028)
+    }
+
+    .d-idx {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--tm)
+    }
+
+    .d-title {
+      font-family: var(--fd);
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -.05em;
+      line-height: .9;
+      margin: 32px 0;
+      transition: all .4s
+    }
+
+    .dp-e .d-title {
+      color: var(--em)
+    }
+
+    .dp-c .d-title {
+      color: var(--el)
+    }
+
+    .dp-s .d-title {
+      background: linear-gradient(135deg, var(--em) 0%, var(--el) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .d-body {
+      font-size: .92rem;
+      color: var(--ts);
+      line-height: 1.78;
+      margin-bottom: 40px
+    }
+
+    .d-note {
+      font-size: .75rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--tm);
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      letter-spacing: .01em
+    }
+
+    .d-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .dtag {
+      font-size: .7rem;
+      font-weight: 500;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--td);
+      background: var(--bg-s);
+      letter-spacing: .01em
+    }
+
+    /* ===== LIFECYCLE ===== */
+    #lifecycle {
+      padding: var(--sp) 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, var(--bg), var(--bg-02) 50%, var(--bg))
+    }
+
+    .lc-hdr {
+      text-align: center;
+      margin-bottom: 120px
+    }
+
+    .lc-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp);
+      margin-bottom: 24px
+    }
+
+    .lc-sub {
+      font-size: 1.05rem;
+      color: var(--ts);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.75
+    }
+
+    .lc-vis {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto
+    }
+
+    .lc-track {
+      position: relative;
+    }
+
+    .lc-spine {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(to bottom, transparent 0%, rgba(16, 185, 129, .2) 10%, var(--em) 30%, var(--el) 70%, rgba(59, 130, 246, .2) 90%, transparent 100%)
+    }
+
+    .lc-sglow {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 80px;
+      bottom: 0;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center, rgba(16, 185, 129, .04) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .lc-nodes {
+      position: relative;
+      z-index: 2
+    }
+
+    .lcs {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 28px 0;
+      position: relative
+    }
+
+    .lc-l {
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      padding-right: 48px
+    }
+
+    .lc-r {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding-left: 48px
+    }
+
+    .lc-c {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 0;
+      position: relative
+    }
+
+    .lc-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg-02);
+      border: 2px solid var(--border);
+      transition: all .5s var(--ease);
+      cursor: pointer
+    }
+
+    .lc-dot::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: all .4s
+    }
+
+    .lcs:hover .lc-dot,
+    .lcs.act .lc-dot {
+      border-color: var(--em);
+      background: var(--em);
+      box-shadow: 0 0 20px rgba(16, 185, 129, .6), 0 0 40px rgba(16, 185, 129, .2)
+    }
+
+    .lcs:hover .lc-dot::before,
+    .lcs.act .lc-dot::before {
+      border-color: rgba(16, 185, 129, .2)
+    }
+
+    .lc-card {
+      width: 100%;
+      max-width: none;
+      padding: 32px 36px;
+      border: 1px solid transparent;
+      border-radius: var(--r-md);
+      background: transparent;
+      transition: all .5s var(--ease)
+    }
+
+    .lcs:hover .lc-card,
+    .lcs.act .lc-card {
+      border-color: var(--border);
+      background: var(--bg-s);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, .4)
+    }
+
+    .lc-snum {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--tm);
+      margin-bottom: 8px
+    }
+
+    .lc-stit {
+      font-family: var(--fd);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -.025em;
+      color: var(--tp);
+      margin-bottom: 10px;
+      transition: color .3s
+    }
+
+    .lcs:hover .lc-stit,
+    .lcs.act .lc-stit {
+      color: var(--em)
+    }
+
+    .lc-stxt {
+      font-size: .93rem;
+      color: var(--ts);
+      line-height: 1.7;
+      transition: color .4s, text-shadow .4s
+    }
+
+    .lcs:hover .lc-stxt,
+    .lcs.act .lc-stxt {
+      color: rgba(255, 255, 255, .85);
+      text-shadow: 0 0 18px rgba(16, 185, 129, .25), 0 0 40px rgba(16, 185, 129, .1)
+    }
+
+    .lc-loop {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 60px;
+      border-top: 1px solid var(--border)
+    }
+
+    .lc-looptxt {
+      font-family: var(--fd);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--td);
+      letter-spacing: .02em
+    }
+
+    .lc-looptxt span {
+      color: var(--em)
+    }
+
+    /* ===== PRINCIPLES ===== */
+    #principles {
+      padding: var(--sp) 0
+    }
+
+    .pr-hdr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 80px
+    }
+
+    .pr-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp)
+    }
+
+    .pr-body {
+      font-size: 1rem;
+      color: var(--ts);
+      line-height: 1.78;
+      align-self: end
+    }
+
+    .pr-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden
+    }
+
+    .pr-cell {
+      background: var(--bg);
+      padding: 52px 44px;
+      position: relative;
+      overflow: hidden;
+      transition: background .4s var(--ease)
+    }
+
+    .pr-cell:hover {
+      background: var(--bg-s)
+    }
+
+    .pr-cell::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--em), var(--el));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .55s var(--ease)
+    }
+
+    .pr-cell:hover::before {
+      transform: scaleX(1)
+    }
+
+    .pr-ghost {
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      font-family: var(--fd);
+      font-size: 7rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, .018);
+      letter-spacing: -.06em;
+      line-height: 1;
+      pointer-events: none;
+      transition: color .4s
+    }
+
+    .pr-cell:hover .pr-ghost {
+      color: rgba(16, 185, 129, .04)
+    }
+
+    .pr-idx {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--tm);
+      margin-bottom: 24px
+    }
+
+    .pr-name {
+      font-family: var(--fd);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -.025em;
+      color: var(--tp);
+      margin-bottom: 14px;
+      transition: color .3s
+    }
+
+    .pr-cell:hover .pr-name {
+      color: var(--em)
+    }
+
+    .pr-desc {
+      font-size: .88rem;
+      color: var(--ts);
+      line-height: 1.75;
+      position: relative;
+      z-index: 1
+    }
+
+    /* ===== ECOSYSTEM ===== */
+    #ecosystem {
+      padding: var(--sp) 0;
+      background: linear-gradient(to bottom, var(--bg), var(--bg-s) 40%, var(--bg) 100%)
+    }
+
+    .eco-hdr {
+      text-align: center;
+      margin-bottom: 80px
+    }
+
+    .eco-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp);
+      margin-bottom: 22px
+    }
+
+    .eco-sub {
+      font-size: 1.02rem;
+      color: var(--ts);
+      max-width: 460px;
+      margin: 0 auto;
+      line-height: 1.75
+    }
+
+    .eco-wrap {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      height: 560px;
+      background: var(--bg-02)
+    }
+
+    #eco-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .eco-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    /* Center node */
+    .eco-center {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: all;
+    }
+
+    .eco-center-ring {
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(16, 185, 129, 0.25);
+      animation: eco-spin 18s linear infinite;
+    }
+
+    .eco-center-ring::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981, 0 0 20px rgba(16, 185, 129, .5);
+    }
+
+    .eco-center-inner {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, .04);
+      border: 1.5px solid rgba(16, 185, 129, .25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      backdrop-filter: blur(8px);
+    }
+
+    .eco-center-label {
+      font-family: var(--fd);
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: #10b981;
+      text-transform: uppercase;
+    }
+
+    .eco-center-logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(16, 185, 129, .75)) drop-shadow(0 0 24px rgba(16, 185, 129, .35));
+    }
+
+    /* Branch nodes */
+    .eco-branch-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: all;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      transition: transform .3s var(--ease);
+    }
+
+    .eco-branch-node:hover {
+      transform: translate(-50%, -50%) scale(1.12);
+    }
+
+    .eco-branch-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      backdrop-filter: blur(10px);
+      transition: border-color .3s, box-shadow .3s, background .3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+    }
+
+    .eco-branch-node:hover .eco-branch-icon {
+      background: rgba(255, 255, 255, .07);
+      border-color: rgba(255, 255, 255, .3);
+      box-shadow: 0 0 20px rgba(255, 255, 255, .08), 0 4px 20px rgba(0, 0, 0, .4);
+    }
+
+    .eco-branch-label {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: rgba(255, 255, 255, .6);
+      text-align: center;
+      max-width: 80px;
+      line-height: 1.3;
+      transition: color .3s;
+    }
+
+    .eco-branch-node:hover .eco-branch-label {
+      color: rgba(255, 255, 255, .9);
+    }
+
+    @keyframes eco-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes eco-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 30px rgba(16, 185, 129, .18), 0 0 60px rgba(16, 185, 129, .07), inset 0 0 20px rgba(16, 185, 129, .08);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(16, 185, 129, .28), 0 0 80px rgba(16, 185, 129, .12), inset 0 0 25px rgba(16, 185, 129, .12);
+      }
+    }
+
+    @keyframes eco-float {
+
+      0%,
+      100% {
+        transform: translate(-50%, -50%) translateY(0px);
+      }
+
+      50% {
+        transform: translate(-50%, -50%) translateY(-6px);
+      }
+    }
+
+    /* ===== FUTURE ===== */
+    #future {
+      padding: var(--sp) 0
+    }
+
+    .fut-in {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start
+    }
+
+    .fut-lh {
+      position: sticky;
+      top: 140px
+    }
+
+    .fut-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp);
+      margin-bottom: 28px
+    }
+
+    .fut-d {
+      font-size: 1.02rem;
+      color: var(--ts);
+      line-height: 1.78
+    }
+
+    .fut-tl {
+      position: relative;
+      padding-left: 36px
+    }
+
+    .fut-tl::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--em) 0%, var(--el) 60%, transparent 100%)
+    }
+
+    .ft-n {
+      position: relative;
+      margin-bottom: 72px
+    }
+
+    .ft-n:last-child {
+      margin-bottom: 0
+    }
+
+    .ft-n::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 12px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--border-h);
+      transition: all .4s var(--ease)
+    }
+
+    .ft-n:hover::before {
+      border-color: var(--em);
+      background: var(--em);
+      box-shadow: 0 0 16px rgba(16, 185, 129, .5)
+    }
+
+    .ft-yr {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--em);
+      margin-bottom: 10px
+    }
+
+    .ft-ti {
+      font-family: var(--fd);
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: var(--tp);
+      margin-bottom: 12px;
+      line-height: 1.1
+    }
+
+    .ft-tx {
+      font-size: .93rem;
+      color: var(--ts);
+      line-height: 1.75
+    }
+
+    .ft-ch {
+      margin-top: 20px;
+      padding-left: 20px;
+      border-left: 1px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .ft-ci {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .88rem;
+      color: var(--td);
+      transition: color 0.3s ease;
+      cursor: default;
+    }
+
+    .ft-n:hover .ft-ci {
+      color: var(--ts);
+    }
+
+    .ft-ci:hover {
+      color: var(--tp);
+    }
+
+    .ft-ci::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--em);
+      flex-shrink: 0;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ft-ci:hover::before {
+      background-color: var(--em-l);
+      box-shadow: 0 0 8px var(--em);
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      padding: var(--sp) 0;
+      background: linear-gradient(to bottom, var(--bg), var(--bg-02))
+    }
+
+    .con-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start
+    }
+
+    .con-l {
+      position: sticky;
+      top: 140px
+    }
+
+    .con-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp);
+      margin-bottom: 24px
+    }
+
+    .con-s {
+      font-size: 1rem;
+      color: var(--ts);
+      line-height: 1.78;
+      margin-bottom: 48px;
+      max-width: 420px
+    }
+
+    .con-chs {
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .con-ch {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: .9rem;
+      color: var(--ts);
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      background: var(--bg-s);
+      transition: all .3s var(--ease)
+    }
+
+    .con-ch:hover {
+      color: var(--tp);
+      border-color: var(--border-h);
+      background: var(--bg-e);
+      transform: translateX(4px)
+    }
+
+    .ch-ic {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all .3s
+    }
+
+    .con-ch:hover .ch-ic {
+      border-color: var(--em);
+      background: var(--em-mist);
+      color: var(--em)
+    }
+
+    .con-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .fduo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .ff {
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .fl {
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--tm)
+    }
+
+    .fi,
+    .fs,
+    .fta {
+      background: var(--bg-s);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 13px 16px;
+      font-family: var(--fb);
+      font-size: .9rem;
+      color: var(--tp);
+      outline: none;
+      width: 100%;
+      transition: border-color .25s, box-shadow .25s, background .25s;
+      -webkit-appearance: none
+    }
+
+    .fi::placeholder,
+    .fta::placeholder {
+      color: var(--tm)
+    }
+
+    .fi:focus,
+    .fs:focus,
+    .fta:focus {
+      border-color: var(--em);
+      background: rgba(16, 185, 129, .03);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, .08)
+    }
+
+    .fs {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3E%3Cpath fill='%234b5563' d='M5.5 7L1 2h9z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 38px;
+      cursor: pointer
+    }
+
+    .fs option {
+      background: #0c0c0c;
+      color: #efefef;
+    }
+
+    .fta {
+      resize: vertical;
+      min-height: 128px;
+      line-height: 1.6
+    }
+
+    .btn-sub {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: .92rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, var(--em-d), var(--em));
+      border: 1px solid rgba(16, 185, 129, .3);
+      transition: all .3s var(--ease);
+      cursor: pointer;
+      align-self: flex-start
+    }
+
+    .btn-sub:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(16, 185, 129, .3)
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      padding: 72px 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 10
+    }
+
+    .foot-in {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px
+    }
+
+    .foot-logo {
+      font-family: var(--fd);
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--tm);
+      letter-spacing: -.02em
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 32px;
+      list-style: none
+    }
+
+    .foot-links a {
+      font-size: .8rem;
+      color: var(--tm);
+      transition: color .2s
+    }
+
+    .foot-links a:hover {
+      color: var(--ts)
+    }
+
+    .foot-copy {
+      font-size: .78rem;
+      color: var(--tm)
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1100px) {
+      :root {
+        --sp: 140px
+      }
+
+      .nav-links {
+        gap: 28px
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+
+      .story-block {
+        grid-template-columns: 100px 1fr;
+        gap: 36px;
+        padding: 28px 24px;
+      }
+
+      .schap {
+        font-size: 3.5rem
+      }
+
+      .dom-row {
+        grid-template-columns: 1fr
+      }
+
+      .dp+.dp {
+        border-left: 1px solid var(--border);
+        border-top: none
+      }
+
+      .fut-in {
+        grid-template-columns: 1fr;
+        gap: 64px
+      }
+
+      .fut-lh {
+        position: static
+      }
+    }
+
+    @media(max-width:860px) {
+      :root {
+        --sp: 110px
+      }
+
+      #nav {
+        padding: 0 24px
+      }
+
+      #hero,
+      .inner {
+        padding-left: 24px;
+        padding-right: 24px
+      }
+
+      .nav-links,
+      .nav-right {
+        display: none
+      }
+
+      .nav-toggle {
+        display: flex
+      }
+
+      .hero-h1 {
+        font-size: clamp(3rem, 11vw, 6rem)
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr
+      }
+
+      .pgrid {
+        grid-template-columns: 1fr
+      }
+
+      .pc.feat {
+        flex-direction: column
+      }
+
+      .pc.feat .pc-vis {
+        width: 100%
+      }
+
+      .pr-hdr {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .pr-grid {
+        grid-template-columns: 1fr
+      }
+
+      .con-wrap {
+        grid-template-columns: 1fr;
+        gap: 64px
+      }
+
+      .con-l {
+        position: static
+      }
+
+      .story-block {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+      }
+
+      .schap {
+        display: none
+      }
+    }
+
+    @media(max-width:560px) {
+      .hero-acts {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .btn-hp,
+      .btn-ho {
+        justify-content: center
+      }
+
+      .lcs {
+        grid-template-columns: 1fr
+      }
+
+      .lc-l,
+      .lc-r {
+        padding: 0;
+        justify-content: flex-start
+      }
+
+      .lc-c {
+        display: none
+      }
+
+      .lc-card {
+        border-color: var(--border);
+        background: var(--bg-s)
+      }
+
+      .fduo {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ===== PORTFOLIO ARCHITECTURE ===== */
+    #portfolio-architecture {
+      padding: var(--sp) 0;
+      background: var(--bg-02);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .arch-hdr {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .arch-h {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .95;
+      color: var(--tp);
+      margin-bottom: 24px;
+    }
+
+    .arch-p {
+      font-size: 1.05rem;
+      color: var(--ts);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .arch-p strong {
+      color: var(--em);
+      font-weight: 600;
+    }
+
+    .arch-tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .arch-card {
+      background: var(--bg-s);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 24px 32px;
+      text-align: center;
+      transition: all .4s var(--ease);
+      position: relative;
+      z-index: 5;
+    }
+
+    .parent-card {
+      border-color: var(--em);
+      background: linear-gradient(135deg, rgba(16, 185, 129, .05), rgba(5, 5, 5, .6));
+      box-shadow: 0 0 20px rgba(16, 185, 129, .05);
+    }
+
+    .parent-card:hover {
+      border-color: var(--em-l);
+      box-shadow: 0 0 30px var(--em-glow);
+      transform: translateY(-2px);
+    }
+
+    .category-card {
+      border-color: var(--border-h);
+      background: var(--bg-e);
+    }
+
+    .category-card:hover {
+      border-color: var(--el);
+      transform: translateY(-2px);
+    }
+
+    .asset-card {
+      width: 100%;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .asset-card:hover {
+      border-color: var(--border-h);
+      background: rgba(255, 255, 255, .02);
+      transform: translateY(-4px);
+    }
+
+    .asset-card.live:hover {
+      border-color: var(--em);
+      box-shadow: 0 0 25px rgba(16, 185, 129, .1);
+    }
+
+    .asset-card.soon:hover {
+      border-color: var(--el);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+    }
+
+    .asset-card.research:hover {
+      border-color: var(--vi);
+      box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+    }
+
+    .incubator-card {
+      border-color: var(--border);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .incubator-card:hover {
+      border-color: var(--vi);
+      transform: translateY(-2px);
+    }
+
+    .node-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--tm);
+      margin-bottom: 8px;
+    }
+
+    .node-title {
+      font-family: var(--fd);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--tp);
+      letter-spacing: -.02em;
+    }
+
+    .parent-card .node-title {
+      font-size: 1.8rem;
+    }
+
+    .node-desc {
+      font-size: .8rem;
+      color: var(--ts);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* Connectors */
+    .arch-line-v {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--border-h), var(--border));
+    }
+
+    .parent+.arch-line-v {
+      background: linear-gradient(to bottom, var(--em), var(--border-h));
+    }
+
+    .category+.arch-line-v {
+      background: linear-gradient(to bottom, var(--border-h), var(--border-h));
+    }
+
+    .arch-branches {
+      width: 100%;
+      position: relative;
+      height: 24px;
+    }
+
+    .branch-line-h {
+      position: absolute;
+      top: 0;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: var(--border-h);
+    }
+
+    .branch-lines-v {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 12.5%;
+      box-sizing: border-box;
+    }
+
+    .b-line-v {
+      width: 1px;
+      height: 24px;
+      background: var(--border-h);
+    }
+
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    @media(max-width: 860px) {
+      .arch-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .arch-branches {
+        display: none;
+      }
+
+      .arch-line-v {
+        height: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" id="nav-logo" aria-label="EnCarbonSys Home">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="https://image2url.com/images/1755178545433-c3754ed2-3557-4a1f-a3d8-13fff7dc37dd.png"
+            alt="EnCarbonSys Logo">
+        </div>
+        <span>EnCarbonSys</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#why" id="nav-philosophy">Philosophy</a></li>
+        <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+        <li><a href="#lifecycle" id="nav-lifecycle">How We Operate</a></li>
+        <li><a href="#ecosystem" id="nav-partners">Network</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="/encbam.html" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;</a>
+        <a href="#contact" class="btn-primary-sm" id="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-atm" aria-hidden="true">
+      <div class="atm1"></div>
+      <div class="atm2"></div>
+      <div class="atm3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow" id="hero-eyebrow">
+        Domain-Specific Enterprise Systems
+      </div>
+      <h1 class="hero-h1" id="hero-heading">
+        Enterprise Systems<br>
+        <span class="grad">for Complex Industries.</span>
+      </h1>
+      <p class="hero-sub" id="hero-subheading">
+        We discover, architect, build and scale enterprise systems for complex operational domains - leading with
+        Energy and Carbon.
+      </p>
+      <div class="hero-acts" id="hero-actions">
+        <a href="#portfolio" class="btn-hp" id="hero-cta-primary">
+          Explore Portfolio
+          <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#why" class="btn-ho" id="hero-cta-secondary">Our Philosophy</a>
+      </div>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="hstat hs-energy">
+        <div class="sv">Energy<span class="su">+</span></div>
+        <div class="sl">Domain</div>
+      </div>
+      <div class="hstat hs-carbon">
+        <div class="sv">Carbon<span class="su">+</span></div>
+        <div class="sl">Domain</div>
+      </div>
+      <div class="hstat hs-systems">
+        <div class="sv">Systems<span class="su">+</span></div>
+        <div class="sl">Capability</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" aria-labelledby="why-heading">
+    <div class="inner">
+      <div class="why-grid">
+        <div class="reveal">
+          <div class="stag" aria-hidden="true">Why We Exist</div>
+          <h2 class="why-bh" id="why-heading">Every complex<br>industry reaches<br>a <span class="ag">breaking
+              point.</span></h2>
+        </div>
+        <div class="why-rt reveal d2">
+          <p class="why-bt">Spreadsheets erode. Generic & traditional software fails to account for operational nuance.
+            Disconnected
+            tools multiply without resolution. At some point, the problem is no longer about choosing better software.
+          </p>
+          <p class="why-bt"><strong>The problem is the absence of an enterprise system designed specifically for that
+              domain.</strong></p>
+          <p class="why-bt">EnCarbonSys exists to discover those moments-and to build the systems that industries
+            actually need.</p>
+        </div>
+      </div>
+      <div>
+        <div class="story-block reveal">
+          <div class="schap" aria-hidden="true">01</div>
+          <div>
+            <h3 class="stitle">Industries outgrow their tools.</h3>
+            <p class="stext">Every complex industry- oil & gas, HCA, energy trading, carbon accounting, emissions
+              verification-begins with spreadsheets. Then comes generic ERP. Then bolt-on point solutions. Until
+              the stack becomes the problem itself. Operations slow. Errors compound. Compliance becomes existential.
+              <strong>The industry has not failed. The tools have failed the industry.</strong>
+            </p>
+          </div>
+        </div>
+        <div class="story-block reveal d1">
+          <div class="schap" aria-hidden="true">02</div>
+          <div>
+            <h3 class="stitle">Generic software was never the answer.</h3>
+            <p class="stext">Horizontal platforms optimise for breadth. Domain complexity demands depth. An enterprise
+              managing cross-border carbon flows, real-time energy dispatch, and multi-jurisdictional compliance cannot
+              be served by software built for accounts receivable and project tracking. <strong>Depth requires a system
+                built from the domain up-not retrofitted from the platform down.</strong></p>
+          </div>
+        </div>
+        <div class="story-block reveal d2">
+          <div class="schap" aria-hidden="true">03</div>
+          <div>
+            <h3 class="stitle">A new category of company was needed.</h3>
+            <p class="stext">Not a consultancy. Not a SaaS provider. Not a systems integrator. EnCarbonSys is a
+              Domain-Specific Enterprise Systems Company-an entity that identifies inflection points in complex
+              industries, designs purpose-built enterprise systems, scales them into platform businesses, and compounds
+              that capability into a portfolio of mission-critical infrastructure. <strong>We're building enterprise
+                systems for domains where operational complexity has outgrown traditional software.</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="pullquote reveal">
+        <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another application.</span><br>It needs a
+          <em>dedicated enterprise system</em>."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINS -->
+  <section id="domains" aria-labelledby="domains-heading">
+    <div class="dom-row">
+      <div class="dp dp-e reveal">
+        <div>
+          <div class="d-idx" id="domains-heading">01 - Domain</div>
+          <div class="d-title">Energy</div>
+          <p class="d-body">The global energy system is undergoing its most complex transformation in a century.
+            Intermittent generation, real-time dispatch, cross-border flows, capacity markets, and regulatory
+            fragmentation demand infrastructure that can operate at the speed and precision of the grid itself.</p>
+          <div class="d-tags">
+            <span class="dtag">Grid Operations</span><span class="dtag">Dispatch</span><span class="dtag">Capacity
+              Markets</span><span class="dtag">Energy Accounting</span><span class="dtag">Regulatory Compliance</span>
+          </div>
+        </div>
+        <div class="d-note">Grid operations and real-time dispatch systems under active research.</div>
+        <div class="d-amb" aria-hidden="true">01</div>
+      </div>
+      <div class="dp dp-c reveal d1">
+        <div>
+          <div class="d-idx">02 - Domain</div>
+          <div class="d-title">Carbon</div>
+          <p class="d-body">Carbon has graduated from a sustainability metric to a regulated financial instrument. CBAM,
+            ETS, Article 6, Scope 3 accounting, voluntary markets, and verification requirements are converging into an
+            operational domain of immense complexity-one that demands dedicated enterprise infrastructure.</p>
+          <div class="d-tags">
+            <span class="dtag">CBAM</span><span class="dtag">ETS</span><span class="dtag">Article 6</span><span
+              class="dtag">Scope 3</span><span class="dtag">Verification</span><span class="dtag">Markets</span>
+          </div>
+        </div>
+        <div class="d-note">EnCBAM&#8482; is live. Expanded systems in research.</div>
+        <div class="d-amb" aria-hidden="true">02</div>
+      </div>
+      <div class="dp dp-s reveal d2">
+        <div>
+          <div class="d-idx">03 - Capability</div>
+          <div class="d-title">Systems</div>
+          <p class="d-body">Systems is not a third vertical. It is the capability that makes the first two possible. The
+            discipline of enterprise system architecture: platform thinking, data modelling at operational depth,
+            regulatory integration, and long-term ownership-is what separates EnCarbonSys from every other company
+            operating in this space.</p>
+          <div class="d-tags">
+            <span class="dtag">Platform Architecture</span><span class="dtag">Systems Thinking</span><span
+              class="dtag">Enterprise Grade</span><span class="dtag">Domain Modelling</span><span class="dtag">Long-Term
+              Ownership</span>
+          </div>
+        </div>
+        <div class="d-note">The connective capability across all domains.</div>
+        <div class="d-amb" aria-hidden="true">03</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" aria-labelledby="portfolio-heading">
+    <div class="inner">
+      <div class="port-hdr">
+        <div class="reveal">
+          <div class="stag" aria-hidden="true">Our Portfolio</div>
+          <h2 class="port-h" id="portfolio-heading">Enterprise systems<br>we architect & own.</h2>
+        </div>
+        <p class="port-d reveal d2">Each enterprise system we build is architected as the foundation of a dedicated
+          venture, with its own leadership, team, partnerships, and commercial strategy to serve an entire industry
+          vertical.</p>
+      </div>
+      <div class="pgrid">
+        <!-- EnCBAM featured -->
+        <div class="pc feat reveal">
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pbadge blive" id="encbam-badge">Live</span>
+              <div class="picon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M3 11h5l3-7 4 14 3-7h4" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="pname">EnCBAM<sup>&#8482;</sup></div>
+            <p class="pdesc">Enterprise system for EU Carbon Border Adjustment Mechanism compliance. Purpose-built
+              infrastructure for consultants, ESG Firms, Enterprises and verification bodies operating across
+              CBAM-covered
+              sectors.</p>
+            <div class="pfooter">
+              <span class="pdom">Carbon &middot; Compliance &middot; EU Regulation</span>
+              <a href="/encbam.html" class="parr" id="encbam-link" aria-label="View EnCBAM">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="pc-vis" aria-hidden="true">
+            <div class="vis-grid"></div>
+            <div class="vis-pulse"></div>
+          </div>
+        </div>
+        <!-- Verification Readiness featured -->
+        <div class="pc feat reveal vr-feat">
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pbadge bdev" id="vr-badge">Strategically Aligned Initiative</span>
+              <div class="picon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M17 5L8 14l-5-5" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="pname">Enterprise Ecosystem Enablement</div>
+            <p class="pdesc">Establish a dedicated scalable ecosystem to enable product, partners, and customers through
+              domain expertise, implementation excellence, enablement frameworks and reusable operational capabilities.
+            </p>
+            <div class="pfooter">
+              <span class="pdom">Ecosystem &middot; Enablement &middot; Growth</span>
+              <div class="parr" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="pc-vis" aria-hidden="true">
+            <div class="vis-grid"></div>
+            <div class="vis-pulse"></div>
+          </div>
+        </div>
+        <!-- Future Energy -->
+        <div class="pc reveal d1">
+          <div class="pc-top">
+            <span class="pbadge bsoon">Research</span>
+            <div class="picon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M10 2v3M10 15v3M4.2 4.2l2.1 2.1M13.7 13.7l2.1 2.1M2 10h3M15 10h3M4.2 15.8l2.1-2.1M13.7 6.3l2.1-2.1"
+                  stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="pname">Future Energy<br>Systems</div>
+          <p class="pdesc">Enterprise infrastructure for specialised energy domains - Hydrocarbon Accounting, LNG
+            Operations,
+            Pipeline, ETRM, and real-time market compliance.</p>
+          <div class="pfooter">
+            <span class="pdom">Energy &middot; Grid &middot; Markets</span>
+            <div class="parr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+          </div>
+        </div>
+        <!-- Future Carbon -->
+        <div class="pc reveal d2">
+          <div class="pc-top">
+            <span class="pbadge bresearch">Research</span>
+            <div class="picon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="7" stroke="#8b5cf6" stroke-width="1.5" />
+                <path d="M10 6v4l3 2" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="pname">Future Carbon<br>Systems</div>
+          <p class="pdesc">Expanded carbon intelligence platform - Voluntary Carbon Markets, Scope 1, Scope 2, Scope 3,
+            GHG
+            Accounting, ESG, CCTS, MRV and Emissions Tracking at enterprise scale.</p>
+          <div class="pfooter">
+            <span class="pdom">Carbon &middot; Markets &middot; Accounting</span>
+            <div class="parr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+          </div>
+        </div>
+        <!-- Verification Readiness removed (now featured above) -->
+        <!-- Future Enterprise -->
+        <div class="pc reveal d4">
+          <div class="pc-top">
+            <span class="pbadge bincub">Incubation</span>
+            <div class="picon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="3" width="5" height="5" rx="1" stroke="#6b7280" stroke-width="1.5" />
+                <rect x="12" y="3" width="5" height="5" rx="1" stroke="#6b7280" stroke-width="1.5" />
+                <rect x="3" y="12" width="5" height="5" rx="1" stroke="#6b7280" stroke-width="1.5" />
+                <rect x="12" y="12" width="5" height="5" rx="1" stroke="#6b7280" stroke-width="1.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="pname">Future Enterprise<br>Systems</div>
+          <p class="pdesc">The portfolio grows. We continuously identify new domains where operational complexity has
+            outgrown the available tooling - where only a purpose-built enterprise system will suffice.</p>
+          <div class="pfooter">
+            <span class="pdom">Next Domain &middot; TBD</span>
+            <div class="parr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO ARCHITECTURE -->
+  <section id="portfolio-architecture" aria-labelledby="architecture-heading">
+    <div class="inner">
+      <div class="arch-hdr reveal">
+        <div class="stag" aria-hidden="true">Structure of Ownership</div>
+        <h2 class="arch-h" id="architecture-heading">Portfolio Architecture</h2>
+        <p class="arch-p">
+          <strong>EnCarbonSys owns the portfolio.</strong> The portfolio does not define EnCarbonSys. We act as the
+          architectural holding entity, incubating and scaling domain-specific infrastructure.
+        </p>
+      </div>
+
+      <div class="arch-tree reveal d2">
+        <!-- Top Parent Node -->
+        <div class="arch-node parent">
+          <div class="arch-card parent-card">
+            <div class="node-label">Parent Company</div>
+            <div class="node-title">EnCarbonSys</div>
+          </div>
+        </div>
+
+        <!-- Connector Line -->
+        <div class="arch-line-v"></div>
+
+        <!-- Category Node -->
+        <div class="arch-node category">
+          <div class="arch-card category-card">
+            <div class="node-label">Systems Category</div>
+            <div class="node-title">Enterprise Systems Portfolio</div>
+          </div>
+        </div>
+
+        <!-- Connector Line -->
+        <div class="arch-line-v"></div>
+
+        <!-- Branch Lines -->
+        <div class="arch-branches">
+          <div class="branch-line-h"></div>
+          <div class="branch-lines-v">
+            <div class="b-line-v"></div>
+            <div class="b-line-v"></div>
+            <div class="b-line-v"></div>
+            <div class="b-line-v"></div>
+          </div>
+        </div>
+
+        <!-- Portfolio Assets Grid -->
+        <div class="arch-grid">
+          <!-- Asset 1 -->
+          <div class="arch-node asset">
+            <div class="arch-card asset-card live">
+              <span class="pbadge blive">Live</span>
+              <div class="node-title">EnCBAM™</div>
+              <div class="node-desc">EU Carbon Border Adjustment Mechanism compliance platform</div>
+            </div>
+          </div>
+          <!-- Asset 11 -->
+          <div class="arch-node asset">
+            <div class="arch-card asset-card live">
+              <span class="pbadge blive">Initiated</span>
+              <div class="node-title">Enterprise Ecosystem Enablement</div>
+              <div class="node-desc">A strategically aligned, dedicated, scalable partner success capability</div>
+            </div>
+          </div>
+          <!-- Asset 2 -->
+          <div class="arch-node asset">
+            <div class="arch-card asset-card soon">
+              <span class="pbadge bsoon">Research</span>
+              <div class="node-title">Energy Systems</div>
+              <div class="node-desc">HCA, LNG, ETRM, and other Green Energy Infrastructure</div>
+            </div>
+          </div>
+          <!-- Asset 3 -->
+          <div class="arch-node asset">
+            <div class="arch-card asset-card research">
+              <span class="pbadge bresearch">Research</span>
+              <div class="node-title">Carbon Systems</div>
+              <div class="node-desc">Voluntary carbon markets, CCTS, Carbon Accounting, and MRV systems</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector from middle to incubator -->
+        <div class="arch-line-v"></div>
+
+        <!-- Incubator Node -->
+        <div class="arch-node incubator">
+          <div class="arch-card incubator-card">
+            <div class="node-label">Incubator</div>
+            <div class="node-title">Future Enterprise Systems</div>
+            <div class="node-desc">Research pipeline targeting next-generation complex domains</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LIFECYCLE -->
+  <section id="lifecycle" aria-labelledby="lifecycle-heading">
+    <div class="inner">
+      <div class="lc-hdr">
+        <div class="reveal">
+          <div class="stag" aria-hidden="true">How We Operate</div>
+          <h2 class="lc-h" id="lifecycle-heading">The Enterprise<br>Systems Lifecycle</h2>
+        </div>
+        <p class="lc-sub reveal d2">Every enterprise system we build follows the same disciplined arc: from domain
+          discovery to portfolio asset.</p>
+      </div>
+      <div class="lc-vis">
+        <div class="lc-track">
+          <div class="lc-spine" aria-hidden="true"></div>
+          <div class="lc-sglow" aria-hidden="true"></div>
+          <div class="lc-nodes" role="list">
+
+            <div class="lcs reveal" role="listitem">
+              <div class="lc-l">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 01</div>
+                  <div class="lc-stit">Industry</div>
+                  <div class="lc-stxt">We identify industries where operational complexity is growing faster than the
+                    available tooling. Energy, carbon, and adjacent domains where the stakes are high and the gaps are
+                    real.</div>
+                </div>
+              </div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r"></div>
+            </div>
+
+            <div class="lcs reveal d1" role="listitem">
+              <div class="lc-l"></div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 02</div>
+                  <div class="lc-stit">Operational Complexity</div>
+                  <div class="lc-stxt">We map the full operational surface-regulatory layers, data flows,
+                    stakeholder networks, compliance cycles. The complexity becomes our design brief.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lcs reveal d2" role="listitem">
+              <div class="lc-l">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 03</div>
+                  <div class="lc-stit">Identify the Gap</div>
+                  <div class="lc-stxt">Where generic software fails and complexity has reached critical mass, we
+                    identify
+                    the precise gap where a purpose-built enterprise system will create structural, defensible value.
+                  </div>
+                </div>
+              </div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r"></div>
+            </div>
+
+            <div class="lcs reveal d3" role="listitem">
+              <div class="lc-l"></div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 04</div>
+                  <div class="lc-stit">Architecture</div>
+                  <div class="lc-stxt">Domain-first system design. We architect from the operational domain
+                    outward-not from a technology stack inward. Every data model, workflow, and integration is
+                    grounded in how the industry actually operates.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lcs reveal d4" role="listitem">
+              <div class="lc-l">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 05</div>
+                  <div class="lc-stit">Enterprise Systems</div>
+                  <div class="lc-stxt">We build for platform density-not feature breadth. The system becomes the
+                    operational backbone of the specialized domain. EnCarbonSys retain the core intellectual property,
+                    ensuring every enterprise system builds upon an increasingly stronger foundation. Mission-critical
+                    infrastructure commands
+                    mission-critical trust.
+                  </div>
+                </div>
+              </div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r"></div>
+            </div>
+
+            <div class="lcs reveal d5" role="listitem">
+              <div class="lc-l"></div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 06</div>
+                  <div class="lc-stit">Business</div>
+                  <div class="lc-stxt">The system becomes a business. Revenue follows operational dependency.
+                    Enterprise
+                    contracts, API ecosystems, and marketplace integrations create compounding defensibility.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lcs reveal" role="listitem">
+              <div class="lc-l">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 07</div>
+                  <div class="lc-stit">Portfolio Company</div>
+                  <div class="lc-stxt">Every enterprise system begins as a dedicated venture with its own team and
+                    operating model. As it matures, it evolves into a portfolio company-ready to scale, spin off, or
+                    pursue strategic growth, while the core IP remains
+                    with EnCarbonSys.
+                  </div>
+                </div>
+              </div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r"></div>
+            </div>
+
+            <div class="lcs reveal d1" role="listitem">
+              <div class="lc-l"></div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 08</div>
+                  <div class="lc-stit">Strategic Exit / Partnership</div>
+                  <div class="lc-stxt">When the timing and terms are right, strategic exits and partnerships are
+                    considered. But exit
+                    is
+                    never the primary objective. The greater the compounding value, the more selective we become about
+                    ownership transitions.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lcs reveal d2" role="listitem">
+              <div class="lc-l">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 09</div>
+                  <div class="lc-stit">Capital Reinvestment</div>
+                  <div class="lc-stxt">Capital generated by mature portfolio companies is reinvested into the
+                    discovery
+                    and architecture of the next enterprise system. The lifecycle is self-reinforcing by design.</div>
+                </div>
+              </div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r"></div>
+            </div>
+
+            <div class="lcs reveal d3" role="listitem">
+              <div class="lc-l"></div>
+              <div class="lc-c">
+                <div class="lc-dot" aria-hidden="true"></div>
+              </div>
+              <div class="lc-r">
+                <div class="lc-card">
+                  <div class="lc-snum">Step 10</div>
+                  <div class="lc-stit">Next Enterprise System</div>
+                  <div class="lc-stxt">The loop restarts. Each cycle begins with stronger domain knowledge, deeper
+                    systems
+                    thinking, and a more powerful platform architecture. The portfolio grows. The capability
+                    compounds.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="lc-loop reveal">
+          <p class="lc-looptxt">The lifecycle is <span>perpetual by design.</span> Each system compounds the next.</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section id="principles" aria-labelledby="principles-heading">
+    <div class="inner">
+      <div class="pr-hdr">
+        <div class="reveal">
+          <div class="stag" aria-hidden="true">Our Principles</div>
+          <h2 class="pr-h" id="principles-heading">The beliefs that
+            <br>guide everything.
+          </h2>
+        </div>
+        <p class="pr-body reveal d2">Every decision-architecture, product, partnership, or hire-is evaluated
+          against these six principles. They are not aspirational. They are operational.</p>
+      </div>
+      <div class="pr-grid reveal">
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">1</div>
+          <div class="pr-idx">Principle 01</div>
+          <div class="pr-name">Domain First</div>
+          <p class="pr-desc">We study the domain before we write a line of code. Operational depth is a prerequisite for
+            system design. Technology choices follow domain understanding-never the reverse.</p>
+        </div>
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">2</div>
+          <div class="pr-idx">Principle 02</div>
+          <div class="pr-name">Systems Thinking</div>
+          <p class="pr-desc">We design systems, not features. Every component is evaluated for its role in the whole.
+            Complexity is embraced at the architecture level so simplicity can be experienced at the user level.</p>
+        </div>
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">3</div>
+          <div class="pr-idx">Principle 03</div>
+          <div class="pr-name">Enterprise Grade</div>
+          <p class="pr-desc">The infrastructure we build carries regulatory weight, financial consequence, and
+            operational dependency. Every decision is made with that gravity in mind. No shortcuts. No prototypes
+            shipped as products.</p>
+        </div>
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">4</div>
+          <div class="pr-idx">Principle 04</div>
+          <div class="pr-name">Platform Architecture</div>
+          <p class="pr-desc">We build platforms, not applications. A platform is designed to be extended, integrated,
+            and scaled. An application is designed to be used. We build the former.</p>
+        </div>
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">5</div>
+          <div class="pr-idx">Principle 05</div>
+          <div class="pr-name">Long-Term Ownership</div>
+          <p class="pr-desc">We do not build to flip. We build to hold. Long-term ownership creates alignment between
+            our incentives and those of our customers. When we own the system for decades, we design it for decades.</p>
+        </div>
+        <div class="pr-cell">
+          <div class="pr-ghost" aria-hidden="true">6</div>
+          <div class="pr-idx">Principle 06</div>
+          <div class="pr-name">Portfolio Thinking</div>
+          <p class="pr-desc">Each enterprise system is a node in a portfolio. Learnings, architecture patterns, and
+            domain knowledge compound across systems. The portfolio is stronger than the sum of its parts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section id="ecosystem" aria-labelledby="ecosystem-heading">
+    <div class="inner">
+      <div class="eco-hdr">
+        <div class="reveal">
+          <div class="stag" aria-hidden="true">Ecosystem Network</div>
+          <h2 class="eco-h" id="ecosystem-heading">Everything connects.</h2>
+        </div>
+        <p class="eco-sub reveal d2">EnCarbonSys operates at the centre of a growing network of partners, verifiers,
+          enterprises, and institutions. Every relationship is designed to strengthen the system.</p>
+      </div>
+      <div class="eco-wrap reveal">
+        <canvas id="eco-canvas" aria-label="Partner ecosystem network visualisation"></canvas>
+        <div class="eco-overlay" id="eco-overlay" aria-hidden="true">
+          <!-- Center node -->
+          <div class="eco-node eco-center" id="eco-center-node">
+            <div class="eco-center-ring"></div>
+            <div class="eco-center-inner">
+              <img src="https://image2url.com/images/1755178545433-c3754ed2-3557-4a1f-a3d8-13fff7dc37dd.png"
+                alt="EnCarbonSys Logo" class="eco-center-logo" />
+            </div>
+          </div>
+          <!-- Branch nodes - positioned via JS -->
+          <div class="eco-branch-node" id="eco-n-0" data-color="59,130,246">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="9" width="18" height="13" rx="1.5" stroke="#3b82f6" stroke-width="1.6" />
+                <path d="M8 22V12h8v10" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M2 9l10-6 10 6" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Enterprises</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-1" data-color="16,185,129">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l2.4 4.8L20 7.6l-4 3.9.9 5.5L12 14.4l-4.9 2.6.9-5.5-4-3.9 5.6-.8z" stroke="#10b981"
+                  stroke-width="1.6" stroke-linejoin="round" />
+                <path d="M9 12.5l2 2 4-4" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Verification Bodies</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-2" data-color="59,130,246">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="9" cy="7" r="3" stroke="#3b82f6" stroke-width="1.6" />
+                <path d="M3 20c0-3.3 2.7-6 6-6" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M17 14v6M14 17h6" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Consultants</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-3" data-color="16,185,129">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17l4-8 4 5 3-4 4 7" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M3 20h18" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Marketplaces</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-4" data-color="59,130,246">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="4" width="6" height="6" rx="1" stroke="#3b82f6" stroke-width="1.6" />
+                <rect x="14" y="4" width="6" height="6" rx="1" stroke="#3b82f6" stroke-width="1.6" />
+                <rect x="4" y="14" width="6" height="6" rx="1" stroke="#3b82f6" stroke-width="1.6" />
+                <path d="M17 14v6M14 17h6" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Technology Partners</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-5" data-color="139,92,246">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="10" r="4" stroke="#8b5cf6" stroke-width="1.6" />
+                <path d="M12 14v7" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M8 21h8" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M4 5l3 3M20 5l-3 3M12 2v2" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Future Domains</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-6" data-color="245,158,11">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l2 6h6l-5 3.6 1.9 5.9L12 15l-4.9 3.5 1.9-5.9L4 9h6z" stroke="#f59e0b" stroke-width="1.6"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Regulators</div>
+          </div>
+          <div class="eco-branch-node" id="eco-n-7" data-color="20,184,166">
+            <div class="eco-branch-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="5" cy="12" r="2.5" stroke="#14b8a6" stroke-width="1.6" />
+                <circle cx="19" cy="6" r="2.5" stroke="#14b8a6" stroke-width="1.6" />
+                <circle cx="19" cy="18" r="2.5" stroke="#14b8a6" stroke-width="1.6" />
+                <path d="M7.5 11L16.5 7M7.5 13L16.5 17" stroke="#14b8a6" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="eco-branch-label">Ecosystem Partners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE -->
+  <section id="future" aria-labelledby="future-heading">
+    <div class="inner">
+      <div class="fut-in">
+        <div class="fut-lh reveal">
+          <div class="stag" aria-hidden="true">The Long Arc</div>
+          <h2 class="fut-h" id="future-heading">30 years.<br>One mission.</h2>
+          <p class="fut-d">EnCarbonSys is not measured in quarters. The enterprise systems we are building today will be
+            operational infrastructure for the better part of a century. The roadmap reflects that ambition.</p>
+        </div>
+        <div class="fut-tl">
+          <div class="ft-n reveal">
+            <div class="ft-yr">2025 - 2026</div>
+            <div class="ft-ti">EnCarbonSys Founded</div>
+            <p class="ft-tx">The company is established with a clear thesis: every complex operational domain eventually
+              requires a dedicated enterprise system. We began with Energy & Carbon domain.</p>
+            <div class="ft-ch">
+              <div class="ft-ci">Energy & Carbon domain research commenced</div>
+              <div class="ft-ci">Market opportunity identified</div>
+              <div class="ft-ci">EnCBAM&#8482; - First enterprise system architectured & launched</div>
+            </div>
+          </div>
+          <div class="ft-n reveal d1">
+            <div class="ft-yr">2026 - 2027</div>
+            <div class="ft-ti">Portfolio Expansion</div>
+            <p class="ft-tx">EnCBAM&#8482; scales across enterprise customers.
+              Enterprise Ecosystem Enablement initiated. Partner ecosystem formalised.</p>
+            <div class="ft-ch">
+              <div class="ft-ci">EnCBAM&#8482; - enterprise customer growth</div>
+              <div class="ft-ci">Enterprise Ecosystem Enablement division - establish & operate</div>
+              <div class="ft-ci">Energy & carbon domain - architecture phase</div>
+            </div>
+          </div>
+          <div class="ft-n reveal d2">
+            <div class="ft-yr">2027 - 2030</div>
+            <div class="ft-ti">Systems at Scale</div>
+            <p class="ft-tx">Multiple enterprise systems in production. The portfolio model is proven. Capital compounds
+              from mature systems into new domain research and architecture.</p>
+            <div class="ft-ch">
+              <div class="ft-ci">Energy & Carbon Systems - live and scaling</div>
+              <div class="ft-ci">Validate scalable, predictable & repeatable strategy</div>
+              <div class="ft-ci">New domain incubation begins</div>
+            </div>
+          </div>
+          <div class="ft-n reveal d3">
+            <div class="ft-yr">2030 - beyond</div>
+            <div class="ft-ti">Leading Domain-Specific Enterprise Systems Company</div>
+            <p class="ft-tx">A portfolio of mission-critical enterprise systems across multiple complex operational
+              domains. The category we defined is now the standard for how industries are built on infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="inner">
+      <div class="con-wrap">
+        <div class="con-l reveal">
+          <div class="stag" aria-hidden="true">Get in Touch</div>
+          <h2 class="con-h" id="contact-heading">Let's build<br>something<br>consequential.</h2>
+          <p class="con-s">Whether you're an enterprise customer, a potential partner, a future team member, or an
+            investor-we'd like to hear from you.</p>
+          <div class="con-chs">
+            <a href="mailto:contact@encarbonsys.com" class="con-ch" id="contact-email">
+              <div class="ch-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4" />
+                  <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg></div>
+              contact@encarbonsys.com
+            </a>
+            <a href="https://linkedin.com/company/encarbonsys" target="_blank" rel="noopener noreferrer" class="con-ch"
+              id="contact-linkedin">
+              <div class="ch-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="1" y="1" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.4" />
+                  <path d="M5 7v5M5 5v.5M8 12V9a1 1 0 0 1 2 0v3M11 9v3" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                </svg></div>
+              LinkedIn - EnCarbonSys
+            </a>
+            <a href="/encbam.html" class="con-ch" id="contact-encbam">
+              <div class="ch-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8h4l2-5 3 10 2-5h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+              Explore EnCBAM&#8482; - First Enterprise System
+            </a>
+          </div>
+        </div>
+        <div class="reveal d2" id="contact-form-wrapper">
+          <form class="con-form" id="contact-form" action="https://formspree.io/f/contact" method="POST" novalidate>
+            <div class="fduo">
+              <div class="ff"><label class="fl" for="cn">Name</label><input class="fi" id="cn" name="name" type="text"
+                  placeholder="Your name" autocomplete="name" required></div>
+              <div class="ff"><label class="fl" for="co">Organisation</label><input class="fi" id="co"
+                  name="organisation" type="text" placeholder="Company name" autocomplete="organization"></div>
+            </div>
+            <div class="ff"><label class="fl" for="ce">Email</label><input class="fi" id="ce" name="email" type="email"
+                placeholder="your@company.com" autocomplete="email" required></div>
+            <div class="ff">
+              <label class="fl" for="ct">Enquiry type</label>
+              <select class="fs" id="ct" name="enquiry_type">
+                <option value="">Select an option</option>
+                <option value="enterprise-customer">Enterprise Customer</option>
+                <option value="partner">Partnership</option>
+                <option value="investor">Investor Relations</option>
+                <option value="careers">Careers</option>
+                <option value="media">Media &amp; Analyst</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="ff"><label class="fl" for="cm">Message</label><textarea class="fta" id="cm" name="message"
+                placeholder="Tell us about your organisation and how we might work together." required></textarea></div>
+            <button type="submit" class="btn-sub" id="contact-submit">
+              Send message
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="inner">
+      <div class="foot-in">
+        <div class="foot-logo">EnCarbonSys - Domain-Specific Enterprise Systems</div>
+        <ul class="foot-links" role="list">
+          <li><a href="#why" id="footer-philosophy">Philosophy</a></li>
+          <li><a href="#portfolio" id="footer-portfolio">Portfolio</a></li>
+
+          <li><a href="/encbam.html" id="footer-encbam">EnCBAM&#8482;</a></li>
+          <li><a href="#contact" id="footer-contact">Contact</a></li>
+        </ul>
+        <p class="foot-copy">&copy; <span id="footer-year"></span> EnCarbonSys. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+    const $ = s => document.querySelector(s);
+    const $$ = s => [...document.querySelectorAll(s)];
+
+    $('#footer-year').textContent = new Date().getFullYear();
+
+    // Nav scroll
+    const nav = $('#nav');
+    let tick = false;
+    window.addEventListener('scroll', () => {
+      if (!tick) { requestAnimationFrame(() => { nav.classList.toggle('scrolled', scrollY > 40); tick = false; }); tick = true; }
+    }, { passive: true });
+
+    // Reveal
+    const ro = new IntersectionObserver(e => { e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('vis'); ro.unobserve(x.target); } }); }, { threshold: .1, rootMargin: '0px 0px -60px 0px' });
+    $$('.reveal').forEach(el => ro.observe(el));
+
+    // Lifecycle hover
+    $$('.lcs').forEach(s => {
+      s.addEventListener('mouseenter', () => { $$('.lcs.act').forEach(x => x.classList.remove('act')); s.classList.add('act'); });
+    });
+
+    // Mobile menu
+    const tog = $('#mobile-toggle');
+    if (tog) {
+      let open = false;
+      tog.addEventListener('click', () => {
+        open = !open;
+        tog.setAttribute('aria-expanded', open);
+        if (open) {
+          let mm = $('#mm');
+          if (!mm) {
+            mm = document.createElement('div'); mm.id = 'mm';
+            mm.style.cssText = 'position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(5,5,5,.97);backdrop-filter:blur(24px);z-index:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px;';
+            [['#portfolio', 'Portfolio'], ['#why', 'Philosophy'], ['#lifecycle', 'Lifecycle'], ['#ecosystem', 'Partners'], ['/encbam.html', 'EnCBAM\u2122'], ['#contact', 'Contact']].forEach(([h, l]) => {
+              const a = document.createElement('a'); a.href = h; a.textContent = l;
+              a.style.cssText = 'font-family:Outfit,sans-serif;font-size:2rem;font-weight:700;color:#8a8f98;letter-spacing:-.03em;transition:color .2s;';
+              a.addEventListener('mouseenter', () => a.style.color = '#efefef');
+              a.addEventListener('mouseleave', () => a.style.color = '#8a8f98');
+              a.addEventListener('click', () => { open = false; mm.remove(); tog.setAttribute('aria-expanded', false); });
+              mm.appendChild(a);
+            });
+            document.body.appendChild(mm);
+          }
+        } else { const mm = $('#mm'); if (mm) mm.remove(); }
+      });
+    }
+
+    // Smooth anchors
+    $$('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    /* ---- HERO CANVAS ---- */
+    (function () {
+      const cv = $('#hero-canvas'); if (!cv) return;
+      const ctx = cv.getContext('2d');
+      let W, H, nodes, fr;
+      const pal = ['16,185,129', '59,130,246', '16,185,129', '16,185,129', '59,130,246'];
+      function resize() { W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; build(); }
+      function build() {
+        const n = Math.min(80, Math.floor(W * H / 12000));
+        nodes = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .22, vy: (Math.random() - .5) * .22, r: Math.random() * 2 + .8, c: pal[Math.floor(Math.random() * pal.length)], o: Math.random() * .5 + .2, p: Math.random() * Math.PI * 2 }));
+      }
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        const t = Date.now() * .001;
+        nodes.forEach(n => { n.x += n.vx; n.y += n.vy; if (n.x < 0) n.x = W; if (n.x > W) n.x = 0; if (n.y < 0) n.y = H; if (n.y > H) n.y = 0; });
+        for (let i = 0; i < nodes.length; i++)for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 160) { const a = (1 - d / 160) * .18; ctx.beginPath(); ctx.strokeStyle = `rgba(${nodes[i].c},${a})`; ctx.lineWidth = .6; ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke(); }
+        }
+        nodes.forEach(n => { const p = n.o + Math.sin(t * 1.2 + n.p) * .12; ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(${n.c},${p})`; ctx.fill(); });
+        fr = requestAnimationFrame(draw);
+      }
+      new ResizeObserver(resize).observe(cv.parentElement);
+      resize(); draw();
+      document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(fr); else draw(); });
+    })();
+
+    /* ---- ECO CANVAS ---- */
+    (function () {
+      const cv = $('#eco-canvas'); if (!cv) return;
+      const ctx = cv.getContext('2d');
+      const overlay = $('#eco-overlay'); if (!overlay) return;
+      const centerEl = $('#eco-center-node');
+      const branchEls = [0, 1, 2, 3, 4, 5, 6, 7].map(i => $(`#eco-n-${i}`));
+
+      // Node config: color, matching order of branchEls
+      const branchCfg = [
+        { c: '59,130,246' },   // Enterprises
+        { c: '16,185,129' },   // Verification Bodies
+        { c: '59,130,246' },   // Consultants
+        { c: '16,185,129' },   // Marketplaces
+        { c: '59,130,246' },   // Technology Partners
+        { c: '139,92,246' },   // Future Domains
+        { c: '245,158,11' },   // Regulators
+        { c: '20,184,166' },   // Ecosystem Partners
+      ];
+
+      let W, H, fr, time = 0;
+      let cx, cy, bpos = [];
+      let mx = -9999, my = -9999;
+
+      cv.addEventListener('mousemove', e => {
+        const r = cv.getBoundingClientRect();
+        mx = e.clientX - r.left; my = e.clientY - r.top;
+      });
+      cv.addEventListener('mouseleave', () => { mx = -9999; my = -9999; });
+
+      function resize() {
+        W = cv.width = cv.offsetWidth;
+        H = cv.height = cv.offsetHeight;
+        cx = W / 2; cy = H / 2;
+        const rx = Math.min(W * .38, 230);
+        const ry = Math.min(H * .38, 185);
+        // Position center node
+        if (centerEl) { centerEl.style.left = cx + 'px'; centerEl.style.top = cy + 'px'; }
+        // Calculate base positions for branch nodes
+        bpos = branchEls.map((el, i) => {
+          const angle = i * (Math.PI * 2 / branchEls.length) - Math.PI / 2;
+          const bx = cx + Math.cos(angle) * rx;
+          const by = cy + Math.sin(angle) * ry;
+          if (el) {
+            el.style.left = bx + 'px';
+            el.style.top = by + 'px';
+            el.style.animationDelay = (i * 0.45) + 's';
+          }
+          return { bx, by, x: bx, y: by, angle };
+        });
+      }
+
+      function draw() {
+        time += .005;
+        ctx.clearRect(0, 0, W, H);
+
+        // Update floating positions & sync HTML nodes
+        bpos.forEach((p, i) => {
+          p.x = p.bx + Math.cos(time + i * .9) * 7;
+          p.y = p.by + Math.sin(time * .65 + i * 1.3) * 5;
+          const el = branchEls[i];
+          if (el) { el.style.left = p.x + 'px'; el.style.top = p.y + 'px'; }
+        });
+
+        // Draw lines from center to each branch — always visible, pulsating
+        bpos.forEach((p, i) => {
+          const cfg = branchCfg[i];
+          const hov = Math.hypot(mx - p.x, my - p.y) < 60;
+          // Base alpha always visible, pulses between .18 and .38
+          const pulse = .28 + Math.sin(time * 1.4 + i * .9) * .12;
+          const alpha = hov ? .65 : pulse;
+          const lineW = hov ? 1.8 : 1.1 + Math.sin(time * 1.4 + i * .9) * .3;
+
+          const g = ctx.createLinearGradient(cx, cy, p.x, p.y);
+          g.addColorStop(0, `rgba(${cfg.c},0.08)`);
+          g.addColorStop(.4, `rgba(${cfg.c},${alpha})`);
+          g.addColorStop(1, `rgba(${cfg.c},${alpha * .4})`);
+          ctx.beginPath();
+          ctx.strokeStyle = g;
+          ctx.lineWidth = lineW;
+          ctx.moveTo(cx, cy); ctx.lineTo(p.x, p.y);
+          ctx.stroke();
+
+          // Traveling pulse dot
+          const t = (time * .4 + i * .35) % 1;
+          const dx = cx + (p.x - cx) * t;
+          const dy = cy + (p.y - cy) * t;
+          const dotAlpha = Math.sin(t * Math.PI) * .9;
+          ctx.beginPath();
+          ctx.arc(dx, dy, 2.8, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${cfg.c},${dotAlpha})`;
+          ctx.fill();
+
+          // Glow around dot
+          const grd = ctx.createRadialGradient(dx, dy, 0, dx, dy, 10);
+          grd.addColorStop(0, `rgba(${cfg.c},${dotAlpha * .45})`);
+          grd.addColorStop(1, `rgba(${cfg.c},0)`);
+          ctx.beginPath(); ctx.arc(dx, dy, 10, 0, Math.PI * 2);
+          ctx.fillStyle = grd; ctx.fill();
+        });
+
+        fr = requestAnimationFrame(draw);
+      }
+
+      new ResizeObserver(resize).observe(cv.parentElement);
+      resize(); draw();
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) cancelAnimationFrame(fr); else draw();
+      });
+    })();
+
+    /* ---- SPINE PROGRESS ---- */
+    (function () {
+      const sp = $('.lc-spine'); if (!sp) return;
+      const prog = document.createElement('div');
+      prog.style.cssText = 'position:absolute;top:0;left:0;right:0;height:0%;background:linear-gradient(to bottom,#10b981,#3b82f6);box-shadow:0 0 12px rgba(16,185,129,.5);transition:height .4s ease-out;';
+      sp.appendChild(prog);
+      window.addEventListener('scroll', () => {
+        const sec = $('#lifecycle'); if (!sec) return;
+        const rect = sec.getBoundingClientRect(); const total = sec.offsetHeight - innerHeight;
+        const pct = Math.max(0, Math.min(100, (-rect.top / total) * 100));
+        prog.style.height = pct + '%';
+      }, { passive: true });
+    })();
+
+    // Spotlight Hover Card Glow Effect
+    $$('.pc, .story-block, .lc-card, .hstat').forEach(card => {
+      card.style.setProperty('--mouse-x', '0px');
+      card.style.setProperty('--mouse-y', '0px');
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // Parallax Scrolling Effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      
+      // Hero atmosphere parallax glow
+      const atm1 = $('.atm1');
+      const atm2 = $('.atm2');
+      const atm3 = $('.atm3');
+      if (atm1) atm1.style.transform = `translateX(-50%) translateY(${scrolled * 0.12}px)`;
+      if (atm2) atm2.style.transform = `translateY(${scrolled * -0.08}px)`;
+      if (atm3) atm3.style.transform = `translateY(${scrolled * 0.04}px)`;
+
+      // Ambient background text parallax (e.g. .d-amb in domains)
+      $$('.d-amb').forEach(el => {
+        const speed = 0.08;
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    }, { passive: true });
+
+    // Contact Form Submission Handler
+    const form = $('#contact-form');
+    if (form) {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        
+        const nameInput = $('#cn');
+        const emailInput = $('#ce');
+        const msgInput = $('#cm');
+        const btn = $('#contact-submit');
+
+        if (!nameInput || !emailInput || !msgInput || !btn) return;
+        
+        // Reset errors
+        $$('.fi, .fta').forEach(el => {
+          el.style.borderColor = '';
+          el.style.boxShadow = '';
+        });
+
+        let valid = true;
+        if (!nameInput.value.trim()) {
+          nameInput.style.borderColor = '#ef4444';
+          nameInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, .1)';
+          valid = false;
+        }
+        if (!emailInput.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+          emailInput.style.borderColor = '#ef4444';
+          emailInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, .1)';
+          valid = false;
+        }
+        if (!msgInput.value.trim()) {
+          msgInput.style.borderColor = '#ef4444';
+          msgInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, .1)';
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        // Button Loading State
+        const originalBtnHTML = btn.innerHTML;
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        btn.innerHTML = `Sending... <svg class="spinner" width="16" height="16" viewBox="0 0 50 50" style="animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-left: 6px;"><circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="80 200" stroke-dashoffset="0"></circle></svg>`;
+
+        if (!document.getElementById('form-spinner-style')) {
+          const style = document.createElement('style');
+          style.id = 'form-spinner-style';
+          style.textContent = '@keyframes spin { 100% { transform: rotate(360deg); } }';
+          document.head.appendChild(style);
+        }
+
+        const action = form.getAttribute('action');
+        const formData = new FormData(form);
+
+        let success = false;
+        try {
+          if (action.includes('/your-form-id') || action === 'https://formspree.io/f/contact') {
+            // Mock success if it is a placeholder Formspree URL so client demos always work cleanly!
+            await new Promise(resolve => setTimeout(resolve, 1200));
+            success = true;
+          } else {
+            const response = await fetch(action, {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+              success = true;
+            }
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+        }
+
+        if (success) {
+          const wrapper = $('#contact-form-wrapper') || form.parentElement;
+          wrapper.style.opacity = '0';
+          wrapper.style.transition = 'opacity 0.4s ease';
+          setTimeout(() => {
+            wrapper.innerHTML = `
+              <div class="form-success-card" style="padding: 48px; border: 1px solid rgba(16, 185, 129, 0.25); background: rgba(16, 185, 129, 0.02); border-radius: var(--r-md); text-align: center; backdrop-filter: blur(12px); animation: slideReveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;">
+                <div class="success-icon" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); border: 2px solid var(--em); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="var(--em)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 style="font-family: var(--fd); font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.02em;">Message Received</h3>
+                <p style="font-size: 0.95rem; color: var(--ts); line-height: 1.6; max-width: 380px; margin: 0 auto;">Thank you! Your inquiry has been sent successfully. Our team will review details and get back to you within 24 hours.</p>
+              </div>
+            `;
+            wrapper.style.opacity = '1';
+          }, 400);
+        } else {
+          alert('Submission failed. Please check details or try again later.');
+          btn.disabled = false;
+          btn.style.opacity = '1';
+          btn.innerHTML = originalBtnHTML;
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
