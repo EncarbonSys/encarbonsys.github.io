@@ -542,6 +542,7 @@
       0% {
         transform: translateY(105%);
       }
+
       100% {
         transform: translateY(0);
       }
@@ -598,6 +599,7 @@
         opacity: 0;
         transform: translateY(15px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -956,7 +958,7 @@
     }
 
     .port-d {
-      font-size: 1.12rem;
+      font-size: 0.98rem;
       color: var(--ts);
       max-width: 420px;
       line-height: 1.7
@@ -1461,7 +1463,7 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      padding: 28px 0;
+      padding: 40px 0;
       position: relative
     }
 
@@ -1469,14 +1471,14 @@
       display: flex;
       justify-content: flex-end;
       align-items: stretch;
-      padding-right: 48px
+      padding-right: 36px
     }
 
     .lc-r {
       display: flex;
       justify-content: flex-start;
       align-items: stretch;
-      padding-left: 48px
+      padding-left: 36px
     }
 
     .lc-c {
@@ -1524,7 +1526,7 @@
     .lc-card {
       width: 100%;
       max-width: none;
-      padding: 32px 36px;
+      padding: 44px 48px;
       border: 1px solid transparent;
       border-radius: var(--r-md);
       background: transparent;
@@ -1539,7 +1541,7 @@
     }
 
     .lc-snum {
-      font-size: .65rem;
+      font-size: .72rem;
       font-weight: 700;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -1549,11 +1551,11 @@
 
     .lc-stit {
       font-family: var(--fd);
-      font-size: 1.35rem;
+      font-size: 1.75rem;
       font-weight: 700;
       letter-spacing: -.025em;
       color: var(--tp);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       transition: color .3s
     }
 
@@ -1563,9 +1565,9 @@
     }
 
     .lc-stxt {
-      font-size: .93rem;
+      font-size: 1.02rem;
       color: var(--ts);
-      line-height: 1.7;
+      line-height: 1.75;
       transition: color .4s, text-shadow .4s
     }
 
@@ -2417,7 +2419,8 @@
 
       .lc-card {
         border-color: var(--border);
-        background: var(--bg-s)
+        background: var(--bg-s);
+        padding: 24px 20px;
       }
 
       .fduo {
@@ -2735,7 +2738,7 @@
           </p>
           <p class="why-bt"><strong>The problem is the absence of an enterprise system designed specifically for that
               domain.</strong></p>
-          <p class="why-bt">EnCarbonSys exists to discover those moments-and to build the systems that industries
+          <p class="why-bt">EnCarbonSys exists to discover those moments - and to build the systems that industries
             actually need.</p>
         </div>
       </div>
@@ -2747,7 +2750,7 @@
             <p class="stext">Every complex industry- oil & gas, HCA, energy trading, carbon accounting, emissions
               verification-begins with spreadsheets. Then comes generic ERP. Then bolt-on point solutions. Until
               the stack becomes the problem itself. Operations slow. Errors compound. Compliance becomes existential.
-              <strong>The industry has not failed. The tools have failed the industry.</strong>
+              <br><strong>The industry has not failed. The tools have failed the industry.</strong>
             </p>
           </div>
         </div>
@@ -2757,28 +2760,30 @@
             <h3 class="stitle">Generic software was never the answer.</h3>
             <p class="stext">Horizontal platforms optimise for breadth. Domain complexity demands depth. An enterprise
               managing cross-border carbon flows, real-time energy dispatch, and multi-jurisdictional compliance cannot
-              be served by software built for accounts receivable and project tracking. <strong>Depth requires a system
+              be served by software built for accounts receivable and project tracking.<br> <strong>Depth requires a
+                system
                 built from the domain up-not retrofitted from the platform down.</strong></p>
           </div>
         </div>
-        <div class="story-block reveal d2">
-          <div class="schap" aria-hidden="true">03</div>
-          <div>
-            <h3 class="stitle">A new category of company was needed.</h3>
-            <p class="stext">Not a consultancy. Not a SaaS provider. Not a systems integrator. EnCarbonSys is a
-              Domain-Specific Enterprise Systems Company-an entity that identifies inflection points in complex
-              industries, designs purpose-built enterprise systems, scales them into platform businesses, and compounds
-              that capability into a portfolio of mission-critical infrastructure. <strong>We're building enterprise
-                systems for domains where operational complexity has outgrown traditional software.</strong></p>
-          </div>
+      </div>
+      <div class="story-block reveal d2">
+        <div class="schap" aria-hidden="true">03</div>
+        <div>
+          <h3 class="stitle">A new category of company was needed.</h3>
+          <p class="stext">Not a consultancy. Not a SaaS provider. Not a systems integrator. EnCarbonSys is a
+            Domain-Specific Enterprise Systems Company-an entity that identifies inflection points in complex
+            industries, designs purpose-built enterprise systems, scales them into platform businesses, and compounds
+            that capability into a portfolio of mission-critical infrastructure. <br><strong>We're building enterprise
+              systems for domains where operational complexity has outgrown traditional software.</strong></p>
         </div>
       </div>
-      <div class="pullquote reveal">
-        <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another
-            application.</span><br>It needs a
-          <em>dedicated enterprise system</em>."
-        </blockquote>
-      </div>
+    </div>
+    <div class="pullquote reveal">
+      <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another
+          application.</span><br>It needs a
+        <em>dedicated enterprise system</em>."
+      </blockquote>
+    </div>
     </div>
   </section>
 
@@ -2790,7 +2795,8 @@
           <div class="d-idx" id="domains-heading">01 - Domain</div>
           <div class="d-title">Energy</div>
           <p class="d-body">Specialized enterprise infrastructure for critical energy domains. We discover, design, and
-            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and real-time market compliance.</p>
+            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and
+            real-time market compliance.</p>
           <div class="d-tags">
             <span class="dtag">Oil & Gas</span><span class="dtag">HCA</span><span class="dtag">LNG</span><span
               class="dtag">ETRM</span><span class="dtag">Compliance</span>
