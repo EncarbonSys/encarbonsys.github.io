@@ -268,13 +268,49 @@
       padding: 8px 18px;
       border-radius: var(--r-sm);
       border: 1px solid var(--border);
-      transition: all .25s
+      transition: all .25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn-ghost:hover {
       color: var(--tp);
       border-color: var(--border-h);
       background: rgba(255, 255, 255, .03)
+    }
+
+    .live-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--em);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .live-dot::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--em);
+      animation: livePulse 2s infinite ease-in-out;
+    }
+
+    @keyframes livePulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(3.2);
+        opacity: 0;
+      }
     }
 
     .btn-primary-sm {
@@ -2665,7 +2701,7 @@
         <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a href="/encbam.html" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;</a>
+        <a href="/encbam.html" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;<span class="live-dot" aria-hidden="true"></span></a>
         <a href="#contact" class="btn-primary-sm" id="nav-cta">Get in Touch</a>
       </div>
       <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
