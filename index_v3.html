@@ -495,10 +495,39 @@
       font-family: var(--fd);
       font-size: clamp(2.5rem, 6.6vw, 6.2rem);
       font-weight: 800;
-      line-height: .95;
+      line-height: 1.05;
       letter-spacing: -.04em;
       color: var(--tp);
       margin-bottom: 24px
+    }
+
+    .h-line {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.08em;
+    }
+
+    .h-line-inner {
+      display: block;
+      transform: translateY(105%);
+      animation: lineReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .h-line:nth-child(1) .h-line-inner {
+      animation-delay: 0.2s;
+    }
+
+    .h-line:nth-child(2) .h-line-inner {
+      animation-delay: 0.38s;
+    }
+
+    @keyframes lineReveal {
+      0% {
+        transform: translateY(105%);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
 
     .hero-h1 .grad {
@@ -528,7 +557,11 @@
       color: var(--ts);
       max-width: 780px;
       margin: 0 auto 40px;
-      line-height: 1.75
+      line-height: 1.75;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: subReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.65s;
     }
 
     .hero-acts {
@@ -536,7 +569,22 @@
       align-items: center;
       justify-content: center;
       gap: 14px;
-      flex-wrap: wrap
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: subReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes subReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .btn-hp {
@@ -2619,8 +2667,8 @@
         Domain-Specific Enterprise Systems
       </div>
       <h1 class="hero-h1" id="hero-heading">
-        Enterprise Systems<br>
-        <span class="grad">for Complex Industries.</span>
+        <span class="h-line"><span class="h-line-inner">Enterprise Systems</span></span>
+        <span class="h-line"><span class="h-line-inner grad">for Complex Industries.</span></span>
       </h1>
       <p class="hero-sub" id="hero-subheading">
         We discover, architect, build and scale enterprise systems for complex operational domains - leading with
