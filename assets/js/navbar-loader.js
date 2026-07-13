@@ -246,7 +246,7 @@
     const NAV_HTML = `
 <nav class="navbar" id="encarbonsys-navbar">
     <div class="nav-container">
-        <a href="https://encarbonsys.com/" class="logo">
+        <a href="/" class="logo">
             <img src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png"
                 alt="EnCarbonSys Logo">
             EnCarbonSys
@@ -255,9 +255,9 @@
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links" id="encav-navLinks">
-            <li><a href="https://encarbonsys.com/#problem">Problem</a></li>
-            <li><a href="https://encarbonsys.com/#solution">Solution</a></li>
-            <li><a href="https://encarbonsys.com/pages/pricing.html">Pricing</a></li>
+            <li><a href="/encbam.html#problem">Problem</a></li>
+            <li><a href="/encbam.html#solution">Solution</a></li>
+            <li><a href="/pages/pricing.html">Pricing</a></li>
             <li class="dropdown" id="encav-toolsDropdown">
                 <a href="#" class="dropdown-toggle">
                     Tools <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
@@ -268,11 +268,11 @@
                     <li><a href="https://cbam-tools.encarbonsys.com/tools/cbam-cost-estimator">CBAM Cost Estimator</a></li>
                 </ul>
             </li>
-            <li><a href="https://encarbonsys.com/cbam-blog/">Blog</a></li>
-            <li><a href="https://encarbonsys.com/#faq">FAQ</a></li>
+            <li><a href="/cbam-blog/">Blog</a></li>
+            <li><a href="/encbam.html#faq">FAQ</a></li>
             <li class="nav-cta-group" style="display:flex;align-items:center;gap:1rem;margin-left:1rem;">
                 <a href="https://encbam.encarbonsys.com/login" class="nav-login">Login</a>
-                <a href="https://encarbonsys.com/#cta" class="nav-cta">Get Started</a>
+                <a href="/encbam.html#cta" class="nav-cta">Get Started</a>
             </li>
         </ul>
     </div>
