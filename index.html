@@ -343,10 +343,17 @@
     }
 
     /* Spotlight Hover Glow */
-    .pc, .story-block, .lc-card, .hstat {
+    .pc,
+    .story-block,
+    .lc-card,
+    .hstat {
       position: relative;
     }
-    .pc::before, .story-block::before, .lc-card::before, .hstat::before {
+
+    .pc::before,
+    .story-block::before,
+    .lc-card::before,
+    .hstat::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -357,15 +364,24 @@
       opacity: 0;
       transition: opacity 0.5s ease;
     }
-    .pc:hover::before, .story-block:hover::before, .lc-card:hover::before, .hstat:hover::before {
+
+    .pc:hover::before,
+    .story-block:hover::before,
+    .lc-card:hover::before,
+    .hstat:hover::before {
       opacity: 1;
     }
-    .hstat.hs-energy::before, .story-block::before, .lc-card::before {
+
+    .hstat.hs-energy::before,
+    .story-block::before,
+    .lc-card::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(16, 185, 129, 0.06), transparent 70%);
     }
+
     .hstat.hs-carbon::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(59, 130, 246, 0.06), transparent 70%);
     }
+
     .hstat.hs-systems::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(139, 92, 246, 0.06), transparent 70%);
     }
@@ -484,6 +500,7 @@
         transform: translateX(-15px);
         clip-path: inset(0 100% 0 0);
       }
+
       100% {
         opacity: 1;
         transform: translateX(0);
@@ -2709,7 +2726,8 @@
         </div>
       </div>
       <div class="pullquote reveal">
-        <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another application.</span><br>It needs a
+        <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another
+            application.</span><br>It needs a
           <em>dedicated enterprise system</em>."
         </blockquote>
       </div>
@@ -2738,11 +2756,11 @@
           <div class="d-idx">02 - Domain</div>
           <div class="d-title">Carbon</div>
           <p class="d-body">Carbon has graduated from a sustainability metric to a regulated financial instrument. CBAM,
-            ETS, Article 6, Scope 3 accounting, voluntary markets, and verification requirements are converging into an
-            operational domain of immense complexity-one that demands dedicated enterprise infrastructure.</p>
+            CCTS, ETS, GHG accounting, voluntary markets, and verification requirements are converging into an
+            operational domain of immense complexity—one that demands dedicated enterprise infrastructure.</p>
           <div class="d-tags">
-            <span class="dtag">CBAM</span><span class="dtag">ETS</span><span class="dtag">Article 6</span><span
-              class="dtag">Scope 3</span><span class="dtag">Verification</span><span class="dtag">Markets</span>
+            <span class="dtag">CBAM</span><span class="dtag">ETS</span><span class="dtag">CCTS</span><span
+              class="dtag">GHG</span><span class="dtag">Verification</span><span class="dtag">Carbon Markets</span>
           </div>
         </div>
         <div class="d-note">EnCBAM&#8482; is live. Expanded systems in research.</div>
@@ -3755,7 +3773,7 @@
     // Parallax Scrolling Effect
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      
+
       // Hero atmosphere parallax glow
       const atm1 = $('.atm1');
       const atm2 = $('.atm2');
@@ -3776,14 +3794,14 @@
     if (form) {
       form.addEventListener('submit', async e => {
         e.preventDefault();
-        
+
         const nameInput = $('#cn');
         const emailInput = $('#ce');
         const msgInput = $('#cm');
         const btn = $('#contact-submit');
 
         if (!nameInput || !emailInput || !msgInput || !btn) return;
-        
+
         // Reset errors
         $$('.fi, .fta').forEach(el => {
           el.style.borderColor = '';
