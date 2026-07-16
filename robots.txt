@@ -22,9 +22,10 @@ Disallow: /*.py$
 
 # Allow important pages (explicit)
 Allow: /
-Allow: /pages/encbam-pro.html
-Allow: /pages/pricing.html
-Allow: /pages/client-resource.html
+Allow: /EnCBAM
+Allow: /pages/encbam-pro
+Allow: /pages/pricing
+Allow: /pages/client-resource
 Allow: /cbam-blog/
 
 # Allow CSS, JS, images for rendering

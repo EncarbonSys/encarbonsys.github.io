@@ -11,7 +11,11 @@
     gtag('config', 'G-5KSFR9S0QX');
     (function () {
       const h = ['#problem', '#solution', '#process', '#advantage', '#cta', '#about', '#faq'];
-      if (h.includes(window.location.hash)) window.location.replace('/encbam.html' + window.location.hash);
+      if (h.includes(window.location.hash)) {
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const dest = isLocal ? '/EnCBAM.html' : '/EnCBAM';
+        window.location.replace(dest + window.location.hash);
+      }
     })();
   </script>
   <meta charset="UTF-8">
@@ -38,6 +42,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- GSAP + ScrollTrigger for scroll dot animation -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://encarbonsys.com/#organization","name":"EnCarbonSys","url":"https://encarbonsys.com","description":"EnCarbonSys is a Domain-Specific Enterprise Systems Company.","foundingDate":"2024","contactPoint":{"@type":"ContactPoint","email":"contact@encarbonsys.com","contactType":"business","availableLanguage":"English"}},{"@type":"WebSite","@id":"https://encarbonsys.com/#website","url":"https://encarbonsys.com","name":"EnCarbonSys \u2014 Domain-Specific Enterprise Systems","publisher":{"@id":"https://encarbonsys.com/#organization"}}]}
   </script>
@@ -379,10 +386,17 @@
     }
 
     /* Spotlight Hover Glow */
-    .pc, .story-block, .lc-card, .hstat {
+    .pc,
+    .story-block,
+    .lc-card,
+    .hstat {
       position: relative;
     }
-    .pc::before, .story-block::before, .lc-card::before, .hstat::before {
+
+    .pc::before,
+    .story-block::before,
+    .lc-card::before,
+    .hstat::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -393,15 +407,24 @@
       opacity: 0;
       transition: opacity 0.5s ease;
     }
-    .pc:hover::before, .story-block:hover::before, .lc-card:hover::before, .hstat:hover::before {
+
+    .pc:hover::before,
+    .story-block:hover::before,
+    .lc-card:hover::before,
+    .hstat:hover::before {
       opacity: 1;
     }
-    .hstat.hs-energy::before, .story-block::before, .lc-card::before {
+
+    .hstat.hs-energy::before,
+    .story-block::before,
+    .lc-card::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(16, 185, 129, 0.06), transparent 70%);
     }
+
     .hstat.hs-carbon::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(59, 130, 246, 0.06), transparent 70%);
     }
+
     .hstat.hs-systems::before {
       background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(139, 92, 246, 0.06), transparent 70%);
     }
@@ -520,6 +543,7 @@
         transform: translateX(-15px);
         clip-path: inset(0 100% 0 0);
       }
+
       100% {
         opacity: 1;
         transform: translateX(0);
@@ -561,6 +585,7 @@
       0% {
         transform: translateY(105%);
       }
+
       100% {
         transform: translateY(0);
       }
@@ -617,6 +642,7 @@
         opacity: 0;
         transform: translateY(15px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -2682,7 +2708,7 @@
         <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a href="/encbam.html" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;<span class="live-dot" aria-hidden="true"></span></a>
+        <a href="/EnCBAM" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;<span class="live-dot" aria-hidden="true"></span></a>
         <a href="#contact" class="btn-primary-sm" id="nav-cta">Get in Touch</a>
       </div>
       <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -2704,7 +2730,7 @@
         Domain-Specific Enterprise Systems
       </div>
       <h1 class="hero-h1" id="hero-heading">
-        <span class="h-line"><span class="h-line-inner">Enterprise Systems</span></span>
+        <span class="h-line"><span class="h-line-inner">Enterpr<span id="hero-i-char">i</span>se Systems</span></span>
         <span class="h-line"><span class="h-line-inner"><span class="grad">for Complex Industries.</span></span></span>
       </h1>
       <p class="hero-sub" id="hero-subheading">
@@ -2746,7 +2772,7 @@
         <div class="reveal">
           <div class="stag" aria-hidden="true">Why We Exist</div>
           <h2 class="why-bh" id="why-heading">Every complex<br>industry reaches<br>a <span class="ag">breaking
-              point.</span></h2>
+              point<span id="why-fullstop">.</span></span></h2>
         </div>
         <div class="why-rt reveal d2">
           <p class="why-bt">Spreadsheets erode. Generic & traditional software fails to account for operational nuance.
@@ -2755,7 +2781,7 @@
           </p>
           <p class="why-bt"><strong>The problem is the absence of an enterprise system designed specifically for that
               domain.</strong></p>
-          <p class="why-bt">EnCarbonSys exists to discover those moments-and to build the systems that industries
+          <p class="why-bt">EnCarbonSys exists to discover those moments - and to build the systems that industries
             actually need.</p>
         </div>
       </div>
@@ -2782,23 +2808,25 @@
                 built from the domain up-not retrofitted from the platform down.</strong></p>
           </div>
         </div>
-        <div class="story-block reveal d2">
-          <div class="schap" aria-hidden="true">03</div>
-          <div>
-            <h3 class="stitle">A new category of company was needed.</h3>
-            <p class="stext">Not a consultancy. Not a SaaS provider. Not a systems integrator. EnCarbonSys is a
-              Domain-Specific Enterprise Systems Company-an entity that identifies inflection points in complex
-              industries, designs purpose-built enterprise systems, scales them into platform businesses, and compounds
-              that capability into a portfolio of mission-critical infrastructure. <br><strong>We're building enterprise
-                systems for domains where operational complexity has outgrown traditional software.</strong></p>
-          </div>
+      </div>
+      <div class="story-block reveal d2">
+        <div class="schap" aria-hidden="true">03</div>
+        <div>
+          <h3 class="stitle">A new category of company was needed.</h3>
+          <p class="stext">Not a consultancy. Not a SaaS provider. Not a systems integrator. EnCarbonSys is a
+            Domain-Specific Enterprise Systems Company-an entity that identifies inflection points in complex
+            industries, designs purpose-built enterprise systems, scales them into platform businesses, and compounds
+            that capability into a portfolio of mission-critical infrastructure. <br><strong>We're building enterprise
+              systems for domains where operational complexity has outgrown traditional software.</strong></p>
         </div>
       </div>
-      <div class="pullquote reveal">
-        <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another application.</span><br>It needs a
-          <em>dedicated enterprise system</em>."
-        </blockquote>
-      </div>
+    </div>
+    <div class="pullquote reveal">
+      <blockquote class="pq-text">"The industry does not need <span class="pq-nowrap">another
+          application.</span><br>It needs a
+        <em>dedicated enterprise system</em>."
+      </blockquote>
+    </div>
     </div>
   </section>
 
@@ -2810,7 +2838,8 @@
           <div class="d-idx" id="domains-heading">01 - Domain</div>
           <div class="d-title">Energy</div>
           <p class="d-body">Specialized enterprise infrastructure for critical energy domains. We discover, design, and
-            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and real-time market compliance.</p>
+            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and
+            real-time market compliance.</p>
           <div class="d-tags">
             <span class="dtag">Oil & Gas</span><span class="dtag">HCA</span><span class="dtag">LNG</span><span
               class="dtag">ETRM</span><span class="dtag">Compliance</span>
@@ -2886,7 +2915,7 @@
               sectors.</p>
             <div class="pfooter">
               <span class="pdom">Carbon &middot; Compliance &middot; EU Regulation</span>
-              <a href="/encbam.html" class="parr" id="encbam-link" aria-label="View EnCBAM">
+              <a href="/EnCBAM" class="parr" id="encbam-link" aria-label="View EnCBAM">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -3553,7 +3582,7 @@
                 </svg></div>
               LinkedIn - EnCarbonSys
             </a>
-            <a href="/encbam.html" class="con-ch" id="contact-encbam">
+            <a href="/EnCBAM" class="con-ch" id="contact-encbam">
               <div class="ch-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M2 8h4l2-5 3 10 2-5h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -3608,7 +3637,7 @@
           <li><a href="#why" id="footer-philosophy">Philosophy</a></li>
           <li><a href="#portfolio" id="footer-portfolio">Portfolio</a></li>
 
-          <li><a href="/encbam.html" id="footer-encbam">EnCBAM&#8482;</a></li>
+          <li><a href="/EnCBAM" id="footer-encbam">EnCBAM&#8482;</a></li>
           <li><a href="#contact" id="footer-contact">Contact</a></li>
         </ul>
         <p class="foot-copy">&copy; <span id="footer-year"></span> EnCarbonSys. All rights reserved.</p>
@@ -3651,7 +3680,7 @@
           if (!mm) {
             mm = document.createElement('div'); mm.id = 'mm';
             mm.style.cssText = 'position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(5,5,5,.97);backdrop-filter:blur(24px);z-index:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px;';
-            [['#portfolio', 'Portfolio'], ['#why', 'Philosophy'], ['#lifecycle', 'Lifecycle'], ['#ecosystem', 'Partners'], ['/encbam.html', 'EnCBAM\u2122'], ['#contact', 'Contact']].forEach(([h, l]) => {
+            [['#portfolio', 'Portfolio'], ['#why', 'Philosophy'], ['#lifecycle', 'Lifecycle'], ['#ecosystem', 'Partners'], ['/EnCBAM', 'EnCBAM\u2122'], ['#contact', 'Contact']].forEach(([h, l]) => {
               const a = document.createElement('a'); a.href = h; a.textContent = l;
               a.style.cssText = 'font-family:Outfit,sans-serif;font-size:2rem;font-weight:700;color:#8a8f98;letter-spacing:-.03em;transition:color .2s;';
               a.addEventListener('mouseenter', () => a.style.color = '#efefef');
@@ -3841,7 +3870,7 @@
     // Parallax Scrolling Effect
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      
+
       // Hero atmosphere parallax glow
       const atm1 = $('.atm1');
       const atm2 = $('.atm2');
@@ -3862,14 +3891,14 @@
     if (form) {
       form.addEventListener('submit', async e => {
         e.preventDefault();
-        
+
         const nameInput = $('#cn');
         const emailInput = $('#ce');
         const msgInput = $('#cm');
         const btn = $('#contact-submit');
 
         if (!nameInput || !emailInput || !msgInput || !btn) return;
-        
+
         // Reset errors
         $$('.fi, .fta').forEach(el => {
           el.style.borderColor = '';
@@ -3957,6 +3986,1110 @@
         }
       });
     }
+  </script>
+
+  <!-- SCROLL DOT ELEMENT -->
+  <div id="scroll-dot" aria-hidden="true">
+    <div class="sd-core"></div>
+    <div class="sd-ring"></div>
+    
+    <!-- SVG Gears (Dedicated System) -->
+    <div class="sd-shape sd-gears">
+      <svg class="gear-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <svg class="gear-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+    </div>
+
+    <!-- SVG Bolt (Energy) -->
+    <div class="sd-shape sd-bolt">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+    </div>
+
+    <!-- SVG Carbon (Atom/Molecule representation) -->
+    <div class="sd-shape sd-carbon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8">
+        <circle cx="12" cy="12" r="3" fill="#34d399"></circle>
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0 12 12)" stroke-dasharray="3,1.5"></ellipse>
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" stroke-dasharray="3,1.5"></ellipse>
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" stroke-dasharray="3,1.5"></ellipse>
+      </svg>
+    </div>
+
+    <!-- SVG Lightbulb (Systems) -->
+    <div class="sd-shape sd-bulb">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 14c.75-1 1.5-2 1.5-3.5 0-2.5-2-4.5-4.5-4.5S7.5 8 7.5 10.5c0 1.5.75 2.5 1.5 3.5h6z"></path>
+        <path d="M10 10l2-2 2 2"></path>
+        <path d="M9 17h6"></path>
+        <path d="M10 20h4"></path>
+      </svg>
+    </div>
+
+    <!-- SVG Lifeline (Card 1 EnCBAM) -->
+    <div class="sd-shape sd-lifeline">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M3 11h5l3-7 4 14 3-7h4" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+
+    <!-- SVG Checkmark (Card 2 Ecosystem) -->
+    <div class="sd-shape sd-check">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M17 5L8 14l-5-5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+
+    <!-- SVG Sunburst (Card 3 Future Energy) -->
+    <div class="sd-shape sd-sunburst">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 2v3M10 15v3M4.2 4.2l2.1 2.1M13.7 13.7l2.1 2.1M2 10h3M15 10h3M4.2 15.8l2.1-2.1M13.7 6.3l2.1-2.1" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></path>
+      </svg>
+    </div>
+
+    <!-- SVG Clock (Card 4 Future Carbon) -->
+    <div class="sd-shape sd-clock">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="7" stroke="#ffffff" stroke-width="1.8"></circle>
+        <path d="M10 6v4l3 2" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+
+    <!-- SVG Boxes (Card 5 Future Enterprise) -->
+    <div class="sd-shape sd-boxes">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="5" height="5" rx="1" stroke="#ffffff" stroke-width="1.8"></rect>
+        <rect x="12" y="3" width="5" height="5" rx="1" stroke="#ffffff" stroke-width="1.8"></rect>
+        <rect x="3" y="12" width="5" height="5" rx="1" stroke="#ffffff" stroke-width="1.8"></rect>
+        <rect x="12" y="12" width="5" height="5" rx="1" stroke="#ffffff" stroke-width="1.8"></rect>
+      </svg>
+    </div>
+  </div>
+
+  <style>
+    /* ===== SCROLL DOT SYSTEM ===== */
+    #scroll-dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      will-change: transform, opacity;
+      opacity: 0;
+    }
+
+    .sd-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 0%, #cccccc 60%, transparent 100%);
+      box-shadow:
+        0 0 6px 2px rgba(255, 255, 255, 0.95),
+        0 0 16px 5px rgba(255, 255, 255, 0.5),
+        0 0 32px 10px rgba(255, 255, 255, 0.15);
+      animation: sdBreath 2.4s ease-in-out infinite;
+    }
+
+    .sd-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      animation: sdRingPulse 2.4s ease-in-out infinite;
+    }
+
+    /* Morph Shapes Base Styles */
+    .sd-shape {
+      position: absolute;
+      inset: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      will-change: transform, opacity;
+      pointer-events: none;
+    }
+
+    /* Shape Specific Animations */
+    .sd-gears .gear-1 {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      animation: spin-cw 4s linear infinite;
+    }
+
+    .sd-gears .gear-2 {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      animation: spin-ccw 4s linear infinite;
+    }
+
+    .sd-carbon svg {
+      animation: spin-cw 10s linear infinite;
+    }
+
+    .sd-bolt svg {
+      animation: bolt-flicker 1.5s ease-in-out infinite;
+    }
+
+    .sd-bulb svg {
+      animation: bulb-pulse 1.8s ease-in-out infinite;
+    }
+
+    /* Scroll Dot Card Shapes Animations */
+    .sd-lifeline svg path {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: ecg-flow 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .sd-check svg path {
+      stroke-dasharray: 30;
+      stroke-dashoffset: 30;
+      animation: draw-check 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .sd-sunburst svg {
+      animation: spin-cw 8s linear infinite;
+    }
+    .sd-sunburst svg path {
+      animation: ray-pulse 1.5s ease-in-out infinite;
+    }
+
+    .sd-clock svg path:last-child {
+      transform-origin: 10px 10px;
+      animation: clock-tick 4s linear infinite;
+    }
+
+    .sd-boxes svg rect {
+      transform-origin: center;
+      animation: box-pulse 1.6s ease-in-out infinite;
+    }
+    .sd-boxes svg rect:nth-child(1) { animation-delay: 0s; }
+    .sd-boxes svg rect:nth-child(2) { animation-delay: 0.3s; }
+    .sd-boxes svg rect:nth-child(3) { animation-delay: 0.6s; }
+    .sd-boxes svg rect:nth-child(4) { animation-delay: 0.9s; }
+
+    @keyframes sdBreath {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    @keyframes sdRingPulse {
+      0%, 100% { transform: scale(1); opacity: 0.35; }
+      50% { transform: scale(1.4); opacity: 0; }
+    }
+
+    @keyframes spin-cw {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes spin-ccw {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+
+    /* section dot-landing flash */
+    .dot-flash-border {
+      animation: dotLand 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+    @keyframes dotLand {
+      0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.0); }
+      40% { box-shadow: 0 0 0 12px rgba(16,185,129,0.25); }
+      100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.0); }
+    }
+
+    /* Card Icon Micro-animations */
+    .pc .picon svg path,
+    .pc .picon svg rect,
+    .pc .picon svg circle {
+      transition: stroke 0.3s ease, fill 0.3s ease;
+    }
+
+    /* Card 1 (EnCBAM): ECG Heartbeat wave flow */
+    .pc.active .picon svg path,
+    .pc:hover .picon svg path {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: ecg-flow 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes ecg-flow {
+      0% { stroke-dashoffset: 40; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -40; }
+    }
+
+    /* Card 2 (Ecosystem): Checkmark self-drawing */
+    .pc.active .picon svg path,
+    .pc:hover .picon svg path {
+      stroke-dasharray: 30;
+      stroke-dashoffset: 30;
+      animation: draw-check 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    @keyframes draw-check {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* Card 3 (Future Energy): Sunburst rotation & ray pulsing */
+    .pc.active .picon svg,
+    .pc:hover .picon svg {
+      animation: spin-cw 8s linear infinite;
+    }
+    .pc.active .picon svg path,
+    .pc:hover .picon svg path {
+      animation: ray-pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes ray-pulse {
+      0%, 100% { opacity: 0.5; stroke-width: 1.4; }
+      50% { opacity: 1; stroke-width: 2.0; }
+    }
+
+    /* Card 4 (Future Carbon): Clock hands rotating */
+    .pc.active .picon svg path:last-child,
+    .pc:hover .picon svg path:last-child {
+      transform-origin: 10px 10px;
+      animation: clock-tick 4s linear infinite;
+    }
+    @keyframes clock-tick {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Card 5 (Future Enterprise): Four boxes pulsing in sequence */
+    .pc.active .picon svg rect,
+    .pc:hover .picon svg rect {
+      transform-origin: center;
+      animation: box-pulse 1.6s ease-in-out infinite;
+    }
+    .pc.active .picon svg rect:nth-child(1), .pc:hover .picon svg rect:nth-child(1) { animation-delay: 0s; }
+    .pc.active .picon svg rect:nth-child(2), .pc:hover .picon svg rect:nth-child(2) { animation-delay: 0.3s; }
+    .pc.active .picon svg rect:nth-child(3), .pc:hover .picon svg rect:nth-child(3) { animation-delay: 0.6s; }
+    .pc.active .picon svg rect:nth-child(4), .pc:hover .picon svg rect:nth-child(4) { animation-delay: 0.9s; }
+    @keyframes box-pulse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    /* Bolt & Bulb keyframe animations */
+    @keyframes bolt-flicker {
+      0%, 100% { filter: drop-shadow(0 0 6px #10b981); opacity: 0.9; }
+      50% { filter: drop-shadow(0 0 14px #10b981); opacity: 1; }
+      55% { opacity: 0.85; }
+      60% { opacity: 1; }
+    }
+
+    @keyframes bulb-pulse {
+      0%, 100% { filter: drop-shadow(0 0 6px #10b981); fill: rgba(16, 185, 129, 0.1); }
+      50% { filter: drop-shadow(0 0 14px #10b981); fill: rgba(16, 185, 129, 0.35); }
+    }
+
+    /* Mobile: hide dot entirely */
+    @media (max-width: 860px) {
+      #scroll-dot { display: none !important; }
+    }
+  </style>
+
+  <script>
+  /* ============================================================
+     SCROLL DOT ORCHESTRATION — index_v3.html
+     White birth → morph green → ping-pong at breaking point → 01/02/03
+  ============================================================ */
+  (function () {
+    if (window.innerWidth <= 860) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const dot = document.getElementById('scroll-dot');
+    if (!dot) return;
+    const sdCore = dot.querySelector('.sd-core');
+    const sdRing  = dot.querySelector('.sd-ring');
+
+    function getCoords(el, yOffsetRatio = 0.5) {
+      if (!el) return { x: 0, y: 0 };
+      const r = el.getBoundingClientRect();
+      return {
+        x: r.left + r.width / 2,
+        y: r.top + window.scrollY + r.height * yOffsetRatio
+      };
+    }
+
+    function setWhite() {
+      if (!sdCore) return;
+      gsap.set(sdCore, {
+        background: 'radial-gradient(circle, #ffffff 0%, #cccccc 60%, transparent 100%)',
+        boxShadow:  '0 0 6px 2px rgba(255,255,255,0.95), 0 0 16px 5px rgba(255,255,255,0.5), 0 0 32px 10px rgba(255,255,255,0.15)'
+      });
+      if (sdRing) gsap.set(sdRing, { borderColor: 'rgba(255,255,255,0.3)' });
+    }
+
+    function morphGreen(dur) {
+      if (!sdCore) return;
+      gsap.to(sdCore, {
+        background: 'radial-gradient(circle, #10b981 0%, #34d399 60%, transparent 100%)',
+        boxShadow:  '0 0 8px 2px rgba(16,185,129,0.95), 0 0 22px 7px rgba(16,185,129,0.55), 0 0 44px 14px rgba(16,185,129,0.22)',
+        duration: dur ?? 0.4, ease: 'power1.out'
+      });
+      if (sdRing) gsap.to(sdRing, { borderColor: 'rgba(16,185,129,0.4)', duration: dur ?? 0.4 });
+    }
+
+    let triggers = [];
+    let mouseX = 0, mouseY = 0;
+    let lastMouseX = 0, lastMouseY = 0;
+    let isMouseActive = false;
+    let followMouse = false;
+    let updateDomainShapeFn = null;
+    let showShapeFn = null;
+    let t6c_ref = null;
+    let t6d_ref = null;
+    let cards_ref = null;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      isMouseActive = true;
+      if (updateDomainShapeFn) updateDomainShapeFn();
+    });
+
+    gsap.ticker.add(() => {
+      if (followMouse && isMouseActive) {
+        const targetX = mouseX;
+        const targetY = mouseY + window.scrollY;
+        const dx = targetX - lastMouseX;
+        const dy = targetY - lastMouseY;
+        
+        lastMouseX += dx * 0.12;
+        lastMouseY += dy * 0.12;
+        
+        gsap.set(dot, { x: lastMouseX, y: lastMouseY, scale: 1.0 });
+      } else {
+        // Horizontal sliding between side-by-side cards when scroll is parked on that row
+        if (t6c_ref && t6c_ref.progress === 1 && t6d_ref && t6d_ref.progress === 0 && cards_ref && cards_ref.length > 3) {
+          const useLeft = mouseX < window.innerWidth / 2;
+          const targetCard = useLeft ? cards_ref[2] : cards_ref[3];
+          const targetShape = useLeft ? 'sunburst' : 'clock';
+          const otherCard = useLeft ? cards_ref[3] : cards_ref[2];
+
+          const pTo_dyn = getCoords(targetCard.querySelector('.picon'), 0.5);
+          
+          const dx = pTo_dyn.x - lastMouseX;
+          const dy = pTo_dyn.y - lastMouseY;
+          
+          lastMouseX += dx * 0.15;
+          lastMouseY += dy * 0.15;
+
+          if (showShapeFn) showShapeFn(targetShape);
+          
+          cards_ref[1].querySelector('.picon').style.opacity = 1;
+          targetCard.querySelector('.picon').style.opacity = 0;
+          otherCard.querySelector('.picon').style.opacity = 1;
+          cards_ref[4].querySelector('.picon').style.opacity = 1;
+          
+          gsap.set(dot, { x: lastMouseX, y: lastMouseY });
+        }
+      }
+    });
+
+    function initDotAnimation() {
+      // Clean up previous instances
+      triggers.forEach(t => t.kill());
+      triggers = [];
+      followMouse = false; // Reset on initialization/resize
+      updateDomainShapeFn = null; // Clear old callback reference
+
+      const iChar = document.getElementById('hero-i-char');
+      const whyFullstop = document.getElementById('why-fullstop');
+      const storyBlocks = document.querySelectorAll('.story-block');
+      const pullquote = document.querySelector('.pullquote');
+      const dpE = document.querySelector('.dp-e .d-title');
+      const dpC = document.querySelector('.dp-c .d-title');
+      const dpS = document.querySelector('.dp-s .d-title');
+      const portHdr = document.querySelector('#portfolio-heading');
+      const cards = document.querySelectorAll('#portfolio .pc');
+      const portArchHdr = document.querySelector('#architecture-heading');
+
+      if (!iChar || !whyFullstop) return;
+
+      // Morphing Shapes setup
+      const shapes = {
+        core: sdCore,
+        ring: sdRing,
+        gears: dot.querySelector('.sd-gears'),
+        bolt: dot.querySelector('.sd-bolt'),
+        carbon: dot.querySelector('.sd-carbon'),
+        bulb: dot.querySelector('.sd-bulb'),
+        lifeline: dot.querySelector('.sd-lifeline'),
+        check: dot.querySelector('.sd-check'),
+        sunburst: dot.querySelector('.sd-sunburst'),
+        clock: dot.querySelector('.sd-clock'),
+        boxes: dot.querySelector('.sd-boxes')
+      };
+
+      function showShape(activeName) {
+        const cardShapes = ['lifeline', 'check', 'sunburst', 'clock', 'boxes'];
+        const isCardShape = cardShapes.includes(activeName);
+
+        Object.keys(shapes).forEach(name => {
+          const el = shapes[name];
+          if (!el) return;
+
+          if (name === 'core' || name === 'ring') {
+            if (isCardShape) {
+              // Scale up the background circular glow plate to match 48px icon container
+              gsap.to(el, { 
+                scale: 3.4, 
+                opacity: 1, 
+                duration: 0.35, 
+                overwrite: 'auto' 
+              });
+              if (name === 'core') {
+                gsap.to(el, {
+                  background: 'radial-gradient(circle, #10b981 0%, #059669 80%, transparent 100%)',
+                  boxShadow: '0 0 12px 3px rgba(16,185,129,0.85), 0 0 24px 8px rgba(16,185,129,0.3)',
+                  duration: 0.35,
+                  overwrite: 'auto'
+                });
+              }
+            } else {
+              // Standard scale core
+              gsap.to(el, { 
+                scale: 1.0, 
+                opacity: 1, 
+                duration: 0.35, 
+                overwrite: 'auto' 
+              });
+              if (name === 'core') {
+                const isDomain = ['gears', 'bolt', 'carbon', 'bulb'].includes(activeName);
+                if (isDomain) {
+                  gsap.to(el, {
+                    background: 'radial-gradient(circle, #10b981 0%, #34d399 60%, transparent 100%)',
+                    boxShadow: '0 0 8px 2px rgba(16,185,129,0.95), 0 0 22px 7px rgba(16,185,129,0.55), 0 0 44px 14px rgba(16,185,129,0.22)',
+                    duration: 0.35,
+                    overwrite: 'auto'
+                  });
+                } else {
+                  gsap.to(el, {
+                    background: 'radial-gradient(circle, #ffffff 0%, #cccccc 60%, transparent 100%)',
+                    boxShadow: '0 0 6px 2px rgba(255, 255, 255, 0.95), 0 0 16px 5px rgba(255, 255, 255, 0.5), 0 0 32px 10px rgba(255, 255, 255, 0.15)',
+                    duration: 0.35,
+                    overwrite: 'auto'
+                  });
+                }
+              }
+            }
+          } else {
+            // It's an SVG shape
+            if (name === activeName) {
+              const targetScale = isCardShape ? 1.2 : 1.0;
+              gsap.to(el, { 
+                opacity: 1, 
+                scale: targetScale, 
+                duration: 0.35, 
+                ease: 'back.out(1.5)', 
+                overwrite: 'auto' 
+              });
+            } else {
+              gsap.to(el, { 
+                opacity: 0, 
+                scale: 0, 
+                duration: 0.35, 
+                overwrite: 'auto' 
+              });
+            }
+          }
+        });
+      }
+
+      // Check horizontally which column card the mouse is currently hovering over
+      function updateDomainShape() {
+        if (!followMouse || !dpE || !dpC || !dpS) return;
+        const rE = dpE.closest('.dp').getBoundingClientRect();
+        const rC = dpC.closest('.dp').getBoundingClientRect();
+        const rS = dpS.closest('.dp').getBoundingClientRect();
+        
+        if (mouseX >= rE.left && mouseX <= rE.right) {
+          showShape('bolt');
+        } else if (mouseX >= rC.left && mouseX <= rC.right) {
+          showShape('carbon');
+        } else if (mouseX >= rS.left && mouseX <= rS.right) {
+          showShape('bulb');
+        } else {
+          // If cursor moves outside visual columns boundary, map to the closest center
+          const cE = rE.left + rE.width / 2;
+          const cC = rC.left + rC.width / 2;
+          const cS = rS.left + rS.width / 2;
+          const distE = Math.abs(mouseX - cE);
+          const distC = Math.abs(mouseX - cC);
+          const distS = Math.abs(mouseX - cS);
+          const minDist = Math.min(distE, distC, distS);
+          if (minDist === distE) {
+            showShape('bolt');
+          } else if (minDist === distC) {
+            showShape('carbon');
+          } else {
+            showShape('bulb');
+          }
+        }
+      }
+
+      // Bind the active callback to the parent IIFE scope mousemove handler
+      updateDomainShapeFn = updateDomainShape;
+
+      const pI = getCoords(iChar, 0.12);
+      const pBP = getCoords(whyFullstop, 0.5);
+
+      const storyCoords = [];
+      storyBlocks.forEach(block => {
+        const schap = block.querySelector('.schap');
+        if (schap) {
+          storyCoords.push(getCoords(schap, 0.5));
+        }
+      });
+
+      // Set initial position at hero "i"
+      gsap.set(dot, { x: pI.x, y: pI.y, scale: 0.7, opacity: 1 });
+      setWhite();
+      showShape('dot');
+
+      const heading = document.getElementById('hero-heading');
+      if (!heading) return;
+
+      // Trigger 1: Loop path from Hero I, circling right, bottom, left, top, then diving to Breaking Point
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.2
+        }
+      });
+
+      t1.to(dot, {
+        duration: 8,
+        ease: 'none',
+        onUpdate: function() {
+          const progress = this.progress();
+          
+          const pI_dyn = getCoords(iChar, 0.12);
+          const pBP_dyn = getCoords(whyFullstop, 0.85);
+
+          // S-curve trajectory: loops right first, then loops left, then lands on the period
+          const x_base = pI_dyn.x + (pBP_dyn.x - pI_dyn.x) * progress;
+          const y = pI_dyn.y + (pBP_dyn.y - pI_dyn.y) * progress;
+
+          const envelope = Math.sin(progress * Math.PI); // 0 at start/end, peaks in middle
+          const amplitude = 180; // width of the S-curve swings
+          const x_offset = amplitude * envelope * Math.sin(progress * Math.PI * 2);
+
+          const x = x_base + x_offset;
+          const scale = 0.7 + 0.6 * progress;
+
+          if (progress > 0.5) {
+            morphGreen(0.2);
+          } else {
+            setWhite();
+          }
+
+          // Fade out the text period as the glowing dot merges with it
+          if (progress > 0.85) {
+            const fade = (progress - 0.85) / 0.15;
+            whyFullstop.style.opacity = Math.max(0, 1 - fade);
+          } else {
+            whyFullstop.style.opacity = 1;
+          }
+
+          gsap.set(dot, { x, y, scale });
+        }
+      });
+      triggers.push(t1);
+
+      // Trigger 3: Standalone Breaking Point Shake at Period (plays once on enter)
+      let shakePlayed = false;
+      const t3 = ScrollTrigger.create({
+        trigger: '#why',
+        start: 'top top',
+        onEnter: () => {
+          if (shakePlayed) return;
+          shakePlayed = true;
+
+          const pBP_dyn = getCoords(whyFullstop, 0.85);
+
+          gsap.timeline()
+            .to(dot, {
+              keyframes: [
+                { x: pBP_dyn.x - 12, duration: 0.05, ease: 'power1.out' },
+                { x: pBP_dyn.x + 12, duration: 0.05, ease: 'power1.inOut' },
+                { x: pBP_dyn.x - 8, duration: 0.05, ease: 'power1.inOut' },
+                { x: pBP_dyn.x + 8, duration: 0.05, ease: 'power1.inOut' },
+                { x: pBP_dyn.x, duration: 0.05, ease: 'bounce.out' }
+              ]
+            })
+            .to(dot, { scale: 2.2, duration: 0.15, ease: 'expo.out' })
+            .to(dot, { scale: 1.0, duration: 0.3, ease: 'power2.inOut' });
+        },
+        onLeaveBack: () => {
+          shakePlayed = false;
+        }
+      });
+      triggers.push(t3);
+
+      // Trigger 2a: Hop from Period to Story Block 01 (starts after 120px scroll buffer)
+      const t2a = ScrollTrigger.create({
+        trigger: '#why',
+        start: 'top -120px',
+        end: 'top -450px',
+        scrub: 1,
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const pBP_dyn = getCoords(whyFullstop, 0.85);
+          const pS1_dyn = getCoords(storyBlocks[0].querySelector('.schap'), 0.5);
+
+          const ease = gsap.parseEase('back.out(1.25)')(progress);
+          const x = pBP_dyn.x + (pS1_dyn.x - pBP_dyn.x) * ease;
+          const y = pBP_dyn.y + (pS1_dyn.y - pBP_dyn.y) * ease - 100 * Math.sin(progress * Math.PI);
+          
+          whyFullstop.style.opacity = Math.max(0, 1 - progress * 3);
+          showShape('dot');
+
+          if (!gsap.isTweening(dot)) {
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        }
+      });
+      triggers.push(t2a);
+
+      // Trigger 2b: Hop from Story Block 01 to Story Block 02
+      if (storyBlocks.length > 1) {
+        const t2b = ScrollTrigger.create({
+          trigger: storyBlocks[1],
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pS1_dyn = getCoords(storyBlocks[0].querySelector('.schap'), 0.5);
+            const pS2_dyn = getCoords(storyBlocks[1].querySelector('.schap'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pS1_dyn.x + (pS2_dyn.x - pS1_dyn.x) * ease;
+            const y = pS1_dyn.y + (pS2_dyn.y - pS1_dyn.y) * ease - 100 * Math.sin(progress * Math.PI);
+            
+            showShape('dot');
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t2b);
+      }
+
+      // Trigger 2c: Hop from Story Block 02 to Story Block 03
+      if (storyBlocks.length > 2) {
+        const t2c = ScrollTrigger.create({
+          trigger: storyBlocks[2],
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pS2_dyn = getCoords(storyBlocks[1].querySelector('.schap'), 0.5);
+            const pS3_dyn = getCoords(storyBlocks[2].querySelector('.schap'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pS2_dyn.x + (pS3_dyn.x - pS2_dyn.x) * ease;
+            const y = pS2_dyn.y + (pS3_dyn.y - pS2_dyn.y) * ease - 100 * Math.sin(progress * Math.PI);
+            
+            showShape('dot');
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t2c);
+      }
+
+      // Trigger 3_pq: Hop from Story Block 03 to Pullquote (Gears transform)
+      if (storyBlocks.length > 2 && pullquote) {
+        const t3_pq = ScrollTrigger.create({
+          trigger: pullquote,
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pS3_dyn = getCoords(storyBlocks[2].querySelector('.schap'), 0.5);
+            const pPQ_dyn = getCoords(pullquote, 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pS3_dyn.x + (pPQ_dyn.x - pS3_dyn.x) * ease;
+            const y = pS3_dyn.y + (pPQ_dyn.y - pS3_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress > 0.95) {
+              showShape('gears');
+            } else {
+              showShape('dot');
+            }
+
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t3_pq);
+      }
+
+      // Trigger 4a: Hop from Pullquote to Energy title (Bolt transform) - S-CURVE TRAJECTORY
+      if (pullquote && dpE) {
+        const t4a = ScrollTrigger.create({
+          trigger: dpE,
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            if (followMouse) return;
+            const progress = self.progress;
+            const pPQ_dyn = getCoords(pullquote, 0.5);
+            const pE_dyn = getCoords(dpE, 0.5);
+
+            // S-curve path
+            const x_base = pPQ_dyn.x + (pE_dyn.x - pPQ_dyn.x) * progress;
+            const y = pPQ_dyn.y + (pE_dyn.y - pPQ_dyn.y) * progress;
+
+            const envelope = Math.sin(progress * Math.PI);
+            const amplitude = 160; 
+            const x_offset = amplitude * envelope * Math.sin(progress * Math.PI * 2);
+
+            const x = x_base + x_offset;
+
+            if (progress > 0.5) {
+              showShape('bolt');
+            } else {
+              showShape('gears');
+            }
+
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t4a);
+      }
+
+      // Trigger 4b: Hop from Energy title to Carbon title (Carbon ring transform)
+      if (dpE && dpC) {
+        const t4b = ScrollTrigger.create({
+          trigger: dpC,
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            if (followMouse) return;
+            const progress = self.progress;
+            const pE_dyn = getCoords(dpE, 0.5);
+            const pC_dyn = getCoords(dpC, 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pE_dyn.x + (pC_dyn.x - pE_dyn.x) * ease;
+            const y = pE_dyn.y + (pC_dyn.y - pE_dyn.y) * ease - 100 * Math.sin(progress * Math.PI);
+
+            if (progress > 0.5) {
+              showShape('carbon');
+            } else {
+              showShape('bolt');
+            }
+
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t4b);
+      }
+
+      // Trigger 4c: Hop from Carbon title to Systems title (Lightbulb transform)
+      if (dpC && dpS) {
+        const t4c = ScrollTrigger.create({
+          trigger: dpS,
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            if (followMouse) return;
+            const progress = self.progress;
+            const pC_dyn = getCoords(dpC, 0.5);
+            const pS_dyn = getCoords(dpS, 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pC_dyn.x + (pS_dyn.x - pC_dyn.x) * ease;
+            const y = pC_dyn.y + (pS_dyn.y - pS_dyn.y) * ease - 100 * Math.sin(progress * Math.PI);
+
+            if (progress > 0.5) {
+              showShape('bulb');
+            } else {
+              showShape('carbon');
+            }
+
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t4c);
+      }
+
+      // Trigger 5_port: Hop from Systems title to Portfolio Heading (Restore dot)
+      if (dpS && portHdr) {
+        const t5_port = ScrollTrigger.create({
+          trigger: portHdr,
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            if (followMouse) return;
+            const progress = self.progress;
+            const pS_dyn = getCoords(dpS, 0.5);
+            const pPort_dyn = getCoords(portHdr, 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pS_dyn.x + (pPort_dyn.x - pS_dyn.x) * ease;
+            const y = pS_dyn.y + (pPort_dyn.y - pS_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress > 0.5) {
+              showShape('dot');
+            } else {
+              showShape('bulb');
+            }
+
+            gsap.set(dot, { x, y, scale: 1.0 });
+          }
+        });
+        triggers.push(t5_port);
+      }
+
+      // Trigger: Mouse follow state controller for domains section
+      if (dpE && dpC && dpS) {
+        const t_domains = ScrollTrigger.create({
+          trigger: '#domains',
+          start: 'top 50%',
+          end: 'bottom 50%',
+          onToggle: (self) => {
+            if (self.isActive) {
+              const curX = gsap.getProperty(dot, 'x') || window.innerWidth / 2;
+              const curY = gsap.getProperty(dot, 'y') || window.scrollY + window.innerHeight / 2;
+              lastMouseX = curX;
+              lastMouseY = curY;
+              followMouse = true;
+              updateDomainShape();
+            } else {
+              followMouse = false;
+              showShape('dot');
+            }
+          },
+          onUpdate: (self) => {
+            if (self.isActive) {
+              updateDomainShape();
+            }
+          }
+        });
+        triggers.push(t_domains);
+      }
+
+      // Assign trackers to external ticker scope
+      showShapeFn = showShape;
+      cards_ref = cards;
+
+      if (cards.length > 4) {
+        // Trigger 6a: Hop from Portfolio Heading to Card 1 (EnCBAM)
+        const t6a = ScrollTrigger.create({
+          trigger: cards[0],
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pPort_dyn = getCoords(portHdr, 0.5);
+            const pCard0_dyn = getCoords(cards[0].querySelector('.picon'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pPort_dyn.x + (pCard0_dyn.x - pPort_dyn.x) * ease;
+            const y = pPort_dyn.y + (pCard0_dyn.y - pPort_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress > 0.95) {
+              showShape('lifeline');
+              cards[0].querySelector('.picon').style.opacity = 0;
+            } else {
+              showShape('dot');
+              cards[0].querySelector('.picon').style.opacity = 1;
+            }
+
+            gsap.set(dot, { x, y });
+          }
+        });
+        triggers.push(t6a);
+
+        // Trigger 6b: Hop from Card 1 (EnCBAM) to Card 2 (Ecosystem)
+        const t6b = ScrollTrigger.create({
+          trigger: cards[1],
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pFrom_dyn = getCoords(cards[0].querySelector('.picon'), 0.5);
+            const pTo_dyn = getCoords(cards[1].querySelector('.picon'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pFrom_dyn.x + (pTo_dyn.x - pFrom_dyn.x) * ease;
+            const y = pFrom_dyn.y + (pTo_dyn.y - pFrom_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress < 0.05) {
+              showShape('lifeline');
+              cards[0].querySelector('.picon').style.opacity = 0;
+              cards[1].querySelector('.picon').style.opacity = 1;
+            } else if (progress > 0.95) {
+              showShape('check');
+              cards[0].querySelector('.picon').style.opacity = 1;
+              cards[1].querySelector('.picon').style.opacity = 0;
+            } else {
+              showShape('dot');
+              cards[0].querySelector('.picon').style.opacity = 1;
+              cards[1].querySelector('.picon').style.opacity = 1;
+            }
+
+            gsap.set(dot, { x, y });
+          }
+        });
+        triggers.push(t6b);
+
+        // Trigger 6c: Hop from Card 2 (Ecosystem) to Card 3 (Energy, left) or Card 4 (Carbon, right) depending on mouse X
+        const t6c = ScrollTrigger.create({
+          trigger: cards[2], // both cards[2] and cards[3] have same top
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const pFrom_dyn = getCoords(cards[1].querySelector('.picon'), 0.5);
+            
+            const useLeft = mouseX < window.innerWidth / 2;
+            const targetCard = useLeft ? cards[2] : cards[3];
+            const targetShape = useLeft ? 'sunburst' : 'clock';
+            const otherCard = useLeft ? cards[3] : cards[2];
+
+            const pTo_dyn = getCoords(targetCard.querySelector('.picon'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pFrom_dyn.x + (pTo_dyn.x - pFrom_dyn.x) * ease;
+            const y = pFrom_dyn.y + (pTo_dyn.y - pFrom_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress < 0.05) {
+              showShape('check');
+              cards[1].querySelector('.picon').style.opacity = 0;
+              targetCard.querySelector('.picon').style.opacity = 1;
+              otherCard.querySelector('.picon').style.opacity = 1;
+            } else if (progress > 0.95) {
+              showShape(targetShape);
+              cards[1].querySelector('.picon').style.opacity = 1;
+              targetCard.querySelector('.picon').style.opacity = 0;
+              otherCard.querySelector('.picon').style.opacity = 1;
+            } else {
+              showShape('dot');
+              cards[1].querySelector('.picon').style.opacity = 1;
+              targetCard.querySelector('.picon').style.opacity = 1;
+              otherCard.querySelector('.picon').style.opacity = 1;
+            }
+
+            // Sync trackers for horizontal slider logic inside the ticker
+            lastMouseX = x;
+            lastMouseY = y;
+
+            gsap.set(dot, { x, y });
+          }
+        });
+        triggers.push(t6c);
+        t6c_ref = t6c;
+
+        // Trigger 6d: Hop from active card (Card 3 or Card 4 depending on mouse X) to Card 5 (Enterprise)
+        const t6d = ScrollTrigger.create({
+          trigger: cards[4],
+          start: 'top 95%',
+          end: 'top 50%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+
+            const useLeft = mouseX < window.innerWidth / 2;
+            const fromCard = useLeft ? cards[2] : cards[3];
+            const fromShape = useLeft ? 'sunburst' : 'clock';
+            const otherCard = useLeft ? cards[3] : cards[2];
+
+            const pFrom_dyn = getCoords(fromCard.querySelector('.picon'), 0.5);
+            const pTo_dyn = getCoords(cards[4].querySelector('.picon'), 0.5);
+
+            const ease = gsap.parseEase('back.out(1.25)')(progress);
+            const x = pFrom_dyn.x + (pTo_dyn.x - pFrom_dyn.x) * ease;
+            const y = pFrom_dyn.y + (pTo_dyn.y - pFrom_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+            if (progress < 0.05) {
+              showShape(fromShape);
+              fromCard.querySelector('.picon').style.opacity = 0;
+              otherCard.querySelector('.picon').style.opacity = 1;
+              cards[4].querySelector('.picon').style.opacity = 1;
+            } else if (progress > 0.95) {
+              showShape('boxes');
+              fromCard.querySelector('.picon').style.opacity = 1;
+              otherCard.querySelector('.picon').style.opacity = 1;
+              cards[4].querySelector('.picon').style.opacity = 0;
+            } else {
+              showShape('dot');
+              fromCard.querySelector('.picon').style.opacity = 1;
+              otherCard.querySelector('.picon').style.opacity = 1;
+              cards[4].querySelector('.picon').style.opacity = 1;
+            }
+
+            gsap.set(dot, { x, y });
+          }
+        });
+        triggers.push(t6d);
+        t6d_ref = t6d;
+
+        // Trigger 7: Hop from Card 5 to architecture heading
+        if (portArchHdr) {
+          const t7 = ScrollTrigger.create({
+            trigger: portArchHdr,
+            start: 'top 95%',
+            end: 'top 50%',
+            scrub: 1,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const pLast_dyn = getCoords(cards[4].querySelector('.picon'), 0.5);
+              const pArch_dyn = getCoords(portArchHdr, 0.5);
+
+              const ease = gsap.parseEase('back.out(1.25)')(progress);
+              const x = pLast_dyn.x + (pArch_dyn.x - pLast_dyn.x) * ease;
+              const y = pLast_dyn.y + (pLast_dyn.y - pLast_dyn.y) * ease - 120 * Math.sin(progress * Math.PI);
+
+              if (progress < 0.05) {
+                showShape('boxes');
+                cards[4].querySelector('.picon').style.opacity = 0;
+              } else {
+                showShape('dot');
+                cards[4].querySelector('.picon').style.opacity = 1;
+              }
+
+              gsap.set(dot, { x, y });
+            }
+          });
+          triggers.push(t7);
+        }
+      }
+
+    }
+
+    // Initialize after a tiny delay to ensure proper font rendering and client rects
+    window.addEventListener('load', () => {
+      setTimeout(initDotAnimation, 200);
+    });
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(initDotAnimation, 250);
+    });
+  })();
   </script>
 </body>
 
