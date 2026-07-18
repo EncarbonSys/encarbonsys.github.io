@@ -11,15 +11,22 @@
   </script>
   
   <script>
-    // Fast client-side routing redirect for legacy/lowercase EnCBAM URLs
+    // Fast client-side routing redirect for legacy/lowercase EnCBAM URLs and blog posts
     (function () {
-      const path = window.location.pathname.toLowerCase();
-      // Remove trailing slash if present
+      const rawPath = window.location.pathname;
+      const path = rawPath.toLowerCase();
+      
+      // 1. Redirect /cbam-blog/* -> https://encbam.com/blog/*
+      if (path.startsWith('/cbam-blog')) {
+        const file = rawPath.substring('/cbam-blog'.length);
+        window.location.replace('https://encbam.com/blog' + file + window.location.hash);
+        return;
+      }
+
+      // 2. Redirect legacy /EnCBAM -> https://encbam.com
       const cleanPath = path.endsWith('/') ? path.slice(0, -1) : path;
       if (cleanPath === '/encbam' || cleanPath === '/encbam.html') {
-        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        const dest = isLocal ? '/EnCBAM.html' : '/EnCBAM';
-        window.location.replace(dest + window.location.hash);
+        window.location.replace('https://encbam.com' + window.location.hash);
       }
     })();
   </script>
