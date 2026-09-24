@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnCBAM LinkedIn Banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #020617;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 25% 50%, #0c2015 0%, #020617 70%, #010307 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+  }
+
+  /* Subtle grid pattern */
+  .banner-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(82,186,113,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(82,186,113,0.03) 1px, transparent 1px);
+    background-size: 4% 16%;
+    pointer-events: none;
+  }
+
+  /* Accent line top */
+  .accent-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #52ba71 30%, #10b981 60%, transparent 100%);
+    z-index: 3;
+  }
+
+  /* LEFT: Branding */
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .brand-text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-text h1 span {
+    color: #52ba71;
+  }
+
+  .brand-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* Vertical divider */
+  .divider {
+    width: 1px;
+    height: 45%;
+    background: linear-gradient(to bottom, transparent, rgba(82,186,113,0.15), transparent);
+    margin: 0 6%;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  /* CENTER: Setup Monitor Comply */
+  .center-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .pillar {
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #ffffff;
+  }
+
+  .pillar.comply {
+    color: #52ba71;
+  }
+
+  /* RIGHT: Cargo Ship Visual */
+  .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+    width: 320px;
+    height: 100%;
+  }
+
+  /* Ship SVG styling & container */
+  .ship-wrap {
+    position: relative;
+    opacity: 0.85;
+    pointer-events: none;
+    transform: scale(1.1);
+  }
+
+  /* Info text at bottom */
+  .bottom-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 8%;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #475569;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .url-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 8%;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #52ba71;
+    letter-spacing: 0.1em;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+<div class="banner-container">
+  <div class="accent-line"></div>
+
+  <!-- LEFT: Branding -->
+  <div class="left-section">
+    <div class="logo-row">
+      <img class="logo-img" src="https://image2url.com/images/1754762251826-aabbb9f2-5d26-42f3-b2a7-896ce713de40.png" alt="EnCarbonSys Logo">
+      <div class="brand-text">
+        <h1>En<span>CBAM</span></h1>
+        <p>by EnCarbonSys</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CENTER: Setup Monitor Comply -->
+  <div class="center-section">
+    <div class="pillars">
+      <div class="pillar">Setup.</div>
+      <div class="pillar">Monitor.</div>
+      <div class="pillar comply">Comply.</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Cargo Ship -->
+  <div class="right-section">
+    <div class="ship-wrap">
+      <svg width="240" height="130" viewBox="0 0 220 120" fill="#52ba71">
+        <!-- Water/Wake Effects -->
+        <path d="M10,95 Q40,90 70,95 T130,95 T190,95" fill="none" stroke="rgba(82, 186, 113, 0.4)" stroke-width="3" stroke-dasharray="12 6" />
+        
+        <!-- Modern Hull -->
+        <path d="M210,65 L10,65 L25,90 L195,90 Z" fill="#1e293b" />
+        
+        <!-- Stacked Containers -->
+        <rect x="170" y="40" width="22" height="25" fill="#059669" rx="2" />
+        <rect x="145" y="40" width="22" height="25" fill="#047857" rx="2" />
+        <rect x="120" y="40" width="22" height="25" fill="#065f46" rx="2" />
+        <rect x="155" y="15" width="22" height="25" fill="#10b981" rx="2" />
+        <rect x="115" y="40" width="22" height="25" fill="#34d399" rx="2" />
+        
+        <!-- Bridge/Tower -->
+        <path d="M35,30 L75,30 L75,65 L45,65 L45,45 L35,45 Z" fill="#334155" />
+        <rect x="50" y="35" width="15" height="8" fill="white" fill-opacity="0.2" rx="1" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="bottom-bar">EU Carbon Border Adjustment Mechanism</div>
+  <div class="url-tag">encbam.com</div>
+</div>
+</body>
+</html>

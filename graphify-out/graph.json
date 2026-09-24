@@ -1,0 +1,199 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "assets\\js\\main.js",
+      "source_location": "L1",
+      "id": "assets_js_main_js",
+      "community": 3,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "navbar-loader.js",
+      "file_type": "code",
+      "source_file": "assets\\js\\navbar-loader.js",
+      "source_location": "L1",
+      "id": "assets_js_navbar_loader_js",
+      "community": 1,
+      "norm_label": "navbar-loader.js"
+    },
+    {
+      "label": "initNavbar()",
+      "file_type": "code",
+      "source_file": "assets\\js\\navbar-loader.js",
+      "source_location": "L293",
+      "id": "js_navbar_loader_initnavbar",
+      "community": 1,
+      "norm_label": "initnavbar()"
+    },
+    {
+      "label": "toc-addition.js",
+      "file_type": "code",
+      "source_file": "assets\\js\\toc-addition.js",
+      "source_location": "L1",
+      "id": "assets_js_toc_addition_js",
+      "community": 4,
+      "norm_label": "toc-addition.js"
+    },
+    {
+      "label": "add_seo_blog.py",
+      "file_type": "code",
+      "source_file": "scripts\\add_seo_blog.py",
+      "source_location": "L1",
+      "id": "scripts_add_seo_blog_py",
+      "community": 2,
+      "norm_label": "add_seo_blog.py"
+    },
+    {
+      "label": "build_article_schema()",
+      "file_type": "code",
+      "source_file": "scripts\\add_seo_blog.py",
+      "source_location": "L116",
+      "id": "scripts_add_seo_blog_build_article_schema",
+      "community": 2,
+      "norm_label": "build_article_schema()"
+    },
+    {
+      "label": "fix_coderabbit_reviews.py",
+      "file_type": "code",
+      "source_file": "scripts\\fix_coderabbit_reviews.py",
+      "source_location": "L1",
+      "id": "scripts_fix_coderabbit_reviews_py",
+      "community": 5,
+      "norm_label": "fix_coderabbit_reviews.py"
+    },
+    {
+      "label": "fix_navbar_js.py",
+      "file_type": "code",
+      "source_file": "scripts\\fix_navbar_js.py",
+      "source_location": "L1",
+      "id": "scripts_fix_navbar_js_py",
+      "community": 6,
+      "norm_label": "fix_navbar_js.py"
+    },
+    {
+      "label": "update_mobile_toc.py",
+      "file_type": "code",
+      "source_file": "scripts\\update_mobile_toc.py",
+      "source_location": "L1",
+      "id": "scripts_update_mobile_toc_py",
+      "community": 7,
+      "norm_label": "update_mobile_toc.py"
+    },
+    {
+      "label": "update_remaining_h1.py",
+      "file_type": "code",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L1",
+      "id": "scripts_update_remaining_h1_py",
+      "community": 0,
+      "norm_label": "update_remaining_h1.py"
+    },
+    {
+      "label": "update_file()",
+      "file_type": "code",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L38",
+      "id": "scripts_update_remaining_h1_update_file",
+      "community": 0,
+      "norm_label": "update_file()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L71",
+      "id": "scripts_update_remaining_h1_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Update H1 in a single file",
+      "file_type": "rationale",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L39",
+      "id": "scripts_update_remaining_h1_rationale_39",
+      "community": 0,
+      "norm_label": "update h1 in a single file"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "assets\\js\\navbar-loader.js",
+      "source_location": "L293",
+      "weight": 1.0,
+      "_src": "assets_js_navbar_loader_js",
+      "_tgt": "js_navbar_loader_initnavbar",
+      "source": "assets_js_navbar_loader_js",
+      "target": "js_navbar_loader_initnavbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\add_seo_blog.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_src": "scripts_add_seo_blog_py",
+      "_tgt": "scripts_add_seo_blog_build_article_schema",
+      "source": "scripts_add_seo_blog_py",
+      "target": "scripts_add_seo_blog_build_article_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "scripts_update_remaining_h1_py",
+      "_tgt": "scripts_update_remaining_h1_update_file",
+      "source": "scripts_update_remaining_h1_py",
+      "target": "scripts_update_remaining_h1_update_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "scripts_update_remaining_h1_py",
+      "_tgt": "scripts_update_remaining_h1_main",
+      "source": "scripts_update_remaining_h1_py",
+      "target": "scripts_update_remaining_h1_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_src": "scripts_update_remaining_h1_main",
+      "_tgt": "scripts_update_remaining_h1_update_file",
+      "source": "scripts_update_remaining_h1_update_file",
+      "target": "scripts_update_remaining_h1_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\update_remaining_h1.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "scripts_update_remaining_h1_rationale_39",
+      "_tgt": "scripts_update_remaining_h1_update_file",
+      "source": "scripts_update_remaining_h1_update_file",
+      "target": "scripts_update_remaining_h1_rationale_39",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
