@@ -225,6 +225,7 @@
 
     .nav-logo span {
       background: linear-gradient(135deg, #00ff88 0%, #34d399 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -408,6 +409,7 @@
         transform: scale(1);
         opacity: 0.8;
       }
+
       100% {
         transform: scale(3.2);
         opacity: 0;
@@ -2367,6 +2369,7 @@
       outline: none;
       width: 100%;
       transition: border-color .25s, box-shadow .25s, background .25s;
+      appearance: none;
       -webkit-appearance: none
     }
 
@@ -2689,7 +2692,7 @@
         min-height: unset;
       }
 
-      .dp + .dp {
+      .dp+.dp {
         border-left: 1px solid var(--border);
         border-top: none;
       }
@@ -3255,14 +3258,16 @@
         <li class="nav-dropdown">
           <button type="button" class="nav-drop-trigger" aria-expanded="false">Services</button>
           <ul class="nav-dropdown-menu" role="menu" aria-label="Services menu">
-            <li><a href="https://encbam.com" target="_blank" rel="noopener noreferrer">Carbon Border Adjustment Mechanism</a></li>
+            <li><a href="https://encbam.com" target="_blank" rel="noopener noreferrer">Carbon Border Adjustment
+                Mechanism</a></li>
             <li><a href="#energysys-services">EnergySys Enablement Services</a></li>
           </ul>
         </li>
         <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a href="https://encbam.com" target="_blank" rel="noopener noreferrer" class="btn-ghost" id="nav-encbam">EnCBAM&#8482;<span class="live-dot" aria-hidden="true"></span></a>
+        <a href="https://encbam.com" target="_blank" rel="noopener noreferrer" class="btn-ghost"
+          id="nav-encbam">EnCBAM&#8482;<span class="live-dot" aria-hidden="true"></span></a>
         <a href="#contact" class="btn-primary-sm" id="nav-cta">Get in Touch</a>
       </div>
       <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -3416,7 +3421,8 @@
               sectors.</p>
             <div class="pfooter">
               <span class="pdom">Carbon &middot; Compliance &middot; EU Regulation</span>
-              <a href="https://encbam.com" target="_blank" rel="noopener noreferrer" class="parr" id="encbam-link" aria-label="View EnCBAM">
+              <a href="https://encbam.com" target="_blank" rel="noopener noreferrer" class="parr" id="encbam-link"
+                aria-label="View EnCBAM">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -3449,15 +3455,18 @@
               <span class="pbadge bsoon" id="energysys-badge">Services</span>
               <div class="picon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <circle cx="11" cy="11" r="7.2" stroke="#10b981" stroke-width="1.7"/>
-                  <circle cx="11" cy="11" r="4.4" stroke="#10b981" stroke-width="1.7"/>
-                  <path d="M11 2.5V5.2M11 16.8V19.5M2.5 11H5.2M16.8 11H19.5M4.7 4.7L6.6 6.6M15.4 15.4L17.3 17.3M4.7 17.3L6.6 15.4M15.4 6.6L17.3 4.7" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="11" cy="11" r="7.2" stroke="#10b981" stroke-width="1.7" />
+                  <circle cx="11" cy="11" r="4.4" stroke="#10b981" stroke-width="1.7" />
+                  <path
+                    d="M11 2.5V5.2M11 16.8V19.5M2.5 11H5.2M16.8 11H19.5M4.7 4.7L6.6 6.6M15.4 15.4L17.3 17.3M4.7 17.3L6.6 15.4M15.4 6.6L17.3 4.7"
+                    stroke="#10b981" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
               </div>
             </div>
             <div class="pname">EnergySys Enablement Services</div>
             <p class="pdesc">Extending the capabilities of EnergySys for complex energy operations.</p>
-            <p class="pdesc">We help energy companies design, configure, integrate, optimise, and operate EnergySys solutions across complex operational domains.</p>
+            <p class="pdesc">We help energy companies design, configure, integrate, optimise, and operate EnergySys
+              solutions across complex operational domains.</p>
             <div class="pfooter">
               <span class="pdom">Capabilities</span>
               <a href="#portfolio" class="parr" id="energysys-link" aria-label="View EnergySys Enablement Services">
@@ -3467,7 +3476,8 @@
                 </svg>
               </a>
             </div>
-            <ul class="pbullets" style="margin: 14px 0 0 18px; padding: 0; color: var(--tp); font-size: .82rem; line-height: 1.8; list-style: disc;">
+            <ul class="pbullets"
+              style="margin: 14px 0 0 18px; padding: 0; color: var(--tp); font-size: .82rem; line-height: 1.8; list-style: disc;">
               <li>Hydrocarbon Accounting</li>
               <li>EnergySys Implementation &amp; Configuration</li>
               <li>Solution Architecture</li>
@@ -3480,10 +3490,14 @@
           </div>
           <div class="pc-vis" aria-hidden="true">
             <div class="vis-grid"></div>
-            <svg viewBox="0 0 180 180" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; z-index:1;">
-              <circle cx="90" cy="90" r="62" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.95"/>
-              <circle cx="90" cy="90" r="46" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
-              <path d="M90 20v20M90 140v20M20 90h20M140 90h20M41 41l14 14M125 125l14 14M41 139l14-14M125 55l14-14" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+            <svg viewBox="0 0 180 180" aria-hidden="true"
+              style="position:absolute; inset:0; width:100%; height:100%; z-index:1;">
+              <circle cx="90" cy="90" r="62" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"
+                opacity="0.95" />
+              <circle cx="90" cy="90" r="46" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"
+                opacity="0.8" />
+              <path d="M90 20v20M90 140v20M20 90h20M140 90h20M41 41l14 14M125 125l14 14M41 139l14-14M125 55l14-14"
+                fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.9" />
             </svg>
           </div>
         </div>
@@ -3500,7 +3514,7 @@
                 </svg>
               </div>
             </div>
-            
+
             <div class="pname">Enterprise Ecosystem Design</div>
             <p class="pdesc">Establish a dedicated scalable ecosystem to enable product, partners, and customers through
               domain expertise, implementation excellence, design frameworks and reusable operational capabilities.
@@ -3657,7 +3671,7 @@
           <div class="arch-node asset">
             <div class="arch-card asset-card live">
               <span class="pbadge blive">Initiated</span>
-              <div class="node-title">Enterprise Ecosystem Enablement</div>
+              <div class="node-title">Enterprise Ecosystem Design</div>
               <div class="node-desc">A strategically aligned, dedicated, scalable partner success capability</div>
             </div>
           </div>
@@ -4141,10 +4155,10 @@
             <div class="ft-yr">2026 - 2027</div>
             <div class="ft-ti">Portfolio Expansion</div>
             <p class="ft-tx">EnCBAM&#8482; scales across enterprise customers.
-              Enterprise Ecosystem Enablement initiated. Partner ecosystem formalised.</p>
+              Enterprise Ecosystem Design initiated. Partner ecosystem formalised.</p>
             <div class="ft-ch">
               <div class="ft-ci">EnCBAM&#8482; - enterprise customer growth</div>
-              <div class="ft-ci">Enterprise Ecosystem Enablement division - establish & operate</div>
+              <div class="ft-ci">Enterprise Ecosystem Design division - establish & operate</div>
               <div class="ft-ci">Energy & carbon domain - architecture phase</div>
             </div>
           </div>
@@ -4251,7 +4265,8 @@
           <li><a href="#why" id="footer-philosophy">Philosophy</a></li>
           <li><a href="#portfolio" id="footer-portfolio">Portfolio</a></li>
 
-          <li><a href="https://encbam.com" target="_blank" rel="noopener noreferrer" id="footer-encbam">EnCBAM&#8482;</a></li>
+          <li><a href="https://encbam.com" target="_blank" rel="noopener noreferrer"
+              id="footer-encbam">EnCBAM&#8482;</a></li>
           <li><a href="#contact" id="footer-contact">Contact</a></li>
         </ul>
         <p class="foot-copy">&copy; <span id="footer-year"></span> EnCarbonSys. All rights reserved.</p>
@@ -4336,14 +4351,14 @@
           mm.setAttribute('role', 'dialog');
           mm.setAttribute('aria-label', 'Mobile Navigation');
           [
-            ['#why','Philosophy'],
-            ['#portfolio','Portfolio'],
-            ['#lifecycle','How We Operate'],
-            ['#portfolio','Services'],
-            ['https://encbam.com','Carbon Border Adjustment Mechanism'],
-            ['#energysys-services','EnergySys Enablement Services'],
-            ['https://encbam.com','EnCBAM\u2122']
-          ].forEach(([h,l]) => {
+            ['#why', 'Philosophy'],
+            ['#portfolio', 'Portfolio'],
+            ['#lifecycle', 'How We Operate'],
+            ['#portfolio', 'Services'],
+            ['https://encbam.com', 'Carbon Border Adjustment Mechanism'],
+            ['#energysys-services', 'EnergySys Enablement Services'],
+            ['https://encbam.com', 'EnCBAM\u2122']
+          ].forEach(([h, l]) => {
             const a = document.createElement('a');
             a.href = h; a.textContent = l;
             if (h.startsWith('http')) {
