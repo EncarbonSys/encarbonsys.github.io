@@ -265,6 +265,88 @@
       width: 100%
     }
 
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-drop-trigger {
+      border: 0;
+      background: transparent;
+      padding: 0;
+      font: inherit;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .01em;
+      color: var(--ts);
+      cursor: pointer;
+      transition: color .2s;
+      position: relative;
+    }
+
+    .nav-drop-trigger::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--em);
+      transition: width .3s var(--ease)
+    }
+
+    .nav-drop-trigger:hover,
+    .nav-drop-trigger:focus-visible,
+    .nav-dropdown:hover .nav-drop-trigger,
+    .nav-dropdown:focus-within .nav-drop-trigger {
+      color: var(--tp);
+      outline: none;
+    }
+
+    .nav-dropdown:hover .nav-drop-trigger::after,
+    .nav-dropdown:focus-within .nav-drop-trigger::after {
+      width: 100%;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 250px;
+      padding: 12px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      background: rgba(12, 12, 12, 0.96);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s, transform .2s, visibility .2s;
+      z-index: 20;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 16px;
+      font-size: .76rem;
+      color: var(--ts);
+      transition: color .2s, background .2s;
+    }
+
+    .nav-dropdown-menu a:hover {
+      color: var(--tp);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
     .nav-right {
       display: flex;
       align-items: center;
@@ -1108,6 +1190,46 @@
       inset: 0;
       background-image: linear-gradient(rgba(16, 185, 129, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, .06) 1px, transparent 1px);
       background-size: 20px 20px
+    }
+
+    .factory-emissions {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: .9;
+      pointer-events: none;
+    }
+
+    .factory-emissions .ring {
+      fill: none;
+      stroke: rgba(16, 185, 129, .28);
+      stroke-width: 1.5;
+    }
+
+    .factory-emissions .factory-body,
+    .factory-emissions .stack,
+    .factory-emissions .smoke,
+    .factory-emissions .pipe {
+      fill: none;
+      stroke: rgba(16, 185, 129, .8);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .factory-emissions .factory-body {
+      stroke-width: 2;
+    }
+
+    .factory-emissions .stack,
+    .factory-emissions .pipe {
+      stroke-width: 2.2;
+    }
+
+    .factory-emissions .smoke {
+      stroke-width: 2;
+      opacity: .9;
     }
 
     .vis-pulse {
@@ -3121,7 +3243,13 @@
         <li><a href="#why" id="nav-philosophy">Philosophy</a></li>
         <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
         <li><a href="#lifecycle" id="nav-lifecycle">How We Operate</a></li>
-        <li><a href="#ecosystem" id="nav-partners">Network</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-drop-trigger" aria-expanded="false">Services</button>
+          <ul class="nav-dropdown-menu" role="menu" aria-label="Services menu">
+            <li><a href="https://encbam.com" target="_blank" rel="noopener noreferrer">Carbon Border Adjustment Mechanism</a></li>
+            <li><a href="#energysys-services">EnergySys Enablement Services</a></li>
+          </ul>
+        </li>
         <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -3247,59 +3375,6 @@
     </div>
   </section>
 
-  <!-- DOMAINS -->
-  <section id="domains" aria-labelledby="domains-heading">
-    <div class="dom-row">
-      <div class="dp dp-e reveal">
-        <div>
-          <div class="d-idx" id="domains-heading">01 - Domain</div>
-          <div class="d-title">Energy</div>
-          <p class="d-body">Specialized enterprise infrastructure for critical energy domains. We discover, design, and
-            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and
-            real-time market compliance.</p>
-          <div class="d-tags">
-            <span class="dtag">Oil & Gas</span><span class="dtag">HCA</span><span class="dtag">LNG</span><span
-              class="dtag">ETRM</span><span class="dtag">Compliance</span>
-          </div>
-        </div>
-        <div class="d-note">Systems incubation and architecture active.</div>
-        <div class="d-amb" aria-hidden="true">01</div>
-      </div>
-      <div class="dp dp-c reveal d1">
-        <div>
-          <div class="d-idx">02 - Domain</div>
-          <div class="d-title">Carbon</div>
-          <p class="d-body">Carbon has graduated from a sustainability metric to a regulated financial instrument. CBAM,
-            CCTS, ETS, GHG accounting, voluntary markets, and verification requirements are converging into an
-            operational domain of immense complexity - one that demands dedicated enterprise infrastructure.</p>
-          <div class="d-tags">
-            <span class="dtag">CBAM</span><span class="dtag">ETS</span><span class="dtag">CCTS</span><span
-              class="dtag">GHG</span><span class="dtag">Verification</span><span class="dtag">Carbon Markets</span>
-          </div>
-        </div>
-        <div class="d-note">EnCBAM&#8482; is live. Expanded systems in research.</div>
-        <div class="d-amb" aria-hidden="true">02</div>
-      </div>
-      <div class="dp dp-s reveal d2">
-        <div>
-          <div class="d-idx">03 - Capability</div>
-          <div class="d-title">Systems</div>
-          <p class="d-body">Systems is not a third vertical. It is the capability that makes the first two possible. The
-            discipline of enterprise system architecture: platform thinking, data modelling at operational depth,
-            regulatory integration, and long-term ownership - is what separates EnCarbonSys from every other company
-            operating in this space.</p>
-          <div class="d-tags">
-            <span class="dtag">Platform Architecture</span><span class="dtag">Systems Thinking</span><span
-              class="dtag">Enterprise Grade</span><span class="dtag">Domain Modelling</span><span class="dtag">Long-Term
-              Ownership</span>
-          </div>
-        </div>
-        <div class="d-note">The connective capability across all domains.</div>
-        <div class="d-amb" aria-hidden="true">03</div>
-      </div>
-    </div>
-  </section>
-
   <!-- PORTFOLIO -->
   <section id="portfolio" aria-labelledby="portfolio-heading">
     <div class="inner">
@@ -3342,9 +3417,68 @@
           </div>
           <div class="pc-vis" aria-hidden="true">
             <div class="vis-grid"></div>
+            <svg class="factory-emissions" viewBox="0 0 260 130" aria-hidden="true">
+              <ellipse class="ring" cx="150" cy="70" rx="80" ry="36"></ellipse>
+              <path class="pipe" d="M110 34v38"></path>
+              <path class="stack" d="M112 28h18v8h-18z"></path>
+              <path class="factory-body" d="M65 84h110v18H65z"></path>
+              <path class="factory-body" d="M82 76V58h26v18"></path>
+              <path class="factory-body" d="M118 76V58h24v18"></path>
+              <path class="smoke" d="M130 28c-4-10-10-12-16-8"></path>
+              <path class="smoke" d="M142 22c-2-8-7-11-13-8"></path>
+              <path class="smoke" d="M153 28c3-11 9-13 15-10"></path>
+              <path class="smoke" d="M165 24c2-7 7-10 12-7"></path>
+            </svg>
             <div class="vis-pulse"></div>
           </div>
         </div>
+
+        <!-- EnergySys Enablement Services featured -->
+        <div class="pc feat reveal d1" id="energysys-services">
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pbadge bsoon" id="energysys-badge">Services</span>
+              <div class="picon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="7.2" stroke="#10b981" stroke-width="1.7"/>
+                  <circle cx="11" cy="11" r="4.4" stroke="#10b981" stroke-width="1.7"/>
+                  <path d="M11 2.5V5.2M11 16.8V19.5M2.5 11H5.2M16.8 11H19.5M4.7 4.7L6.6 6.6M15.4 15.4L17.3 17.3M4.7 17.3L6.6 15.4M15.4 6.6L17.3 4.7" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="pname">EnergySys Enablement Services</div>
+            <p class="pdesc">Extending the capabilities of EnergySys for complex energy operations.</p>
+            <p class="pdesc">We help energy companies design, configure, integrate, optimise, and operate EnergySys solutions across complex operational domains.</p>
+            <div class="pfooter">
+              <span class="pdom">Capabilities</span>
+              <a href="#portfolio" class="parr" id="energysys-link" aria-label="View EnergySys Enablement Services">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <ul class="pbullets" style="margin: 14px 0 0 18px; padding: 0; color: var(--tp); font-size: .82rem; line-height: 1.8; list-style: disc;">
+              <li>Hydrocarbon Accounting</li>
+              <li>EnergySys Implementation &amp; Configuration</li>
+              <li>Solution Architecture</li>
+              <li>Data &amp; System Integration</li>
+              <li>Operational Analytics</li>
+              <li>System Optimisation</li>
+              <li>Training &amp; Enablement</li>
+              <li>Custom EnergySys Solutions</li>
+            </ul>
+          </div>
+          <div class="pc-vis" aria-hidden="true">
+            <div class="vis-grid"></div>
+            <svg viewBox="0 0 180 180" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; z-index:1;">
+              <circle cx="90" cy="90" r="62" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.95"/>
+              <circle cx="90" cy="90" r="46" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+              <path d="M90 20v20M90 140v20M20 90h20M140 90h20M41 41l14 14M125 125l14 14M41 139l14-14M125 55l14-14" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+            </svg>
+          </div>
+        </div>
+
         <!-- Verification Readiness featured -->
         <div class="pc feat reveal vr-feat">
           <div class="pc-body">
@@ -3357,12 +3491,13 @@
                 </svg>
               </div>
             </div>
-            <div class="pname">Enterprise Ecosystem Enablement</div>
+            
+            <div class="pname">Enterprise Ecosystem Design</div>
             <p class="pdesc">Establish a dedicated scalable ecosystem to enable product, partners, and customers through
-              domain expertise, implementation excellence, enablement frameworks and reusable operational capabilities.
+              domain expertise, implementation excellence, design frameworks and reusable operational capabilities.
             </p>
             <div class="pfooter">
-              <span class="pdom">Ecosystem &middot; Enablement &middot; Growth</span>
+              <span class="pdom">Ecosystem &middot; Design &middot; Growth</span>
               <div class="parr" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -3806,6 +3941,59 @@
     </div>
   </section>
 
+  <!-- DOMAINS -->
+  <section id="domains" aria-labelledby="domains-heading">
+    <div class="dom-row">
+      <div class="dp dp-e reveal">
+        <div>
+          <div class="d-idx" id="domains-heading">01 - Domain</div>
+          <div class="d-title">Energy</div>
+          <p class="d-body">Specialized enterprise infrastructure for critical energy domains. We discover, design, and
+            scale custom systems for Hydrocarbon Accounting (HCA), LNG Operations, Pipeline management, ETRM, and
+            real-time market compliance.</p>
+          <div class="d-tags">
+            <span class="dtag">Oil & Gas</span><span class="dtag">HCA</span><span class="dtag">LNG</span><span
+              class="dtag">ETRM</span><span class="dtag">Compliance</span>
+          </div>
+        </div>
+        <div class="d-note">Systems incubation and architecture active.</div>
+        <div class="d-amb" aria-hidden="true">01</div>
+      </div>
+      <div class="dp dp-c reveal d1">
+        <div>
+          <div class="d-idx">02 - Domain</div>
+          <div class="d-title">Carbon</div>
+          <p class="d-body">Carbon has graduated from a sustainability metric to a regulated financial instrument. CBAM,
+            CCTS, ETS, GHG accounting, voluntary markets, and verification requirements are converging into an
+            operational domain of immense complexity - one that demands dedicated enterprise infrastructure.</p>
+          <div class="d-tags">
+            <span class="dtag">CBAM</span><span class="dtag">ETS</span><span class="dtag">CCTS</span><span
+              class="dtag">GHG</span><span class="dtag">Verification</span><span class="dtag">Carbon Markets</span>
+          </div>
+        </div>
+        <div class="d-note">EnCBAM&#8482; is live. Expanded systems in research.</div>
+        <div class="d-amb" aria-hidden="true">02</div>
+      </div>
+      <div class="dp dp-s reveal d2">
+        <div>
+          <div class="d-idx">03 - Capability</div>
+          <div class="d-title">Systems</div>
+          <p class="d-body">Systems is not a third vertical. It is the capability that makes the first two possible. The
+            discipline of enterprise system architecture: platform thinking, data modelling at operational depth,
+            regulatory integration, and long-term ownership - is what separates EnCarbonSys from every other company
+            operating in this space.</p>
+          <div class="d-tags">
+            <span class="dtag">Platform Architecture</span><span class="dtag">Systems Thinking</span><span
+              class="dtag">Enterprise Grade</span><span class="dtag">Domain Modelling</span><span class="dtag">Long-Term
+              Ownership</span>
+          </div>
+        </div>
+        <div class="d-note">The connective capability across all domains.</div>
+        <div class="d-amb" aria-hidden="true">03</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ECOSYSTEM -->
   <section id="ecosystem" aria-labelledby="ecosystem-heading">
     <div class="inner">
@@ -4142,7 +4330,9 @@
             ['#why','Philosophy'],
             ['#portfolio','Portfolio'],
             ['#lifecycle','How We Operate'],
-            ['#ecosystem','Network'],
+            ['#portfolio','Services'],
+            ['https://encbam.com','Carbon Border Adjustment Mechanism'],
+            ['#energysys-services','EnergySys Enablement Services'],
             ['https://encbam.com','EnCBAM\u2122']
           ].forEach(([h,l]) => {
             const a = document.createElement('a');
