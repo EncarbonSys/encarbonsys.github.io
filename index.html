@@ -3255,6 +3255,13 @@
         <li><a href="#why" id="nav-philosophy">Philosophy</a></li>
         <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
         <li><a href="#lifecycle" id="nav-lifecycle">How We Operate</a></li>
+        <li class="nav-dropdown">
+          <a href="#services" class="nav-drop-trigger" id="nav-services" aria-expanded="false">Services</a>
+          <ul class="nav-dropdown-menu" role="menu" aria-label="Services menu">
+            <li><a href="#services" id="nav-cbam-service">Carbon Border Adjustment
+                Mechanism</a></li>
+          </ul>
+        </li>
         <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -3395,7 +3402,7 @@
       </div>
       <div class="pgrid">
         <!-- EnCBAM featured -->
-        <div class="pc feat reveal">
+        <div class="pc feat reveal" id="services" style="scroll-margin-top: 90px;">
           <div class="pc-body">
             <div class="pc-top">
               <span class="pbadge blive" id="encbam-badge">Live</span>
@@ -4293,6 +4300,8 @@
             ['#why', 'Philosophy'],
             ['#portfolio', 'Portfolio'],
             ['#lifecycle', 'How We Operate'],
+            ['#services', 'Services'],
+            ['#services', 'Carbon Border Adjustment Mechanism'],
             ['https://encbam.com', 'EnCBAM\u2122']
           ].forEach(([h, l]) => {
             const a = document.createElement('a');
